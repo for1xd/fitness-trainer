@@ -20,6 +20,8 @@ export interface Portion {
 export interface Food {
   id: string;
   source: FoodSource;
+  /** Стабільний ідентифікатор страви з вбудованої бази */
+  slug?: string;
   name: string;
   brand?: string;
   category?: string;
@@ -44,6 +46,8 @@ export interface MealEntry {
   grams: number;
   nutrients: Nutrients;
   source: EntrySource;
+  /** Аналіз фото, з якого створено запис */
+  photoAnalysisId?: string;
   updatedAt: string;
 }
 

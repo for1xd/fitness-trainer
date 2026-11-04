@@ -43,15 +43,30 @@ export default function TodayScreen() {
       <Text variant="title">{formatLongDate(new Date())}</Text>
 
       <DaySummaryCard eaten={eaten} targets={targets} />
-      <Button
-        label={t('nutrition.addFood')}
-        onPress={() =>
-          router.push({
-            pathname: '/food/add',
-            params: { date: today, meal: defaultMealType(new Date().getHours()) },
-          })
-        }
-      />
+      <View className="flex-row gap-3">
+        <Button
+          label={t('nutrition.addFood')}
+          className="flex-[2]"
+          onPress={() =>
+            router.push({
+              pathname: '/food/add',
+              params: { date: today, meal: defaultMealType(new Date().getHours()) },
+            })
+          }
+        />
+        <Button
+          label={t('foodQuick.photo')}
+          variant="secondary"
+          compact
+          className="flex-1"
+          onPress={() =>
+            router.push({
+              pathname: '/food/photo',
+              params: { date: today, meal: defaultMealType(new Date().getHours()) },
+            })
+          }
+        />
+      </View>
 
       <WaterCard date={today} weightKg={latestWeightKg(weights) ?? targets.weightKg} />
 

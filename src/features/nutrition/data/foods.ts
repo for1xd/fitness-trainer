@@ -21,6 +21,7 @@ interface SeedFood {
 export const SEED_FOODS: Food[] = (seed as SeedFood[]).map((f) => ({
   id: f.id,
   source: f.source as FoodSource,
+  slug: f.slug,
   category: f.category,
   name: f.name_uk,
   per100: {
@@ -34,3 +35,6 @@ export const SEED_FOODS: Food[] = (seed as SeedFood[]).map((f) => ({
 
 const byId = new Map(SEED_FOODS.map((f) => [f.id, f]));
 export const seedFoodById = (id: string) => byId.get(id);
+
+const bySlug = new Map(SEED_FOODS.map((f) => [f.slug, f]));
+export const seedFoodBySlug = (slug: string) => bySlug.get(slug);

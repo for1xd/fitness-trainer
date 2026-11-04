@@ -23,6 +23,7 @@ export default function FoodPortionScreen() {
     date?: string;
     meal?: MealType;
     entryId?: string;
+    source?: 'barcode';
   }>();
   const found = useFoodById(params.id);
   const entry = useNutrition((s) => s.entries.find((e) => e.id === params.entryId));
@@ -96,7 +97,15 @@ export default function FoodPortionScreen() {
   const save = () => {
     if (!grams) return;
     if (entry) updateEntry(entry.id, { grams, mealType: meal, food });
-    else addEntry({ food, isRecipe, grams, mealType: meal, date });
+    else
+      addEntry({
+        food,
+        isRecipe,
+        grams,
+        mealType: meal,
+        date,
+        source: params.source === 'barcode' ? 'barcode' : 'manual',
+      });
     close();
   };
 

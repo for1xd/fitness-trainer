@@ -20,6 +20,7 @@ export const mealEntryToRow = (e: MealEntry, deletedAt?: string): Row & { id: st
   fat_g: e.nutrients.fatG,
   carbs_g: e.nutrients.carbsG,
   source: e.source,
+  photo_analysis_id: e.photoAnalysisId ?? null,
   updated_at: e.updatedAt,
   deleted_at: deletedAt ?? null,
 });
@@ -35,6 +36,7 @@ export const mealEntryFromRow = (r: Row): MealEntry => ({
   grams: n(r.grams),
   nutrients: { kcal: n(r.kcal), proteinG: n(r.protein_g), fatG: n(r.fat_g), carbsG: n(r.carbs_g) },
   source: r.source as MealEntry['source'],
+  photoAnalysisId: s(r.photo_analysis_id),
   updatedAt: String(r.updated_at),
 });
 

@@ -1,5 +1,6 @@
 // Edge Function: пошук продуктів у зовнішніх базах.
 // POST { query: string } → { foods: RemoteFood[] }
+// POST { barcode: string } → { foods: [RemoteFood] | [] } — товар за штрихкодом з Open Food Facts
 // Секрети: USDA_API_KEY (необов'язковий — без нього шукаємо лише в Open Food Facts).
 // Деплой: npx supabase functions deploy food-search
 
@@ -46,6 +47,16 @@ async function searchOpenFoodFacts(query: string, limit: number): Promise<Remote
   return products.map((p) => mapOffProduct(p as never)).filter((f): f is RemoteFood => f !== null);
 }
 
+async function lookupBarcode(code: string): Promise<RemoteFood[]> {
+  const fields = 'code,product_name,product_name_uk,brands,serving_quantity,nutriments';
+  const data = (await fetchJson(
+    `https://world.openfoodfacts.org/api/v2/product/${encodeURIComponent(code)}.json?fields=${fields}&lc=uk`,
+  )) as { status?: number; product?: unknown };
+  if (data.status !== 1 || !data.product) return [];
+  const food = mapOffProduct(data.product as never);
+  return food ? [food] : [];
+}
+
 async function searchUsda(query: string, limit: number): Promise<RemoteFood[]> {
   const key = Deno.env.get('USDA_API_KEY');
   if (!key) return [];
@@ -72,12 +83,25 @@ Deno.serve(async (req) => {
     });
 
   let query = '';
+  let barcode = '';
   try {
-    const body = (await req.json()) as { query?: unknown };
+    const body = (await req.json()) as { query?: unknown; barcode?: unknown };
     query = typeof body.query === 'string' ? body.query.trim() : '';
+    barcode = typeof body.barcode === 'string' ? body.barcode.replace(/\D/g, '') : '';
   } catch {
     return json({ error: 'invalid_body' }, 400);
   }
+
+  if (barcode) {
+    if (barcode.length < 8 || barcode.length > 14) return json({ error: 'invalid_barcode' }, 400);
+    try {
+      return json({ foods: await lookupBarcode(barcode) });
+    } catch (e) {
+      console.warn('[food-search] barcode', String(e));
+      return json({ error: 'lookup_failed' }, 502);
+    }
+  }
+
   if (query.length < 2 || query.length > 80) return json({ error: 'invalid_query' }, 400);
 
   const [off, usda] = await Promise.allSettled([

@@ -51,6 +51,14 @@ docs/                    # PLAN.md, схеми, промти для AI
 - Зовнішні бази (Open Food Facts, USDA) — лише через Edge Function `food-search`; розбір відповідей —
   `supabase/functions/_shared/foodMappers.ts` (без Deno-залежностей, тестується Jest).
 
+## Claude API (розпізнавання фото)
+
+- Лише в Edge Function `analyze-meal` через `npm:@anthropic-ai/sdk` (версію зафіксовано). Модель — секрет
+  `CLAUDE_MODEL` (за замовчуванням `claude-opus-5-5`), effort задано явно, `fallbacks: "default"`.
+- Відповідь — строгий JSON через `output_config.format`; числові межі схема не підтримує, тому їх перевіряє
+  `validateMealAnalysis`. Перевіряй `stop_reason` (`refusal`, `max_tokens`) перед читанням відповіді.
+- Список українських страв для промпту генерує `npm run seed:build` (`_shared/uaDishes.ts`).
+
 ## Дизайн
 
 - Палітра «зал і крейда» (`src/theme/tokens.ts`). Кольори дисків IWF кодують лише дані:

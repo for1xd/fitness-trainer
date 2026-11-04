@@ -18,6 +18,9 @@ export interface NewEntry {
   mealType: MealType;
   date: string;
   source?: EntrySource;
+  /** Продукт не з бази (напр. оцінка з фото) — запис зберігає лише знімок КБЖВ */
+  detached?: boolean;
+  photoAnalysisId?: string;
 }
 
 interface NutritionState {
@@ -53,18 +56,28 @@ export const useNutrition = create<NutritionState>()(
       userFoods: [],
       recipes: [],
 
-      addEntry: ({ food, isRecipe, grams, mealType, date, source = 'manual' }) => {
+      addEntry: ({
+        food,
+        isRecipe,
+        grams,
+        mealType,
+        date,
+        source = 'manual',
+        detached,
+        photoAnalysisId,
+      }) => {
         const entry: MealEntry = {
           id: randomUUID(),
           date,
           eatenAt: now(),
           mealType,
-          foodId: isRecipe ? undefined : food.id,
-          recipeId: isRecipe ? food.id : undefined,
+          foodId: isRecipe || detached ? undefined : food.id,
+          recipeId: isRecipe && !detached ? food.id : undefined,
           name: food.brand ? `${food.name} (${food.brand})` : food.name,
           grams,
           nutrients: scaleNutrients(food.per100, grams),
           source: isRecipe ? 'recipe' : source,
+          photoAnalysisId,
           updatedAt: now(),
         };
         set((s) => ({ entries: [...s.entries, entry] }));

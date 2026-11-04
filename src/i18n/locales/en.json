@@ -220,7 +220,9 @@
     "deleteTitle": "Delete all data from this device?",
     "deleteBody": "Your profile, targets, diary, water, workouts and weight history will be erased from this device. This can't be undone.",
     "deleteConfirm": "Delete data",
-    "summary": "{{sex}}, {{age}} y.o., {{height}} cm, {{weight}} kg"
+    "summary": "{{sex}}, {{age}} y.o., {{height}} cm, {{weight}} kg",
+    "signIn": "Sign in or create an account",
+    "signInHint": "Data from this device will be kept and synced to your account."
   },
   "validation": {
     "range": "Enter a value from {{min}} to {{max}} {{unit}}",
@@ -539,5 +541,64 @@
     "wellbeing": "Felt: {{value}}",
     "notFound": "Workout not found",
     "tonnageLabel": "kg volume"
+  },
+  "photo": {
+    "title": "Meal photo",
+    "intro": "Take a photo of the plate from above so all the food is visible. We'll estimate weight and nutrition, and you'll check it before saving.",
+    "take": "Take photo",
+    "pick": "Choose from gallery",
+    "hint": "Hint (optional)",
+    "hintPlaceholder": "For example, borscht with sour cream",
+    "analyzing": "Recognising your meal…",
+    "analyzingHint": "This usually takes 10–30 seconds.",
+    "review": "Check the result",
+    "confidence": {
+      "high": "confident",
+      "medium": "approximate",
+      "low": "unsure"
+    },
+    "lowConfidence": "Recognition isn't confident. Check names and weights and correct them if needed.",
+    "fromDb": "nutrition from the Ukrainian dishes database",
+    "itemGrams": "{{name}}, weight",
+    "remove": "Remove {{name}}",
+    "total": "Total: {{kcal}} kcal",
+    "save": "Add to diary",
+    "retake": "Another photo",
+    "addMore": "Add food manually",
+    "empty": "All items removed. Take another photo or add food manually.",
+    "signIn": "Sign in",
+    "errors": {
+      "signedOut": "Photo recognition works when you're signed in: the photo is stored in your private storage.",
+      "notConfigured": "The server isn't connected yet, so photo recognition is unavailable. Add food through search.",
+      "upload": "Couldn't upload the photo. Check your connection and try again.",
+      "refused": "This photo couldn't be processed. Try another one or add food manually.",
+      "busy": "The recognition service is busy right now. Try again in a minute.",
+      "tooLarge": "The photo is too large. Try taking it again.",
+      "notFood": "No food visible in the photo. Take a closer photo of the plate.",
+      "network": "Can't reach the server. Check your connection and try again.",
+      "generic": "Couldn't recognise the meal. Try again or add food manually."
+    },
+    "permission": "To photograph food, allow camera access in your phone settings."
+  },
+  "barcode": {
+    "title": "Barcode",
+    "intro": "Point the camera at the barcode or type the digits under it.",
+    "manual": "Barcode digits",
+    "manualPlaceholder": "4820000000000",
+    "find": "Find product",
+    "searching": "Looking up the product…",
+    "invalid": "This code looks mistyped: the check digit doesn't match. Check the digits.",
+    "notFound": "No product with code {{code}} in Open Food Facts.",
+    "notFoundHint": "Add it yourself from the label — next time it'll be found by this code.",
+    "addOwn": "Add my own product",
+    "error": "Couldn't check the barcode. Check your connection and try again.",
+    "webHint": "Camera scanning works in the phone app. Here, type the digits under the barcode.",
+    "permission": "The camera is needed to scan barcodes.",
+    "allowCamera": "Allow camera",
+    "scanAgain": "Scan again"
+  },
+  "foodQuick": {
+    "photo": "Meal photo",
+    "barcode": "Barcode"
   }
 }

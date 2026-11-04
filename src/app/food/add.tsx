@@ -3,6 +3,7 @@ import { useDeferredValue, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ActivityIndicator, View } from 'react-native';
 
+import { saveRemoteFood } from '@/features/nutrition/api/saveRemote';
 import { FoodRow } from '@/features/nutrition/components/FoodRow';
 import {
   isRemoteSearchAvailable,
@@ -31,7 +32,6 @@ export default function AddFoodScreen() {
   const catalog = useCatalog();
   const recent = useRecentFoods();
   const recipes = useNutrition((s) => s.recipes);
-  const saveFood = useNutrition((s) => s.saveFood);
   const recipeIds = useMemo(() => new Set(recipes.map((r) => r.id)), [recipes]);
 
   const local = useMemo(() => searchFoods(catalog, deferred), [catalog, deferred]);
@@ -40,26 +40,7 @@ export default function AddFoodScreen() {
   const open = (food: Food) =>
     router.push({ pathname: '/food/[id]', params: { id: food.id, date, meal } });
 
-  const openRemote = (r: RemoteFood) => {
-    const food = saveFood({
-      source: r.source,
-      externalId: r.externalId,
-      barcode: r.barcode,
-      name: r.name,
-      brand: r.brand,
-      per100: r.per100,
-      portions: r.servingG
-        ? [
-            {
-              id: `${r.source}:${r.externalId}:serving`,
-              label: t('recipe.serving'),
-              grams: r.servingG,
-            },
-          ]
-        : [],
-    });
-    open(food);
-  };
+  const openRemote = (r: RemoteFood) => open(saveRemoteFood(r, t('recipe.serving')));
 
   const hasQuery = deferred.trim().length > 0;
   const remoteFoods = remote.data ?? [];
@@ -85,6 +66,22 @@ export default function AddFoodScreen() {
 
       {!hasQuery ? (
         <>
+          <View className="flex-row gap-3">
+            <Button
+              label={t('foodQuick.photo')}
+              variant="secondary"
+              compact
+              className="flex-1"
+              onPress={() => router.push({ pathname: '/food/photo', params: { date, meal } })}
+            />
+            <Button
+              label={t('foodQuick.barcode')}
+              variant="secondary"
+              compact
+              className="flex-1"
+              onPress={() => router.push({ pathname: '/food/barcode', params: { date, meal } })}
+            />
+          </View>
           {recent.length > 0 && params.tab !== 'recipes' ? (
             <Section title={t('food.recent')}>
               {recent.map((f, i) => (

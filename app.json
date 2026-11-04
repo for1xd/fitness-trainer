@@ -28,7 +28,21 @@
       "expo-status-bar",
       "expo-localization",
       "expo-font",
-      "expo-splash-screen"
+      "expo-splash-screen",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Камера потрібна, щоб фотографувати їжу та сканувати штрихкоди.",
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Доступ до фото потрібен, щоб додати фото страви або тренажера.",
+          "cameraPermission": "Камера потрібна, щоб фотографувати їжу."
+        }
+      ]
     ],
     "scheme": "fitnesstrainer",
     "experiments": {

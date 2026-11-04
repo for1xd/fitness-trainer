@@ -12,7 +12,12 @@ type Macro = 'kcal' | 'proteinG' | 'fatG' | 'carbsG';
 
 export default function NewFoodScreen() {
   const { t } = useTranslation();
-  const params = useLocalSearchParams<{ date?: string; meal?: MealType; name?: string }>();
+  const params = useLocalSearchParams<{
+    date?: string;
+    meal?: MealType;
+    name?: string;
+    barcode?: string;
+  }>();
   const saveFood = useNutrition((s) => s.saveFood);
   const [name, setName] = useState(params.name ?? '');
   const [brand, setBrand] = useState('');
@@ -45,6 +50,7 @@ export default function NewFoodScreen() {
       brand: brand.trim() || undefined,
       per100: { kcal, proteinG, fatG, carbsG },
       portions: [],
+      barcode: params.barcode || undefined,
     });
     router.replace({
       pathname: '/food/[id]',

@@ -15,6 +15,7 @@ import { useWorkouts } from '@/features/workouts/store';
 import { confirmAction } from '@/lib/confirm';
 import { parseIsoDate } from '@/lib/dates';
 import { formatNumber } from '@/lib/format';
+import { isSupabaseConfigured } from '@/lib/supabase';
 import { useOutbox } from '@/lib/sync/store';
 import { Button, Screen, Segmented, Text } from '@/ui';
 
@@ -27,6 +28,7 @@ export default function ProfileScreen() {
   const { theme, language, setTheme, setLanguage } = useSettings();
   const session = useAuth((s) => s.session);
   const signOut = useAuth((s) => s.signOut);
+  const setGuest = useAuth((s) => s.setGuest);
 
   const deleteLocal = async () => {
     const ok = await confirmAction({
@@ -104,6 +106,15 @@ export default function ProfileScreen() {
         </Text>
         {session ? (
           <Button label={t('profile.signOut')} variant="secondary" onPress={() => void signOut()} />
+        ) : isSupabaseConfigured ? (
+          <>
+            <Button
+              label={t('profile.signIn')}
+              variant="secondary"
+              onPress={() => setGuest(false)}
+            />
+            <Text variant="caption">{t('profile.signInHint')}</Text>
+          </>
         ) : null}
         <Button
           label={t('profile.deleteLocal')}

@@ -98,6 +98,19 @@ const lines = [
 ];
 
 writeFileSync(join(root, 'supabase/seed.sql'), lines.join('\n'));
+
+// Список українських страв для промпту розпізнавання фото (Edge Function analyze-meal)
+const dishes = foods
+  .filter((f) => f.source === 'ua_dish')
+  .map((f) => ({
+    slug: f.slug,
+    name: f.name_uk,
+    per100: { kcal: f.kcal_100g, proteinG: f.protein_100g, fatG: f.fat_100g, carbsG: f.carbs_100g },
+  }));
+writeFileSync(
+  join(root, 'supabase/functions/_shared/uaDishes.ts'),
+  `// ЗГЕНЕРОВАНО scripts/build-seed.mjs — не редагуй вручну.\nimport type { KnownDish } from './mealAnalysis.ts';\n\nexport const UA_DISHES: KnownDish[] = ${JSON.stringify(dishes, null, 1)};\n`,
+);
 console.log(
   `seed.sql: ${foods.length} продуктів, ${exercises.length} вправ, ${catalog.machine_types.length} типів тренажерів`,
 );
