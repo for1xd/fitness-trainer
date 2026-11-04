@@ -1,0 +1,152 @@
+{
+  "common": {
+    "next": "Next",
+    "back": "Back",
+    "cancel": "Cancel",
+    "kg": "kg",
+    "cm": "cm",
+    "g": "g",
+    "kcal": "kcal",
+    "ml": "ml",
+    "years": "years",
+    "decrease": "Decrease",
+    "increase": "Increase"
+  },
+  "disclaimer": "These numbers are estimates, not medical advice. If you have a chronic condition, are pregnant or breastfeeding, talk to a doctor first.",
+  "auth": {
+    "title": "Fitness Trainer",
+    "tagline": "Food, water and workouts in one place. Targets are calculated for your body and goal.",
+    "email": "Email",
+    "password": "Password",
+    "passwordHint": "At least 8 characters",
+    "signIn": "Sign in",
+    "signUp": "Create account",
+    "toSignUp": "No account yet? Create one",
+    "toSignIn": "Already have an account? Sign in",
+    "guest": "Continue without an account",
+    "guestHint": "Your data stays on this device only. You can create an account later.",
+    "notConfigured": "The server isn't connected yet, so sign-in is unavailable. You can use the app without an account.",
+    "checkEmail": "We sent an email to {{email}}. Open the link in it to confirm your account.",
+    "errors": {
+      "invalidCredentials": "Email or password doesn't match. Check them and try again.",
+      "emailTaken": "An account with this email already exists. Sign in instead.",
+      "weakPassword": "Password is too short. Use at least 8 characters.",
+      "invalidEmail": "This address looks mistyped. Example: name@gmail.com",
+      "network": "Can't reach the server. Check your connection and try again.",
+      "generic": "Couldn't sign in. Try again in a minute."
+    }
+  },
+  "onboarding": {
+    "stepOf": "Step {{current}} of {{total}}",
+    "about": { "title": "About you", "subtitle": "Sex and age affect your basal metabolic rate." },
+    "body": {
+      "title": "Height and weight",
+      "subtitle": "Weigh yourself in the morning before eating."
+    },
+    "activityStep": {
+      "title": "Activity",
+      "subtitle": "Pick based on a typical week, workouts included."
+    },
+    "goalStep": { "title": "Goal", "subtitle": "Calories are based on what you burn in a day." },
+    "sexLabel": "Sex",
+    "sex": { "male": "Male", "female": "Female" },
+    "age": "Age",
+    "height": "Height",
+    "weight": "Weight",
+    "activity": {
+      "sedentary": { "title": "Sedentary", "desc": "Desk job, little movement, no workouts" },
+      "light": { "title": "Lightly active", "desc": "1–3 workouts a week or lots of walking" },
+      "moderate": { "title": "Moderately active", "desc": "3–5 workouts a week" },
+      "high": { "title": "Very active", "desc": "6–7 workouts a week" },
+      "very_high": { "title": "Extremely active", "desc": "Physical job and daily workouts" }
+    },
+    "goal": {
+      "lose": { "title": "Lose weight", "desc": "Calorie deficit, more protein to keep muscle" },
+      "maintain": { "title": "Maintain", "desc": "Calories match what you burn" },
+      "gain": { "title": "Build muscle", "desc": "A small surplus for muscle growth" }
+    },
+    "paceLabel": "Pace",
+    "pace": { "slow": "Slow", "normal": "Moderate", "fast": "Fast" },
+    "paceExpected": "≈ {{value}} kg per week",
+    "calculate": "Calculate my targets"
+  },
+  "result": {
+    "title": "Your daily targets",
+    "kcalLabel": "kcal a day",
+    "protein": "Protein",
+    "fat": "Fat",
+    "carbs": "Carbs",
+    "water": "Water",
+    "waterValue": "{{value}} L a day",
+    "how": "How we calculated",
+    "bmr": "Basal metabolic rate (Mifflin–St Jeor): {{value}} kcal.",
+    "tdee": "With your activity you burn ≈ {{value}} kcal a day.",
+    "adjustment": "For your goal: {{value}} % of that.",
+    "adjustmentNone": "For your goal, calories match what you burn.",
+    "weekly": "Expected weight change: {{value}} kg per week.",
+    "warnings": {
+      "clamped_to_minimum": "Raised to a safe minimum. Below this it's hard to get enough nutrients.",
+      "fast_loss": "A fast pace is hard to sustain and costs muscle along with fat. A moderate pace works better.",
+      "fast_gain": "With fast gain, most of it is fat. A moderate pace builds more muscle.",
+      "underweight_loss": "Your weight is already below normal (BMI < 18.5). Losing weight isn't recommended — talk to a doctor.",
+      "minor": "Under 18 your needs are different. Talk to a doctor or coach before changing your diet."
+    },
+    "save": "Save and start",
+    "saveEdit": "Save changes",
+    "edit": "Change answers"
+  },
+  "tabs": {
+    "today": "Today",
+    "nutrition": "Food",
+    "workouts": "Workouts",
+    "progress": "Progress",
+    "profile": "Profile"
+  },
+  "today": {
+    "target": "kcal for today",
+    "water": "Water",
+    "weighIn": "Weigh-in",
+    "weighInHint": "Weigh yourself in the morning. Targets follow your weight trend, not a single reading.",
+    "logWeight": "Log weight",
+    "logged": "Logged. Trend: {{trend}} kg.",
+    "targetsUpdated": "Your weight trend changed, so your target is now {{kcal}} kcal."
+  },
+  "nutrition": {
+    "emptyTitle": "Food diary is coming",
+    "emptyBody": "Food search (including Ukrainian dishes), portions and recipes will live here. For now, your target is on the Today tab.",
+    "emptyAction": "See my target"
+  },
+  "workouts": {
+    "emptyTitle": "Workouts are coming",
+    "emptyBody": "A program for your gym, a calendar and a live workout mode with a rest timer will live here.",
+    "emptyAction": "See my target"
+  },
+  "progress": {
+    "title": "Weight",
+    "trend": "7-day trend",
+    "history": "Weigh-in history",
+    "emptyTitle": "No weigh-ins yet",
+    "emptyBody": "Log your weight on the Today tab and your history with a trend will show up here.",
+    "emptyAction": "Log weight"
+  },
+  "profile": {
+    "title": "Profile",
+    "params": "My details",
+    "edit": "Edit details",
+    "theme": "Theme",
+    "themeOptions": { "system": "System", "light": "Light", "dark": "Dark" },
+    "language": "Language",
+    "account": "Account",
+    "guestMode": "No account: data stays on this device",
+    "signOut": "Sign out",
+    "deleteLocal": "Delete data from this device",
+    "deleteTitle": "Delete all data from this device?",
+    "deleteBody": "Your profile, targets and weight history will be erased from this device. This can't be undone.",
+    "deleteConfirm": "Delete data",
+    "summary": "{{sex}}, {{age}} y.o., {{height}} cm, {{weight}} kg"
+  },
+  "validation": {
+    "range": "Enter a value from {{min}} to {{max}} {{unit}}",
+    "required": "Fill in this field"
+  }
+}

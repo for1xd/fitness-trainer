@@ -4,6 +4,7 @@
 Мова інтерфейсу — українська, з i18n (англійська — пізніше). Детальний план — `docs/PLAN.md`.
 
 ## Стек
+
 - **Expo (React Native) + TypeScript strict + Expo Router** — один код для iOS, Android, веб.
 - **Supabase** — Auth, Postgres (RLS), Storage (фото), Edge Functions (Deno).
 - **TanStack Query** — серверний стан; **Zustand** — локальний/UI-стан (живе тренування, онбординг).
@@ -13,17 +14,19 @@
 - **Тести**: Jest (`jest-expo`) для логіки; Playwright (скіл `webapp-testing`) — для веб-версії.
 
 ## Структура
+
 ```
-app/                     # Expo Router: лише екрани та layout-и, мінімум логіки
-  (auth)/  (onboarding)/  (tabs)/{today,nutrition,workouts,progress,profile}/
 src/
+  app/                   # Expo Router: лише екрани та layout-и, мінімум логіки
+    sign-in.tsx  onboarding/  (tabs)/{index,nutrition,workouts,progress,profile}.tsx
   features/<feature>/    # nutrition, water, onboarding, strength, workouts, catalog, progress, profile
     logic/               # чисті функції (формули) + *.test.ts — без React і без I/O
     api/                 # запити до Supabase / локальної БД
     hooks/  components/  store.ts
   ui/                    # дизайн-система: Button, Card, Ring, Sheet, …
-  lib/                   # supabase client, db (sqlite+drizzle), sync, i18n, units
-  theme/                 # токени кольорів, типографіка, spacing
+  lib/                   # supabase client, db (sqlite+drizzle), sync, форматування, дати
+  i18n/                  # i18next + locales/{uk,en}.json (ключі однакові — є тест)
+  theme/                 # палітра (CSS-змінні для NativeWind), ThemeProvider
 supabase/
   migrations/            # SQL-міграції (схема + RLS)
   functions/             # Edge Functions: analyze-meal, food-search, barcode-lookup
@@ -31,7 +34,15 @@ supabase/
 docs/                    # PLAN.md, схеми, промти для AI
 ```
 
+## Дизайн
+
+- Палітра «зал і крейда» (`src/theme/tokens.ts`). Кольори дисків IWF кодують лише дані:
+  білки — червоний, жири — жовтий, вуглеводи — зелений, вода — синій.
+- Кнопки — кольором тексту (`bg-ink`), не акцентом. Шрифти: Unbounded (цифри, заголовки), Manrope (текст).
+- Без ALL CAPS-міток, градієнтів і скла. Головна цифра екрана — велика (`variant="hero"`).
+
 ## Правила коду
+
 - TypeScript `strict`, без `any` (якщо неминуче — `unknown` + звуження).
 - Формули — тільки в `features/*/logic`, чисті функції, одиниці в назвах (`weightKg`, `heightCm`), покриті юніт-тестами.
 - Жодних ключів API в клієнті. Claude / USDA / інші ключі — лише в Edge Functions (`supabase secrets`). У клієнті — тільки `EXPO_PUBLIC_SUPABASE_URL` і anon key.
@@ -43,10 +54,18 @@ docs/                    # PLAN.md, схеми, промти для AI
 - Медичний дисклеймер «не є медичною порадою» — в онбордингу і на екрані норм.
 
 ## Скіли
+
 - `.claude/skills/frontend-design` — для всього UI.
 - `.claude/skills/webapp-testing` — перевірка веб-версії (`npx expo start --web`).
 
-## Команди (після етапу 1)
+## Особливості середовища
+
+- `npx expo install` потребує мережі до api.expo.dev; якщо вона закрита — `EXPO_OFFLINE=1 npx expo install <pkg>`
+  (версії беруться з `node_modules/expo/bundledNativeModules.json`).
+- TypeScript 6: `@types` не підключаються автоматично — список у `tsconfig.json → types`.
+
+## Команди
+
 ```
 npm install
 npx expo start            # dev (i — iOS, a — Android, w — веб)
