@@ -8,3 +8,7 @@ export { Screen } from './Screen';
 export { Segmented } from './Segmented';
 export { StepProgress } from './StepProgress';
 export { Text } from './Text';
+export { Header } from './Header';
+export { IconButton } from './IconButton';
+export { Ring } from './Ring';
+export { TextField } from './TextField';

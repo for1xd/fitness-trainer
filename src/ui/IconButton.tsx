@@ -1,0 +1,37 @@
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import type { ComponentProps } from 'react';
+import { Pressable } from 'react-native';
+
+import { useTheme } from '@/theme/ThemeProvider';
+
+interface Props {
+  icon: ComponentProps<typeof MaterialCommunityIcons>['name'];
+  /** Обов'язковий підпис для екранних читачів і підказки. */
+  label: string;
+  onPress: () => void;
+  disabled?: boolean;
+  tone?: 'default' | 'filled' | 'danger';
+}
+
+/** Квадратна кнопка з іконкою 48×48. */
+export function IconButton({ icon, label, onPress, disabled, tone = 'default' }: Props) {
+  const { colors } = useTheme();
+  const color = tone === 'filled' ? colors.inverse : tone === 'danger' ? colors.danger : colors.ink;
+  return (
+    <Pressable
+      accessibilityRole="button"
+      accessibilityLabel={label}
+      accessibilityState={{ disabled: !!disabled }}
+      // На вебі показує нативну підказку
+      {...({ title: label } as object)}
+      onPress={onPress}
+      disabled={disabled}
+      hitSlop={4}
+      className={`h-12 w-12 items-center justify-center rounded-xl ${
+        tone === 'filled' ? 'bg-ink active:opacity-80' : 'active:bg-line'
+      } ${disabled ? 'opacity-30' : ''}`}
+    >
+      <MaterialCommunityIcons name={icon} size={24} color={color} />
+    </Pressable>
+  );
+}

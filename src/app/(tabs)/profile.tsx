@@ -4,12 +4,15 @@ import { View } from 'react-native';
 
 import { useAuth } from '@/features/auth/store';
 import { calcAgeYears } from '@/features/onboarding/logic/nutrition';
+import { useNutrition } from '@/features/nutrition/store';
 import { useOnboarding } from '@/features/onboarding/store';
 import { latestWeightKg, useProfile } from '@/features/profile/store';
 import { useSettings, type Language, type ThemePreference } from '@/features/settings/store';
+import { useWater } from '@/features/water/store';
 import { confirmAction } from '@/lib/confirm';
 import { parseIsoDate } from '@/lib/dates';
 import { formatNumber } from '@/lib/format';
+import { useOutbox } from '@/lib/sync/store';
 import { Button, Screen, Segmented, Text } from '@/ui';
 
 export default function ProfileScreen() {
@@ -32,6 +35,9 @@ export default function ProfileScreen() {
     });
     if (!ok) return;
     resetProfile();
+    useNutrition.getState().reset();
+    useWater.getState().reset();
+    useOutbox.getState().reset();
     clearDraft();
     await signOut();
   };

@@ -47,7 +47,7 @@ export default function TabsLayout() {
         tabBarItemStyle: wide
           ? { borderRadius: 12, marginHorizontal: 12, minHeight: 48 }
           : undefined,
-        tabBarLabelStyle: { fontFamily: 'Manrope_600SemiBold', fontSize: wide ? 15 : 12 },
+        tabBarLabelStyle: { fontFamily: 'Manrope_600SemiBold', fontSize: wide ? 15 : 11 },
         sceneStyle: { backgroundColor: colors.bg },
       }}
     >

@@ -10,7 +10,14 @@
     "ml": "ml",
     "years": "years",
     "decrease": "Decrease",
-    "increase": "Increase"
+    "increase": "Increase",
+    "save": "Save",
+    "delete": "Delete",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "prevDay": "Previous day",
+    "nextDay": "Next day",
+    "liters": "L"
   },
   "disclaimer": "These numbers are estimates, not medical advice. If you have a chronic condition, are pregnant or breastfeeding, talk to a doctor first.",
   "auth": {
@@ -38,7 +45,10 @@
   },
   "onboarding": {
     "stepOf": "Step {{current}} of {{total}}",
-    "about": { "title": "About you", "subtitle": "Sex and age affect your basal metabolic rate." },
+    "about": {
+      "title": "About you",
+      "subtitle": "Sex and age affect your basal metabolic rate."
+    },
     "body": {
       "title": "Height and weight",
       "subtitle": "Weigh yourself in the morning before eating."
@@ -47,26 +57,60 @@
       "title": "Activity",
       "subtitle": "Pick based on a typical week, workouts included."
     },
-    "goalStep": { "title": "Goal", "subtitle": "Calories are based on what you burn in a day." },
+    "goalStep": {
+      "title": "Goal",
+      "subtitle": "Calories are based on what you burn in a day."
+    },
     "sexLabel": "Sex",
-    "sex": { "male": "Male", "female": "Female" },
+    "sex": {
+      "male": "Male",
+      "female": "Female"
+    },
     "age": "Age",
     "height": "Height",
     "weight": "Weight",
     "activity": {
-      "sedentary": { "title": "Sedentary", "desc": "Desk job, little movement, no workouts" },
-      "light": { "title": "Lightly active", "desc": "1–3 workouts a week or lots of walking" },
-      "moderate": { "title": "Moderately active", "desc": "3–5 workouts a week" },
-      "high": { "title": "Very active", "desc": "6–7 workouts a week" },
-      "very_high": { "title": "Extremely active", "desc": "Physical job and daily workouts" }
+      "sedentary": {
+        "title": "Sedentary",
+        "desc": "Desk job, little movement, no workouts"
+      },
+      "light": {
+        "title": "Lightly active",
+        "desc": "1–3 workouts a week or lots of walking"
+      },
+      "moderate": {
+        "title": "Moderately active",
+        "desc": "3–5 workouts a week"
+      },
+      "high": {
+        "title": "Very active",
+        "desc": "6–7 workouts a week"
+      },
+      "very_high": {
+        "title": "Extremely active",
+        "desc": "Physical job and daily workouts"
+      }
     },
     "goal": {
-      "lose": { "title": "Lose weight", "desc": "Calorie deficit, more protein to keep muscle" },
-      "maintain": { "title": "Maintain", "desc": "Calories match what you burn" },
-      "gain": { "title": "Build muscle", "desc": "A small surplus for muscle growth" }
+      "lose": {
+        "title": "Lose weight",
+        "desc": "Calorie deficit, more protein to keep muscle"
+      },
+      "maintain": {
+        "title": "Maintain",
+        "desc": "Calories match what you burn"
+      },
+      "gain": {
+        "title": "Build muscle",
+        "desc": "A small surplus for muscle growth"
+      }
     },
     "paceLabel": "Pace",
-    "pace": { "slow": "Slow", "normal": "Moderate", "fast": "Fast" },
+    "pace": {
+      "slow": "Slow",
+      "normal": "Moderate",
+      "fast": "Fast"
+    },
     "paceExpected": "≈ {{value}} kg per week",
     "calculate": "Calculate my targets"
   },
@@ -112,9 +156,15 @@
     "targetsUpdated": "Your weight trend changed, so your target is now {{kcal}} kcal."
   },
   "nutrition": {
-    "emptyTitle": "Food diary is coming",
-    "emptyBody": "Food search (including Ukrainian dishes), portions and recipes will live here. For now, your target is on the Today tab.",
-    "emptyAction": "See my target"
+    "title": "Food",
+    "eaten": "Eaten {{eaten}} of {{target}} kcal",
+    "left": "left",
+    "over": "over target",
+    "addTo": "Add to {{meal}}",
+    "emptyMeal": "Nothing yet",
+    "recipes": "My recipes",
+    "macroOf": "{{eaten}} of {{target}} g",
+    "addFood": "Add food"
   },
   "workouts": {
     "emptyTitle": "Workouts are coming",
@@ -134,19 +184,113 @@
     "params": "My details",
     "edit": "Edit details",
     "theme": "Theme",
-    "themeOptions": { "system": "System", "light": "Light", "dark": "Dark" },
+    "themeOptions": {
+      "system": "System",
+      "light": "Light",
+      "dark": "Dark"
+    },
     "language": "Language",
     "account": "Account",
     "guestMode": "No account: data stays on this device",
     "signOut": "Sign out",
     "deleteLocal": "Delete data from this device",
     "deleteTitle": "Delete all data from this device?",
-    "deleteBody": "Your profile, targets and weight history will be erased from this device. This can't be undone.",
+    "deleteBody": "Your profile, targets, food diary, water and weight history will be erased from this device. This can't be undone.",
     "deleteConfirm": "Delete data",
     "summary": "{{sex}}, {{age}} y.o., {{height}} cm, {{weight}} kg"
   },
   "validation": {
     "range": "Enter a value from {{min}} to {{max}} {{unit}}",
     "required": "Fill in this field"
+  },
+  "meals": {
+    "breakfast": "Breakfast",
+    "lunch": "Lunch",
+    "dinner": "Dinner",
+    "snack": "Snack"
+  },
+  "food": {
+    "searchTitle": "Add food",
+    "searchLabel": "Search for a dish or product",
+    "searchPlaceholder": "For example, borscht or buckwheat",
+    "recent": "Recent",
+    "myRecipes": "My recipes",
+    "createRecipe": "Create recipe",
+    "createFood": "Add my own product",
+    "createFoodNamed": "Add “{{name}}” as my product",
+    "local": "In the app's database",
+    "remote": "Open Food Facts and USDA",
+    "remoteLoading": "Searching Open Food Facts…",
+    "remoteError": "External databases are unavailable right now. Results from the app's database are above.",
+    "remoteOffline": "Open Food Facts and USDA search works when you're signed in.",
+    "noResults": "Nothing found for “{{query}}”",
+    "noResultsHint": "Try another name or add the product yourself from its label.",
+    "per100": "{{kcal}} kcal per 100 g",
+    "approx": "Approximate values for a standard recipe.",
+    "meal": "Meal",
+    "amount": "Amount",
+    "unitGrams": "g",
+    "add": "Add to diary",
+    "saveChanges": "Save changes",
+    "deleteEntry": "Delete entry",
+    "deleteTitle": "Delete “{{name}}” from the diary?",
+    "deleteBody": "The entry and its calories will be removed from this day.",
+    "notFound": "Product not found",
+    "notFoundBody": "It may have been deleted. Go back to search and pick another one.",
+    "backToSearch": "Back to search",
+    "grams": "{{grams}} g",
+    "newTitle": "My product",
+    "newHint": "Values per 100 g — you'll find them on the label.",
+    "name": "Name",
+    "brand": "Brand (optional)",
+    "kcal": "Calories",
+    "saveFood": "Save product",
+    "macrosMismatch": "Calories don't match the macros: macros give ≈ {{kcal}} kcal. Check the label.",
+    "source": {
+      "ua_dish": "Ukrainian cuisine",
+      "base": "Product",
+      "off": "Open Food Facts",
+      "usda": "USDA",
+      "user": "My product",
+      "ai": "From photo"
+    },
+    "portionCount": "How many: {{label}} of {{grams}} g"
+  },
+  "recipe": {
+    "newTitle": "New recipe",
+    "editTitle": "Recipe",
+    "name": "Recipe name",
+    "namePlaceholder": "For example, grandma's syrnyky",
+    "ingredients": "Ingredients",
+    "ingredientSearch": "Search for an ingredient",
+    "noIngredients": "Add ingredients and the nutrition is calculated for you.",
+    "remove": "Remove {{name}}",
+    "servings": "Servings",
+    "cookedWeight": "Cooked weight",
+    "cookedWeightHint": "Weigh the finished dish: cooking adds or removes water, which changes nutrition per 100 g. Optional.",
+    "perServing": "Per serving, {{grams}} g",
+    "total": "Whole dish, {{grams}} g",
+    "save": "Save recipe",
+    "delete": "Delete recipe",
+    "deleteTitle": "Delete the recipe “{{name}}”?",
+    "deleteBody": "Diary entries stay, but the recipe disappears from search.",
+    "serving": "serving",
+    "emptyTitle": "No recipes yet",
+    "emptyBody": "Build a dish from ingredients once, then log it by the serving.",
+    "edit": "Edit recipe"
+  },
+  "water": {
+    "title": "Water",
+    "of": "of {{target}} L",
+    "add": "+{{ml}} ml",
+    "addLabel": "Add {{ml}} ml of water",
+    "custom": "Other",
+    "customLabel": "Amount",
+    "addCustom": "Add",
+    "undo": "Undo last",
+    "trainingDay": "Training day",
+    "trainingHint": "Adds 500 ml to your target",
+    "done": "Today's water target reached",
+    "customLabelFull": "Custom amount of water"
   }
 }

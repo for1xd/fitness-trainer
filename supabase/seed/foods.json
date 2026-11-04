@@ -1,0 +1,5393 @@
+[
+ {
+  "id": "86c1ad6b-2aa5-59c9-ae34-1c3cbb88f1ab",
+  "slug": "borshch-ukrainskyi-z-miasom",
+  "source": "ua_dish",
+  "category": "soups",
+  "name_uk": "Борщ український з м'ясом",
+  "kcal_100g": 57,
+  "protein_100g": 3.1,
+  "fat_100g": 2.9,
+  "carbs_100g": 5.0,
+  "portions": [
+   {
+    "id": "5dba658e-d3e3-588e-be47-a7e404cefbf3",
+    "label_uk": "тарілка",
+    "grams": 300
+   },
+   {
+    "id": "92698e69-0a09-5e85-b326-131c2c8fa20b",
+    "label_uk": "пів тарілки",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "66832e50-4b18-5d6c-b7af-5f6923fd05e1",
+  "slug": "borshch-zelenyi-zi-shchavlem-i-iaitsem",
+  "source": "ua_dish",
+  "category": "soups",
+  "name_uk": "Борщ зелений зі щавлем і яйцем",
+  "kcal_100g": 45,
+  "protein_100g": 2.3,
+  "fat_100g": 2.2,
+  "carbs_100g": 4.1,
+  "portions": [
+   {
+    "id": "a06c79f9-a869-5ad0-995f-bfcd682a1fb9",
+    "label_uk": "тарілка",
+    "grams": 300
+   },
+   {
+    "id": "cb9a7574-9e8e-571c-9506-55b8a514462c",
+    "label_uk": "пів тарілки",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "0e3f8835-38ea-58e0-a68d-81eef7a07932",
+  "slug": "borshch-pisnyi",
+  "source": "ua_dish",
+  "category": "soups",
+  "name_uk": "Борщ пісний",
+  "kcal_100g": 38,
+  "protein_100g": 1.2,
+  "fat_100g": 1.5,
+  "carbs_100g": 5.2,
+  "portions": [
+   {
+    "id": "b501373e-e368-559b-9558-1eae5dc6da6d",
+    "label_uk": "тарілка",
+    "grams": 300
+   },
+   {
+    "id": "2237edf5-9d95-5e38-9c87-4d30b9c8658d",
+    "label_uk": "пів тарілки",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "ccd08dcb-3d85-59da-b2c4-7a1da1009fa7",
+  "slug": "borshch-z-kvasoleiu",
+  "source": "ua_dish",
+  "category": "soups",
+  "name_uk": "Борщ з квасолею",
+  "kcal_100g": 55,
+  "protein_100g": 2.4,
+  "fat_100g": 1.6,
+  "carbs_100g": 7.6,
+  "portions": [
+   {
+    "id": "fbdb0b72-d5d1-52ef-86b6-f7fc6ee1d721",
+    "label_uk": "тарілка",
+    "grams": 300
+   },
+   {
+    "id": "7883e3e9-664d-5504-b8f4-1c2ead1cd7ab",
+    "label_uk": "пів тарілки",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "674f81d2-ebbb-5263-ac85-f2bbfad4d220",
+  "slug": "kapusniak",
+  "source": "ua_dish",
+  "category": "soups",
+  "name_uk": "Капусняк",
+  "kcal_100g": 40,
+  "protein_100g": 1.8,
+  "fat_100g": 1.9,
+  "carbs_100g": 4.2,
+  "portions": [
+   {
+    "id": "1ab56b92-768c-5a9d-a359-093ab8120f0e",
+    "label_uk": "тарілка",
+    "grams": 300
+   },
+   {
+    "id": "cde86e51-8780-5454-a57e-2f36c0ed5822",
+    "label_uk": "пів тарілки",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "66ca7723-df80-5470-9bf6-e2322bd611a8",
+  "slug": "sup-kuriachyi-z-lokshynoiu",
+  "source": "ua_dish",
+  "category": "soups",
+  "name_uk": "Суп курячий з локшиною",
+  "kcal_100g": 48,
+  "protein_100g": 3.4,
+  "fat_100g": 1.6,
+  "carbs_100g": 5.0,
+  "portions": [
+   {
+    "id": "38de3972-8077-5845-9862-f0a01d2e2584",
+    "label_uk": "тарілка",
+    "grams": 300
+   },
+   {
+    "id": "9e4fb30c-30b6-5101-8ff0-0c6262192da9",
+    "label_uk": "пів тарілки",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "a9cd746a-68ad-50dd-aae1-21aa86215620",
+  "slug": "sup-horokhovyi-z-kopchenostiamy",
+  "source": "ua_dish",
+  "category": "soups",
+  "name_uk": "Суп гороховий з копченостями",
+  "kcal_100g": 72,
+  "protein_100g": 4.4,
+  "fat_100g": 2.9,
+  "carbs_100g": 7.2,
+  "portions": [
+   {
+    "id": "56591969-1967-50b5-86ca-3c9535b6b48c",
+    "label_uk": "тарілка",
+    "grams": 300
+   },
+   {
+    "id": "569b42f7-6ef4-50d4-bff0-e15f4f571e75",
+    "label_uk": "пів тарілки",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "f063c88a-c1e7-5303-ac06-0983353e65dc",
+  "slug": "sup-hrybnyi",
+  "source": "ua_dish",
+  "category": "soups",
+  "name_uk": "Суп грибний",
+  "kcal_100g": 30,
+  "protein_100g": 1.1,
+  "fat_100g": 1.4,
+  "carbs_100g": 3.5,
+  "portions": [
+   {
+    "id": "93f79a1c-cf4d-5be3-b80e-68e5fca0db94",
+    "label_uk": "тарілка",
+    "grams": 300
+   },
+   {
+    "id": "c6b8884f-7f6b-5687-ad0e-e23f44b9bcef",
+    "label_uk": "пів тарілки",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "6674284f-210d-50d3-ba9e-05ed25120c89",
+  "slug": "rozsolnyk",
+  "source": "ua_dish",
+  "category": "soups",
+  "name_uk": "Розсольник",
+  "kcal_100g": 45,
+  "protein_100g": 1.6,
+  "fat_100g": 2.2,
+  "carbs_100g": 5.0,
+  "portions": [
+   {
+    "id": "f7f1836d-8ff4-5d94-93a0-da7d2e3137bd",
+    "label_uk": "тарілка",
+    "grams": 300
+   },
+   {
+    "id": "ea01f976-479c-5ea9-b766-0aecfae39776",
+    "label_uk": "пів тарілки",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "63598080-1148-5b79-86d4-7b914d5c06a5",
+  "slug": "solianka-miasna",
+  "source": "ua_dish",
+  "category": "soups",
+  "name_uk": "Солянка м'ясна",
+  "kcal_100g": 69,
+  "protein_100g": 4.6,
+  "fat_100g": 4.6,
+  "carbs_100g": 2.4,
+  "portions": [
+   {
+    "id": "d520fde5-9aa3-53dd-b9f3-720637ad4e28",
+    "label_uk": "тарілка",
+    "grams": 300
+   },
+   {
+    "id": "8d749812-6445-590a-8750-3441b0e98466",
+    "label_uk": "пів тарілки",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "6a73be23-5a10-58a5-a118-afdf81593431",
+  "slug": "iushka-rybna",
+  "source": "ua_dish",
+  "category": "soups",
+  "name_uk": "Юшка рибна",
+  "kcal_100g": 45,
+  "protein_100g": 4.5,
+  "fat_100g": 1.8,
+  "carbs_100g": 2.9,
+  "portions": [
+   {
+    "id": "504c2370-0e1c-5c14-a6d7-4549db2ebe47",
+    "label_uk": "тарілка",
+    "grams": 300
+   },
+   {
+    "id": "a70a7431-4ed5-5216-8030-2b394fc7f8f3",
+    "label_uk": "пів тарілки",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "6528e181-ab49-5837-80e8-967299a22c39",
+  "slug": "sup-piure-harbuzovyi",
+  "source": "ua_dish",
+  "category": "soups",
+  "name_uk": "Суп-пюре гарбузовий",
+  "kcal_100g": 45,
+  "protein_100g": 1.0,
+  "fat_100g": 2.2,
+  "carbs_100g": 5.4,
+  "portions": [
+   {
+    "id": "579120c7-f6e2-536c-9234-94f42aa7b4ab",
+    "label_uk": "тарілка",
+    "grams": 300
+   },
+   {
+    "id": "7af9ec15-d33f-5540-b0e5-71ae47d35399",
+    "label_uk": "пів тарілки",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "38a2d3d7-24c2-5cd6-8b08-d2c0ff6524f2",
+  "slug": "sup-z-frykadelkamy",
+  "source": "ua_dish",
+  "category": "soups",
+  "name_uk": "Суп з фрикадельками",
+  "kcal_100g": 50,
+  "protein_100g": 3.0,
+  "fat_100g": 2.4,
+  "carbs_100g": 4.2,
+  "portions": [
+   {
+    "id": "af15e8cc-aa3d-5d50-a5b2-a64f6ff1cd5f",
+    "label_uk": "тарілка",
+    "grams": 300
+   },
+   {
+    "id": "74485d3f-53cb-5839-819c-dd0cb6265834",
+    "label_uk": "пів тарілки",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "816016bd-37bf-5b03-a1a5-e4fec1c5d26f",
+  "slug": "okroshka-na-kvasi",
+  "source": "ua_dish",
+  "category": "soups",
+  "name_uk": "Окрошка на квасі",
+  "kcal_100g": 52,
+  "protein_100g": 2.2,
+  "fat_100g": 2.3,
+  "carbs_100g": 6.0,
+  "portions": [
+   {
+    "id": "ce6dd716-078f-5617-b78f-00b7d0eec17c",
+    "label_uk": "тарілка",
+    "grams": 300
+   },
+   {
+    "id": "b5c65649-1b68-5bcf-9404-a4c270a33d10",
+    "label_uk": "пів тарілки",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "41c94620-41ec-5b33-8b17-435280094681",
+  "slug": "kholodnyk-buriakovyi",
+  "source": "ua_dish",
+  "category": "soups",
+  "name_uk": "Холодник буряковий",
+  "kcal_100g": 45,
+  "protein_100g": 1.8,
+  "fat_100g": 2.0,
+  "carbs_100g": 4.9,
+  "portions": [
+   {
+    "id": "f28c2bb1-371e-5ff8-9629-3ac052be91dc",
+    "label_uk": "тарілка",
+    "grams": 300
+   },
+   {
+    "id": "faf72b58-7ac8-589d-bbe4-4fe8f8c491fe",
+    "label_uk": "пів тарілки",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "3baae258-5425-5802-ab14-ada4b7b49295",
+  "slug": "kulish",
+  "source": "ua_dish",
+  "category": "soups",
+  "name_uk": "Куліш",
+  "kcal_100g": 95,
+  "protein_100g": 4.5,
+  "fat_100g": 3.9,
+  "carbs_100g": 10.5,
+  "portions": [
+   {
+    "id": "26482e97-ca9b-50fe-9b66-5b52e3700e87",
+    "label_uk": "тарілка",
+    "grams": 300
+   },
+   {
+    "id": "57b2a478-7570-5810-aa5f-c974e6a00770",
+    "label_uk": "пів тарілки",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "71af2e78-7479-557f-87af-824277d73083",
+  "slug": "sup-hrechanyi",
+  "source": "ua_dish",
+  "category": "soups",
+  "name_uk": "Суп гречаний",
+  "kcal_100g": 42,
+  "protein_100g": 1.8,
+  "fat_100g": 1.5,
+  "carbs_100g": 5.6,
+  "portions": [
+   {
+    "id": "4e04ba98-13c2-5ea1-ba92-022d76a7d2f1",
+    "label_uk": "тарілка",
+    "grams": 300
+   },
+   {
+    "id": "2bf1a322-a56d-5ae3-b7fc-e71f26622b46",
+    "label_uk": "пів тарілки",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "fca3f0f1-8ea4-5c41-80c6-5c3bca86c9d0",
+  "slug": "bohrach",
+  "source": "ua_dish",
+  "category": "soups",
+  "name_uk": "Бограч",
+  "kcal_100g": 85,
+  "protein_100g": 6.5,
+  "fat_100g": 4.8,
+  "carbs_100g": 4.2,
+  "portions": [
+   {
+    "id": "e6b6401f-4721-55a8-beaf-67c0f6b9a772",
+    "label_uk": "тарілка",
+    "grams": 300
+   },
+   {
+    "id": "68fe4637-05e2-5706-9815-d85ccb59c345",
+    "label_uk": "пів тарілки",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "1a6bf057-08d4-5d45-afb8-22908fdd56bc",
+  "slug": "halushky-poltavski-v-bulioni",
+  "source": "ua_dish",
+  "category": "soups",
+  "name_uk": "Галушки полтавські в бульйоні",
+  "kcal_100g": 90,
+  "protein_100g": 4.0,
+  "fat_100g": 3.0,
+  "carbs_100g": 12.0,
+  "portions": [
+   {
+    "id": "ebe0eed0-ae2e-51b0-be42-c3a044a915a0",
+    "label_uk": "тарілка",
+    "grams": 300
+   },
+   {
+    "id": "8e73d7a8-1f0b-5178-916b-ffeedbd9c528",
+    "label_uk": "пів тарілки",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "3cf8382c-4a9d-5e88-8fc0-1ec209db391d",
+  "slug": "sup-rysovyi-z-kurkoiu",
+  "source": "ua_dish",
+  "category": "soups",
+  "name_uk": "Суп рисовий з куркою",
+  "kcal_100g": 45,
+  "protein_100g": 3.0,
+  "fat_100g": 1.5,
+  "carbs_100g": 5.0,
+  "portions": [
+   {
+    "id": "7f18b71f-e441-50a8-8b91-14837aa7520f",
+    "label_uk": "тарілка",
+    "grams": 300
+   },
+   {
+    "id": "421c04c5-76a6-5ecb-b90b-23f72408a950",
+    "label_uk": "пів тарілки",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "fc123beb-7ab2-555f-be59-43691e0bbc97",
+  "slug": "sup-ovochevyi",
+  "source": "ua_dish",
+  "category": "soups",
+  "name_uk": "Суп овочевий",
+  "kcal_100g": 35,
+  "protein_100g": 1.0,
+  "fat_100g": 1.5,
+  "carbs_100g": 4.5,
+  "portions": [
+   {
+    "id": "715dbed5-d30b-5682-942b-9e111a9ff561",
+    "label_uk": "тарілка",
+    "grams": 300
+   },
+   {
+    "id": "8dd6d51a-da0b-5856-b991-116dfc4b7d2a",
+    "label_uk": "пів тарілки",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "d06ce2dd-cf64-55b1-b76b-f25b2cbcb37b",
+  "slug": "bulion-kuriachyi",
+  "source": "ua_dish",
+  "category": "soups",
+  "name_uk": "Бульйон курячий",
+  "kcal_100g": 20,
+  "protein_100g": 2.5,
+  "fat_100g": 1.0,
+  "carbs_100g": 0.3,
+  "portions": [
+   {
+    "id": "623f60aa-770a-5006-a876-a940f30b1142",
+    "label_uk": "чашка",
+    "grams": 250
+   },
+   {
+    "id": "06f10820-c119-5412-8bb9-c61897fa4d49",
+    "label_uk": "тарілка",
+    "grams": 300
+   },
+   {
+    "id": "be61471e-6d81-5a74-bd41-544acfd62db2",
+    "label_uk": "пів тарілки",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "f16fac2e-312e-5c2d-9d89-14e350602f55",
+  "slug": "hrechka-varena",
+  "source": "ua_dish",
+  "category": "porridge",
+  "name_uk": "Гречка варена",
+  "kcal_100g": 110,
+  "protein_100g": 4.2,
+  "fat_100g": 1.1,
+  "carbs_100g": 21.3,
+  "portions": [
+   {
+    "id": "9c2be1d5-74d3-55b5-8b0b-7776195bc5fa",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "1c6be770-b31b-5536-bb2a-6467b16f4711",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "c9d81727-ce11-5d8c-b50a-2fd7c3033762",
+  "slug": "hrechka-z-miasom-po-kupetsky",
+  "source": "ua_dish",
+  "category": "porridge",
+  "name_uk": "Гречка з м'ясом по-купецьки",
+  "kcal_100g": 150,
+  "protein_100g": 8.5,
+  "fat_100g": 6.5,
+  "carbs_100g": 14.5,
+  "portions": [
+   {
+    "id": "9190d6dc-e059-5a92-8b63-93df970bd1ea",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "3d0f8465-0f27-5c3b-8380-1a9081069916",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "2f19fa80-26bc-5d36-8a0a-c927424904b9",
+  "slug": "hrechka-z-hrybamy-i-tsybuleiu",
+  "source": "ua_dish",
+  "category": "porridge",
+  "name_uk": "Гречка з грибами й цибулею",
+  "kcal_100g": 120,
+  "protein_100g": 4.0,
+  "fat_100g": 3.5,
+  "carbs_100g": 18.5,
+  "portions": [
+   {
+    "id": "b0820ca6-4100-540a-a53c-3d25f2bbc67e",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "9b59fbde-f847-5153-9887-c464a1bd9f1a",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "732f99e4-28fb-590a-8ea3-03cc58730650",
+  "slug": "rys-varenyi",
+  "source": "ua_dish",
+  "category": "sides",
+  "name_uk": "Рис варений",
+  "kcal_100g": 116,
+  "protein_100g": 2.2,
+  "fat_100g": 0.5,
+  "carbs_100g": 24.9,
+  "portions": [
+   {
+    "id": "f2ad87ec-4642-5283-b902-9e9fa665db33",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "2c5fb752-0ff9-532a-b30d-76bbf63685ea",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "73232e9c-b58f-5893-8baf-49603278287a",
+  "slug": "plov-zi-svynynoiu",
+  "source": "ua_dish",
+  "category": "porridge",
+  "name_uk": "Плов зі свининою",
+  "kcal_100g": 195,
+  "protein_100g": 6.8,
+  "fat_100g": 9.5,
+  "carbs_100g": 20.5,
+  "portions": [
+   {
+    "id": "47ace439-b9da-55cd-baeb-62c845ef2ca0",
+    "label_uk": "тарілка",
+    "grams": 300
+   },
+   {
+    "id": "ad60cff0-8aec-569e-9d44-98693de51e39",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "652ecbf4-b92a-5449-9142-f2f6b732c2c0",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "a206d555-88f2-5f81-99af-1f9e1adb71f4",
+  "slug": "plov-z-kurkoiu",
+  "source": "ua_dish",
+  "category": "porridge",
+  "name_uk": "Плов з куркою",
+  "kcal_100g": 160,
+  "protein_100g": 8.5,
+  "fat_100g": 5.5,
+  "carbs_100g": 19.0,
+  "portions": [
+   {
+    "id": "80e3d37e-69a6-5e62-9c63-bb766af548a0",
+    "label_uk": "тарілка",
+    "grams": 300
+   },
+   {
+    "id": "f6228c8f-5a8a-5652-9478-d708cc7a57be",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "78135726-f5a9-54ee-8ece-7872f1f1fc1f",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "d1185e11-1bf2-5d65-8399-eb2653d0bce5",
+  "slug": "pshoniana-kasha-na-vodi",
+  "source": "ua_dish",
+  "category": "porridge",
+  "name_uk": "Пшоняна каша на воді",
+  "kcal_100g": 92,
+  "protein_100g": 3.0,
+  "fat_100g": 0.7,
+  "carbs_100g": 17.0,
+  "portions": [
+   {
+    "id": "0997daac-06c5-5c42-a036-b92850cf4c94",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "8930a28a-80cc-58a1-bafc-eadc599016e3",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "2317de87-34cb-560c-be33-9376fd28b3fa",
+  "slug": "pshoniana-kasha-z-harbuzom-na-molotsi",
+  "source": "ua_dish",
+  "category": "porridge",
+  "name_uk": "Пшоняна каша з гарбузом на молоці",
+  "kcal_100g": 110,
+  "protein_100g": 3.2,
+  "fat_100g": 3.0,
+  "carbs_100g": 17.5,
+  "portions": [
+   {
+    "id": "d2123fc0-6d70-5cbc-9b5a-ead2564b0e1b",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "60ffb941-a9cc-5a07-9ee8-2b27a9c39513",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "2213e93c-fb23-5a74-b2b0-927b8e79b67b",
+  "slug": "vivsianka-na-molotsi",
+  "source": "ua_dish",
+  "category": "porridge",
+  "name_uk": "Вівсянка на молоці",
+  "kcal_100g": 102,
+  "protein_100g": 3.2,
+  "fat_100g": 4.1,
+  "carbs_100g": 14.2,
+  "portions": [
+   {
+    "id": "b8fa4cff-a6e5-55c6-8ee3-8775f8970c15",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "e3415313-06cf-58f6-a162-2444db47cc4e",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "dd3b152c-724f-5316-bd8e-8f77f881ccdc",
+  "slug": "vivsianka-na-vodi",
+  "source": "ua_dish",
+  "category": "porridge",
+  "name_uk": "Вівсянка на воді",
+  "kcal_100g": 88,
+  "protein_100g": 3.0,
+  "fat_100g": 1.7,
+  "carbs_100g": 15.0,
+  "portions": [
+   {
+    "id": "9dee758b-5658-5686-90d1-62cfa789cea4",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "dd2c00da-97be-5d8c-9456-40a60010291d",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "ab1fe15e-6018-53a9-8ec2-2aa30639c674",
+  "slug": "manna-kasha-na-molotsi",
+  "source": "ua_dish",
+  "category": "porridge",
+  "name_uk": "Манна каша на молоці",
+  "kcal_100g": 98,
+  "protein_100g": 3.0,
+  "fat_100g": 3.2,
+  "carbs_100g": 15.0,
+  "portions": [
+   {
+    "id": "cb00a2d8-8c77-55d6-b4c4-571b58779136",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "cfd4ac92-5c1e-5a68-bd42-30bac6ec2e8d",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "b11f93c2-bcc5-5298-b6cb-f2c841966aaa",
+  "slug": "perlova-kasha",
+  "source": "ua_dish",
+  "category": "porridge",
+  "name_uk": "Перлова каша",
+  "kcal_100g": 109,
+  "protein_100g": 3.1,
+  "fat_100g": 0.4,
+  "carbs_100g": 22.2,
+  "portions": [
+   {
+    "id": "91fcdac9-2c43-52db-833a-87000f5c825f",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "b2ac2896-6cbd-519e-9641-63614441195a",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "4a1e2678-4dda-5d0a-8112-561a78aaa844",
+  "slug": "iachna-kasha",
+  "source": "ua_dish",
+  "category": "porridge",
+  "name_uk": "Ячна каша",
+  "kcal_100g": 96,
+  "protein_100g": 3.1,
+  "fat_100g": 0.4,
+  "carbs_100g": 19.7,
+  "portions": [
+   {
+    "id": "3b902bb6-cc3c-5747-975e-97586a804499",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "debdb213-963e-5239-b5e0-60167a69d063",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "1bc4dd6a-4a6c-5ef5-9a99-8dbb1fb1e99c",
+  "slug": "banosh-z-brynzoiu-i-shkvarkamy",
+  "source": "ua_dish",
+  "category": "porridge",
+  "name_uk": "Банош з бринзою і шкварками",
+  "kcal_100g": 230,
+  "protein_100g": 6.5,
+  "fat_100g": 15.0,
+  "carbs_100g": 17.5,
+  "portions": [
+   {
+    "id": "8cf23d66-d662-5c1c-bc2d-b1cf5fcd2c25",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "6b37525d-27f2-5bdc-a0c7-f56e971bddad",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "7076409c-9636-570f-b03e-d1a1774e82db",
+  "slug": "mamalyha",
+  "source": "ua_dish",
+  "category": "porridge",
+  "name_uk": "Мамалига",
+  "kcal_100g": 100,
+  "protein_100g": 2.5,
+  "fat_100g": 0.8,
+  "carbs_100g": 21.0,
+  "portions": [
+   {
+    "id": "82bf0fdf-de42-5436-97b5-ee181a2112f8",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "20a61d4b-2665-5705-9e29-ad0ccb78865c",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "db18db26-854b-585e-86d2-d00e8c77598e",
+  "slug": "kartopliane-piure",
+  "source": "ua_dish",
+  "category": "sides",
+  "name_uk": "Картопляне пюре",
+  "kcal_100g": 106,
+  "protein_100g": 2.5,
+  "fat_100g": 4.2,
+  "carbs_100g": 14.5,
+  "portions": [
+   {
+    "id": "ca628ae9-ab09-5a47-b15d-836119f74529",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "2685e7f3-101c-591d-9f12-9747ec5e86f3",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "11626f6a-f98d-56f6-b024-7b95b470375d",
+  "slug": "kartoplia-varena",
+  "source": "ua_dish",
+  "category": "sides",
+  "name_uk": "Картопля варена",
+  "kcal_100g": 82,
+  "protein_100g": 2.0,
+  "fat_100g": 0.4,
+  "carbs_100g": 16.7,
+  "portions": [
+   {
+    "id": "45cf88f3-2b80-56d9-8ada-c4ac569082aa",
+    "label_uk": "шт.",
+    "grams": 100
+   },
+   {
+    "id": "6ab2c185-4644-549c-a580-76f1f695015d",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "a28b7961-ce5f-527e-a63f-3e171d5ba629",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "61578ad8-8916-50ec-a709-fc16dffc8aa0",
+  "slug": "kartoplia-smazhena",
+  "source": "ua_dish",
+  "category": "sides",
+  "name_uk": "Картопля смажена",
+  "kcal_100g": 192,
+  "protein_100g": 2.8,
+  "fat_100g": 9.5,
+  "carbs_100g": 23.4,
+  "portions": [
+   {
+    "id": "59493527-65b7-5f54-87f4-3b48b5349ae8",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "cf75b5de-bd64-5c74-9fc6-342cdbf9632a",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "0692ff78-0954-540a-bcb2-b68c539bf50c",
+  "slug": "kartoplia-pechena-po-seliansky",
+  "source": "ua_dish",
+  "category": "sides",
+  "name_uk": "Картопля печена по-селянськи",
+  "kcal_100g": 140,
+  "protein_100g": 2.6,
+  "fat_100g": 6.0,
+  "carbs_100g": 19.0,
+  "portions": [
+   {
+    "id": "b08a3dd5-2950-56ae-b03a-fff918792f5f",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "f44cbfca-adc8-5f21-af39-21fbb62e34be",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "93e8c05e-eb9d-5e45-850c-f41863b77f1e",
+  "slug": "kartoplia-z-hrybamy-smazhena",
+  "source": "ua_dish",
+  "category": "sides",
+  "name_uk": "Картопля з грибами смажена",
+  "kcal_100g": 140,
+  "protein_100g": 2.6,
+  "fat_100g": 7.6,
+  "carbs_100g": 15.0,
+  "portions": [
+   {
+    "id": "9941f879-958e-5b3d-8a1c-aeb7f984ab8a",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "75997255-a756-5c35-a84d-87f87a2ae4ff",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "7d0c5cc8-2203-5d64-9e05-51c3cd5b9675",
+  "slug": "makarony-vareni",
+  "source": "ua_dish",
+  "category": "sides",
+  "name_uk": "Макарони варені",
+  "kcal_100g": 158,
+  "protein_100g": 5.8,
+  "fat_100g": 0.9,
+  "carbs_100g": 30.9,
+  "portions": [
+   {
+    "id": "5d25dda6-0d93-5300-9b91-eb950f125c78",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "a21150ad-a9a0-5afb-bdf9-70692d9ad374",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "f98bc127-cbb4-5ae6-a79c-9807291c2a02",
+  "slug": "makarony-po-flotsky",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Макарони по-флотськи",
+  "kcal_100g": 180,
+  "protein_100g": 8.0,
+  "fat_100g": 7.5,
+  "carbs_100g": 20.0,
+  "portions": [
+   {
+    "id": "009bad2a-c84a-5aff-ba04-d9dfe5c1b61f",
+    "label_uk": "тарілка",
+    "grams": 300
+   },
+   {
+    "id": "c5a72471-d56c-56f6-98d0-115ffc37440e",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "8b146d9a-170d-5e7e-b665-37c518e337fc",
+  "slug": "bulhur-varenyi",
+  "source": "ua_dish",
+  "category": "sides",
+  "name_uk": "Булгур варений",
+  "kcal_100g": 83,
+  "protein_100g": 3.1,
+  "fat_100g": 0.2,
+  "carbs_100g": 18.6,
+  "portions": [
+   {
+    "id": "31ea1ff6-4679-50e3-855a-4c78322e1e27",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "1c7251e2-ecc4-5fc5-8eb6-9c11fbb97e33",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "08b8eff2-f8f1-5f46-b154-a3f08cac9906",
+  "slug": "kuskus-varenyi",
+  "source": "ua_dish",
+  "category": "sides",
+  "name_uk": "Кускус варений",
+  "kcal_100g": 112,
+  "protein_100g": 3.8,
+  "fat_100g": 0.2,
+  "carbs_100g": 23.2,
+  "portions": [
+   {
+    "id": "1ad1f7a7-d8b2-5764-9fa0-8c02846276c5",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "cc441145-8596-5d52-ab3c-0e8bf752c289",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "119795f1-e3f1-58ee-81f9-e941a552b357",
+  "slug": "ovocheve-rahu",
+  "source": "ua_dish",
+  "category": "sides",
+  "name_uk": "Овочеве рагу",
+  "kcal_100g": 70,
+  "protein_100g": 1.6,
+  "fat_100g": 3.5,
+  "carbs_100g": 8.5,
+  "portions": [
+   {
+    "id": "79488fa5-30f2-5dad-8dd4-2b2c07faf404",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "793bdd47-112d-5956-93fc-69c20befa2b8",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "c9c67cef-0303-5f83-8709-e4e9d1f3b08f",
+  "slug": "kapusta-tushkovana",
+  "source": "ua_dish",
+  "category": "sides",
+  "name_uk": "Капуста тушкована",
+  "kcal_100g": 75,
+  "protein_100g": 1.8,
+  "fat_100g": 4.0,
+  "carbs_100g": 8.0,
+  "portions": [
+   {
+    "id": "6b7d726b-0a21-5803-90b3-2cbec1a4bb26",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "7b0b6339-fee4-517a-9bd5-7d2ec2601a5b",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "f74050c0-d744-5862-84e5-b99745f0a126",
+  "slug": "bihos-z-kovbasoiu",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Бігос з ковбасою",
+  "kcal_100g": 120,
+  "protein_100g": 6.0,
+  "fat_100g": 8.0,
+  "carbs_100g": 6.0,
+  "portions": [
+   {
+    "id": "ae9c8cd2-7f1c-575f-91e9-176fcdded68c",
+    "label_uk": "порція",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "58321e5e-cf2a-5312-9b84-54bcc6d992cf",
+  "slug": "kvasolia-tushkovana-v-tomati",
+  "source": "ua_dish",
+  "category": "sides",
+  "name_uk": "Квасоля тушкована в томаті",
+  "kcal_100g": 105,
+  "protein_100g": 6.0,
+  "fat_100g": 3.0,
+  "carbs_100g": 13.5,
+  "portions": [
+   {
+    "id": "d7c57361-2fb5-50d5-8f5c-8be7a0621c0c",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "600fd55a-88c5-578d-91f3-d36bec5f4efb",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "6e8bfa20-9f23-5c5b-9c0e-70e9527c8dae",
+  "slug": "sochevytsia-varena",
+  "source": "ua_dish",
+  "category": "sides",
+  "name_uk": "Сочевиця варена",
+  "kcal_100g": 116,
+  "protein_100g": 9.0,
+  "fat_100g": 0.4,
+  "carbs_100g": 20.1,
+  "portions": [
+   {
+    "id": "04ebc18b-4de1-5c96-ab25-97e843981e5c",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "471b3dde-132b-5c23-80f9-5083ffab1810",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "0bfbf3d1-849f-5b30-b09f-3fcc7952fa94",
+  "slug": "hryby-smazheni-z-tsybuleiu",
+  "source": "ua_dish",
+  "category": "sides",
+  "name_uk": "Гриби смажені з цибулею",
+  "kcal_100g": 120,
+  "protein_100g": 3.5,
+  "fat_100g": 10.0,
+  "carbs_100g": 4.0,
+  "portions": [
+   {
+    "id": "694a9247-3bdc-53ff-bc73-745fb9257465",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "3f8bec19-6ede-5230-9da2-dcc1986a7b08",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "dcaba2d2-2001-5cee-9cf1-af5184978b02",
+  "slug": "kabachky-smazheni-z-chasnykom",
+  "source": "ua_dish",
+  "category": "sides",
+  "name_uk": "Кабачки смажені з часником",
+  "kcal_100g": 105,
+  "protein_100g": 1.2,
+  "fat_100g": 7.8,
+  "carbs_100g": 7.5,
+  "portions": [
+   {
+    "id": "8e810b26-bbe5-5ae4-8bc7-edf12aefb8a8",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "2b1a51f2-ac85-5b23-99ad-af25895259f8",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "2ac9e7fd-fbf7-5225-8186-edf39007f367",
+  "slug": "baklazhany-zapecheni",
+  "source": "ua_dish",
+  "category": "sides",
+  "name_uk": "Баклажани запечені",
+  "kcal_100g": 75,
+  "protein_100g": 1.5,
+  "fat_100g": 4.5,
+  "carbs_100g": 7.0,
+  "portions": [
+   {
+    "id": "d2e1991f-cd71-52e6-9d7f-4d959af0d546",
+    "label_uk": "порція",
+    "grams": 200
+   },
+   {
+    "id": "df20ab82-594d-5a30-b26e-7db927c6aad7",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "58c5ee0d-4578-5fdb-8e6c-e13d3350d183",
+  "slug": "perets-farshyrovanyi",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Перець фарширований",
+  "kcal_100g": 110,
+  "protein_100g": 6.0,
+  "fat_100g": 5.5,
+  "carbs_100g": 10.0,
+  "portions": [
+   {
+    "id": "1547d156-652b-5884-9e2b-fb78706a6016",
+    "label_uk": "шт.",
+    "grams": 180
+   },
+   {
+    "id": "5df12903-063b-5e3d-8763-adc7dda0b5e4",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "130335a3-56d5-5da0-ab37-753727e3dbd9",
+  "slug": "kotleta-po-kyivsky",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Котлета по-київськи",
+  "kcal_100g": 255,
+  "protein_100g": 15.5,
+  "fat_100g": 18.5,
+  "carbs_100g": 7.8,
+  "portions": [
+   {
+    "id": "06e30f51-5dc3-529a-ab39-59876dd45af1",
+    "label_uk": "шт.",
+    "grams": 160
+   },
+   {
+    "id": "cd02b8d8-dde7-5cb7-b69d-c9d68d8185a9",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "0e279333-0b74-5e3f-9b52-a932c2dd182f",
+  "slug": "kotleta-domashnia",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Котлета домашня",
+  "kcal_100g": 230,
+  "protein_100g": 14.5,
+  "fat_100g": 15.0,
+  "carbs_100g": 9.5,
+  "portions": [
+   {
+    "id": "8cb8289d-35b6-591c-9fc0-9a97f3764537",
+    "label_uk": "шт.",
+    "grams": 90
+   },
+   {
+    "id": "03e06eb7-f2b8-5762-bc8f-65b5ca075a23",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "6ccce732-a21d-5fbc-9146-65552aacf545",
+  "slug": "kotleta-kuriacha",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Котлета куряча",
+  "kcal_100g": 190,
+  "protein_100g": 16.0,
+  "fat_100g": 10.0,
+  "carbs_100g": 9.0,
+  "portions": [
+   {
+    "id": "776fbad7-695b-50e4-98e8-12a9b8ecc04b",
+    "label_uk": "шт.",
+    "grams": 90
+   },
+   {
+    "id": "8c63f6c6-d3bb-5fd3-a60f-721228b35d95",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "695859f6-4814-5c6b-b8b5-18ac9df8ffe0",
+  "slug": "vidbyvna-svyniacha",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Відбивна свиняча",
+  "kcal_100g": 260,
+  "protein_100g": 19.0,
+  "fat_100g": 18.0,
+  "carbs_100g": 6.0,
+  "portions": [
+   {
+    "id": "8ec0abd7-90d9-527d-a64a-99d829132ee4",
+    "label_uk": "шт.",
+    "grams": 150
+   },
+   {
+    "id": "fa5bc601-52b6-5b77-b5f2-dfe2b0ce2806",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "3ba83c8a-5389-5af8-aff5-d5c45feaaf75",
+  "slug": "vidbyvna-kuriacha",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Відбивна куряча",
+  "kcal_100g": 185,
+  "protein_100g": 22.0,
+  "fat_100g": 8.0,
+  "carbs_100g": 6.0,
+  "portions": [
+   {
+    "id": "1dba05f4-da9d-56ac-9d11-2e2971e00f13",
+    "label_uk": "шт.",
+    "grams": 130
+   },
+   {
+    "id": "95b63f9a-0137-52be-b0b8-3482cb2dae7d",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "83e576f9-b329-5b3c-bb60-0fd4776e8835",
+  "slug": "kurka-zapechena",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Курка запечена",
+  "kcal_100g": 210,
+  "protein_100g": 21.0,
+  "fat_100g": 13.5,
+  "carbs_100g": 0.5,
+  "portions": [
+   {
+    "id": "5b9f49b8-9c89-573a-905f-05f9dddebf07",
+    "label_uk": "стегно",
+    "grams": 150
+   },
+   {
+    "id": "b32cbc76-1b68-56e1-a7a8-35687b4dfcb4",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "21b151e4-1a7f-5095-91ce-6772446d5af2",
+  "slug": "kuriache-file-vidvarne",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Куряче філе відварне",
+  "kcal_100g": 137,
+  "protein_100g": 29.8,
+  "fat_100g": 1.8,
+  "carbs_100g": 0.0,
+  "portions": [
+   {
+    "id": "a8176607-f3de-553a-a3e8-52a78c9e8eb1",
+    "label_uk": "шт.",
+    "grams": 200
+   },
+   {
+    "id": "0b9704df-98a2-52dd-88b7-a907287993fa",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "e88dfd96-a8b3-5af7-8b76-568d7f6b866e",
+  "slug": "kuriache-file-na-hryli",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Куряче філе на грилі",
+  "kcal_100g": 150,
+  "protein_100g": 30.0,
+  "fat_100g": 3.0,
+  "carbs_100g": 0.0,
+  "portions": [
+   {
+    "id": "c167bea4-5efb-544f-b914-1e8342f29931",
+    "label_uk": "шт.",
+    "grams": 180
+   },
+   {
+    "id": "bc9f0163-541d-55f8-ac31-0b564ae2350c",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "b24eb745-9a37-5823-a0a1-11e29f87ccaa",
+  "slug": "holubtsi-z-miasom-i-rysom",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Голубці з м'ясом і рисом",
+  "kcal_100g": 120,
+  "protein_100g": 6.5,
+  "fat_100g": 6.0,
+  "carbs_100g": 10.0,
+  "portions": [
+   {
+    "id": "826e4fcc-47ec-5303-8221-5be7c556c33f",
+    "label_uk": "шт.",
+    "grams": 150
+   },
+   {
+    "id": "ac62dc9f-295b-5675-b75f-64e8244360c5",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "1e472b0b-e6ad-53e9-be04-d7f8d113312e",
+  "slug": "holubtsi-pisni-z-krupoiu-i-hrybamy",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Голубці пісні з крупою і грибами",
+  "kcal_100g": 80,
+  "protein_100g": 2.5,
+  "fat_100g": 2.5,
+  "carbs_100g": 12.0,
+  "portions": [
+   {
+    "id": "f7de363e-2142-57f3-aed5-9ad8129f5b06",
+    "label_uk": "шт.",
+    "grams": 150
+   },
+   {
+    "id": "6e84e93b-b10e-5561-8611-b3e29994dd9a",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "78fbc85a-41b5-591d-866c-2f31e749020f",
+  "slug": "pechenia-zi-svynynoiu-i-kartopleiu",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Печеня зі свининою і картоплею",
+  "kcal_100g": 145,
+  "protein_100g": 7.5,
+  "fat_100g": 8.0,
+  "carbs_100g": 10.5,
+  "portions": [
+   {
+    "id": "fa1866fe-670b-5ddb-a986-e47074cb86ce",
+    "label_uk": "тарілка",
+    "grams": 300
+   },
+   {
+    "id": "836dbad0-e4da-5577-9128-0d7017f74db0",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "ad8a493b-53e3-5361-83dd-d0f606e3504d",
+  "slug": "kruchenyky-z-ialovychyny",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Крученики з яловичини",
+  "kcal_100g": 190,
+  "protein_100g": 15.0,
+  "fat_100g": 12.0,
+  "carbs_100g": 5.0,
+  "portions": [
+   {
+    "id": "ed55ed2b-15b4-5f17-9f90-2045c6fbfa88",
+    "label_uk": "шт.",
+    "grams": 120
+   },
+   {
+    "id": "4e478343-4dcc-501e-8c76-d4d7d3e66138",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "0118f1dc-cb9e-5d9c-a5ef-5baa99c7e2d7",
+  "slug": "zrazy-kartopliani-z-miasom",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Зрази картопляні з м'ясом",
+  "kcal_100g": 170,
+  "protein_100g": 7.0,
+  "fat_100g": 7.5,
+  "carbs_100g": 19.0,
+  "portions": [
+   {
+    "id": "15dd48f2-41b3-518a-86a8-a32122c5464d",
+    "label_uk": "шт.",
+    "grams": 120
+   },
+   {
+    "id": "0e6e73fe-8d2c-51ce-a605-a7c8a02a4b98",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "5f989998-9a75-5800-aff2-903ab9787170",
+  "slug": "tefteli-v-tomatnomu-sousi",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Тефтелі в томатному соусі",
+  "kcal_100g": 150,
+  "protein_100g": 9.0,
+  "fat_100g": 9.0,
+  "carbs_100g": 8.0,
+  "portions": [
+   {
+    "id": "3f8e545a-5ed2-5f53-8c48-245ee0f394d0",
+    "label_uk": "шт.",
+    "grams": 60
+   },
+   {
+    "id": "ea7a0569-443a-5712-9da6-9437aae3f6d4",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "7d91ef67-baa2-51f9-aea2-274450b42928",
+  "slug": "huliash-ialovychyi",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Гуляш яловичий",
+  "kcal_100g": 135,
+  "protein_100g": 14.0,
+  "fat_100g": 7.5,
+  "carbs_100g": 3.5,
+  "portions": [
+   {
+    "id": "1236270b-9783-5afd-a344-61fef91966db",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "1190315f-f8e1-59e7-9f49-68eb10948522",
+  "slug": "pechinka-tushkovana-z-tsybuleiu",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Печінка тушкована з цибулею",
+  "kcal_100g": 165,
+  "protein_100g": 19.0,
+  "fat_100g": 7.0,
+  "carbs_100g": 6.5,
+  "portions": [
+   {
+    "id": "9e94e50e-2a01-558f-b2c8-61229be79732",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "b6e02a37-6f44-5ff5-9771-80a29cb24b3a",
+  "slug": "shashlyk-svyniachyi",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Шашлик свинячий",
+  "kcal_100g": 260,
+  "protein_100g": 18.0,
+  "fat_100g": 20.5,
+  "carbs_100g": 1.0,
+  "portions": [
+   {
+    "id": "e59abb54-5e98-57a8-82b3-affc108e6ba1",
+    "label_uk": "шампур",
+    "grams": 200
+   },
+   {
+    "id": "adde024e-b890-5a36-ab9d-3574f65fdc4d",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "c2e3a1e6-cdf5-56d7-b534-e39c9fdd8abb",
+  "slug": "shashlyk-kuriachyi",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Шашлик курячий",
+  "kcal_100g": 180,
+  "protein_100g": 22.0,
+  "fat_100g": 9.5,
+  "carbs_100g": 1.5,
+  "portions": [
+   {
+    "id": "3d00fb26-ef9d-5203-9e37-7a338c65db0b",
+    "label_uk": "шампур",
+    "grams": 200
+   },
+   {
+    "id": "a89701af-404b-5ea9-91e4-e6b21c94f2f0",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "72baa63b-74fa-5f7b-8b24-7eb3739f07bb",
+  "slug": "kovbasa-domashnia-smazhena",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Ковбаса домашня смажена",
+  "kcal_100g": 300,
+  "protein_100g": 15.0,
+  "fat_100g": 26.0,
+  "carbs_100g": 1.5,
+  "portions": [
+   {
+    "id": "4822379a-78b7-5f82-8e5b-ca6706e79017",
+    "label_uk": "кільце",
+    "grams": 150
+   },
+   {
+    "id": "48c25db8-87cd-5796-a717-126c87c9c2ff",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "fd576fa9-3beb-58e8-850a-ac48edbdfc6b",
+  "slug": "kholodets",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Холодець",
+  "kcal_100g": 120,
+  "protein_100g": 15.0,
+  "fat_100g": 6.5,
+  "carbs_100g": 1.0,
+  "portions": [
+   {
+    "id": "9ef62890-7214-5a44-a45f-2c3a64324b2a",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "9457c960-0f3d-5225-a3f8-50931087417f",
+  "slug": "buzhenyna",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Буженина",
+  "kcal_100g": 230,
+  "protein_100g": 21.0,
+  "fat_100g": 16.0,
+  "carbs_100g": 0.5,
+  "portions": [
+   {
+    "id": "5ed1f26b-a28a-547f-b025-7251896fa724",
+    "label_uk": "скибка",
+    "grams": 30
+   },
+   {
+    "id": "c83936a3-39d5-54f4-b0ce-2852aef735cc",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "895d1568-25ea-5ada-a9e7-3ad94c159a19",
+  "slug": "salo-solone",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Сало солоне",
+  "kcal_100g": 770,
+  "protein_100g": 2.4,
+  "fat_100g": 85.0,
+  "carbs_100g": 0.0,
+  "portions": [
+   {
+    "id": "22ccc075-ff1b-5bf3-bc9a-0912cedac622",
+    "label_uk": "скибка",
+    "grams": 15
+   },
+   {
+    "id": "04127cfc-3d83-547f-bfbe-b754202ba3ec",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "2a678957-049a-58c2-a1b4-0df2978c6a8f",
+  "slug": "krovianka",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Кров'янка",
+  "kcal_100g": 275,
+  "protein_100g": 9.5,
+  "fat_100g": 19.0,
+  "carbs_100g": 15.0,
+  "portions": [
+   {
+    "id": "08b00b81-84ca-565b-8310-852f15834a06",
+    "label_uk": "кільце",
+    "grams": 150
+   },
+   {
+    "id": "71f35686-83dd-5004-9090-2e67ae94edc3",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "a19f4fc5-dc77-5b6d-8094-21725a482fef",
+  "slug": "kachka-zapechena-z-iablukamy",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Качка запечена з яблуками",
+  "kcal_100g": 255,
+  "protein_100g": 16.0,
+  "fat_100g": 20.0,
+  "carbs_100g": 4.0,
+  "portions": [
+   {
+    "id": "b5b62387-33e9-53f5-8a80-5b276a453746",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "802f21b1-5c67-5fec-b08e-34a91eb7b081",
+  "slug": "krolyk-tushkovanyi",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Кролик тушкований",
+  "kcal_100g": 190,
+  "protein_100g": 21.0,
+  "fat_100g": 11.0,
+  "carbs_100g": 2.0,
+  "portions": [
+   {
+    "id": "939ff543-2153-5fe1-958f-6dd6e8bdfcad",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "4c1f6c53-eaec-5ec1-a6fe-52bdbcfd175d",
+  "slug": "steik-ialovychyi",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Стейк яловичий",
+  "kcal_100g": 230,
+  "protein_100g": 26.0,
+  "fat_100g": 14.0,
+  "carbs_100g": 0.0,
+  "portions": [
+   {
+    "id": "0808a79c-d002-56bc-a457-74c297af6a60",
+    "label_uk": "шт.",
+    "grams": 200
+   },
+   {
+    "id": "dab92bb6-bc46-572a-860d-c2938cb96066",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "194c640d-b950-5d51-9f0f-f6846c144315",
+  "slug": "svyniacha-shyika-zapechena",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Свиняча шийка запечена",
+  "kcal_100g": 280,
+  "protein_100g": 17.0,
+  "fat_100g": 23.5,
+  "carbs_100g": 0.0,
+  "portions": [
+   {
+    "id": "0c0d11d5-5d43-5462-bb16-d5d8a342a708",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "632ea31a-bd18-59f3-b948-ea7fc4601bd3",
+  "slug": "kuriachi-kryltsia-zapecheni",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Курячі крильця запечені",
+  "kcal_100g": 230,
+  "protein_100g": 19.0,
+  "fat_100g": 16.5,
+  "carbs_100g": 1.5,
+  "portions": [
+   {
+    "id": "3a15c75f-3ff8-57d8-a0fd-043e31d764f4",
+    "label_uk": "шт.",
+    "grams": 40
+   },
+   {
+    "id": "81913594-82aa-5120-a68b-7546e7314f96",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "f6294f29-6e15-5e83-b4a2-e9388b8d4526",
+  "slug": "miaso-po-frantsuzky",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "М'ясо по-французьки",
+  "kcal_100g": 230,
+  "protein_100g": 13.0,
+  "fat_100g": 18.0,
+  "carbs_100g": 4.0,
+  "portions": [
+   {
+    "id": "b4aa5cc3-4e29-5ca1-841c-755e14777b10",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "4b675f62-87e5-52d0-b7ff-db425592bc3c",
+  "slug": "nahetsy-kuriachi",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Нагетси курячі",
+  "kcal_100g": 260,
+  "protein_100g": 15.0,
+  "fat_100g": 15.0,
+  "carbs_100g": 16.0,
+  "portions": [
+   {
+    "id": "d46e1d67-d6d8-5079-a93d-cc77ef7cab1b",
+    "label_uk": "шт.",
+    "grams": 20
+   },
+   {
+    "id": "edb98a3b-c4ee-546a-8a7e-bd5bf66c2f1a",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "60245b41-2db1-5e92-b4ee-2f0b391d1034",
+  "slug": "rahu-z-kurky-i-ovochiv",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Рагу з курки й овочів",
+  "kcal_100g": 95,
+  "protein_100g": 8.0,
+  "fat_100g": 4.0,
+  "carbs_100g": 7.0,
+  "portions": [
+   {
+    "id": "a9c97ea3-c8e2-5fba-9600-e16ac5644860",
+    "label_uk": "тарілка",
+    "grams": 300
+   },
+   {
+    "id": "c6d69946-9ec9-55f1-8c77-1d967ffa2309",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "4860c15b-2a36-5d4c-818a-a6d90e4f9db6",
+  "slug": "deruny-z-miasom",
+  "source": "ua_dish",
+  "category": "mains",
+  "name_uk": "Деруни з м'ясом",
+  "kcal_100g": 200,
+  "protein_100g": 8.0,
+  "fat_100g": 11.0,
+  "carbs_100g": 17.0,
+  "portions": [
+   {
+    "id": "8a59f459-8f96-5f64-84bd-b4ec25edefba",
+    "label_uk": "шт.",
+    "grams": 90
+   },
+   {
+    "id": "61dfb807-8109-551a-baf9-60693010a502",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "b2278aa7-149f-5ae8-b0dd-401c6aea913f",
+  "slug": "oseledets-solonyi",
+  "source": "ua_dish",
+  "category": "fish",
+  "name_uk": "Оселедець солоний",
+  "kcal_100g": 217,
+  "protein_100g": 19.8,
+  "fat_100g": 15.4,
+  "carbs_100g": 0.0,
+  "portions": [
+   {
+    "id": "9c289b42-baa2-5ad4-bb0b-c3af43031635",
+    "label_uk": "шматок",
+    "grams": 50
+   },
+   {
+    "id": "3518ddd8-89f0-5ad9-9107-36ad8457452e",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "cd1dcd75-529b-5c02-8697-c2dfc1acb470",
+  "slug": "khek-zapechenyi",
+  "source": "ua_dish",
+  "category": "fish",
+  "name_uk": "Хек запечений",
+  "kcal_100g": 95,
+  "protein_100g": 17.5,
+  "fat_100g": 2.5,
+  "carbs_100g": 0.5,
+  "portions": [
+   {
+    "id": "459dc145-d655-5c08-a28d-6f33d2e00694",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "652d0ef1-9e3b-58ef-85ef-0349affc629e",
+  "slug": "korop-smazhenyi",
+  "source": "ua_dish",
+  "category": "fish",
+  "name_uk": "Короп смажений",
+  "kcal_100g": 196,
+  "protein_100g": 18.5,
+  "fat_100g": 11.5,
+  "carbs_100g": 5.5,
+  "portions": [
+   {
+    "id": "5fcc3d35-1a57-59d3-8379-943c917c5fe2",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "0172ec6d-4288-517b-8674-11ceda0464b9",
+  "slug": "skumbriia-zapechena",
+  "source": "ua_dish",
+  "category": "fish",
+  "name_uk": "Скумбрія запечена",
+  "kcal_100g": 190,
+  "protein_100g": 19.0,
+  "fat_100g": 12.5,
+  "carbs_100g": 0.0,
+  "portions": [
+   {
+    "id": "f87be34f-8718-5a58-b3bb-dad2dfad0bbc",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "8fac4a43-aae9-518a-abb2-42b7f0b7e92d",
+  "slug": "losos-na-hryli",
+  "source": "ua_dish",
+  "category": "fish",
+  "name_uk": "Лосось на грилі",
+  "kcal_100g": 206,
+  "protein_100g": 22.1,
+  "fat_100g": 12.4,
+  "carbs_100g": 0.0,
+  "portions": [
+   {
+    "id": "d687fa71-2778-53eb-9e39-1b1951af1028",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "167b2268-3df4-57c0-9df9-8681bb843e47",
+  "slug": "kotlety-rybni",
+  "source": "ua_dish",
+  "category": "fish",
+  "name_uk": "Котлети рибні",
+  "kcal_100g": 165,
+  "protein_100g": 12.5,
+  "fat_100g": 7.5,
+  "carbs_100g": 11.5,
+  "portions": [
+   {
+    "id": "278aefff-a428-5b87-bc49-d032e514074e",
+    "label_uk": "шт.",
+    "grams": 90
+   },
+   {
+    "id": "3f61a036-a702-54df-a43e-45a8ef57d3f3",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "fb04b796-b6fa-5aaf-9bdc-31c864e59faa",
+  "slug": "ryba-pid-marynadom",
+  "source": "ua_dish",
+  "category": "fish",
+  "name_uk": "Риба під маринадом",
+  "kcal_100g": 120,
+  "protein_100g": 11.0,
+  "fat_100g": 5.0,
+  "carbs_100g": 7.5,
+  "portions": [
+   {
+    "id": "fc4c9c32-6465-59d6-84a7-c4f0e0a7d731",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "ce3a9441-8f79-5735-bb5f-c90a516b9454",
+  "slug": "sichenyky-rybni",
+  "source": "ua_dish",
+  "category": "fish",
+  "name_uk": "Січеники рибні",
+  "kcal_100g": 175,
+  "protein_100g": 13.0,
+  "fat_100g": 9.0,
+  "carbs_100g": 10.0,
+  "portions": [
+   {
+    "id": "a1f637b1-a0c9-556e-8c41-5eeb4e36c11b",
+    "label_uk": "шт.",
+    "grams": 90
+   },
+   {
+    "id": "25a45d72-1c12-57bb-859b-2594289f13ac",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "e528f14b-c450-5aac-b36c-5cc07b96cbc5",
+  "slug": "karas-smazhenyi-u-smetani",
+  "source": "ua_dish",
+  "category": "fish",
+  "name_uk": "Карась смажений у сметані",
+  "kcal_100g": 170,
+  "protein_100g": 17.0,
+  "fat_100g": 9.5,
+  "carbs_100g": 3.5,
+  "portions": [
+   {
+    "id": "7b519f15-b5b9-5f43-a3b9-a0ccdfa82acc",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "7921d653-9748-5fa6-9df1-ec84e56cdc5c",
+  "slug": "varenyky-z-kartopleiu",
+  "source": "ua_dish",
+  "category": "dough",
+  "name_uk": "Вареники з картоплею",
+  "kcal_100g": 148,
+  "protein_100g": 3.8,
+  "fat_100g": 2.9,
+  "carbs_100g": 26.5,
+  "portions": [
+   {
+    "id": "433b40e6-8e92-50cf-898d-a71eff3fe9a8",
+    "label_uk": "шт.",
+    "grams": 30
+   },
+   {
+    "id": "b27a0a5f-98f2-547c-a10b-55aba81ebedc",
+    "label_uk": "порція",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "424105d0-1cb3-59cc-b6f0-ca2552e3c2a5",
+  "slug": "varenyky-z-kapustoiu",
+  "source": "ua_dish",
+  "category": "dough",
+  "name_uk": "Вареники з капустою",
+  "kcal_100g": 135,
+  "protein_100g": 3.5,
+  "fat_100g": 3.2,
+  "carbs_100g": 23.0,
+  "portions": [
+   {
+    "id": "fd83228a-2d1a-5e76-9bfd-803267064541",
+    "label_uk": "шт.",
+    "grams": 30
+   },
+   {
+    "id": "283d86ca-fc40-5e02-af29-9680988c8cd5",
+    "label_uk": "порція",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "73234d56-5c09-55ee-aa47-40fe2730d25c",
+  "slug": "varenyky-z-syrom",
+  "source": "ua_dish",
+  "category": "dough",
+  "name_uk": "Вареники з сиром",
+  "kcal_100g": 190,
+  "protein_100g": 9.5,
+  "fat_100g": 5.5,
+  "carbs_100g": 25.5,
+  "portions": [
+   {
+    "id": "4c857b71-c524-5a24-bab5-815e199d0578",
+    "label_uk": "шт.",
+    "grams": 30
+   },
+   {
+    "id": "d26d23f7-b233-528b-bf31-eed64f5b74db",
+    "label_uk": "порція",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "b9059bd7-9ae6-58bb-b46b-7bd5ef133d3d",
+  "slug": "varenyky-z-vyshniamy",
+  "source": "ua_dish",
+  "category": "dough",
+  "name_uk": "Вареники з вишнями",
+  "kcal_100g": 165,
+  "protein_100g": 3.5,
+  "fat_100g": 1.0,
+  "carbs_100g": 34.5,
+  "portions": [
+   {
+    "id": "d07de9fa-ee5a-5d0f-9e01-394a20c99d9d",
+    "label_uk": "шт.",
+    "grams": 30
+   },
+   {
+    "id": "3ee5f793-7a75-5e34-82df-80cc31ac2bb5",
+    "label_uk": "порція",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "77601f78-cf8f-5481-92df-090c16c1ac55",
+  "slug": "varenyky-z-polunytseiu",
+  "source": "ua_dish",
+  "category": "dough",
+  "name_uk": "Вареники з полуницею",
+  "kcal_100g": 160,
+  "protein_100g": 3.5,
+  "fat_100g": 1.0,
+  "carbs_100g": 34.0,
+  "portions": [
+   {
+    "id": "57791b0e-100b-55ef-b8d4-af40e74c928c",
+    "label_uk": "шт.",
+    "grams": 30
+   },
+   {
+    "id": "6b8d4f3b-9d2a-5a53-886e-6c67db0ab193",
+    "label_uk": "порція",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "75ef193f-f758-5cb0-8495-e4014e3e5db0",
+  "slug": "varenyky-z-kartopleiu-i-hrybamy",
+  "source": "ua_dish",
+  "category": "dough",
+  "name_uk": "Вареники з картоплею і грибами",
+  "kcal_100g": 145,
+  "protein_100g": 3.8,
+  "fat_100g": 3.3,
+  "carbs_100g": 24.5,
+  "portions": [
+   {
+    "id": "be4da088-92fd-53ec-a101-a2db43131429",
+    "label_uk": "шт.",
+    "grams": 30
+   },
+   {
+    "id": "50b29828-7c03-54fa-8acf-54ce5a18eaa9",
+    "label_uk": "порція",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "335ce371-a845-5be8-82e1-d888213b38f5",
+  "slug": "varenyky-z-miasom",
+  "source": "ua_dish",
+  "category": "dough",
+  "name_uk": "Вареники з м'ясом",
+  "kcal_100g": 210,
+  "protein_100g": 9.5,
+  "fat_100g": 8.5,
+  "carbs_100g": 23.5,
+  "portions": [
+   {
+    "id": "bafcd0bb-0d89-5fbc-afbe-057591eb8fb8",
+    "label_uk": "шт.",
+    "grams": 30
+   },
+   {
+    "id": "081b65c4-0c48-5fcf-8a34-8beec72bccbb",
+    "label_uk": "порція",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "e9ad650b-6802-5e3f-bb55-2fa3f187e631",
+  "slug": "varenyky-z-pechinkoiu",
+  "source": "ua_dish",
+  "category": "dough",
+  "name_uk": "Вареники з печінкою",
+  "kcal_100g": 185,
+  "protein_100g": 8.5,
+  "fat_100g": 6.5,
+  "carbs_100g": 23.0,
+  "portions": [
+   {
+    "id": "94e16a88-1831-52f8-a7e4-4ab13e413d98",
+    "label_uk": "шт.",
+    "grams": 30
+   },
+   {
+    "id": "8dc6b1d2-fbbc-5fc2-8d66-3e3b1f6df716",
+    "label_uk": "порція",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "96c1ceb8-402c-5a20-be46-7c4864785017",
+  "slug": "pelmeni",
+  "source": "ua_dish",
+  "category": "dough",
+  "name_uk": "Пельмені",
+  "kcal_100g": 250,
+  "protein_100g": 11.9,
+  "fat_100g": 12.4,
+  "carbs_100g": 23.0,
+  "portions": [
+   {
+    "id": "c553ae5f-5149-59a1-9487-6d121e4b9da4",
+    "label_uk": "шт.",
+    "grams": 12
+   },
+   {
+    "id": "cc767ef0-7c2c-5c13-822c-355f8d29d9e5",
+    "label_uk": "порція",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "00731cdd-6b77-59ff-b86c-1824fe1bca06",
+  "slug": "halushky",
+  "source": "ua_dish",
+  "category": "dough",
+  "name_uk": "Галушки",
+  "kcal_100g": 150,
+  "protein_100g": 4.5,
+  "fat_100g": 2.0,
+  "carbs_100g": 28.5,
+  "portions": [
+   {
+    "id": "9f6a516a-1933-51d1-bc4f-71f9706a57c1",
+    "label_uk": "порція",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "dcead128-4319-589a-96d1-fae53ece880b",
+  "slug": "linyvi-varenyky",
+  "source": "ua_dish",
+  "category": "dough",
+  "name_uk": "Ліниві вареники",
+  "kcal_100g": 205,
+  "protein_100g": 11.5,
+  "fat_100g": 6.0,
+  "carbs_100g": 26.0,
+  "portions": [
+   {
+    "id": "9030de42-e1d7-5cd8-b9a3-d95e8efcb406",
+    "label_uk": "порція",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "8d24613a-58e2-55fd-8667-b2b99d6d3baa",
+  "slug": "mlyntsi",
+  "source": "ua_dish",
+  "category": "dough",
+  "name_uk": "Млинці",
+  "kcal_100g": 225,
+  "protein_100g": 6.0,
+  "fat_100g": 11.0,
+  "carbs_100g": 26.0,
+  "portions": [
+   {
+    "id": "a238f813-1963-5d29-8444-9b400dbb0309",
+    "label_uk": "шт.",
+    "grams": 50
+   },
+   {
+    "id": "5ddbb317-caae-5dda-ac0c-f8eb435d01db",
+    "label_uk": "порція",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "47512107-3655-5135-b413-ad14d0752bde",
+  "slug": "mlyntsi-z-syrom",
+  "source": "ua_dish",
+  "category": "dough",
+  "name_uk": "Млинці з сиром",
+  "kcal_100g": 210,
+  "protein_100g": 9.5,
+  "fat_100g": 9.0,
+  "carbs_100g": 23.0,
+  "portions": [
+   {
+    "id": "e05f8e74-10f9-5c69-814c-2115ab26db0c",
+    "label_uk": "шт.",
+    "grams": 90
+   },
+   {
+    "id": "616d3e04-280a-5bad-87bd-9002030f6e32",
+    "label_uk": "порція",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "f9cd6d62-1b15-55d4-95e4-07e23f900c91",
+  "slug": "mlyntsi-z-miasom",
+  "source": "ua_dish",
+  "category": "dough",
+  "name_uk": "Млинці з м'ясом",
+  "kcal_100g": 220,
+  "protein_100g": 10.5,
+  "fat_100g": 11.0,
+  "carbs_100g": 19.5,
+  "portions": [
+   {
+    "id": "2eab4a9f-7004-53fa-a43b-b9ccbd42def0",
+    "label_uk": "шт.",
+    "grams": 90
+   },
+   {
+    "id": "9fc8d32c-562f-5727-acee-49d9eceb98d8",
+    "label_uk": "порція",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "675b0c55-8827-5e75-b329-5955075a1c6c",
+  "slug": "nalysnyky-z-syrom-i-rodzynkamy",
+  "source": "ua_dish",
+  "category": "dough",
+  "name_uk": "Налисники з сиром і родзинками",
+  "kcal_100g": 215,
+  "protein_100g": 9.0,
+  "fat_100g": 8.0,
+  "carbs_100g": 27.0,
+  "portions": [
+   {
+    "id": "ad1558d3-c041-51c7-9174-b49a51f9c2f3",
+    "label_uk": "шт.",
+    "grams": 90
+   },
+   {
+    "id": "9b366a0d-6bdd-548f-bfa3-611aeffdaced",
+    "label_uk": "порція",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "72528410-9498-5c82-ac03-08ca1ead4725",
+  "slug": "deruny",
+  "source": "ua_dish",
+  "category": "dough",
+  "name_uk": "Деруни",
+  "kcal_100g": 190,
+  "protein_100g": 3.8,
+  "fat_100g": 10.5,
+  "carbs_100g": 20.5,
+  "portions": [
+   {
+    "id": "3263ebb5-632e-544b-bdbf-f59cc5c37633",
+    "label_uk": "шт.",
+    "grams": 70
+   },
+   {
+    "id": "d76f7f68-143e-575e-94c3-8544377ff383",
+    "label_uk": "порція",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "83924eff-0390-5813-aa2a-d88afa320016",
+  "slug": "kartoplianyky",
+  "source": "ua_dish",
+  "category": "dough",
+  "name_uk": "Картопляники",
+  "kcal_100g": 175,
+  "protein_100g": 4.5,
+  "fat_100g": 7.5,
+  "carbs_100g": 22.0,
+  "portions": [
+   {
+    "id": "9272fbe6-8b81-5c88-9b00-a0e60aebeb7e",
+    "label_uk": "шт.",
+    "grams": 80
+   },
+   {
+    "id": "e940334f-9f50-5625-8b75-8e23868d7688",
+    "label_uk": "порція",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "c7ec0163-ef8d-507e-9274-2d250705dfa4",
+  "slug": "knysh-z-kartopleiu",
+  "source": "ua_dish",
+  "category": "bakery",
+  "name_uk": "Книш з картоплею",
+  "kcal_100g": 250,
+  "protein_100g": 6.0,
+  "fat_100g": 9.0,
+  "carbs_100g": 37.0,
+  "portions": [
+   {
+    "id": "873ecdd4-c02a-5c8a-8ec8-c6f8b12f41f9",
+    "label_uk": "шт.",
+    "grams": 100
+   },
+   {
+    "id": "f92bb491-7680-5456-8456-629685ef3f98",
+    "label_uk": "скибка",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "bf74eb96-500c-50c6-934c-d11d9db796bc",
+  "slug": "pyrizhky-smazheni-z-kartopleiu",
+  "source": "ua_dish",
+  "category": "bakery",
+  "name_uk": "Пиріжки смажені з картоплею",
+  "kcal_100g": 230,
+  "protein_100g": 5.0,
+  "fat_100g": 10.0,
+  "carbs_100g": 30.0,
+  "portions": [
+   {
+    "id": "2724df40-7cce-571b-89d9-2f55c6f1cdb1",
+    "label_uk": "шт.",
+    "grams": 70
+   },
+   {
+    "id": "57bc3f93-51fa-57a5-b214-1aa62132c39c",
+    "label_uk": "скибка",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "d768c0ba-b072-577b-9dd3-6c2f8f69cf93",
+  "slug": "pyrizhky-pecheni-z-kapustoiu",
+  "source": "ua_dish",
+  "category": "bakery",
+  "name_uk": "Пиріжки печені з капустою",
+  "kcal_100g": 210,
+  "protein_100g": 6.0,
+  "fat_100g": 6.5,
+  "carbs_100g": 32.0,
+  "portions": [
+   {
+    "id": "ce19e747-c0c6-5049-9e7e-6bb4e1d8ab2a",
+    "label_uk": "шт.",
+    "grams": 70
+   },
+   {
+    "id": "92172223-05ad-5563-92f9-eac69fe884f1",
+    "label_uk": "скибка",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "3d4a228c-2ef9-59c9-afd9-53a2c1564741",
+  "slug": "pyrizhky-z-vyshniamy",
+  "source": "ua_dish",
+  "category": "bakery",
+  "name_uk": "Пиріжки з вишнями",
+  "kcal_100g": 245,
+  "protein_100g": 5.0,
+  "fat_100g": 6.5,
+  "carbs_100g": 41.5,
+  "portions": [
+   {
+    "id": "e3890f70-eec4-5e3c-a929-6fb7e07d6a21",
+    "label_uk": "шт.",
+    "grams": 70
+   },
+   {
+    "id": "9c33927c-c01f-5c0a-8d22-bb343c3b8ee6",
+    "label_uk": "скибка",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "a9f34079-0f68-51c7-bc0f-6dc5d9e3ef37",
+  "slug": "pyrizhky-z-miasom",
+  "source": "ua_dish",
+  "category": "bakery",
+  "name_uk": "Пиріжки з м'ясом",
+  "kcal_100g": 275,
+  "protein_100g": 10.0,
+  "fat_100g": 12.0,
+  "carbs_100g": 31.0,
+  "portions": [
+   {
+    "id": "36636145-ff6d-5294-90d1-7a91177d1065",
+    "label_uk": "шт.",
+    "grams": 80
+   },
+   {
+    "id": "a5cd1217-8cc0-5880-b731-f9704489e977",
+    "label_uk": "скибка",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "18e6d8d5-1855-5917-8e56-8b80738cee07",
+  "slug": "perepichka",
+  "source": "ua_dish",
+  "category": "bakery",
+  "name_uk": "Перепічка",
+  "kcal_100g": 300,
+  "protein_100g": 9.0,
+  "fat_100g": 15.0,
+  "carbs_100g": 33.0,
+  "portions": [
+   {
+    "id": "19433093-26b0-5ab2-976f-17426dead69b",
+    "label_uk": "шт.",
+    "grams": 120
+   },
+   {
+    "id": "d24bb2c7-c3f1-59de-8bde-242e3a4c3546",
+    "label_uk": "скибка",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "c9d975df-8ed1-573b-8d28-94259d2545d7",
+  "slug": "pampushky-z-chasnykom",
+  "source": "ua_dish",
+  "category": "bakery",
+  "name_uk": "Пампушки з часником",
+  "kcal_100g": 290,
+  "protein_100g": 8.0,
+  "fat_100g": 6.5,
+  "carbs_100g": 50.0,
+  "portions": [
+   {
+    "id": "911baa30-bd98-5937-88ba-41d91ffbd98b",
+    "label_uk": "шт.",
+    "grams": 50
+   },
+   {
+    "id": "a3325ff8-c246-525b-b384-951e9c5a5ff0",
+    "label_uk": "скибка",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "875d2c79-3d0d-5d71-99d4-db40113ad94c",
+  "slug": "khlib-pshenychnyi",
+  "source": "ua_dish",
+  "category": "bakery",
+  "name_uk": "Хліб пшеничний",
+  "kcal_100g": 245,
+  "protein_100g": 8.1,
+  "fat_100g": 1.0,
+  "carbs_100g": 49.0,
+  "portions": [
+   {
+    "id": "999fced3-7933-5230-9956-59d79b62dea9",
+    "label_uk": "шматок",
+    "grams": 50
+   },
+   {
+    "id": "00215f3b-8ac3-5aa3-b7dc-a779f463ef5d",
+    "label_uk": "скибка",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "9195743a-99bc-5a0d-bebd-63bdc622ed47",
+  "slug": "palianytsia",
+  "source": "ua_dish",
+  "category": "bakery",
+  "name_uk": "Паляниця",
+  "kcal_100g": 250,
+  "protein_100g": 8.0,
+  "fat_100g": 1.2,
+  "carbs_100g": 50.5,
+  "portions": [
+   {
+    "id": "0147ba34-adf0-5b2e-9e79-e70e6a82dc7a",
+    "label_uk": "скибка",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "a13338e6-ec56-5474-a7de-3132540f49af",
+  "slug": "khlib-zhytnii",
+  "source": "ua_dish",
+  "category": "bakery",
+  "name_uk": "Хліб житній",
+  "kcal_100g": 210,
+  "protein_100g": 6.8,
+  "fat_100g": 1.3,
+  "carbs_100g": 41.0,
+  "portions": [
+   {
+    "id": "2739341e-f613-5c3e-a25a-3c22f0d8e6ac",
+    "label_uk": "скибка",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "ecac1555-0291-54bd-9a98-1f3e8dd94820",
+  "slug": "khlib-tsilnozernovyi",
+  "source": "ua_dish",
+  "category": "bakery",
+  "name_uk": "Хліб цільнозерновий",
+  "kcal_100g": 230,
+  "protein_100g": 9.0,
+  "fat_100g": 3.0,
+  "carbs_100g": 42.0,
+  "portions": [
+   {
+    "id": "97542dfd-0e0e-58e2-acdd-b11689f60f0d",
+    "label_uk": "скибка",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "322926b6-0818-500b-ac8e-afa621c60384",
+  "slug": "baton-nariznyi",
+  "source": "ua_dish",
+  "category": "bakery",
+  "name_uk": "Батон нарізний",
+  "kcal_100g": 262,
+  "protein_100g": 7.5,
+  "fat_100g": 2.9,
+  "carbs_100g": 51.4,
+  "portions": [
+   {
+    "id": "0e564103-fc19-5ba5-94ec-39672d235879",
+    "label_uk": "скибка",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "cb0470ed-03cc-52ba-9994-356a008565fc",
+  "slug": "lavash-tonkyi",
+  "source": "ua_dish",
+  "category": "bakery",
+  "name_uk": "Лаваш тонкий",
+  "kcal_100g": 275,
+  "protein_100g": 9.0,
+  "fat_100g": 1.2,
+  "carbs_100g": 56.0,
+  "portions": [
+   {
+    "id": "cede1795-ac75-5d2f-ac2f-bb97c46ea031",
+    "label_uk": "лист",
+    "grams": 60
+   },
+   {
+    "id": "cca82de9-1432-59c4-b11a-361df3e3d188",
+    "label_uk": "скибка",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "dcd4eac1-eb9f-5ebc-933c-694411b6b088",
+  "slug": "hrinky-z-chasnykom",
+  "source": "ua_dish",
+  "category": "bakery",
+  "name_uk": "Грінки з часником",
+  "kcal_100g": 340,
+  "protein_100g": 8.0,
+  "fat_100g": 17.0,
+  "carbs_100g": 39.0,
+  "portions": [
+   {
+    "id": "958d6939-7aa3-52df-84f1-389b8cfe9864",
+    "label_uk": "шт.",
+    "grams": 20
+   },
+   {
+    "id": "bccf0002-02bc-5532-bb83-b35b525c8b3e",
+    "label_uk": "скибка",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "ae0a0802-1d24-5f94-86c7-3bd9985ec2dc",
+  "slug": "syrnyky",
+  "source": "ua_dish",
+  "category": "breakfast",
+  "name_uk": "Сирники",
+  "kcal_100g": 220,
+  "protein_100g": 14.5,
+  "fat_100g": 10.0,
+  "carbs_100g": 18.5,
+  "portions": [
+   {
+    "id": "9b1be0af-343a-5ebd-ae4f-478b26ad3794",
+    "label_uk": "шт.",
+    "grams": 60
+   },
+   {
+    "id": "a92c6eac-545d-5939-8055-df66bf9cea01",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "7efc76ea-dfbb-5b58-9bb8-b99c56f55012",
+  "slug": "zapikanka-syrna",
+  "source": "ua_dish",
+  "category": "breakfast",
+  "name_uk": "Запіканка сирна",
+  "kcal_100g": 170,
+  "protein_100g": 13.0,
+  "fat_100g": 5.5,
+  "carbs_100g": 17.0,
+  "portions": [
+   {
+    "id": "a5adf723-6f6c-5341-b335-6ae01a4788ef",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "67f83924-ecba-54b4-bc12-b33c1a52ccc6",
+  "slug": "omlet",
+  "source": "ua_dish",
+  "category": "breakfast",
+  "name_uk": "Омлет",
+  "kcal_100g": 150,
+  "protein_100g": 9.5,
+  "fat_100g": 11.5,
+  "carbs_100g": 2.0,
+  "portions": [
+   {
+    "id": "841f83db-7fd0-5748-8965-8987db6c08b9",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "1f7d267e-959c-5bbe-9dca-73c718125b17",
+  "slug": "iaiechnia",
+  "source": "ua_dish",
+  "category": "breakfast",
+  "name_uk": "Яєчня",
+  "kcal_100g": 185,
+  "protein_100g": 12.5,
+  "fat_100g": 14.5,
+  "carbs_100g": 0.8,
+  "portions": [
+   {
+    "id": "c0c6e50f-9cf4-594d-8bf4-5e867f0351cf",
+    "label_uk": "з 2 яєць",
+    "grams": 110
+   },
+   {
+    "id": "ae6c5b28-25f6-56b1-8435-f28a0a9a7eb9",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "e39076d0-d8b8-5dce-bc1d-c9f2a2bc8b0d",
+  "slug": "iaiechnia-z-salom",
+  "source": "ua_dish",
+  "category": "breakfast",
+  "name_uk": "Яєчня з салом",
+  "kcal_100g": 330,
+  "protein_100g": 13.0,
+  "fat_100g": 30.5,
+  "carbs_100g": 1.0,
+  "portions": [
+   {
+    "id": "ac2dcb3b-9c58-51ea-b722-2603fa11245e",
+    "label_uk": "з 2 яєць",
+    "grams": 140
+   },
+   {
+    "id": "22273cf5-1a35-5b43-9898-87d49fcfdee0",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "018f65e6-e827-53bd-aafb-01e4353b122d",
+  "slug": "iaitse-varene",
+  "source": "ua_dish",
+  "category": "breakfast",
+  "name_uk": "Яйце варене",
+  "kcal_100g": 155,
+  "protein_100g": 12.6,
+  "fat_100g": 10.6,
+  "carbs_100g": 1.1,
+  "portions": [
+   {
+    "id": "a0ddc67f-6bd7-58d6-9de5-9ad2936f8905",
+    "label_uk": "шт.",
+    "grams": 55
+   },
+   {
+    "id": "8055bfc9-fe83-51db-81a6-bee5e9bad17c",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "77ff4d15-9311-521c-b598-431f60d13374",
+  "slug": "buterbrod-z-salom",
+  "source": "ua_dish",
+  "category": "breakfast",
+  "name_uk": "Бутерброд з салом",
+  "kcal_100g": 330,
+  "protein_100g": 6.5,
+  "fat_100g": 24.0,
+  "carbs_100g": 23.0,
+  "portions": [
+   {
+    "id": "cde11a0e-5e1c-5014-b898-c21f80c86269",
+    "label_uk": "шт.",
+    "grams": 60
+   },
+   {
+    "id": "f09b4d1f-6de4-5a9a-b531-142c326864dc",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "8888b518-ed4e-5557-b3a3-f0f8d4357980",
+  "slug": "buterbrod-z-syrom",
+  "source": "ua_dish",
+  "category": "breakfast",
+  "name_uk": "Бутерброд з сиром",
+  "kcal_100g": 300,
+  "protein_100g": 12.0,
+  "fat_100g": 14.5,
+  "carbs_100g": 30.0,
+  "portions": [
+   {
+    "id": "519da655-c2a5-54ab-b936-0da9d7c6e6ef",
+    "label_uk": "шт.",
+    "grams": 60
+   },
+   {
+    "id": "ce7b4862-9868-5864-bb71-a17ea25c50fc",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "ee9cd57f-b9e1-5de4-898f-285783c29e3c",
+  "slug": "buterbrod-z-kovbasoiu",
+  "source": "ua_dish",
+  "category": "breakfast",
+  "name_uk": "Бутерброд з ковбасою",
+  "kcal_100g": 290,
+  "protein_100g": 10.0,
+  "fat_100g": 16.0,
+  "carbs_100g": 26.0,
+  "portions": [
+   {
+    "id": "94e4114b-7fe6-578a-8258-e66b32036b85",
+    "label_uk": "шт.",
+    "grams": 60
+   },
+   {
+    "id": "08b85061-6a3c-58c9-9603-52f4dbcae90f",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "802160a3-b9fa-5018-be75-cf4a714aff3e",
+  "slug": "hranola-z-iohurtom",
+  "source": "ua_dish",
+  "category": "breakfast",
+  "name_uk": "Гранола з йогуртом",
+  "kcal_100g": 180,
+  "protein_100g": 6.0,
+  "fat_100g": 6.0,
+  "carbs_100g": 26.0,
+  "portions": [
+   {
+    "id": "d62d51dd-9377-5c42-a0e2-39b598a183ad",
+    "label_uk": "миска",
+    "grams": 200
+   },
+   {
+    "id": "8fe881c7-9971-5da3-9ea2-097e08608c7a",
+    "label_uk": "порція",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "3ccdce9a-e4ac-5abe-92a0-9cb9408da571",
+  "slug": "olivie-z-kovbasoiu",
+  "source": "ua_dish",
+  "category": "salads",
+  "name_uk": "Олів'є з ковбасою",
+  "kcal_100g": 198,
+  "protein_100g": 5.5,
+  "fat_100g": 16.7,
+  "carbs_100g": 6.8,
+  "portions": [
+   {
+    "id": "19e1fb99-080d-57ff-a513-30f0ca1f3763",
+    "label_uk": "порція",
+    "grams": 150
+   },
+   {
+    "id": "3112b703-c37f-504f-98ac-2bafa06eb43b",
+    "label_uk": "ст. л.",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "91dd1821-7098-5e94-ab3d-1ad40b86c217",
+  "slug": "olivie-z-kurkoiu",
+  "source": "ua_dish",
+  "category": "salads",
+  "name_uk": "Олів'є з куркою",
+  "kcal_100g": 155,
+  "protein_100g": 7.5,
+  "fat_100g": 11.0,
+  "carbs_100g": 6.5,
+  "portions": [
+   {
+    "id": "63e9482a-616b-5faa-ac81-46a4ea4e68c5",
+    "label_uk": "порція",
+    "grams": 150
+   },
+   {
+    "id": "1cb0aa0d-6791-544e-b6be-26db8e8b5f98",
+    "label_uk": "ст. л.",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "12ff1ee1-92fa-59a8-98a1-b013cc6f78a2",
+  "slug": "vinehret",
+  "source": "ua_dish",
+  "category": "salads",
+  "name_uk": "Вінегрет",
+  "kcal_100g": 76,
+  "protein_100g": 1.4,
+  "fat_100g": 4.6,
+  "carbs_100g": 7.0,
+  "portions": [
+   {
+    "id": "3ee52a87-9c6a-5810-8154-9da9061c6113",
+    "label_uk": "порція",
+    "grams": 150
+   },
+   {
+    "id": "928e485c-d460-5e41-8608-ef65b60d7ba8",
+    "label_uk": "ст. л.",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "94518cbe-1e87-5acc-a8ed-ccc90d1cf13c",
+  "slug": "oseledets-pid-shuboiu",
+  "source": "ua_dish",
+  "category": "salads",
+  "name_uk": "Оселедець під шубою",
+  "kcal_100g": 190,
+  "protein_100g": 5.5,
+  "fat_100g": 15.5,
+  "carbs_100g": 7.5,
+  "portions": [
+   {
+    "id": "04c8697f-dd54-5dc6-931a-82c766c8e36c",
+    "label_uk": "порція",
+    "grams": 150
+   },
+   {
+    "id": "304cf7ed-5c00-50b4-8f97-58650d5490a1",
+    "label_uk": "ст. л.",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "a3d768e3-2fdd-54c4-a284-77e120178366",
+  "slug": "salat-z-krabovymy-palychkamy",
+  "source": "ua_dish",
+  "category": "salads",
+  "name_uk": "Салат з крабовими паличками",
+  "kcal_100g": 180,
+  "protein_100g": 5.0,
+  "fat_100g": 13.0,
+  "carbs_100g": 10.5,
+  "portions": [
+   {
+    "id": "ec707456-c664-5713-8cb7-65c82ed74273",
+    "label_uk": "порція",
+    "grams": 150
+   },
+   {
+    "id": "6495a7a7-c80e-5640-accf-0edb8dbc8520",
+    "label_uk": "ст. л.",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "fe36ff16-d442-58cb-ac08-895c264d5177",
+  "slug": "salat-z-buriaka-z-chasnykom",
+  "source": "ua_dish",
+  "category": "salads",
+  "name_uk": "Салат з буряка з часником",
+  "kcal_100g": 140,
+  "protein_100g": 1.8,
+  "fat_100g": 11.0,
+  "carbs_100g": 8.5,
+  "portions": [
+   {
+    "id": "989cd562-0af4-5ecc-a85a-e6893bc6f1fe",
+    "label_uk": "порція",
+    "grams": 150
+   },
+   {
+    "id": "597cf0fb-092d-53b3-a8b1-c35f246302d5",
+    "label_uk": "ст. л.",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "fddf0560-a7c8-5f54-a64a-26e9a848c136",
+  "slug": "salat-z-ohirkiv-i-pomidoriv-z-oliieiu",
+  "source": "ua_dish",
+  "category": "salads",
+  "name_uk": "Салат з огірків і помідорів з олією",
+  "kcal_100g": 50,
+  "protein_100g": 0.9,
+  "fat_100g": 3.4,
+  "carbs_100g": 3.8,
+  "portions": [
+   {
+    "id": "487fc468-688a-5c64-a372-3f00d517b201",
+    "label_uk": "порція",
+    "grams": 150
+   },
+   {
+    "id": "cbfe1b58-8703-59d3-b9dc-4b2ac0fe42d8",
+    "label_uk": "ст. л.",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "be156e98-2d85-5463-88c6-50fd0226c763",
+  "slug": "salat-z-ohirkiv-i-pomidoriv-zi-smetanoiu",
+  "source": "ua_dish",
+  "category": "salads",
+  "name_uk": "Салат з огірків і помідорів зі сметаною",
+  "kcal_100g": 52,
+  "protein_100g": 1.0,
+  "fat_100g": 3.5,
+  "carbs_100g": 4.2,
+  "portions": [
+   {
+    "id": "d70bf588-f281-5b82-b76c-a7c8675524cd",
+    "label_uk": "порція",
+    "grams": 150
+   },
+   {
+    "id": "6dc4b467-839f-5e5c-8d66-630c8ffc1095",
+    "label_uk": "ст. л.",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "034b764b-0352-5c94-b205-70b7683e1190",
+  "slug": "salat-tsezar-z-kurkoiu",
+  "source": "ua_dish",
+  "category": "salads",
+  "name_uk": "Салат Цезар з куркою",
+  "kcal_100g": 190,
+  "protein_100g": 11.0,
+  "fat_100g": 13.0,
+  "carbs_100g": 7.0,
+  "portions": [
+   {
+    "id": "711eed3e-4723-521a-929b-394819475365",
+    "label_uk": "порція",
+    "grams": 150
+   },
+   {
+    "id": "3e597a3a-67b4-5d7f-82b4-15e8a454340c",
+    "label_uk": "ст. л.",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "1982a0d8-c598-5229-9fa2-891036441825",
+  "slug": "salat-z-kapusty",
+  "source": "ua_dish",
+  "category": "salads",
+  "name_uk": "Салат з капусти",
+  "kcal_100g": 50,
+  "protein_100g": 1.5,
+  "fat_100g": 2.5,
+  "carbs_100g": 5.5,
+  "portions": [
+   {
+    "id": "e8d90326-1406-57bf-9119-3ead4176b328",
+    "label_uk": "порція",
+    "grams": 150
+   },
+   {
+    "id": "f4d2d8a3-3e26-5764-a282-e5658652c7b9",
+    "label_uk": "ст. л.",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "0d68dda5-3cdd-531d-8d7c-97f748c22a2b",
+  "slug": "salat-mimoza",
+  "source": "ua_dish",
+  "category": "salads",
+  "name_uk": "Салат Мімоза",
+  "kcal_100g": 210,
+  "protein_100g": 9.5,
+  "fat_100g": 17.0,
+  "carbs_100g": 4.5,
+  "portions": [
+   {
+    "id": "ff12041b-f2bf-54e3-acb7-0f4dbc57c23c",
+    "label_uk": "порція",
+    "grams": 150
+   },
+   {
+    "id": "eed3e189-1c7c-51b4-ad1c-75ab8698cc12",
+    "label_uk": "ст. л.",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "712bf90e-2a69-50c0-877b-bf23f4829966",
+  "slug": "salat-z-kvasoleiu-i-sukharykamy",
+  "source": "ua_dish",
+  "category": "salads",
+  "name_uk": "Салат з квасолею і сухариками",
+  "kcal_100g": 210,
+  "protein_100g": 8.0,
+  "fat_100g": 10.0,
+  "carbs_100g": 22.0,
+  "portions": [
+   {
+    "id": "541fee9e-ed68-5b42-8854-6dc9495f2ecb",
+    "label_uk": "порція",
+    "grams": 150
+   },
+   {
+    "id": "bc2fe836-bd6b-5fed-88e9-4b37cbbb9041",
+    "label_uk": "ст. л.",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "c69b87b4-f535-54f9-9657-c997e0e6b97b",
+  "slug": "salat-hretskyi",
+  "source": "ua_dish",
+  "category": "salads",
+  "name_uk": "Салат Грецький",
+  "kcal_100g": 95,
+  "protein_100g": 3.0,
+  "fat_100g": 8.0,
+  "carbs_100g": 3.5,
+  "portions": [
+   {
+    "id": "59d5b254-b9b2-581f-9c74-cbb30b7cd159",
+    "label_uk": "порція",
+    "grams": 150
+   },
+   {
+    "id": "3cd665c3-8749-5c09-b51a-4cedc4f129f3",
+    "label_uk": "ст. л.",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "e80417df-dc4e-5e54-a582-e5171ee8130d",
+  "slug": "morkva-po-koreisky",
+  "source": "ua_dish",
+  "category": "salads",
+  "name_uk": "Морква по-корейськи",
+  "kcal_100g": 120,
+  "protein_100g": 1.3,
+  "fat_100g": 8.0,
+  "carbs_100g": 9.5,
+  "portions": [
+   {
+    "id": "a0758974-aa90-567a-a89a-7954d0bf279d",
+    "label_uk": "порція",
+    "grams": 150
+   },
+   {
+    "id": "d017a872-0fb7-5689-b7cd-f97110fd913a",
+    "label_uk": "ст. л.",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "9108f837-e83a-5c73-978c-7003fdd44cca",
+  "slug": "ikra-kabachkova",
+  "source": "ua_dish",
+  "category": "salads",
+  "name_uk": "Ікра кабачкова",
+  "kcal_100g": 97,
+  "protein_100g": 1.2,
+  "fat_100g": 7.0,
+  "carbs_100g": 7.4,
+  "portions": [
+   {
+    "id": "8f3257c1-6eff-59f0-bc46-dc994e648318",
+    "label_uk": "порція",
+    "grams": 150
+   },
+   {
+    "id": "59bc0569-b375-5d60-be80-255ac6425044",
+    "label_uk": "ст. л.",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "1e70a591-13cd-58ea-a615-71c870d4ecad",
+  "slug": "ikra-baklazhanna",
+  "source": "ua_dish",
+  "category": "salads",
+  "name_uk": "Ікра баклажанна",
+  "kcal_100g": 90,
+  "protein_100g": 1.5,
+  "fat_100g": 6.0,
+  "carbs_100g": 7.5,
+  "portions": [
+   {
+    "id": "ab133073-526b-55c7-9b93-191f658a9479",
+    "label_uk": "порція",
+    "grams": 150
+   },
+   {
+    "id": "34241b47-cfd2-537b-9348-71af46012d47",
+    "label_uk": "ст. л.",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "a92b973e-d641-57ac-8963-e091299aaaf3",
+  "slug": "pashtet-z-kuriachoi-pechinky",
+  "source": "ua_dish",
+  "category": "salads",
+  "name_uk": "Паштет з курячої печінки",
+  "kcal_100g": 250,
+  "protein_100g": 12.0,
+  "fat_100g": 21.0,
+  "carbs_100g": 3.0,
+  "portions": [
+   {
+    "id": "44e911a9-02b9-5023-8981-930bb4972c1e",
+    "label_uk": "на хліб",
+    "grams": 30
+   },
+   {
+    "id": "49595052-0b8a-5703-81b9-3fc452f83631",
+    "label_uk": "порція",
+    "grams": 150
+   },
+   {
+    "id": "437fed1c-a742-556f-a822-621360d2f218",
+    "label_uk": "ст. л.",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "caf5ab89-b0ba-51cf-ac49-c67b0f2d3fa5",
+  "slug": "khrin-z-buriakom",
+  "source": "ua_dish",
+  "category": "pickles",
+  "name_uk": "Хрін з буряком",
+  "kcal_100g": 65,
+  "protein_100g": 1.5,
+  "fat_100g": 0.2,
+  "carbs_100g": 13.0,
+  "portions": [
+   {
+    "id": "c17034f4-4182-5ad5-9fa8-d5cbafe86419",
+    "label_uk": "ч. л.",
+    "grams": 10
+   },
+   {
+    "id": "ebaaf42f-b56a-582e-ac46-9016b14d68d7",
+    "label_uk": "порція",
+    "grams": 100
+   },
+   {
+    "id": "c064c359-36c8-5cd0-b1af-16cf2f848f81",
+    "label_uk": "ст. л.",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "6ebc40ff-000e-5e9f-a056-15f2f5e5d9f9",
+  "slug": "kvashena-kapusta",
+  "source": "ua_dish",
+  "category": "pickles",
+  "name_uk": "Квашена капуста",
+  "kcal_100g": 19,
+  "protein_100g": 1.8,
+  "fat_100g": 0.1,
+  "carbs_100g": 3.0,
+  "portions": [
+   {
+    "id": "726d68c1-9c95-51d4-9623-2fb6f5faca22",
+    "label_uk": "порція",
+    "grams": 100
+   },
+   {
+    "id": "6f684b79-d1e1-5c33-9c23-116e2f573da6",
+    "label_uk": "ст. л.",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "a96fe1fa-69bf-58d8-aadf-446d63483a0c",
+  "slug": "ohirky-malosolni",
+  "source": "ua_dish",
+  "category": "pickles",
+  "name_uk": "Огірки малосольні",
+  "kcal_100g": 13,
+  "protein_100g": 0.8,
+  "fat_100g": 0.1,
+  "carbs_100g": 1.7,
+  "portions": [
+   {
+    "id": "95c5ae87-41ab-5346-a266-5a14f7f8b327",
+    "label_uk": "шт.",
+    "grams": 80
+   },
+   {
+    "id": "fee1a6c1-cee9-59e9-9739-8820caf3e5dc",
+    "label_uk": "порція",
+    "grams": 100
+   },
+   {
+    "id": "904c58ea-d26c-522c-a15e-b7efd42d8d7c",
+    "label_uk": "ст. л.",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "6ab18e81-e37a-54a9-990f-a65a5635a615",
+  "slug": "pomidory-soloni",
+  "source": "ua_dish",
+  "category": "pickles",
+  "name_uk": "Помідори солоні",
+  "kcal_100g": 20,
+  "protein_100g": 1.1,
+  "fat_100g": 0.1,
+  "carbs_100g": 3.5,
+  "portions": [
+   {
+    "id": "4be488b6-5daf-5258-b4a7-448a842bd36d",
+    "label_uk": "шт.",
+    "grams": 80
+   },
+   {
+    "id": "8cb5f2fc-0c5b-58ac-9699-533b7f2af9f2",
+    "label_uk": "порція",
+    "grams": 100
+   },
+   {
+    "id": "e24679fc-644c-5e8e-b65d-da901db29ca3",
+    "label_uk": "ст. л.",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "db725b63-4e9c-57d0-9d16-eb736a78809d",
+  "slug": "hryby-marynovani",
+  "source": "ua_dish",
+  "category": "pickles",
+  "name_uk": "Гриби мариновані",
+  "kcal_100g": 25,
+  "protein_100g": 2.2,
+  "fat_100g": 0.4,
+  "carbs_100g": 3.3,
+  "portions": [
+   {
+    "id": "9abfc2c5-7e37-5d34-bd5c-d5676ec850c4",
+    "label_uk": "порція",
+    "grams": 100
+   },
+   {
+    "id": "b1cb8cc1-b2ea-5e62-88e6-770fe892a4dd",
+    "label_uk": "ст. л.",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "0bc4e6a8-5ece-5ddf-9909-7daa1600faa4",
+  "slug": "kyivskyi-tort",
+  "source": "ua_dish",
+  "category": "desserts",
+  "name_uk": "Київський торт",
+  "kcal_100g": 450,
+  "protein_100g": 4.5,
+  "fat_100g": 23.0,
+  "carbs_100g": 57.0,
+  "portions": [
+   {
+    "id": "984034c1-54bb-5372-8600-409a1d7bbf22",
+    "label_uk": "шматок",
+    "grams": 100
+   }
+  ]
+ },
+ {
+  "id": "e02973e5-2d2a-5e7a-8209-dfacf8dadfd9",
+  "slug": "medovyk",
+  "source": "ua_dish",
+  "category": "desserts",
+  "name_uk": "Медовик",
+  "kcal_100g": 390,
+  "protein_100g": 5.0,
+  "fat_100g": 17.0,
+  "carbs_100g": 55.0,
+  "portions": [
+   {
+    "id": "bf738c46-d745-51cd-9a00-23e898aecebb",
+    "label_uk": "шматок",
+    "grams": 100
+   }
+  ]
+ },
+ {
+  "id": "b0718fb6-fb3a-5bad-bf0e-1af64bebed57",
+  "slug": "napoleon",
+  "source": "ua_dish",
+  "category": "desserts",
+  "name_uk": "Наполеон",
+  "kcal_100g": 370,
+  "protein_100g": 5.5,
+  "fat_100g": 22.0,
+  "carbs_100g": 38.0,
+  "portions": [
+   {
+    "id": "341892d3-f4f8-5ec4-950b-3323a9a023dc",
+    "label_uk": "шматок",
+    "grams": 100
+   }
+  ]
+ },
+ {
+  "id": "f3daaba9-13f4-52d3-99a7-87da31119dfe",
+  "slug": "sharlotka",
+  "source": "ua_dish",
+  "category": "desserts",
+  "name_uk": "Шарлотка",
+  "kcal_100g": 210,
+  "protein_100g": 4.5,
+  "fat_100g": 4.5,
+  "carbs_100g": 38.0,
+  "portions": [
+   {
+    "id": "8feada43-e674-5546-aa00-76fa205f3858",
+    "label_uk": "шматок",
+    "grams": 100
+   }
+  ]
+ },
+ {
+  "id": "3b335119-5c2f-52bd-98b0-483da156ceed",
+  "slug": "makivnyk",
+  "source": "ua_dish",
+  "category": "desserts",
+  "name_uk": "Маківник",
+  "kcal_100g": 360,
+  "protein_100g": 7.0,
+  "fat_100g": 13.0,
+  "carbs_100g": 52.0,
+  "portions": [
+   {
+    "id": "b61d3e2a-03f9-5c88-8c74-977e92fa2c02",
+    "label_uk": "шматок",
+    "grams": 100
+   }
+  ]
+ },
+ {
+  "id": "3602a9a3-ea76-50fe-9eb6-b4d13c449833",
+  "slug": "paska",
+  "source": "ua_dish",
+  "category": "desserts",
+  "name_uk": "Паска",
+  "kcal_100g": 330,
+  "protein_100g": 7.5,
+  "fat_100g": 9.5,
+  "carbs_100g": 54.0,
+  "portions": [
+   {
+    "id": "c4e4237f-f859-557a-adfc-031293272d05",
+    "label_uk": "шматок",
+    "grams": 100
+   }
+  ]
+ },
+ {
+  "id": "c4571e93-bdcb-5a24-a4c1-89d3516f59f6",
+  "slug": "syrnyk-lvivskyi",
+  "source": "ua_dish",
+  "category": "desserts",
+  "name_uk": "Сирник львівський",
+  "kcal_100g": 250,
+  "protein_100g": 11.0,
+  "fat_100g": 13.0,
+  "carbs_100g": 22.0,
+  "portions": [
+   {
+    "id": "2e3bf77b-5ad5-5f6a-b1a5-cadf205c1753",
+    "label_uk": "шматок",
+    "grams": 100
+   }
+  ]
+ },
+ {
+  "id": "4ec89982-cd03-5d53-9b0c-6a8b3f35580d",
+  "slug": "ponchyky-z-povydlom",
+  "source": "ua_dish",
+  "category": "desserts",
+  "name_uk": "Пончики з повидлом",
+  "kcal_100g": 300,
+  "protein_100g": 6.0,
+  "fat_100g": 10.0,
+  "carbs_100g": 47.0,
+  "portions": [
+   {
+    "id": "7f4551b7-08c1-5362-bf5a-d9d67318dcf0",
+    "label_uk": "шт.",
+    "grams": 70
+   },
+   {
+    "id": "2395a692-a19e-5081-9006-2ae77daf0269",
+    "label_uk": "шматок",
+    "grams": 100
+   }
+  ]
+ },
+ {
+  "id": "e59dda8f-37a9-5c7c-bfe6-18d832be69fc",
+  "slug": "verhuny",
+  "source": "ua_dish",
+  "category": "desserts",
+  "name_uk": "Вергуни",
+  "kcal_100g": 450,
+  "protein_100g": 7.0,
+  "fat_100g": 25.0,
+  "carbs_100g": 50.0,
+  "portions": [
+   {
+    "id": "87880a1f-c032-5574-80e9-da515b07ab94",
+    "label_uk": "шт.",
+    "grams": 15
+   },
+   {
+    "id": "2d007cf5-f70f-56f6-8a1a-dcd2ffc580b4",
+    "label_uk": "шматок",
+    "grams": 100
+   }
+  ]
+ },
+ {
+  "id": "d73da1e2-755e-502d-8c6a-8390ad7aab02",
+  "slug": "strudel-iabluchnyi",
+  "source": "ua_dish",
+  "category": "desserts",
+  "name_uk": "Струдель яблучний",
+  "kcal_100g": 260,
+  "protein_100g": 3.5,
+  "fat_100g": 12.0,
+  "carbs_100g": 34.0,
+  "portions": [
+   {
+    "id": "73d85bb2-76b3-5e9c-b9ef-ab9dc437104d",
+    "label_uk": "шматок",
+    "grams": 100
+   }
+  ]
+ },
+ {
+  "id": "cb8ba386-f808-56f5-b833-1614f53cc8fb",
+  "slug": "syrok-hlazurovanyi",
+  "source": "ua_dish",
+  "category": "desserts",
+  "name_uk": "Сирок глазурований",
+  "kcal_100g": 410,
+  "protein_100g": 8.5,
+  "fat_100g": 27.0,
+  "carbs_100g": 32.0,
+  "portions": [
+   {
+    "id": "704812f5-4694-5c7e-a36d-a04d51706703",
+    "label_uk": "шт.",
+    "grams": 40
+   },
+   {
+    "id": "74d7f649-d701-5569-b1f6-06a1e62eadda",
+    "label_uk": "шматок",
+    "grams": 100
+   }
+  ]
+ },
+ {
+  "id": "30cb8f6a-a572-5b59-a818-4cef6a69098a",
+  "slug": "uzvar",
+  "source": "ua_dish",
+  "category": "drinks",
+  "name_uk": "Узвар",
+  "kcal_100g": 30,
+  "protein_100g": 0.2,
+  "fat_100g": 0.0,
+  "carbs_100g": 7.5,
+  "portions": [
+   {
+    "id": "fcfca00c-2614-5ee3-bccd-261a54ad4841",
+    "label_uk": "склянка",
+    "grams": 250
+   },
+   {
+    "id": "b3f1998b-a25b-5753-bdc8-ad6d5f20cded",
+    "label_uk": "чашка",
+    "grams": 200
+   }
+  ]
+ },
+ {
+  "id": "e8e3e499-541d-52c1-a374-2650cf229d9a",
+  "slug": "kompot-z-iahid",
+  "source": "ua_dish",
+  "category": "drinks",
+  "name_uk": "Компот з ягід",
+  "kcal_100g": 45,
+  "protein_100g": 0.2,
+  "fat_100g": 0.0,
+  "carbs_100g": 11.0,
+  "portions": [
+   {
+    "id": "a9d09a13-0b43-510d-914c-8a2df70ae904",
+    "label_uk": "склянка",
+    "grams": 250
+   },
+   {
+    "id": "48f45ddb-5b2a-59e0-ac72-9372ca09fe12",
+    "label_uk": "чашка",
+    "grams": 200
+   }
+  ]
+ },
+ {
+  "id": "ac216c79-8cc3-528c-b5e0-e2d41405ce07",
+  "slug": "kysil",
+  "source": "ua_dish",
+  "category": "drinks",
+  "name_uk": "Кисіль",
+  "kcal_100g": 55,
+  "protein_100g": 0.0,
+  "fat_100g": 0.0,
+  "carbs_100g": 13.5,
+  "portions": [
+   {
+    "id": "dd96f938-b275-5f0c-a3b2-fcfe40d69685",
+    "label_uk": "склянка",
+    "grams": 250
+   },
+   {
+    "id": "469840a6-edd3-5c55-8464-fdc1396c1daa",
+    "label_uk": "чашка",
+    "grams": 200
+   }
+  ]
+ },
+ {
+  "id": "62c15e6c-fedc-516e-97f6-d006a6b49b88",
+  "slug": "kvas",
+  "source": "ua_dish",
+  "category": "drinks",
+  "name_uk": "Квас",
+  "kcal_100g": 27,
+  "protein_100g": 0.2,
+  "fat_100g": 0.0,
+  "carbs_100g": 5.2,
+  "portions": [
+   {
+    "id": "30c3bb1d-0327-50ff-b076-9690e4fe001d",
+    "label_uk": "склянка",
+    "grams": 250
+   },
+   {
+    "id": "755bcfbc-6446-5052-a0bd-d12ddb756475",
+    "label_uk": "чашка",
+    "grams": 200
+   }
+  ]
+ },
+ {
+  "id": "dd8b24f6-20c6-59f1-b619-b96cd3013a4c",
+  "slug": "riazhanka-4",
+  "source": "ua_dish",
+  "category": "drinks",
+  "name_uk": "Ряжанка 4%",
+  "kcal_100g": 72,
+  "protein_100g": 2.9,
+  "fat_100g": 4.0,
+  "carbs_100g": 4.2,
+  "portions": [
+   {
+    "id": "605e6961-a6a9-5187-9296-d32a43c645d5",
+    "label_uk": "склянка",
+    "grams": 250
+   },
+   {
+    "id": "5b01c308-c340-537d-b869-dd3bb82e204e",
+    "label_uk": "чашка",
+    "grams": 200
+   }
+  ]
+ },
+ {
+  "id": "d28ceda5-ebf6-5a2e-9974-908d0e757c30",
+  "slug": "kefir-2-5",
+  "source": "ua_dish",
+  "category": "drinks",
+  "name_uk": "Кефір 2,5%",
+  "kcal_100g": 50,
+  "protein_100g": 2.9,
+  "fat_100g": 2.5,
+  "carbs_100g": 4.0,
+  "portions": [
+   {
+    "id": "224f9f4d-542c-5f73-9155-41c83ba77d80",
+    "label_uk": "склянка",
+    "grams": 250
+   },
+   {
+    "id": "83643ccd-7491-500a-adaf-b7b75830c752",
+    "label_uk": "чашка",
+    "grams": 200
+   }
+  ]
+ },
+ {
+  "id": "898e11fd-6eee-52f3-9d31-a557c390a8a8",
+  "slug": "kakao-na-molotsi",
+  "source": "ua_dish",
+  "category": "drinks",
+  "name_uk": "Какао на молоці",
+  "kcal_100g": 80,
+  "protein_100g": 3.2,
+  "fat_100g": 3.0,
+  "carbs_100g": 10.0,
+  "portions": [
+   {
+    "id": "24c43da3-cd21-5c71-9581-02d8b67b3237",
+    "label_uk": "склянка",
+    "grams": 250
+   },
+   {
+    "id": "7757c0d4-cf0e-5adb-bada-e1f6b4c98056",
+    "label_uk": "чашка",
+    "grams": 200
+   }
+  ]
+ },
+ {
+  "id": "f99739dc-e70d-5e15-8160-5a062c769fd2",
+  "slug": "kava-z-molokom-bez-tsukru",
+  "source": "ua_dish",
+  "category": "drinks",
+  "name_uk": "Кава з молоком без цукру",
+  "kcal_100g": 25,
+  "protein_100g": 1.4,
+  "fat_100g": 1.3,
+  "carbs_100g": 2.0,
+  "portions": [
+   {
+    "id": "75747395-c459-53b4-b2ef-1c9b81158706",
+    "label_uk": "склянка",
+    "grams": 250
+   },
+   {
+    "id": "119e0293-b894-53d9-9cef-a22628139e0a",
+    "label_uk": "чашка",
+    "grams": 200
+   }
+  ]
+ },
+ {
+  "id": "5f39c3f1-ff9a-569a-a8f4-c1c2135147f4",
+  "slug": "shaurma-z-kurkoiu",
+  "source": "ua_dish",
+  "category": "fastfood",
+  "name_uk": "Шаурма з куркою",
+  "kcal_100g": 220,
+  "protein_100g": 10.0,
+  "fat_100g": 11.0,
+  "carbs_100g": 21.0,
+  "portions": [
+   {
+    "id": "fbd10e13-2995-503c-89f5-b7532321c8ef",
+    "label_uk": "шт.",
+    "grams": 350
+   },
+   {
+    "id": "b5dd3498-e2db-57f7-9c4d-b2dc8d0047b1",
+    "label_uk": "порція",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "374bfbe6-a9ba-55c6-92a7-79cd13e14ce6",
+  "slug": "pitsa-marharyta",
+  "source": "ua_dish",
+  "category": "fastfood",
+  "name_uk": "Піца Маргарита",
+  "kcal_100g": 245,
+  "protein_100g": 10.0,
+  "fat_100g": 9.0,
+  "carbs_100g": 30.0,
+  "portions": [
+   {
+    "id": "52372503-f278-567c-b15a-e583fdea93a8",
+    "label_uk": "шматок",
+    "grams": 110
+   },
+   {
+    "id": "20009269-928c-5391-af05-8c5adb267b21",
+    "label_uk": "порція",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "4fff25a4-cbb9-5dd4-ad3e-eb996c0b8153",
+  "slug": "khot-doh",
+  "source": "ua_dish",
+  "category": "fastfood",
+  "name_uk": "Хот-дог",
+  "kcal_100g": 270,
+  "protein_100g": 9.5,
+  "fat_100g": 15.0,
+  "carbs_100g": 24.0,
+  "portions": [
+   {
+    "id": "1fab6f03-1db8-59e9-b5fb-21c57a4b8101",
+    "label_uk": "шт.",
+    "grams": 150
+   },
+   {
+    "id": "b1410eb2-25c3-5ba3-8f0c-c77b2f005ae6",
+    "label_uk": "порція",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "9c5c469b-38b1-5e9c-9b81-78a9a6ab7234",
+  "slug": "burher",
+  "source": "ua_dish",
+  "category": "fastfood",
+  "name_uk": "Бургер",
+  "kcal_100g": 250,
+  "protein_100g": 12.5,
+  "fat_100g": 12.0,
+  "carbs_100g": 23.0,
+  "portions": [
+   {
+    "id": "2c9d46bf-a4ab-5b5a-a6f4-0931f1a74f85",
+    "label_uk": "шт.",
+    "grams": 220
+   },
+   {
+    "id": "0e8fdf56-496f-5807-b3c0-1ee7ee1a2ded",
+    "label_uk": "порція",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "70e1ed2f-eb3e-58ab-b735-1f1dfca86947",
+  "slug": "kartoplia-fri",
+  "source": "ua_dish",
+  "category": "fastfood",
+  "name_uk": "Картопля фрі",
+  "kcal_100g": 312,
+  "protein_100g": 3.4,
+  "fat_100g": 15.0,
+  "carbs_100g": 41.0,
+  "portions": [
+   {
+    "id": "ee9db4c3-6193-5fea-8782-42e91f5f0971",
+    "label_uk": "мала",
+    "grams": 80
+   },
+   {
+    "id": "dc03b9e9-5b33-5665-ade5-279995c565fb",
+    "label_uk": "середня",
+    "grams": 115
+   },
+   {
+    "id": "ac8c47bf-4df9-59f8-af39-f67fd9bdc105",
+    "label_uk": "порція",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "c19503bb-fa20-53fe-bc8e-c35c87479c2e",
+  "slug": "kuriache-file-syre",
+  "source": "base",
+  "category": "meat",
+  "name_uk": "Куряче філе сире",
+  "kcal_100g": 113,
+  "protein_100g": 23.6,
+  "fat_100g": 1.9,
+  "carbs_100g": 0.4,
+  "portions": []
+ },
+ {
+  "id": "01fe08e5-f2d5-5bee-91e8-85e472458b07",
+  "slug": "kuriachi-stehna-bez-shkiry-syri",
+  "source": "base",
+  "category": "meat",
+  "name_uk": "Курячі стегна без шкіри сирі",
+  "kcal_100g": 120,
+  "protein_100g": 19.7,
+  "fat_100g": 4.3,
+  "carbs_100g": 0.0,
+  "portions": [
+   {
+    "id": "663d7b0d-c4ec-5ee8-b7dc-cd7644ac3f00",
+    "label_uk": "шт.",
+    "grams": 100
+   }
+  ]
+ },
+ {
+  "id": "671b7d26-ad7b-574c-9df7-a22856ebf18f",
+  "slug": "indychka-file-syre",
+  "source": "base",
+  "category": "meat",
+  "name_uk": "Індичка, філе сире",
+  "kcal_100g": 114,
+  "protein_100g": 23.5,
+  "fat_100g": 1.5,
+  "carbs_100g": 0.0,
+  "portions": []
+ },
+ {
+  "id": "00536603-9016-5998-82fe-6ac3b55d1b55",
+  "slug": "svynyna-pisna-syra",
+  "source": "base",
+  "category": "meat",
+  "name_uk": "Свинина пісна сира",
+  "kcal_100g": 142,
+  "protein_100g": 20.9,
+  "fat_100g": 6.5,
+  "carbs_100g": 0.0,
+  "portions": []
+ },
+ {
+  "id": "2f6e23ff-ba08-56cc-8854-047c09bc5395",
+  "slug": "svyniacha-shyia-syra",
+  "source": "base",
+  "category": "meat",
+  "name_uk": "Свиняча шия сира",
+  "kcal_100g": 267,
+  "protein_100g": 16.0,
+  "fat_100g": 22.5,
+  "carbs_100g": 0.0,
+  "portions": []
+ },
+ {
+  "id": "96d9abd8-1119-5f41-9e8e-e48dc0336cee",
+  "slug": "ialovychyna-syra",
+  "source": "base",
+  "category": "meat",
+  "name_uk": "Яловичина сира",
+  "kcal_100g": 187,
+  "protein_100g": 18.9,
+  "fat_100g": 12.4,
+  "carbs_100g": 0.0,
+  "portions": []
+ },
+ {
+  "id": "8e67aace-495e-5f6b-8767-73c97d40b96c",
+  "slug": "farsh-svynno-ialovychyi",
+  "source": "base",
+  "category": "meat",
+  "name_uk": "Фарш свинно-яловичий",
+  "kcal_100g": 263,
+  "protein_100g": 17.0,
+  "fat_100g": 21.5,
+  "carbs_100g": 0.0,
+  "portions": []
+ },
+ {
+  "id": "d223c6e7-86e5-5ed8-98f1-be23d93fcb47",
+  "slug": "pechinka-kuriacha-syra",
+  "source": "base",
+  "category": "meat",
+  "name_uk": "Печінка куряча сира",
+  "kcal_100g": 136,
+  "protein_100g": 19.1,
+  "fat_100g": 6.3,
+  "carbs_100g": 0.6,
+  "portions": []
+ },
+ {
+  "id": "d714a0aa-2d37-5d6f-824d-9cc86c81ef40",
+  "slug": "kovbasa-varena",
+  "source": "base",
+  "category": "meat",
+  "name_uk": "Ковбаса варена",
+  "kcal_100g": 257,
+  "protein_100g": 12.8,
+  "fat_100g": 22.2,
+  "carbs_100g": 1.5,
+  "portions": [
+   {
+    "id": "4f9abf70-d73b-5f57-a8d7-c69a5dfb0196",
+    "label_uk": "скибка",
+    "grams": 20
+   }
+  ]
+ },
+ {
+  "id": "f2f062fa-3403-54ca-85ef-afc53a98bf68",
+  "slug": "sosysky",
+  "source": "base",
+  "category": "meat",
+  "name_uk": "Сосиски",
+  "kcal_100g": 266,
+  "protein_100g": 11.0,
+  "fat_100g": 23.9,
+  "carbs_100g": 1.6,
+  "portions": [
+   {
+    "id": "2684afcc-95f7-5a10-94ec-f3977ae04d75",
+    "label_uk": "шт.",
+    "grams": 50
+   }
+  ]
+ },
+ {
+  "id": "4658b71e-d9d3-51e9-9650-c87d7cf917ad",
+  "slug": "khek-syryi",
+  "source": "base",
+  "category": "fish_raw",
+  "name_uk": "Хек сирий",
+  "kcal_100g": 86,
+  "protein_100g": 16.6,
+  "fat_100g": 2.2,
+  "carbs_100g": 0.0,
+  "portions": []
+ },
+ {
+  "id": "cb7d1f7e-bba8-5d59-8b19-cbaf1a8b94cf",
+  "slug": "losos-syryi",
+  "source": "base",
+  "category": "fish_raw",
+  "name_uk": "Лосось сирий",
+  "kcal_100g": 208,
+  "protein_100g": 20.0,
+  "fat_100g": 13.4,
+  "carbs_100g": 0.0,
+  "portions": []
+ },
+ {
+  "id": "dbf916d6-a46a-507b-847e-a8b049e8dac0",
+  "slug": "skumbriia-syra",
+  "source": "base",
+  "category": "fish_raw",
+  "name_uk": "Скумбрія сира",
+  "kcal_100g": 205,
+  "protein_100g": 18.6,
+  "fat_100g": 13.9,
+  "carbs_100g": 0.0,
+  "portions": []
+ },
+ {
+  "id": "94cc0664-da6b-5988-ba32-3d82de040647",
+  "slug": "tunets-konservovanyi-u-vlasnomu-soku",
+  "source": "base",
+  "category": "fish_raw",
+  "name_uk": "Тунець консервований у власному соку",
+  "kcal_100g": 116,
+  "protein_100g": 25.5,
+  "fat_100g": 0.8,
+  "carbs_100g": 0.0,
+  "portions": [
+   {
+    "id": "ee8c07b8-53e8-575b-a8fd-2c57084d6019",
+    "label_uk": "банка",
+    "grams": 140
+   }
+  ]
+ },
+ {
+  "id": "5c52d67a-64cb-51e9-9c0d-ffc6113ff4ce",
+  "slug": "moloko-2-5",
+  "source": "base",
+  "category": "dairy",
+  "name_uk": "Молоко 2,5%",
+  "kcal_100g": 52,
+  "protein_100g": 2.8,
+  "fat_100g": 2.5,
+  "carbs_100g": 4.7,
+  "portions": [
+   {
+    "id": "032f7b11-fb84-5b90-9efe-83ab2ec01a58",
+    "label_uk": "склянка",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "5bc0a5ac-f70a-5ace-b88e-29436db10687",
+  "slug": "moloko-3-2",
+  "source": "base",
+  "category": "dairy",
+  "name_uk": "Молоко 3,2%",
+  "kcal_100g": 59,
+  "protein_100g": 2.9,
+  "fat_100g": 3.2,
+  "carbs_100g": 4.7,
+  "portions": [
+   {
+    "id": "159f2d77-563d-5568-a983-db08f68f7cd1",
+    "label_uk": "склянка",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "a5f2b3c7-780d-5adb-ab56-2c249773dd88",
+  "slug": "syr-kyslomolochnyi-0-5",
+  "source": "base",
+  "category": "dairy",
+  "name_uk": "Сир кисломолочний 0,5%",
+  "kcal_100g": 79,
+  "protein_100g": 16.5,
+  "fat_100g": 0.5,
+  "carbs_100g": 1.3,
+  "portions": [
+   {
+    "id": "a2e6ee77-f147-517c-abae-9952d13bc910",
+    "label_uk": "пачка",
+    "grams": 200
+   }
+  ]
+ },
+ {
+  "id": "e254cb2c-20ec-52fc-99a9-1925f89ca284",
+  "slug": "syr-kyslomolochnyi-5",
+  "source": "base",
+  "category": "dairy",
+  "name_uk": "Сир кисломолочний 5%",
+  "kcal_100g": 121,
+  "protein_100g": 17.2,
+  "fat_100g": 5.0,
+  "carbs_100g": 1.8,
+  "portions": [
+   {
+    "id": "7b0efde1-aec5-506c-96d2-25922b0e4281",
+    "label_uk": "пачка",
+    "grams": 200
+   }
+  ]
+ },
+ {
+  "id": "a5aadc54-4e61-5ff3-9b5e-3ec82907c1e3",
+  "slug": "syr-kyslomolochnyi-9",
+  "source": "base",
+  "category": "dairy",
+  "name_uk": "Сир кисломолочний 9%",
+  "kcal_100g": 159,
+  "protein_100g": 16.7,
+  "fat_100g": 9.0,
+  "carbs_100g": 2.0,
+  "portions": [
+   {
+    "id": "71e41986-5254-52b8-8a90-d6ed1ddd33e9",
+    "label_uk": "пачка",
+    "grams": 200
+   }
+  ]
+ },
+ {
+  "id": "0e3b9d4f-4e61-5e02-816c-dab5f2c356d1",
+  "slug": "iohurt-hretskyi-2",
+  "source": "base",
+  "category": "dairy",
+  "name_uk": "Йогурт грецький 2%",
+  "kcal_100g": 66,
+  "protein_100g": 9.0,
+  "fat_100g": 2.0,
+  "carbs_100g": 3.6,
+  "portions": [
+   {
+    "id": "862a036c-55de-5336-944a-feab78c16dfb",
+    "label_uk": "стакан",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "cef4115b-379c-5b33-ba85-a3d64464723c",
+  "slug": "iohurt-pytnyi",
+  "source": "base",
+  "category": "dairy",
+  "name_uk": "Йогурт питний",
+  "kcal_100g": 75,
+  "protein_100g": 2.8,
+  "fat_100g": 2.5,
+  "carbs_100g": 10.0,
+  "portions": [
+   {
+    "id": "aa52cfca-f66f-54b5-b2fa-48468b092163",
+    "label_uk": "пляшка",
+    "grams": 300
+   }
+  ]
+ },
+ {
+  "id": "c3a4ee7a-d402-5b90-b0d1-b513d8f15a19",
+  "slug": "syr-tverdyi",
+  "source": "base",
+  "category": "dairy",
+  "name_uk": "Сир твердий",
+  "kcal_100g": 352,
+  "protein_100g": 26.0,
+  "fat_100g": 26.8,
+  "carbs_100g": 0.0,
+  "portions": [
+   {
+    "id": "ede2f2ff-da2b-5728-9fa1-594746327a6d",
+    "label_uk": "скибка",
+    "grams": 20
+   }
+  ]
+ },
+ {
+  "id": "1d3e4e38-2c71-500e-86c1-41c649dcf3b6",
+  "slug": "brynza",
+  "source": "base",
+  "category": "dairy",
+  "name_uk": "Бринза",
+  "kcal_100g": 260,
+  "protein_100g": 17.9,
+  "fat_100g": 20.1,
+  "carbs_100g": 0.4,
+  "portions": []
+ },
+ {
+  "id": "7f27e35f-6fc2-5fba-8f13-7e48fe7c2a40",
+  "slug": "motsarela",
+  "source": "base",
+  "category": "dairy",
+  "name_uk": "Моцарела",
+  "kcal_100g": 280,
+  "protein_100g": 22.0,
+  "fat_100g": 21.0,
+  "carbs_100g": 2.0,
+  "portions": []
+ },
+ {
+  "id": "64b133e0-80c9-564b-b8ba-b30bb3cc3255",
+  "slug": "maslo-vershkove-82",
+  "source": "base",
+  "category": "dairy",
+  "name_uk": "Масло вершкове 82%",
+  "kcal_100g": 748,
+  "protein_100g": 0.5,
+  "fat_100g": 82.5,
+  "carbs_100g": 0.8,
+  "portions": [
+   {
+    "id": "03192f83-d91a-550a-a903-9a892d7fecfb",
+    "label_uk": "ч. л.",
+    "grams": 5
+   }
+  ]
+ },
+ {
+  "id": "b57d24da-a71c-5ccb-88fc-6a65422d3efe",
+  "slug": "smetana-15",
+  "source": "base",
+  "category": "dairy",
+  "name_uk": "Сметана 15%",
+  "kcal_100g": 160,
+  "protein_100g": 2.6,
+  "fat_100g": 15.0,
+  "carbs_100g": 3.0,
+  "portions": [
+   {
+    "id": "6db4e2ee-9aa6-5d73-9f42-c03ea1fae933",
+    "label_uk": "ст. л.",
+    "grams": 20
+   }
+  ]
+ },
+ {
+  "id": "ac20fbbb-99e3-528f-9b19-c3448c8fb067",
+  "slug": "smetana-20",
+  "source": "base",
+  "category": "dairy",
+  "name_uk": "Сметана 20%",
+  "kcal_100g": 206,
+  "protein_100g": 2.8,
+  "fat_100g": 20.0,
+  "carbs_100g": 3.2,
+  "portions": [
+   {
+    "id": "2a8a3e4d-1b74-5081-bda1-264202015b2f",
+    "label_uk": "ст. л.",
+    "grams": 20
+   }
+  ]
+ },
+ {
+  "id": "090a0de5-6154-5000-a676-e6b513ff2681",
+  "slug": "iaitse-kuriache-syre",
+  "source": "base",
+  "category": "eggs",
+  "name_uk": "Яйце куряче сире",
+  "kcal_100g": 157,
+  "protein_100g": 12.7,
+  "fat_100g": 11.5,
+  "carbs_100g": 0.7,
+  "portions": [
+   {
+    "id": "cd403703-f772-5e5c-8945-7e1cedb169e5",
+    "label_uk": "шт.",
+    "grams": 55
+   }
+  ]
+ },
+ {
+  "id": "253efaea-5f9e-5a17-86d2-bbf6703eb34c",
+  "slug": "hrechka-sukha",
+  "source": "base",
+  "category": "grains",
+  "name_uk": "Гречка суха",
+  "kcal_100g": 313,
+  "protein_100g": 12.6,
+  "fat_100g": 3.3,
+  "carbs_100g": 57.1,
+  "portions": []
+ },
+ {
+  "id": "a4ba847c-831c-5c62-8d3e-42ae6640e1f5",
+  "slug": "rys-bilyi-sukhyi",
+  "source": "base",
+  "category": "grains",
+  "name_uk": "Рис білий сухий",
+  "kcal_100g": 344,
+  "protein_100g": 6.7,
+  "fat_100g": 0.7,
+  "carbs_100g": 78.9,
+  "portions": []
+ },
+ {
+  "id": "c9bfbc78-7cd1-5b28-8564-aed8e8b4ade0",
+  "slug": "vivsiani-plastivtsi",
+  "source": "base",
+  "category": "grains",
+  "name_uk": "Вівсяні пластівці",
+  "kcal_100g": 352,
+  "protein_100g": 12.3,
+  "fat_100g": 6.1,
+  "carbs_100g": 59.5,
+  "portions": [
+   {
+    "id": "858831d8-ad50-57a1-8322-6016b2a2bcd4",
+    "label_uk": "ст. л.",
+    "grams": 10
+   }
+  ]
+ },
+ {
+  "id": "c447efaa-4d15-5228-97cb-00f41a4fea7f",
+  "slug": "pshono-sukhe",
+  "source": "base",
+  "category": "grains",
+  "name_uk": "Пшоно сухе",
+  "kcal_100g": 342,
+  "protein_100g": 11.5,
+  "fat_100g": 3.3,
+  "carbs_100g": 66.5,
+  "portions": []
+ },
+ {
+  "id": "deba7702-e7f9-5b92-8aff-c15d18cbf024",
+  "slug": "bulhur-sukhyi",
+  "source": "base",
+  "category": "grains",
+  "name_uk": "Булгур сухий",
+  "kcal_100g": 342,
+  "protein_100g": 12.3,
+  "fat_100g": 1.3,
+  "carbs_100g": 75.9,
+  "portions": []
+ },
+ {
+  "id": "2b3bc6a3-9374-5e6b-b428-a4012eb58d8c",
+  "slug": "makarony-sukhi",
+  "source": "base",
+  "category": "grains",
+  "name_uk": "Макарони сухі",
+  "kcal_100g": 344,
+  "protein_100g": 10.4,
+  "fat_100g": 1.1,
+  "carbs_100g": 71.5,
+  "portions": []
+ },
+ {
+  "id": "097714d2-0127-52a8-8032-ae9725e71855",
+  "slug": "boroshno-pshenychne",
+  "source": "base",
+  "category": "grains",
+  "name_uk": "Борошно пшеничне",
+  "kcal_100g": 334,
+  "protein_100g": 10.3,
+  "fat_100g": 1.1,
+  "carbs_100g": 70.6,
+  "portions": [
+   {
+    "id": "c221fd7d-87af-5c0c-a3bd-c46443a89f2d",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "9547569a-11c4-5b6f-a3f0-fcc58d5c49a5",
+  "slug": "kukurudziana-krupa",
+  "source": "base",
+  "category": "grains",
+  "name_uk": "Кукурудзяна крупа",
+  "kcal_100g": 337,
+  "protein_100g": 8.3,
+  "fat_100g": 1.2,
+  "carbs_100g": 75.0,
+  "portions": []
+ },
+ {
+  "id": "6c8b8684-5c1b-52b7-b717-ed907e0ac346",
+  "slug": "tsukor",
+  "source": "base",
+  "category": "grains",
+  "name_uk": "Цукор",
+  "kcal_100g": 398,
+  "protein_100g": 0.0,
+  "fat_100g": 0.0,
+  "carbs_100g": 99.7,
+  "portions": [
+   {
+    "id": "a9be1665-0441-50a3-bcb5-3800a7be0252",
+    "label_uk": "ч. л.",
+    "grams": 5
+   }
+  ]
+ },
+ {
+  "id": "4f557efe-0c5d-5f30-91fc-62f355a432dc",
+  "slug": "med",
+  "source": "base",
+  "category": "grains",
+  "name_uk": "Мед",
+  "kcal_100g": 329,
+  "protein_100g": 0.8,
+  "fat_100g": 0.0,
+  "carbs_100g": 81.5,
+  "portions": [
+   {
+    "id": "eab0aef8-6370-54d0-bddc-92f30742c0ee",
+    "label_uk": "ч. л.",
+    "grams": 10
+   }
+  ]
+ },
+ {
+  "id": "ef62c8f5-413d-5c14-8347-304af5690210",
+  "slug": "kartoplia-syra",
+  "source": "base",
+  "category": "veg",
+  "name_uk": "Картопля сира",
+  "kcal_100g": 77,
+  "protein_100g": 2.0,
+  "fat_100g": 0.4,
+  "carbs_100g": 16.3,
+  "portions": [
+   {
+    "id": "65493ff8-91dc-5082-97d0-a6ee9e1383f3",
+    "label_uk": "шт.",
+    "grams": 120
+   }
+  ]
+ },
+ {
+  "id": "649341f7-093b-5287-aa90-9efada3943aa",
+  "slug": "morkva",
+  "source": "base",
+  "category": "veg",
+  "name_uk": "Морква",
+  "kcal_100g": 32,
+  "protein_100g": 1.3,
+  "fat_100g": 0.1,
+  "carbs_100g": 6.9,
+  "portions": [
+   {
+    "id": "4edd076e-25d2-5797-ac81-77da1b8c3017",
+    "label_uk": "шт.",
+    "grams": 80
+   }
+  ]
+ },
+ {
+  "id": "4f74e361-ede3-56c3-835e-c25335ca2f50",
+  "slug": "tsybulia-ripchasta",
+  "source": "base",
+  "category": "veg",
+  "name_uk": "Цибуля ріпчаста",
+  "kcal_100g": 41,
+  "protein_100g": 1.4,
+  "fat_100g": 0.0,
+  "carbs_100g": 8.2,
+  "portions": [
+   {
+    "id": "550b7df3-37cb-5ad2-8165-d0c6f477797c",
+    "label_uk": "шт.",
+    "grams": 80
+   }
+  ]
+ },
+ {
+  "id": "b0cc9211-de09-5ccf-8de9-285e843b49a5",
+  "slug": "buriak",
+  "source": "base",
+  "category": "veg",
+  "name_uk": "Буряк",
+  "kcal_100g": 40,
+  "protein_100g": 1.5,
+  "fat_100g": 0.1,
+  "carbs_100g": 8.8,
+  "portions": [
+   {
+    "id": "6baaa4db-a197-541e-94d8-e9a8ded3f326",
+    "label_uk": "шт.",
+    "grams": 200
+   }
+  ]
+ },
+ {
+  "id": "48ee62f3-8d2c-5721-9b4b-43969b7110cf",
+  "slug": "kapusta-bilokachanna",
+  "source": "base",
+  "category": "veg",
+  "name_uk": "Капуста білокачанна",
+  "kcal_100g": 28,
+  "protein_100g": 1.8,
+  "fat_100g": 0.1,
+  "carbs_100g": 4.7,
+  "portions": []
+ },
+ {
+  "id": "6817eb94-2682-5436-ad3c-09af83635605",
+  "slug": "ohirok",
+  "source": "base",
+  "category": "veg",
+  "name_uk": "Огірок",
+  "kcal_100g": 15,
+  "protein_100g": 0.8,
+  "fat_100g": 0.1,
+  "carbs_100g": 2.8,
+  "portions": [
+   {
+    "id": "c6d03bd1-b4b0-5b04-9a1d-013dbac38fb0",
+    "label_uk": "шт.",
+    "grams": 120
+   }
+  ]
+ },
+ {
+  "id": "940268f2-fb64-56a9-9b27-6660f27782a9",
+  "slug": "pomidor",
+  "source": "base",
+  "category": "veg",
+  "name_uk": "Помідор",
+  "kcal_100g": 20,
+  "protein_100g": 0.6,
+  "fat_100g": 0.2,
+  "carbs_100g": 4.2,
+  "portions": [
+   {
+    "id": "4589e0a2-5ea9-5009-8d07-2d343cf5e28e",
+    "label_uk": "шт.",
+    "grams": 130
+   }
+  ]
+ },
+ {
+  "id": "c8f8dee8-d201-5fce-b253-9597d5993e4b",
+  "slug": "perets-bolharskyi",
+  "source": "base",
+  "category": "veg",
+  "name_uk": "Перець болгарський",
+  "kcal_100g": 26,
+  "protein_100g": 1.3,
+  "fat_100g": 0.1,
+  "carbs_100g": 5.3,
+  "portions": [
+   {
+    "id": "2ade0909-0ad9-5e0f-9577-5d2b79b3ea83",
+    "label_uk": "шт.",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "90262da8-b0a0-501a-be0e-e6b371e775bc",
+  "slug": "kabachok",
+  "source": "base",
+  "category": "veg",
+  "name_uk": "Кабачок",
+  "kcal_100g": 24,
+  "protein_100g": 0.6,
+  "fat_100g": 0.3,
+  "carbs_100g": 4.6,
+  "portions": []
+ },
+ {
+  "id": "b35e2bb5-597d-5f57-b83f-09437656a661",
+  "slug": "chasnyk",
+  "source": "base",
+  "category": "veg",
+  "name_uk": "Часник",
+  "kcal_100g": 143,
+  "protein_100g": 6.5,
+  "fat_100g": 0.5,
+  "carbs_100g": 29.9,
+  "portions": [
+   {
+    "id": "e6b75aa5-0840-5509-a146-10730beec91a",
+    "label_uk": "зубчик",
+    "grams": 5
+   }
+  ]
+ },
+ {
+  "id": "e49fb405-9e8b-5cb7-b0b7-67003848b5c3",
+  "slug": "brokoli",
+  "source": "base",
+  "category": "veg",
+  "name_uk": "Броколі",
+  "kcal_100g": 34,
+  "protein_100g": 2.8,
+  "fat_100g": 0.4,
+  "carbs_100g": 6.6,
+  "portions": []
+ },
+ {
+  "id": "16dd09eb-c594-5b05-8af7-9f30bcf6ce14",
+  "slug": "pecherytsi",
+  "source": "base",
+  "category": "veg",
+  "name_uk": "Печериці",
+  "kcal_100g": 27,
+  "protein_100g": 4.3,
+  "fat_100g": 1.0,
+  "carbs_100g": 0.1,
+  "portions": []
+ },
+ {
+  "id": "6cb1a973-4be3-5a6c-8190-c5976b25f793",
+  "slug": "iabluko",
+  "source": "base",
+  "category": "fruit",
+  "name_uk": "Яблуко",
+  "kcal_100g": 47,
+  "protein_100g": 0.4,
+  "fat_100g": 0.4,
+  "carbs_100g": 9.8,
+  "portions": [
+   {
+    "id": "c65395a1-3ee3-530b-900e-f0304a517c9f",
+    "label_uk": "шт.",
+    "grams": 180
+   }
+  ]
+ },
+ {
+  "id": "9be37675-b0ff-5dde-a4a3-da3246d8c7e2",
+  "slug": "banan",
+  "source": "base",
+  "category": "fruit",
+  "name_uk": "Банан",
+  "kcal_100g": 96,
+  "protein_100g": 1.5,
+  "fat_100g": 0.2,
+  "carbs_100g": 21.8,
+  "portions": [
+   {
+    "id": "4216a498-2573-5fc2-a420-0291f08baa89",
+    "label_uk": "шт.",
+    "grams": 120
+   }
+  ]
+ },
+ {
+  "id": "014119f6-8c4e-569e-8b3d-b4eb3e08e5f1",
+  "slug": "hrusha",
+  "source": "base",
+  "category": "fruit",
+  "name_uk": "Груша",
+  "kcal_100g": 47,
+  "protein_100g": 0.4,
+  "fat_100g": 0.3,
+  "carbs_100g": 10.3,
+  "portions": [
+   {
+    "id": "7eb72782-3d43-5b81-8808-bf0336c03324",
+    "label_uk": "шт.",
+    "grams": 170
+   }
+  ]
+ },
+ {
+  "id": "abb0661c-420c-593f-8257-33a0a88790c4",
+  "slug": "apelsyn",
+  "source": "base",
+  "category": "fruit",
+  "name_uk": "Апельсин",
+  "kcal_100g": 43,
+  "protein_100g": 0.9,
+  "fat_100g": 0.2,
+  "carbs_100g": 8.1,
+  "portions": [
+   {
+    "id": "dd9e9bf4-23e8-51ef-840c-4cd81a9bef42",
+    "label_uk": "шт.",
+    "grams": 200
+   }
+  ]
+ },
+ {
+  "id": "f1571747-0b4e-5c25-9005-bdc66d3b33aa",
+  "slug": "vyshnia",
+  "source": "base",
+  "category": "fruit",
+  "name_uk": "Вишня",
+  "kcal_100g": 52,
+  "protein_100g": 0.8,
+  "fat_100g": 0.2,
+  "carbs_100g": 10.6,
+  "portions": [
+   {
+    "id": "88adcead-91ce-5e33-9140-60c7b21bcc8a",
+    "label_uk": "жменя",
+    "grams": 80
+   }
+  ]
+ },
+ {
+  "id": "5083dc21-056a-5555-8f2b-3745cde2b521",
+  "slug": "polunytsia",
+  "source": "base",
+  "category": "fruit",
+  "name_uk": "Полуниця",
+  "kcal_100g": 41,
+  "protein_100g": 0.8,
+  "fat_100g": 0.4,
+  "carbs_100g": 7.5,
+  "portions": [
+   {
+    "id": "3fa02514-f534-5703-a130-f63ed65c3409",
+    "label_uk": "жменя",
+    "grams": 80
+   }
+  ]
+ },
+ {
+  "id": "b03a0e51-a9fd-5fd5-a01f-2823cdbfda7f",
+  "slug": "vynohrad",
+  "source": "base",
+  "category": "fruit",
+  "name_uk": "Виноград",
+  "kcal_100g": 72,
+  "protein_100g": 0.6,
+  "fat_100g": 0.6,
+  "carbs_100g": 15.4,
+  "portions": [
+   {
+    "id": "a752230f-6d1d-5b83-a991-983a897888ae",
+    "label_uk": "гроно",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "c489cc3d-22c5-5217-9476-66da35d0f368",
+  "slug": "rodzynky",
+  "source": "base",
+  "category": "fruit",
+  "name_uk": "Родзинки",
+  "kcal_100g": 299,
+  "protein_100g": 3.1,
+  "fat_100g": 0.5,
+  "carbs_100g": 79.0,
+  "portions": [
+   {
+    "id": "425f57df-3406-5784-a994-78bb1bd5e643",
+    "label_uk": "ст. л.",
+    "grams": 15
+   }
+  ]
+ },
+ {
+  "id": "9a092e79-b5c7-5af4-a2d0-314220ba767b",
+  "slug": "kvasolia-sukha",
+  "source": "base",
+  "category": "legumes",
+  "name_uk": "Квасоля суха",
+  "kcal_100g": 298,
+  "protein_100g": 21.0,
+  "fat_100g": 2.0,
+  "carbs_100g": 47.0,
+  "portions": []
+ },
+ {
+  "id": "96cb5db6-2f5e-51d4-9b5d-2713dc984796",
+  "slug": "horokh-sukhyi",
+  "source": "base",
+  "category": "legumes",
+  "name_uk": "Горох сухий",
+  "kcal_100g": 298,
+  "protein_100g": 20.5,
+  "fat_100g": 2.0,
+  "carbs_100g": 49.5,
+  "portions": []
+ },
+ {
+  "id": "c59d4fdd-f4d2-56b1-a2cf-7e910409700f",
+  "slug": "nut-sukhyi",
+  "source": "base",
+  "category": "legumes",
+  "name_uk": "Нут сухий",
+  "kcal_100g": 364,
+  "protein_100g": 19.0,
+  "fat_100g": 6.0,
+  "carbs_100g": 61.0,
+  "portions": []
+ },
+ {
+  "id": "38cc6d45-9074-58d0-8f21-1ca0137fa986",
+  "slug": "voloski-horikhy",
+  "source": "base",
+  "category": "nuts",
+  "name_uk": "Волоські горіхи",
+  "kcal_100g": 654,
+  "protein_100g": 15.2,
+  "fat_100g": 65.2,
+  "carbs_100g": 7.0,
+  "portions": [
+   {
+    "id": "f9bfaa0e-ca7b-5b0a-922b-51863a25428b",
+    "label_uk": "жменя",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "9b884360-9a44-50ee-ba83-35591d17351e",
+  "slug": "nasinnia-soniashnyka",
+  "source": "base",
+  "category": "nuts",
+  "name_uk": "Насіння соняшника",
+  "kcal_100g": 578,
+  "protein_100g": 20.7,
+  "fat_100g": 52.9,
+  "carbs_100g": 10.5,
+  "portions": [
+   {
+    "id": "5c730f48-1606-5111-a72b-a1247df26fe3",
+    "label_uk": "жменя",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "4bbcc79b-9ec0-5bcc-92a4-81654fec5dbb",
+  "slug": "arakhis",
+  "source": "base",
+  "category": "nuts",
+  "name_uk": "Арахіс",
+  "kcal_100g": 552,
+  "protein_100g": 26.3,
+  "fat_100g": 45.2,
+  "carbs_100g": 9.9,
+  "portions": [
+   {
+    "id": "ee1a74bd-3da9-5b64-9311-5cce7b442ac8",
+    "label_uk": "жменя",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "79360a9d-61e6-5dcd-85f9-1fc34294d6ce",
+  "slug": "arakhisova-pasta",
+  "source": "base",
+  "category": "nuts",
+  "name_uk": "Арахісова паста",
+  "kcal_100g": 590,
+  "protein_100g": 25.0,
+  "fat_100g": 50.0,
+  "carbs_100g": 14.0,
+  "portions": [
+   {
+    "id": "c7ac7111-a28b-50a5-981b-9e0b30fed5e7",
+    "label_uk": "ст. л.",
+    "grams": 20
+   }
+  ]
+ },
+ {
+  "id": "3c01be2d-877d-50e8-9b9f-dd77fe4cee15",
+  "slug": "oliia-soniashnykova",
+  "source": "base",
+  "category": "oils",
+  "name_uk": "Олія соняшникова",
+  "kcal_100g": 899,
+  "protein_100g": 0.0,
+  "fat_100g": 99.9,
+  "carbs_100g": 0.0,
+  "portions": [
+   {
+    "id": "ee0fe93f-2b2f-50eb-9171-6856a8b37ee8",
+    "label_uk": "ст. л.",
+    "grams": 17
+   },
+   {
+    "id": "083be1d4-ac83-569a-9479-5ac3d7b6cfca",
+    "label_uk": "ч. л.",
+    "grams": 5
+   }
+  ]
+ },
+ {
+  "id": "573c5d32-dfa8-5392-9d5f-74b95fc143db",
+  "slug": "oliia-olyvkova",
+  "source": "base",
+  "category": "oils",
+  "name_uk": "Олія оливкова",
+  "kcal_100g": 898,
+  "protein_100g": 0.0,
+  "fat_100g": 99.8,
+  "carbs_100g": 0.0,
+  "portions": [
+   {
+    "id": "896abd58-8f49-581c-bc1f-31f12ab32264",
+    "label_uk": "ст. л.",
+    "grams": 17
+   },
+   {
+    "id": "3f141256-9a58-5e2e-8eef-d170f64d2346",
+    "label_uk": "ч. л.",
+    "grams": 5
+   }
+  ]
+ },
+ {
+  "id": "e140cb4c-a1b1-58be-ba58-a3dd026c7ef9",
+  "slug": "maionez-67",
+  "source": "base",
+  "category": "sauces",
+  "name_uk": "Майонез 67%",
+  "kcal_100g": 627,
+  "protein_100g": 0.4,
+  "fat_100g": 67.0,
+  "carbs_100g": 2.6,
+  "portions": [
+   {
+    "id": "a7a0dfb7-1d5d-5744-a7e5-8a572bcb15d6",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "a2301497-0fbc-5735-82df-860b264e8f6b",
+  "slug": "ketchup",
+  "source": "base",
+  "category": "sauces",
+  "name_uk": "Кетчуп",
+  "kcal_100g": 93,
+  "protein_100g": 1.8,
+  "fat_100g": 1.0,
+  "carbs_100g": 22.0,
+  "portions": [
+   {
+    "id": "35255c79-7574-5783-af57-f53a7e937a6d",
+    "label_uk": "ст. л.",
+    "grams": 20
+   }
+  ]
+ },
+ {
+  "id": "af239259-2c17-5ee6-94a7-58e078436f5a",
+  "slug": "tomatna-pasta",
+  "source": "base",
+  "category": "sauces",
+  "name_uk": "Томатна паста",
+  "kcal_100g": 99,
+  "protein_100g": 4.8,
+  "fat_100g": 0.0,
+  "carbs_100g": 19.0,
+  "portions": [
+   {
+    "id": "5b80154c-2be5-5376-8132-a63494002c3e",
+    "label_uk": "ст. л.",
+    "grams": 25
+   }
+  ]
+ },
+ {
+  "id": "05c42b3d-c0b1-5ae0-8bd2-51f7520e4945",
+  "slug": "hirchytsia",
+  "source": "base",
+  "category": "sauces",
+  "name_uk": "Гірчиця",
+  "kcal_100g": 143,
+  "protein_100g": 5.7,
+  "fat_100g": 6.4,
+  "carbs_100g": 22.0,
+  "portions": [
+   {
+    "id": "a60bbe94-d55a-569a-b056-dd114ebabb45",
+    "label_uk": "ч. л.",
+    "grams": 5
+   }
+  ]
+ },
+ {
+  "id": "8a182ccb-a3d0-5a5b-8a3c-d8e1fe4b761b",
+  "slug": "shokolad-chornyi",
+  "source": "base",
+  "category": "sweets",
+  "name_uk": "Шоколад чорний",
+  "kcal_100g": 540,
+  "protein_100g": 6.2,
+  "fat_100g": 35.4,
+  "carbs_100g": 48.2,
+  "portions": [
+   {
+    "id": "f7b1968a-2342-56c9-b18a-9e3bbec972da",
+    "label_uk": "плитка",
+    "grams": 90
+   },
+   {
+    "id": "298a1988-f353-5c73-8762-6ed5f188e31a",
+    "label_uk": "шматочок",
+    "grams": 5
+   }
+  ]
+ },
+ {
+  "id": "abbed6b0-2fcb-5a11-8636-2bbbfa61d8b0",
+  "slug": "protein-syrovatkovyi",
+  "source": "base",
+  "category": "sport",
+  "name_uk": "Протеїн сироватковий",
+  "kcal_100g": 380,
+  "protein_100g": 75.0,
+  "fat_100g": 6.0,
+  "carbs_100g": 8.0,
+  "portions": [
+   {
+    "id": "cf262c49-8474-575c-b4c6-c90f37c96ac2",
+    "label_uk": "мірна ложка",
+    "grams": 30
+   }
+  ]
+ },
+ {
+  "id": "21060bc2-4ce5-5c7c-98ed-b344f1881fea",
+  "slug": "proteinovyi-batonchyk",
+  "source": "base",
+  "category": "sport",
+  "name_uk": "Протеїновий батончик",
+  "kcal_100g": 350,
+  "protein_100g": 30.0,
+  "fat_100g": 10.0,
+  "carbs_100g": 35.0,
+  "portions": [
+   {
+    "id": "b91a1e1e-751f-5777-a29e-3a9f9a978a9c",
+    "label_uk": "шт.",
+    "grams": 60
+   }
+  ]
+ },
+ {
+  "id": "97a84ac4-ef91-5ad6-aa04-01916e9d44f7",
+  "slug": "sik-apelsynovyi",
+  "source": "base",
+  "category": "drinks_base",
+  "name_uk": "Сік апельсиновий",
+  "kcal_100g": 45,
+  "protein_100g": 0.7,
+  "fat_100g": 0.2,
+  "carbs_100g": 10.4,
+  "portions": [
+   {
+    "id": "0db73186-3346-5017-893d-55ef62629b62",
+    "label_uk": "склянка",
+    "grams": 250
+   }
+  ]
+ },
+ {
+  "id": "524abe8f-80fc-58b8-b672-d5df7525db1c",
+  "slug": "kola",
+  "source": "base",
+  "category": "drinks_base",
+  "name_uk": "Кола",
+  "kcal_100g": 42,
+  "protein_100g": 0.0,
+  "fat_100g": 0.0,
+  "carbs_100g": 10.6,
+  "portions": [
+   {
+    "id": "bef2b99e-a2e0-502f-8102-fbae75d4255a",
+    "label_uk": "банка",
+    "grams": 330
+   }
+  ]
+ },
+ {
+  "id": "6dfee582-7f8b-5850-b8ca-1eada39e65c7",
+  "slug": "pyvo-svitle",
+  "source": "base",
+  "category": "drinks_base",
+  "name_uk": "Пиво світле",
+  "kcal_100g": 43,
+  "protein_100g": 0.5,
+  "fat_100g": 0.0,
+  "carbs_100g": 3.6,
+  "portions": [
+   {
+    "id": "2997f1db-89d1-545e-9f2a-aa76f9d4992e",
+    "label_uk": "пляшка",
+    "grams": 500
+   }
+  ]
+ },
+ {
+  "id": "0ab941c0-4d14-5cf0-9ebb-fb5edb49e4b3",
+  "slug": "vyno-sukhe",
+  "source": "base",
+  "category": "drinks_base",
+  "name_uk": "Вино сухе",
+  "kcal_100g": 76,
+  "protein_100g": 0.1,
+  "fat_100g": 0.0,
+  "carbs_100g": 2.6,
+  "portions": [
+   {
+    "id": "0a0dae1e-971a-5f9b-bf98-21a35ffb7841",
+    "label_uk": "келих",
+    "grams": 150
+   }
+  ]
+ },
+ {
+  "id": "a6908c25-0629-589b-85f7-2037b533bf81",
+  "slug": "kava-chorna",
+  "source": "base",
+  "category": "drinks_base",
+  "name_uk": "Кава чорна",
+  "kcal_100g": 2,
+  "protein_100g": 0.2,
+  "fat_100g": 0.0,
+  "carbs_100g": 0.3,
+  "portions": [
+   {
+    "id": "0b887e0f-7bd0-54a8-8da7-a066379eb9d4",
+    "label_uk": "чашка",
+    "grams": 200
+   }
+  ]
+ }
+]

@@ -1,6 +1,6 @@
 import { useId, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Pressable, TextInput, View } from 'react-native';
+import { Platform, Pressable, TextInput, View } from 'react-native';
 
 import { useTheme } from '@/theme/ThemeProvider';
 
@@ -18,6 +18,9 @@ interface Props {
   fallback: number;
   hint?: string;
 }
+
+/** На вебі прибираємо контур браузера: фокус показує рамка контейнера. */
+const NO_OUTLINE = Platform.OS === 'web' ? ({ outlineStyle: 'none' } as object) : undefined;
 
 const decimals = (step: number) => (Number.isInteger(step) ? 0 : 1);
 const toText = (v: number | undefined, step: number) =>
@@ -43,6 +46,7 @@ export function NumberField({
   const id = useId();
   const [text, setText] = useState(toText(value, step));
   const [touched, setTouched] = useState(false);
+  const [focused, setFocused] = useState(false);
 
   // Якщо значення змінили кнопками ±, оновлюємо текст (без ефекту — під час рендеру).
   const [syncedValue, setSyncedValue] = useState(value);
@@ -78,7 +82,7 @@ export function NumberField({
         <StepButton symbol="−" label={t('common.decrease')} onPress={() => bump(-1)} />
         <View
           className={`h-14 flex-1 flex-row items-center justify-center rounded-2xl border-2 bg-raised px-3 ${
-            error ? 'border-danger' : 'border-line'
+            error ? 'border-danger' : focused ? 'border-ink' : 'border-line'
           }`}
         >
           <TextInput
@@ -86,7 +90,12 @@ export function NumberField({
             accessibilityLabel={label}
             value={text}
             onChangeText={handleText}
-            onBlur={() => setTouched(true)}
+            onFocus={() => setFocused(true)}
+            onBlur={() => {
+              setFocused(false);
+              setTouched(true);
+            }}
+            style={NO_OUTLINE}
             keyboardType={decimals(step) ? 'decimal-pad' : 'number-pad'}
             inputMode={decimals(step) ? 'decimal' : 'numeric'}
             placeholder={toText(fallback, step)}

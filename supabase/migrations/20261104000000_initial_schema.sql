@@ -11,7 +11,8 @@ create type activity_level as enum ('sedentary', 'light', 'moderate', 'high', 'v
 create type goal as enum ('lose', 'maintain', 'gain');
 create type pace as enum ('slow', 'normal', 'fast');
 create type experience_level as enum ('beginner', 'intermediate', 'advanced');
-create type food_source as enum ('ua_dish', 'off', 'usda', 'user', 'ai');
+-- ua_dish — українські страви, base — базові продукти (обидва з seed), off/usda — зовнішні бази
+create type food_source as enum ('ua_dish', 'base', 'off', 'usda', 'user', 'ai');
 create type meal_type as enum ('breakfast', 'lunch', 'dinner', 'snack');
 create type entry_source as enum ('manual', 'barcode', 'photo', 'recipe');
 create type body_region as enum ('upper', 'lower', 'core');
@@ -150,6 +151,8 @@ create table progress_photos (
 create table foods (
   id uuid primary key default gen_random_uuid(),
   source food_source not null,
+  slug text unique,                -- для seed-даних: стабільний ідентифікатор
+  category text,                   -- 'soups', 'mains', 'salads' … (для seed)
   external_id text,
   barcode text,
   name_uk text not null,
@@ -161,8 +164,12 @@ create table foods (
   carbs_100g numeric(5, 1) not null default 0,
   owner_id uuid references auth.users (id) on delete cascade, -- null = загальна база
   updated_at timestamptz not null default now(),
-  unique (source, external_id)
+  deleted_at timestamptz
 );
+-- Один зовнішній продукт (OFF/USDA) — один запис на власника; seed-рядки без external_id не обмежуються
+create unique index foods_external_uidx on foods (
+  coalesce(owner_id, '00000000-0000-0000-0000-000000000000'::uuid), source, external_id
+) where external_id is not null;
 create index foods_name_trgm_idx on foods using gin (name_uk gin_trgm_ops);
 create index foods_barcode_idx on foods (barcode) where barcode is not null;
 
@@ -194,6 +201,7 @@ create table recipe_ingredients (
 create table meal_entries (
   id uuid primary key default gen_random_uuid(),
   user_id uuid not null references auth.users (id) on delete cascade,
+  date date not null,              -- локальна дата щоденника
   eaten_at timestamptz not null,
   meal_type meal_type not null,
   food_id uuid references foods (id),
@@ -209,7 +217,7 @@ create table meal_entries (
   updated_at timestamptz not null default now(),
   deleted_at timestamptz
 );
-create index meal_entries_user_day_idx on meal_entries (user_id, eaten_at);
+create index meal_entries_user_day_idx on meal_entries (user_id, date);
 
 create table meal_photo_analyses (
   id uuid primary key default gen_random_uuid(),
@@ -225,12 +233,13 @@ create table meal_photo_analyses (
 create table water_entries (
   id uuid primary key default gen_random_uuid(),
   user_id uuid not null references auth.users (id) on delete cascade,
+  date date not null,
   at timestamptz not null,
   ml int not null check (ml > 0 and ml <= 3000),
   updated_at timestamptz not null default now(),
   deleted_at timestamptz
 );
-create index water_entries_user_day_idx on water_entries (user_id, at);
+create index water_entries_user_day_idx on water_entries (user_id, date);
 
 -- ───────────────────────── Зали ─────────────────────────
 create table gyms (

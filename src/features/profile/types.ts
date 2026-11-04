@@ -20,6 +20,7 @@ export interface WeightRecord {
   id: string;
   date: string;
   weightKg: number;
+  updatedAt?: string;
 }
 
 export type TargetsReason = 'onboarding' | 'weight_change' | 'manual';
@@ -31,4 +32,5 @@ export interface TargetsRecord extends NutritionTargets {
   weightKg: number;
   waterMl: number;
   reason: TargetsReason;
+  updatedAt?: string;
 }

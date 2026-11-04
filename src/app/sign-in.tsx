@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { TextInput, View } from 'react-native';
+import { View } from 'react-native';
 
 import { authErrorKey } from '@/features/auth/authErrors';
 import { useAuth } from '@/features/auth/store';
 import { isSupabaseConfigured, supabase } from '@/lib/supabase';
-import { useTheme } from '@/theme/ThemeProvider';
-import { Button, Notice, Screen, Text } from '@/ui';
+import { Button, Notice, Screen, Text, TextField } from '@/ui';
 
 type Mode = 'signIn' | 'signUp';
 
@@ -64,14 +63,18 @@ export default function SignInScreen() {
 
       {isSupabaseConfigured ? (
         <View className="gap-4">
-          <Field
+          <TextField
+            autoCapitalize="none"
+            autoCorrect={false}
             label={t('auth.email')}
             value={email}
             onChangeText={setEmail}
             autoComplete="email"
             keyboardType="email-address"
           />
-          <Field
+          <TextField
+            autoCapitalize="none"
+            autoCorrect={false}
             label={t('auth.password')}
             hint={mode === 'signUp' ? t('auth.passwordHint') : undefined}
             value={password}
@@ -100,33 +103,5 @@ export default function SignInScreen() {
         <Notice text={t('auth.notConfigured')} />
       )}
     </Screen>
-  );
-}
-
-interface FieldProps {
-  label: string;
-  hint?: string;
-  value: string;
-  onChangeText: (v: string) => void;
-  autoComplete: 'email' | 'current-password' | 'new-password';
-  keyboardType?: 'email-address';
-  secureTextEntry?: boolean;
-}
-
-function Field({ label, hint, ...input }: FieldProps) {
-  const { colors } = useTheme();
-  return (
-    <View className="gap-2">
-      <Text variant="label">{label}</Text>
-      <TextInput
-        accessibilityLabel={label}
-        autoCapitalize="none"
-        autoCorrect={false}
-        placeholderTextColor={colors.muted}
-        className="h-14 rounded-2xl border-2 border-line bg-raised px-4 font-body text-base text-ink"
-        {...input}
-      />
-      {hint ? <Text variant="caption">{hint}</Text> : null}
-    </View>
   );
 }

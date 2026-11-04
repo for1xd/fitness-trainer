@@ -16,3 +16,9 @@ export function parseIsoDate(iso: string): Date {
 export function birthDateFromAge(ageYears: number, today: Date = new Date()): string {
   return toIsoDate(new Date(today.getFullYear() - ageYears, today.getMonth(), today.getDate()));
 }
+
+export function addDaysIso(iso: string, days: number): string {
+  const d = parseIsoDate(iso);
+  d.setDate(d.getDate() + days);
+  return toIsoDate(d);
+}

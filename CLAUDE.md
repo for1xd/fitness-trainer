@@ -9,7 +9,10 @@
 - **Supabase** — Auth, Postgres (RLS), Storage (фото), Edge Functions (Deno).
 - **TanStack Query** — серверний стан; **Zustand** — локальний/UI-стан (живе тренування, онбординг).
 - **NativeWind v4** — стилі (Tailwind-токени, темна/світла теми).
-- **Офлайн**: `expo-sqlite` + Drizzle ORM як локальний кеш, outbox-черга для синхронізації.
+- **Офлайн**: zustand + persist (AsyncStorage / localStorage) як локальне джерело правди;
+  зміни йдуть у чергу `src/lib/sync` (outbox) і відправляються в Supabase, коли користувач увійшов.
+  Злиття з сервера — «останній запис перемагає» за `updated_at`, видалення — м'які (`deleted_at`).
+  SQLite + Drizzle — коли обсяг даних виросте (на вебі потребує COOP/COEP-заголовків).
 - **i18n**: `i18next` + `react-i18next`, ключі в `src/i18n/locales/{uk,en}.json`.
 - **Тести**: Jest (`jest-expo`) для логіки; Playwright (скіл `webapp-testing`) — для веб-версії.
 
@@ -33,6 +36,18 @@ supabase/
   seed/                  # JSON: exercises, machines, ua-dishes; seed.sql генерується скриптом
 docs/                    # PLAN.md, схеми, промти для AI
 ```
+
+## Дані та синхронізація
+
+- Кожна таблиця користувача реєструється в `features/<f>/api/sync.ts` через `registerSyncTable`
+  (порядок відправки, колонка власника, `applyRemote`). Новий модуль = таблиця в міграції + реєстрація.
+- id записів генерує клієнт (`expo-crypto` randomUUID) — записи можна створювати офлайн і без акаунта;
+  після входу черга відправить усе, що накопичилось.
+- Перетворення «запис ↔ рядок таблиці» — у `api/rows.ts` з тестами.
+- Вбудована база продуктів: `supabase/seed/foods.json` (ті самі UUID, що в БД). Після зміни —
+  `npm run seed:build` → `supabase/seed.sql`.
+- Зовнішні бази (Open Food Facts, USDA) — лише через Edge Function `food-search`; розбір відповідей —
+  `supabase/functions/_shared/foodMappers.ts` (без Deno-залежностей, тестується Jest).
 
 ## Дизайн
 

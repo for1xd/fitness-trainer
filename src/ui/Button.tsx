@@ -10,6 +10,8 @@ interface Props extends Omit<PressableProps, 'children'> {
   label: string;
   variant?: Variant;
   loading?: boolean;
+  /** Вужчі відступи — для кількох кнопок в один ряд. */
+  compact?: boolean;
   className?: string;
 }
 
@@ -32,6 +34,7 @@ export function Button({
   label,
   variant = 'primary',
   loading = false,
+  compact = false,
   disabled,
   className = '',
   ...rest
@@ -43,13 +46,17 @@ export function Button({
       accessibilityRole="button"
       accessibilityState={{ disabled: !!inactive, busy: loading }}
       disabled={inactive}
-      className={`min-h-14 flex-row items-center justify-center rounded-2xl px-6 active:opacity-80 ${box[variant]} ${inactive ? 'opacity-50' : ''} ${className}`}
+      className={`min-h-14 flex-row items-center justify-center rounded-2xl ${variant === 'ghost' ? 'px-1' : compact ? 'px-3' : 'px-6'} active:opacity-80 ${box[variant]} ${inactive ? 'opacity-50' : ''} ${className}`}
       {...rest}
     >
       {loading ? (
         <ActivityIndicator color={variant === 'primary' ? colors.inverse : colors.ink} />
       ) : (
-        <Text variant="label" className={`text-base ${textColor[variant]}`}>
+        <Text
+          variant="label"
+          numberOfLines={1}
+          className={`text-center text-base ${textColor[variant]}`}
+        >
           {label}
         </Text>
       )}

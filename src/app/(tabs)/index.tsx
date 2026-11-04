@@ -1,19 +1,27 @@
-import { useState } from 'react';
+import { router } from 'expo-router';
+import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { View } from 'react-native';
 
-import { TargetsSummary } from '@/features/profile/components/TargetsSummary';
+import { DaySummaryCard } from '@/features/nutrition/components/DaySummaryCard';
+import { defaultMealType, summarizeDay } from '@/features/nutrition/logic/daySummary';
+import { useNutrition } from '@/features/nutrition/store';
+import { LIMITS } from '@/features/onboarding/store';
 import { latestWeightKg, useProfile } from '@/features/profile/store';
 import { latestTrendKg } from '@/features/progress/logic/weightTrend';
-import { LIMITS } from '@/features/onboarding/store';
+import { WaterCard } from '@/features/water/components/WaterCard';
+import { todayIso } from '@/lib/dates';
 import { formatLongDate, formatNumber } from '@/lib/format';
 import { Button, Notice, NumberField, Screen, Text } from '@/ui';
 
 export default function TodayScreen() {
   const { t } = useTranslation();
+  const today = todayIso();
   const targets = useProfile((s) => s.targets);
   const weights = useProfile((s) => s.weights);
   const logWeight = useProfile((s) => s.logWeight);
+  const entries = useNutrition((s) => s.entries);
+  const eaten = useMemo(() => summarizeDay(entries, today).total, [entries, today]);
   const [weight, setWeight] = useState<number | undefined>(latestWeightKg(weights));
   const [message, setMessage] = useState<string | null>(null);
 
@@ -34,7 +42,18 @@ export default function TodayScreen() {
     <Screen>
       <Text variant="title">{formatLongDate(new Date())}</Text>
 
-      <TargetsSummary targets={targets} waterMl={targets.waterMl} label={t('today.target')} />
+      <DaySummaryCard eaten={eaten} targets={targets} />
+      <Button
+        label={t('nutrition.addFood')}
+        onPress={() =>
+          router.push({
+            pathname: '/food/add',
+            params: { date: today, meal: defaultMealType(new Date().getHours()) },
+          })
+        }
+      />
+
+      <WaterCard date={today} weightKg={latestWeightKg(weights) ?? targets.weightKg} />
 
       <View className="gap-4 rounded-3xl bg-surface p-4">
         <View className="gap-1">
@@ -54,6 +73,7 @@ export default function TodayScreen() {
         />
         <Button
           label={t('today.logWeight')}
+          variant="secondary"
           onPress={submitWeight}
           disabled={weight === undefined}
         />

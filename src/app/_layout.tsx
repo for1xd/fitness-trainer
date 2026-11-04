@@ -15,17 +15,31 @@ import i18n from 'i18next';
 import { useEffect } from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
+import '@/features/syncTables';
+
 import { selectSignedIn, subscribeToAuth, useAuth } from '@/features/auth/store';
 import { useOnboarding } from '@/features/onboarding/store';
+import { useNutrition } from '@/features/nutrition/store';
 import { useProfile } from '@/features/profile/store';
 import { useSettings } from '@/features/settings/store';
+import { useWater } from '@/features/water/store';
+import { startSyncEngine } from '@/lib/sync/engine';
+import { useOutbox } from '@/lib/sync/store';
 import { usePersistHydrated } from '@/lib/usePersistHydrated';
 import { ThemeProvider } from '@/theme/ThemeProvider';
 
 void SplashScreen.preventAutoHideAsync();
 
 const queryClient = new QueryClient();
-const PERSISTED_STORES = [useAuth, useProfile, useSettings, useOnboarding] as const;
+const PERSISTED_STORES = [
+  useAuth,
+  useProfile,
+  useSettings,
+  useOnboarding,
+  useNutrition,
+  useWater,
+  useOutbox,
+] as const;
 
 export default function RootLayout() {
   const [fontsLoaded] = useFonts({
@@ -39,6 +53,7 @@ export default function RootLayout() {
   const language = useSettings((s) => s.language);
 
   useEffect(() => subscribeToAuth(), []);
+  useEffect(() => (hydrated ? startSyncEngine() : undefined), [hydrated]);
   useEffect(() => {
     void i18n.changeLanguage(language);
   }, [language]);
@@ -69,6 +84,8 @@ function RootStack() {
     <Stack screenOptions={{ headerShown: false }}>
       <Stack.Protected guard={signedIn && hasProfile}>
         <Stack.Screen name="(tabs)" />
+        <Stack.Screen name="food" />
+        <Stack.Screen name="recipe" />
       </Stack.Protected>
       <Stack.Protected guard={signedIn}>
         <Stack.Screen name="onboarding" />
