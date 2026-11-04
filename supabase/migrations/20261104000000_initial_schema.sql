@@ -35,7 +35,8 @@ create table muscles (
   id text primary key,            -- 'chest', 'lats', 'quads' …
   name_uk text not null,
   name_en text not null,
-  region body_region not null
+  region body_region not null,
+  group_id text not null          -- 'chest', 'back', 'shoulders', 'arms', 'legs', 'core' (кольори в календарі)
 );
 
 create table equipment_types (
@@ -55,6 +56,7 @@ create table machine_types (
   name_uk text not null,
   name_en text not null,
   equipment_type_id text not null references equipment_types (id),
+  category text not null,         -- група в «Мій зал»: free, legs, back, chest_shoulders, arms_core
   weight_step_kg numeric(4, 2) not null default 2.5
 );
 
@@ -73,9 +75,15 @@ create table exercises (
   primary_muscle_id text not null references muscles (id),
   secondary_muscle_ids text[] not null default '{}',
   equipment_type_id text not null references equipment_types (id),
-  machine_type_id text references machine_types (id),
+  -- Усе обладнання, без якого вправу не виконати (id з machine_types); порожньо — власна вага
+  required_equipment text[] not null default '{}',
   mechanics mechanics not null,
   region body_region not null,
+  pattern text not null,          -- патерн руху: squat, hinge, h_push, v_pull … (для генератора й заміни)
+  load_type text not null,        -- barbell, dumbbell (вага однієї гантелі), machine, cable, bodyweight, assisted, timed
+  base_lift text,                 -- базова вправа для оцінки ваги: squat, bench, deadlift, ohp, row, pullup
+  base_ratio numeric(4, 2),       -- 1ПМ вправи ≈ 1ПМ базової × коефіцієнт
+  difficulty int not null default 1 check (difficulty between 1 and 3),
   technique_uk text,
   mistakes_uk text[] not null default '{}',
   media_url text
@@ -256,6 +264,7 @@ create table gym_equipment (
   gym_id uuid not null references gyms (id) on delete cascade,
   machine_type_id text not null references machine_types (id),
   machine_id uuid references machines (id),
+  brand_id text references brands (id),
   photo_path text,
   note text
 );
@@ -283,6 +292,9 @@ create table programs (
   goal goal not null,
   split text not null,             -- 'full_body', 'upper_lower', 'ppl' …
   days_per_week int not null check (days_per_week between 1 and 7),
+  weekdays int[] not null default '{}',   -- 1 = понеділок … 7 = неділя
+  focus text not null default 'hypertrophy' check (focus in ('strength', 'hypertrophy', 'endurance')),
+  experience experience_level not null default 'beginner',
   session_min int not null,
   gym_id uuid references gyms (id) on delete set null,
   start_date date not null,
@@ -296,6 +308,7 @@ create table program_days (
   id uuid primary key default gen_random_uuid(),
   program_id uuid not null references programs (id) on delete cascade,
   day_index int not null,
+  template text not null,         -- full_a, upper, push …
   name text not null,
   muscle_focus text[] not null default '{}'
 );
@@ -318,7 +331,10 @@ create table workouts (
   user_id uuid not null references auth.users (id) on delete cascade,
   date date not null,
   program_day_id uuid references program_days (id) on delete set null,
+  name text,
   status workout_status not null default 'planned',
+  started_at timestamptz,
+  finished_at timestamptz,
   notes text,
   wellbeing int check (wellbeing between 1 and 5),
   duration_min int,
@@ -331,6 +347,7 @@ create table workout_sets (
   id uuid primary key default gen_random_uuid(),
   workout_id uuid not null references workouts (id) on delete cascade,
   exercise_id text not null references exercises (id),
+  position int not null default 0, -- порядок вправи в тренуванні
   set_index int not null,
   weight_kg numeric(6, 2) not null default 0,
   reps int not null check (reps >= 0),

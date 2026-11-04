@@ -18,7 +18,7 @@ interface Props<T extends string> {
 export function Segmented<T extends string>({ label, options, value, onChange }: Props<T>) {
   return (
     <View className="gap-2">
-      <Text variant="label">{label}</Text>
+      {label ? <Text variant="label">{label}</Text> : null}
       <View accessibilityRole="radiogroup" className="flex-row gap-2 rounded-2xl bg-surface p-1">
         {options.map((o) => {
           const selected = o.value === value;

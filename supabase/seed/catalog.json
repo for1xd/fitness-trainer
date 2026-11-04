@@ -1,0 +1,626 @@
+{
+ "muscles": [
+  {
+   "id": "chest",
+   "name_uk": "Груди",
+   "name_en": "Chest",
+   "region": "upper",
+   "group_id": "chest"
+  },
+  {
+   "id": "front_delts",
+   "name_uk": "Передні дельти",
+   "name_en": "Front delts",
+   "region": "upper",
+   "group_id": "shoulders"
+  },
+  {
+   "id": "side_delts",
+   "name_uk": "Середні дельти",
+   "name_en": "Side delts",
+   "region": "upper",
+   "group_id": "shoulders"
+  },
+  {
+   "id": "rear_delts",
+   "name_uk": "Задні дельти",
+   "name_en": "Rear delts",
+   "region": "upper",
+   "group_id": "shoulders"
+  },
+  {
+   "id": "lats",
+   "name_uk": "Найширші",
+   "name_en": "Lats",
+   "region": "upper",
+   "group_id": "back"
+  },
+  {
+   "id": "upper_back",
+   "name_uk": "Верх спини",
+   "name_en": "Upper back",
+   "region": "upper",
+   "group_id": "back"
+  },
+  {
+   "id": "traps",
+   "name_uk": "Трапеції",
+   "name_en": "Traps",
+   "region": "upper",
+   "group_id": "back"
+  },
+  {
+   "id": "lower_back",
+   "name_uk": "Розгиначі спини",
+   "name_en": "Lower back",
+   "region": "core",
+   "group_id": "back"
+  },
+  {
+   "id": "biceps",
+   "name_uk": "Біцепс",
+   "name_en": "Biceps",
+   "region": "upper",
+   "group_id": "arms"
+  },
+  {
+   "id": "triceps",
+   "name_uk": "Трицепс",
+   "name_en": "Triceps",
+   "region": "upper",
+   "group_id": "arms"
+  },
+  {
+   "id": "forearms",
+   "name_uk": "Передпліччя",
+   "name_en": "Forearms",
+   "region": "upper",
+   "group_id": "arms"
+  },
+  {
+   "id": "abs",
+   "name_uk": "Прес",
+   "name_en": "Abs",
+   "region": "core",
+   "group_id": "core"
+  },
+  {
+   "id": "obliques",
+   "name_uk": "Косі м'язи живота",
+   "name_en": "Obliques",
+   "region": "core",
+   "group_id": "core"
+  },
+  {
+   "id": "quads",
+   "name_uk": "Квадрицепс",
+   "name_en": "Quads",
+   "region": "lower",
+   "group_id": "legs"
+  },
+  {
+   "id": "hamstrings",
+   "name_uk": "Біцепс стегна",
+   "name_en": "Hamstrings",
+   "region": "lower",
+   "group_id": "legs"
+  },
+  {
+   "id": "glutes",
+   "name_uk": "Сідниці",
+   "name_en": "Glutes",
+   "region": "lower",
+   "group_id": "legs"
+  },
+  {
+   "id": "adductors",
+   "name_uk": "Привідні м'язи стегна",
+   "name_en": "Adductors",
+   "region": "lower",
+   "group_id": "legs"
+  },
+  {
+   "id": "abductors",
+   "name_uk": "Відвідні м'язи стегна",
+   "name_en": "Abductors",
+   "region": "lower",
+   "group_id": "legs"
+  },
+  {
+   "id": "calves",
+   "name_uk": "Литки",
+   "name_en": "Calves",
+   "region": "lower",
+   "group_id": "legs"
+  }
+ ],
+ "equipment_types": [
+  {
+   "id": "barbell",
+   "name_uk": "Штанга",
+   "name_en": "Barbell"
+  },
+  {
+   "id": "ez_bar",
+   "name_uk": "EZ-гриф",
+   "name_en": "EZ bar"
+  },
+  {
+   "id": "dumbbell",
+   "name_uk": "Гантелі",
+   "name_en": "Dumbbells"
+  },
+  {
+   "id": "kettlebell",
+   "name_uk": "Гирі",
+   "name_en": "Kettlebells"
+  },
+  {
+   "id": "cable",
+   "name_uk": "Блочний тренажер",
+   "name_en": "Cable"
+  },
+  {
+   "id": "machine",
+   "name_uk": "Тренажер",
+   "name_en": "Machine"
+  },
+  {
+   "id": "smith",
+   "name_uk": "Тренажер Смітта",
+   "name_en": "Smith machine"
+  },
+  {
+   "id": "bodyweight",
+   "name_uk": "Власна вага",
+   "name_en": "Bodyweight"
+  },
+  {
+   "id": "bench",
+   "name_uk": "Лава / стійка",
+   "name_en": "Bench / rack"
+  }
+ ],
+ "brands": [
+  {
+   "id": "interatletika",
+   "name": "InterAtletika",
+   "country": "Україна"
+  },
+  {
+   "id": "technogym",
+   "name": "Technogym",
+   "country": "Італія"
+  },
+  {
+   "id": "matrix",
+   "name": "Matrix",
+   "country": "США"
+  },
+  {
+   "id": "life_fitness",
+   "name": "Life Fitness",
+   "country": "США"
+  },
+  {
+   "id": "hammer_strength",
+   "name": "Hammer Strength",
+   "country": "США"
+  },
+  {
+   "id": "panatta",
+   "name": "Panatta",
+   "country": "Італія"
+  },
+  {
+   "id": "precor",
+   "name": "Precor",
+   "country": "США"
+  },
+  {
+   "id": "impulse",
+   "name": "Impulse",
+   "country": "Китай"
+  }
+ ],
+ "machine_types": [
+  {
+   "id": "barbell",
+   "name_uk": "Штанга з дисками",
+   "name_en": "Barbell and plates",
+   "equipment_type_id": "barbell",
+   "category": "free",
+   "weight_step_kg": 2.5
+  },
+  {
+   "id": "barbell_rack",
+   "name_uk": "Силова рама або стійки",
+   "name_en": "Power rack",
+   "equipment_type_id": "bench",
+   "category": "free",
+   "weight_step_kg": 2.5
+  },
+  {
+   "id": "ez_bar",
+   "name_uk": "EZ-гриф",
+   "name_en": "EZ bar",
+   "equipment_type_id": "ez_bar",
+   "category": "free",
+   "weight_step_kg": 2.5
+  },
+  {
+   "id": "dumbbells",
+   "name_uk": "Гантелі",
+   "name_en": "Dumbbells",
+   "equipment_type_id": "dumbbell",
+   "category": "free",
+   "weight_step_kg": 2
+  },
+  {
+   "id": "kettlebells",
+   "name_uk": "Гирі",
+   "name_en": "Kettlebells",
+   "equipment_type_id": "kettlebell",
+   "category": "free",
+   "weight_step_kg": 4
+  },
+  {
+   "id": "flat_bench",
+   "name_uk": "Горизонтальна лава",
+   "name_en": "Flat bench",
+   "equipment_type_id": "bench",
+   "category": "free",
+   "weight_step_kg": 0
+  },
+  {
+   "id": "adjustable_bench",
+   "name_uk": "Регульована лава",
+   "name_en": "Adjustable bench",
+   "equipment_type_id": "bench",
+   "category": "free",
+   "weight_step_kg": 0
+  },
+  {
+   "id": "pullup_bar",
+   "name_uk": "Турнік",
+   "name_en": "Pull-up bar",
+   "equipment_type_id": "bodyweight",
+   "category": "free",
+   "weight_step_kg": 0
+  },
+  {
+   "id": "dip_bars",
+   "name_uk": "Бруси",
+   "name_en": "Dip bars",
+   "equipment_type_id": "bodyweight",
+   "category": "free",
+   "weight_step_kg": 0
+  },
+  {
+   "id": "preacher_bench",
+   "name_uk": "Лава Скотта",
+   "name_en": "Preacher bench",
+   "equipment_type_id": "bench",
+   "category": "free",
+   "weight_step_kg": 0
+  },
+  {
+   "id": "hyperextension_bench",
+   "name_uk": "Гіперекстензія",
+   "name_en": "Hyperextension bench",
+   "equipment_type_id": "bench",
+   "category": "free",
+   "weight_step_kg": 0
+  },
+  {
+   "id": "smith",
+   "name_uk": "Тренажер Смітта",
+   "name_en": "Smith machine",
+   "equipment_type_id": "smith",
+   "category": "legs",
+   "weight_step_kg": 2.5
+  },
+  {
+   "id": "hack_squat",
+   "name_uk": "Гакк-присід",
+   "name_en": "Hack squat",
+   "equipment_type_id": "machine",
+   "category": "legs",
+   "weight_step_kg": 5
+  },
+  {
+   "id": "leg_press_45",
+   "name_uk": "Жим ногами 45°",
+   "name_en": "Leg press 45°",
+   "equipment_type_id": "machine",
+   "category": "legs",
+   "weight_step_kg": 5
+  },
+  {
+   "id": "leg_press_horizontal",
+   "name_uk": "Горизонтальний жим ногами",
+   "name_en": "Seated leg press",
+   "equipment_type_id": "machine",
+   "category": "legs",
+   "weight_step_kg": 5
+  },
+  {
+   "id": "leg_extension",
+   "name_uk": "Розгинання ніг",
+   "name_en": "Leg extension",
+   "equipment_type_id": "machine",
+   "category": "legs",
+   "weight_step_kg": 5
+  },
+  {
+   "id": "leg_curl_lying",
+   "name_uk": "Згинання ніг лежачи",
+   "name_en": "Lying leg curl",
+   "equipment_type_id": "machine",
+   "category": "legs",
+   "weight_step_kg": 5
+  },
+  {
+   "id": "leg_curl_seated",
+   "name_uk": "Згинання ніг сидячи",
+   "name_en": "Seated leg curl",
+   "equipment_type_id": "machine",
+   "category": "legs",
+   "weight_step_kg": 5
+  },
+  {
+   "id": "calf_raise_standing",
+   "name_uk": "Литки стоячи",
+   "name_en": "Standing calf raise",
+   "equipment_type_id": "machine",
+   "category": "legs",
+   "weight_step_kg": 5
+  },
+  {
+   "id": "calf_raise_seated",
+   "name_uk": "Литки сидячи",
+   "name_en": "Seated calf raise",
+   "equipment_type_id": "machine",
+   "category": "legs",
+   "weight_step_kg": 5
+  },
+  {
+   "id": "glute_bridge_machine",
+   "name_uk": "Сідничний міст-машина",
+   "name_en": "Hip thrust machine",
+   "equipment_type_id": "machine",
+   "category": "legs",
+   "weight_step_kg": 5
+  },
+  {
+   "id": "glute_kickback_machine",
+   "name_uk": "Відведення ноги назад",
+   "name_en": "Glute kickback machine",
+   "equipment_type_id": "machine",
+   "category": "legs",
+   "weight_step_kg": 5
+  },
+  {
+   "id": "hip_abduction",
+   "name_uk": "Розведення ніг",
+   "name_en": "Hip abduction",
+   "equipment_type_id": "machine",
+   "category": "legs",
+   "weight_step_kg": 5
+  },
+  {
+   "id": "hip_adduction",
+   "name_uk": "Зведення ніг",
+   "name_en": "Hip adduction",
+   "equipment_type_id": "machine",
+   "category": "legs",
+   "weight_step_kg": 5
+  },
+  {
+   "id": "lat_pulldown",
+   "name_uk": "Тяга верхнього блока",
+   "name_en": "Lat pulldown",
+   "equipment_type_id": "cable",
+   "category": "back",
+   "weight_step_kg": 5
+  },
+  {
+   "id": "seated_cable_row",
+   "name_uk": "Тяга нижнього блока",
+   "name_en": "Seated cable row",
+   "equipment_type_id": "cable",
+   "category": "back",
+   "weight_step_kg": 5
+  },
+  {
+   "id": "pulldown_lever",
+   "name_uk": "Важільна тяга зверху",
+   "name_en": "Lever pulldown",
+   "equipment_type_id": "machine",
+   "category": "back",
+   "weight_step_kg": 5
+  },
+  {
+   "id": "row_machine",
+   "name_uk": "Важільна тяга до пояса",
+   "name_en": "Lever row",
+   "equipment_type_id": "machine",
+   "category": "back",
+   "weight_step_kg": 5
+  },
+  {
+   "id": "t_bar_row",
+   "name_uk": "Т-гриф",
+   "name_en": "T-bar row",
+   "equipment_type_id": "barbell",
+   "category": "back",
+   "weight_step_kg": 2.5
+  },
+  {
+   "id": "assisted_pullup",
+   "name_uk": "Гравітрон",
+   "name_en": "Assisted pull-up",
+   "equipment_type_id": "machine",
+   "category": "back",
+   "weight_step_kg": 5
+  },
+  {
+   "id": "chest_press_machine",
+   "name_uk": "Жим від грудей",
+   "name_en": "Chest press machine",
+   "equipment_type_id": "machine",
+   "category": "chest_shoulders",
+   "weight_step_kg": 5
+  },
+  {
+   "id": "incline_press_lever",
+   "name_uk": "Важільний жим під кутом",
+   "name_en": "Incline lever press",
+   "equipment_type_id": "machine",
+   "category": "chest_shoulders",
+   "weight_step_kg": 5
+  },
+  {
+   "id": "pec_deck",
+   "name_uk": "Пек-дек (баттерфляй)",
+   "name_en": "Pec deck",
+   "equipment_type_id": "machine",
+   "category": "chest_shoulders",
+   "weight_step_kg": 5
+  },
+  {
+   "id": "shoulder_press_machine",
+   "name_uk": "Жим угору",
+   "name_en": "Shoulder press machine",
+   "equipment_type_id": "machine",
+   "category": "chest_shoulders",
+   "weight_step_kg": 5
+  },
+  {
+   "id": "lateral_raise_machine",
+   "name_uk": "Махи в сторони",
+   "name_en": "Lateral raise machine",
+   "equipment_type_id": "machine",
+   "category": "chest_shoulders",
+   "weight_step_kg": 5
+  },
+  {
+   "id": "cable_crossover",
+   "name_uk": "Кросовер",
+   "name_en": "Cable crossover",
+   "equipment_type_id": "cable",
+   "category": "arms_core",
+   "weight_step_kg": 2.5
+  },
+  {
+   "id": "biceps_curl_machine",
+   "name_uk": "Біцепс-машина",
+   "name_en": "Biceps curl machine",
+   "equipment_type_id": "machine",
+   "category": "arms_core",
+   "weight_step_kg": 5
+  },
+  {
+   "id": "triceps_machine",
+   "name_uk": "Трицепс-машина",
+   "name_en": "Triceps machine",
+   "equipment_type_id": "machine",
+   "category": "arms_core",
+   "weight_step_kg": 5
+  },
+  {
+   "id": "ab_crunch_machine",
+   "name_uk": "Прес-машина",
+   "name_en": "Ab crunch machine",
+   "equipment_type_id": "machine",
+   "category": "arms_core",
+   "weight_step_kg": 5
+  }
+ ],
+ "gym_presets": [
+  {
+   "id": "351b0cc7-1045-5b88-b2a1-8fd3367cfac4",
+   "slug": "full_gym",
+   "name": "Типовий тренажерний зал",
+   "equipment": [
+    "barbell",
+    "barbell_rack",
+    "ez_bar",
+    "dumbbells",
+    "kettlebells",
+    "flat_bench",
+    "adjustable_bench",
+    "pullup_bar",
+    "dip_bars",
+    "preacher_bench",
+    "hyperextension_bench",
+    "smith",
+    "hack_squat",
+    "leg_press_45",
+    "leg_press_horizontal",
+    "leg_extension",
+    "leg_curl_lying",
+    "leg_curl_seated",
+    "calf_raise_standing",
+    "calf_raise_seated",
+    "glute_bridge_machine",
+    "glute_kickback_machine",
+    "hip_abduction",
+    "hip_adduction",
+    "lat_pulldown",
+    "seated_cable_row",
+    "pulldown_lever",
+    "row_machine",
+    "t_bar_row",
+    "assisted_pullup",
+    "chest_press_machine",
+    "incline_press_lever",
+    "pec_deck",
+    "shoulder_press_machine",
+    "lateral_raise_machine",
+    "cable_crossover",
+    "biceps_curl_machine",
+    "triceps_machine",
+    "ab_crunch_machine"
+   ]
+  },
+  {
+   "id": "34272113-906a-5cf0-bc68-ab447d4ccde2",
+   "slug": "small_gym",
+   "name": "Невеликий зал",
+   "equipment": [
+    "barbell",
+    "barbell_rack",
+    "dumbbells",
+    "flat_bench",
+    "adjustable_bench",
+    "pullup_bar",
+    "dip_bars",
+    "hyperextension_bench",
+    "smith",
+    "leg_press_45",
+    "leg_extension",
+    "leg_curl_lying",
+    "lat_pulldown",
+    "seated_cable_row",
+    "cable_crossover"
+   ]
+  },
+  {
+   "id": "7373b84c-3895-562d-9b56-71ba85b5c61a",
+   "slug": "home_dumbbells",
+   "name": "Вдома: гантелі й турнік",
+   "equipment": [
+    "dumbbells",
+    "adjustable_bench",
+    "pullup_bar"
+   ]
+  },
+  {
+   "id": "2f8e32b4-b25b-5298-85ca-5db78de890ee",
+   "slug": "bodyweight",
+   "name": "Без обладнання",
+   "equipment": []
+  }
+ ]
+}

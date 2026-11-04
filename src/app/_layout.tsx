@@ -20,9 +20,12 @@ import '@/features/syncTables';
 import { selectSignedIn, subscribeToAuth, useAuth } from '@/features/auth/store';
 import { useOnboarding } from '@/features/onboarding/store';
 import { useNutrition } from '@/features/nutrition/store';
+import { useGym } from '@/features/gym/store';
 import { useProfile } from '@/features/profile/store';
 import { useSettings } from '@/features/settings/store';
+import { useStrength } from '@/features/strength/store';
 import { useWater } from '@/features/water/store';
+import { useWorkouts } from '@/features/workouts/store';
 import { startSyncEngine } from '@/lib/sync/engine';
 import { useOutbox } from '@/lib/sync/store';
 import { usePersistHydrated } from '@/lib/usePersistHydrated';
@@ -39,6 +42,9 @@ const PERSISTED_STORES = [
   useNutrition,
   useWater,
   useOutbox,
+  useStrength,
+  useGym,
+  useWorkouts,
 ] as const;
 
 export default function RootLayout() {
@@ -86,6 +92,12 @@ function RootStack() {
         <Stack.Screen name="(tabs)" />
         <Stack.Screen name="food" />
         <Stack.Screen name="recipe" />
+        <Stack.Screen name="strength" />
+        <Stack.Screen name="gym" />
+        <Stack.Screen name="program" />
+        <Stack.Screen name="calendar" />
+        <Stack.Screen name="workout" />
+        <Stack.Screen name="exercises" />
       </Stack.Protected>
       <Stack.Protected guard={signedIn}>
         <Stack.Screen name="onboarding" />

@@ -1,0 +1,2233 @@
+[
+ {
+  "id": "barbell_back_squat",
+  "name_uk": "Присідання зі штангою на спині",
+  "name_en": "Barbell back squat",
+  "primary_muscle_id": "quads",
+  "secondary_muscle_ids": [
+   "glutes",
+   "adductors",
+   "lower_back"
+  ],
+  "equipment_type_id": "barbell",
+  "required_equipment": [
+   "barbell",
+   "barbell_rack"
+  ],
+  "mechanics": "compound",
+  "region": "lower",
+  "pattern": "squat",
+  "load_type": "barbell",
+  "base_lift": "squat",
+  "base_ratio": 1.0,
+  "difficulty": 2,
+  "technique_uk": "Гриф на трапеціях, стопи на ширині плечей, носки трохи врозтіч. Вдихни, напруж прес і опускайся, ведучи таз назад і коліна в напрямку носків, до паралелі стегна з підлогою або нижче. Вставай, тиснучи всією стопою.",
+  "mistakes_uk": [
+   "Коліна заходять всередину",
+   "Спина округлюється внизу",
+   "Відрив п'ят від підлоги"
+  ]
+ },
+ {
+  "id": "barbell_front_squat",
+  "name_uk": "Фронтальні присідання",
+  "name_en": "Front squat",
+  "primary_muscle_id": "quads",
+  "secondary_muscle_ids": [
+   "glutes",
+   "abs"
+  ],
+  "equipment_type_id": "barbell",
+  "required_equipment": [
+   "barbell",
+   "barbell_rack"
+  ],
+  "mechanics": "compound",
+  "region": "lower",
+  "pattern": "squat",
+  "load_type": "barbell",
+  "base_lift": "squat",
+  "base_ratio": 0.8,
+  "difficulty": 3,
+  "technique_uk": "Гриф на передніх дельтах, лікті високо. Корпус максимально вертикальний, опускайся глибоко між колінами і вставай, не опускаючи лікті.",
+  "mistakes_uk": [
+   "Лікті падають, гриф скочується",
+   "Завал корпусу вперед"
+  ]
+ },
+ {
+  "id": "goblet_squat",
+  "name_uk": "Гоблет-присідання з гантеллю",
+  "name_en": "Goblet squat",
+  "primary_muscle_id": "quads",
+  "secondary_muscle_ids": [
+   "glutes"
+  ],
+  "equipment_type_id": "dumbbell",
+  "required_equipment": [
+   "dumbbells"
+  ],
+  "mechanics": "compound",
+  "region": "lower",
+  "pattern": "squat",
+  "load_type": "dumbbell",
+  "base_lift": "squat",
+  "base_ratio": 0.3,
+  "difficulty": 1,
+  "technique_uk": "Тримай гантель вертикально біля грудей. Присідай глибоко, лікті проходять між колінами, спина рівна.",
+  "mistakes_uk": [
+   "Гантель відходить від грудей",
+   "Неповна амплітуда"
+  ]
+ },
+ {
+  "id": "smith_squat",
+  "name_uk": "Присідання в тренажері Смітта",
+  "name_en": "Smith machine squat",
+  "primary_muscle_id": "quads",
+  "secondary_muscle_ids": [
+   "glutes"
+  ],
+  "equipment_type_id": "smith",
+  "required_equipment": [
+   "smith"
+  ],
+  "mechanics": "compound",
+  "region": "lower",
+  "pattern": "squat",
+  "load_type": "barbell",
+  "base_lift": "squat",
+  "base_ratio": 0.85,
+  "difficulty": 1,
+  "technique_uk": "Стопи трохи попереду грифа. Опускайся контрольовано до паралелі, тисни п'ятами й серединою стопи.",
+  "mistakes_uk": [
+   "Стопи прямо під грифом — навантаження на коліна",
+   "Різкий відбив унизу"
+  ]
+ },
+ {
+  "id": "hack_squat",
+  "name_uk": "Гакк-присідання",
+  "name_en": "Hack squat",
+  "primary_muscle_id": "quads",
+  "secondary_muscle_ids": [
+   "glutes"
+  ],
+  "equipment_type_id": "machine",
+  "required_equipment": [
+   "hack_squat"
+  ],
+  "mechanics": "compound",
+  "region": "lower",
+  "pattern": "squat",
+  "load_type": "machine",
+  "base_lift": "squat",
+  "base_ratio": 1.1,
+  "difficulty": 1,
+  "technique_uk": "Спина й таз щільно притиснуті до спинки. Опускайся якомога глибше без відриву таза, вставай, не випрямляючи коліна до клацання.",
+  "mistakes_uk": [
+   "Таз відривається від спинки",
+   "Повне блокування колін угорі"
+  ]
+ },
+ {
+  "id": "leg_press_45",
+  "name_uk": "Жим ногами 45°",
+  "name_en": "Leg press 45°",
+  "primary_muscle_id": "quads",
+  "secondary_muscle_ids": [
+   "glutes",
+   "hamstrings"
+  ],
+  "equipment_type_id": "machine",
+  "required_equipment": [
+   "leg_press_45"
+  ],
+  "mechanics": "compound",
+  "region": "lower",
+  "pattern": "squat",
+  "load_type": "machine",
+  "base_lift": "squat",
+  "base_ratio": 1.8,
+  "difficulty": 1,
+  "technique_uk": "Стопи на середині платформи на ширині плечей. Опускай платформу, доки таз не почне відриватися від сидіння, потім вижимай, не блокуючи колін.",
+  "mistakes_uk": [
+   "Таз підкручується й відривається",
+   "Різке блокування колін",
+   "Коліна сходяться"
+  ]
+ },
+ {
+  "id": "leg_press_horizontal",
+  "name_uk": "Горизонтальний жим ногами",
+  "name_en": "Seated leg press",
+  "primary_muscle_id": "quads",
+  "secondary_muscle_ids": [
+   "glutes"
+  ],
+  "equipment_type_id": "machine",
+  "required_equipment": [
+   "leg_press_horizontal"
+  ],
+  "mechanics": "compound",
+  "region": "lower",
+  "pattern": "squat",
+  "load_type": "machine",
+  "base_lift": "squat",
+  "base_ratio": 1.2,
+  "difficulty": 1,
+  "technique_uk": "Сядь щільно, стопи на ширині плечей. Згинай ноги до кута приблизно 90° і плавно випрямляй.",
+  "mistakes_uk": [
+   "Неповна амплітуда",
+   "Відрив таза від сидіння"
+  ]
+ },
+ {
+  "id": "bodyweight_squat",
+  "name_uk": "Присідання з власною вагою",
+  "name_en": "Bodyweight squat",
+  "primary_muscle_id": "quads",
+  "secondary_muscle_ids": [
+   "glutes"
+  ],
+  "equipment_type_id": "bodyweight",
+  "required_equipment": [],
+  "mechanics": "compound",
+  "region": "lower",
+  "pattern": "squat",
+  "load_type": "bodyweight",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Стопи на ширині плечей, руки перед собою. Присідай до паралелі, тримаючи спину рівною й п'яти на підлозі.",
+  "mistakes_uk": [
+   "Коліна всередину",
+   "П'яти відриваються"
+  ]
+ },
+ {
+  "id": "bulgarian_split_squat",
+  "name_uk": "Болгарські випади",
+  "name_en": "Bulgarian split squat",
+  "primary_muscle_id": "quads",
+  "secondary_muscle_ids": [
+   "glutes",
+   "adductors"
+  ],
+  "equipment_type_id": "dumbbell",
+  "required_equipment": [
+   "dumbbells",
+   "flat_bench"
+  ],
+  "mechanics": "compound",
+  "region": "lower",
+  "pattern": "lunge",
+  "load_type": "dumbbell",
+  "base_lift": "squat",
+  "base_ratio": 0.2,
+  "difficulty": 2,
+  "technique_uk": "Задня нога на лаві, передня — на крок попереду. Опускайся вертикально вниз, доки стегно передньої ноги не стане паралельним підлозі.",
+  "mistakes_uk": [
+   "Занадто короткий крок",
+   "Коліно передньої ноги завалюється всередину"
+  ]
+ },
+ {
+  "id": "walking_lunge",
+  "name_uk": "Випади з гантелями",
+  "name_en": "Dumbbell lunges",
+  "primary_muscle_id": "quads",
+  "secondary_muscle_ids": [
+   "glutes"
+  ],
+  "equipment_type_id": "dumbbell",
+  "required_equipment": [
+   "dumbbells"
+  ],
+  "mechanics": "compound",
+  "region": "lower",
+  "pattern": "lunge",
+  "load_type": "dumbbell",
+  "base_lift": "squat",
+  "base_ratio": 0.22,
+  "difficulty": 1,
+  "technique_uk": "Гантелі в опущених руках. Зроби широкий крок, опустись до майже торкання коліном підлоги, відштовхнись передньою ногою.",
+  "mistakes_uk": [
+   "Удар коліном об підлогу",
+   "Корпус нахиляється вперед"
+  ]
+ },
+ {
+  "id": "reverse_lunge_bw",
+  "name_uk": "Зворотні випади",
+  "name_en": "Reverse lunges",
+  "primary_muscle_id": "quads",
+  "secondary_muscle_ids": [
+   "glutes"
+  ],
+  "equipment_type_id": "bodyweight",
+  "required_equipment": [],
+  "mechanics": "compound",
+  "region": "lower",
+  "pattern": "lunge",
+  "load_type": "bodyweight",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Крокуй назад і опускайся, доки обидва коліна не зігнуться приблизно під 90°. Повертайся, тиснучи п'ятою передньої ноги.",
+  "mistakes_uk": [
+   "Втрата балансу через вузьку постановку",
+   "Неповна амплітуда"
+  ]
+ },
+ {
+  "id": "step_up",
+  "name_uk": "Зашагування на лаву",
+  "name_en": "Step-ups",
+  "primary_muscle_id": "quads",
+  "secondary_muscle_ids": [
+   "glutes"
+  ],
+  "equipment_type_id": "dumbbell",
+  "required_equipment": [
+   "dumbbells",
+   "flat_bench"
+  ],
+  "mechanics": "compound",
+  "region": "lower",
+  "pattern": "lunge",
+  "load_type": "dumbbell",
+  "base_lift": "squat",
+  "base_ratio": 0.2,
+  "difficulty": 1,
+  "technique_uk": "Постав всю стопу на лаву і підіймайся силою цієї ноги, не відштовхуючись нижньою.",
+  "mistakes_uk": [
+   "Поштовх нижньою ногою",
+   "Коліно завалюється всередину"
+  ]
+ },
+ {
+  "id": "barbell_deadlift",
+  "name_uk": "Станова тяга",
+  "name_en": "Deadlift",
+  "primary_muscle_id": "glutes",
+  "secondary_muscle_ids": [
+   "hamstrings",
+   "lower_back",
+   "upper_back",
+   "forearms"
+  ],
+  "equipment_type_id": "barbell",
+  "required_equipment": [
+   "barbell"
+  ],
+  "mechanics": "compound",
+  "region": "lower",
+  "pattern": "hinge",
+  "load_type": "barbell",
+  "base_lift": "deadlift",
+  "base_ratio": 1.0,
+  "difficulty": 2,
+  "technique_uk": "Гриф над серединою стопи, хват трохи ширше ніг. Опусти таз, випрями спину, вдихни й напруж прес. Тягни гриф уздовж ніг, одночасно розгинаючи коліна й таз.",
+  "mistakes_uk": [
+   "Округлена спина",
+   "Гриф відходить від ніг",
+   "Ривок замість плавного старту"
+  ]
+ },
+ {
+  "id": "romanian_deadlift",
+  "name_uk": "Румунська тяга",
+  "name_en": "Romanian deadlift",
+  "primary_muscle_id": "hamstrings",
+  "secondary_muscle_ids": [
+   "glutes",
+   "lower_back"
+  ],
+  "equipment_type_id": "barbell",
+  "required_equipment": [
+   "barbell"
+  ],
+  "mechanics": "compound",
+  "region": "lower",
+  "pattern": "hinge",
+  "load_type": "barbell",
+  "base_lift": "deadlift",
+  "base_ratio": 0.6,
+  "difficulty": 2,
+  "technique_uk": "Ноги злегка зігнуті й майже нерухомі. Відводь таз назад, ковзаючи грифом по стегнах, доки не відчуєш сильне розтягнення задньої поверхні стегна.",
+  "mistakes_uk": [
+   "Округлення спини внизу",
+   "Присідання замість нахилу"
+  ]
+ },
+ {
+  "id": "dumbbell_rdl",
+  "name_uk": "Румунська тяга з гантелями",
+  "name_en": "Dumbbell Romanian deadlift",
+  "primary_muscle_id": "hamstrings",
+  "secondary_muscle_ids": [
+   "glutes"
+  ],
+  "equipment_type_id": "dumbbell",
+  "required_equipment": [
+   "dumbbells"
+  ],
+  "mechanics": "compound",
+  "region": "lower",
+  "pattern": "hinge",
+  "load_type": "dumbbell",
+  "base_lift": "deadlift",
+  "base_ratio": 0.25,
+  "difficulty": 1,
+  "technique_uk": "Гантелі перед стегнами. Відводь таз назад зі злегка зігнутими колінами, тримай гантелі близько до ніг, спина рівна.",
+  "mistakes_uk": [
+   "Гантелі далеко від ніг",
+   "Округлена спина"
+  ]
+ },
+ {
+  "id": "sumo_deadlift",
+  "name_uk": "Станова тяга сумо",
+  "name_en": "Sumo deadlift",
+  "primary_muscle_id": "glutes",
+  "secondary_muscle_ids": [
+   "adductors",
+   "quads",
+   "hamstrings"
+  ],
+  "equipment_type_id": "barbell",
+  "required_equipment": [
+   "barbell"
+  ],
+  "mechanics": "compound",
+  "region": "lower",
+  "pattern": "hinge",
+  "load_type": "barbell",
+  "base_lift": "deadlift",
+  "base_ratio": 0.95,
+  "difficulty": 3,
+  "technique_uk": "Широка постановка, носки врозтіч, хват між ногами. Розводь коліна в сторони, тримай груди високо й тягни гриф вертикально вгору.",
+  "mistakes_uk": [
+   "Коліна сходяться",
+   "Таз піднімається раніше за плечі"
+  ]
+ },
+ {
+  "id": "kettlebell_swing",
+  "name_uk": "Махи гирею",
+  "name_en": "Kettlebell swing",
+  "primary_muscle_id": "glutes",
+  "secondary_muscle_ids": [
+   "hamstrings",
+   "lower_back"
+  ],
+  "equipment_type_id": "kettlebell",
+  "required_equipment": [
+   "kettlebells"
+  ],
+  "mechanics": "compound",
+  "region": "lower",
+  "pattern": "hinge",
+  "load_type": "kettlebell",
+  "base_lift": "deadlift",
+  "base_ratio": 0.15,
+  "difficulty": 2,
+  "technique_uk": "Рух іде від таза: відведи гирю між ніг і різко розігни таз, щоб вона піднялась до рівня грудей. Руки лише тримають.",
+  "mistakes_uk": [
+   "Підйом гирі руками",
+   "Присідання замість нахилу"
+  ]
+ },
+ {
+  "id": "hip_thrust",
+  "name_uk": "Сідничний міст зі штангою",
+  "name_en": "Barbell hip thrust",
+  "primary_muscle_id": "glutes",
+  "secondary_muscle_ids": [
+   "hamstrings"
+  ],
+  "equipment_type_id": "barbell",
+  "required_equipment": [
+   "barbell",
+   "flat_bench"
+  ],
+  "mechanics": "compound",
+  "region": "lower",
+  "pattern": "hip_ext",
+  "load_type": "barbell",
+  "base_lift": "deadlift",
+  "base_ratio": 0.7,
+  "difficulty": 1,
+  "technique_uk": "Лопатки на лаві, гриф на тазу (з м'якою накладкою). Підіймай таз до прямої лінії від колін до плечей і затримайся на секунду, стискаючи сідниці.",
+  "mistakes_uk": [
+   "Прогин у попереку вгорі",
+   "Стопи надто далеко — працює біцепс стегна"
+  ]
+ },
+ {
+  "id": "glute_bridge_machine",
+  "name_uk": "Сідничний міст у тренажері",
+  "name_en": "Hip thrust machine",
+  "primary_muscle_id": "glutes",
+  "secondary_muscle_ids": [
+   "hamstrings"
+  ],
+  "equipment_type_id": "machine",
+  "required_equipment": [
+   "glute_bridge_machine"
+  ],
+  "mechanics": "compound",
+  "region": "lower",
+  "pattern": "hip_ext",
+  "load_type": "machine",
+  "base_lift": "deadlift",
+  "base_ratio": 0.6,
+  "difficulty": 1,
+  "technique_uk": "Займи положення за інструкцією тренажера. Підіймай таз до повного розгинання, затримайся вгорі.",
+  "mistakes_uk": [
+   "Прогин у попереку",
+   "Неповне розгинання таза"
+  ]
+ },
+ {
+  "id": "glute_kickback_cable",
+  "name_uk": "Відведення ноги назад у кросовері",
+  "name_en": "Cable glute kickback",
+  "primary_muscle_id": "glutes",
+  "secondary_muscle_ids": [],
+  "equipment_type_id": "cable",
+  "required_equipment": [
+   "cable_crossover"
+  ],
+  "mechanics": "isolation",
+  "region": "lower",
+  "pattern": "hip_ext",
+  "load_type": "cable",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Манжета на щиколотці, легкий нахил вперед. Відводь пряму ногу назад за рахунок сідниць, без прогину в попереку.",
+  "mistakes_uk": [
+   "Прогин у попереку",
+   "Розгойдування корпусу"
+  ]
+ },
+ {
+  "id": "glute_kickback_machine",
+  "name_uk": "Відведення ноги назад у тренажері",
+  "name_en": "Glute kickback machine",
+  "primary_muscle_id": "glutes",
+  "secondary_muscle_ids": [],
+  "equipment_type_id": "machine",
+  "required_equipment": [
+   "glute_kickback_machine"
+  ],
+  "mechanics": "isolation",
+  "region": "lower",
+  "pattern": "hip_ext",
+  "load_type": "machine",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Упрись у тренажер за інструкцією. Відштовхуй платформу ногою назад, стискаючи сідницю вгорі.",
+  "mistakes_uk": [
+   "Рух за рахунок попереку",
+   "Занадто велика вага й ривки"
+  ]
+ },
+ {
+  "id": "hyperextension",
+  "name_uk": "Гіперекстензія",
+  "name_en": "Back extension",
+  "primary_muscle_id": "lower_back",
+  "secondary_muscle_ids": [
+   "glutes",
+   "hamstrings"
+  ],
+  "equipment_type_id": "bodyweight",
+  "required_equipment": [
+   "hyperextension_bench"
+  ],
+  "mechanics": "compound",
+  "region": "lower",
+  "pattern": "hinge",
+  "load_type": "bodyweight",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Валик під тазом. Опускайся з рівною спиною і піднімайся до прямої лінії тіла, без переразгинання.",
+  "mistakes_uk": [
+   "Переразгинання вгорі",
+   "Ривки"
+  ]
+ },
+ {
+  "id": "leg_extension",
+  "name_uk": "Розгинання ніг у тренажері",
+  "name_en": "Leg extension",
+  "primary_muscle_id": "quads",
+  "secondary_muscle_ids": [],
+  "equipment_type_id": "machine",
+  "required_equipment": [
+   "leg_extension"
+  ],
+  "mechanics": "isolation",
+  "region": "lower",
+  "pattern": "knee_ext",
+  "load_type": "machine",
+  "base_lift": "squat",
+  "base_ratio": 0.35,
+  "difficulty": 1,
+  "technique_uk": "Вісь тренажера на рівні колін, валик над щиколотками. Випрямляй ноги до кінця, на секунду затримайся і повільно опускай.",
+  "mistakes_uk": [
+   "Ривки й відрив таза",
+   "Швидке опускання"
+  ]
+ },
+ {
+  "id": "lying_leg_curl",
+  "name_uk": "Згинання ніг лежачи",
+  "name_en": "Lying leg curl",
+  "primary_muscle_id": "hamstrings",
+  "secondary_muscle_ids": [
+   "calves"
+  ],
+  "equipment_type_id": "machine",
+  "required_equipment": [
+   "leg_curl_lying"
+  ],
+  "mechanics": "isolation",
+  "region": "lower",
+  "pattern": "knee_flex",
+  "load_type": "machine",
+  "base_lift": "deadlift",
+  "base_ratio": 0.2,
+  "difficulty": 1,
+  "technique_uk": "Колінa трохи за краєм лави, валик над п'ятами. Згинай ноги, не відриваючи таз, і плавно опускай.",
+  "mistakes_uk": [
+   "Таз піднімається",
+   "Неповна амплітуда"
+  ]
+ },
+ {
+  "id": "seated_leg_curl",
+  "name_uk": "Згинання ніг сидячи",
+  "name_en": "Seated leg curl",
+  "primary_muscle_id": "hamstrings",
+  "secondary_muscle_ids": [],
+  "equipment_type_id": "machine",
+  "required_equipment": [
+   "leg_curl_seated"
+  ],
+  "mechanics": "isolation",
+  "region": "lower",
+  "pattern": "knee_flex",
+  "load_type": "machine",
+  "base_lift": "deadlift",
+  "base_ratio": 0.25,
+  "difficulty": 1,
+  "technique_uk": "Зафіксуй стегна упором. Згинай ноги максимально, контролюй повернення.",
+  "mistakes_uk": [
+   "Вісь тренажера не на рівні колін",
+   "Ривки"
+  ]
+ },
+ {
+  "id": "standing_calf_raise",
+  "name_uk": "Підйоми на носки стоячи",
+  "name_en": "Standing calf raise",
+  "primary_muscle_id": "calves",
+  "secondary_muscle_ids": [],
+  "equipment_type_id": "machine",
+  "required_equipment": [
+   "calf_raise_standing"
+  ],
+  "mechanics": "isolation",
+  "region": "lower",
+  "pattern": "calf",
+  "load_type": "machine",
+  "base_lift": "squat",
+  "base_ratio": 0.6,
+  "difficulty": 1,
+  "technique_uk": "Носки на краю платформи. Опускай п'яти максимально вниз із розтягненням, потім підіймайся якомога вище, затримка 1 с.",
+  "mistakes_uk": [
+   "Пружинні короткі рухи",
+   "Згинання колін"
+  ]
+ },
+ {
+  "id": "seated_calf_raise",
+  "name_uk": "Підйоми на носки сидячи",
+  "name_en": "Seated calf raise",
+  "primary_muscle_id": "calves",
+  "secondary_muscle_ids": [],
+  "equipment_type_id": "machine",
+  "required_equipment": [
+   "calf_raise_seated"
+  ],
+  "mechanics": "isolation",
+  "region": "lower",
+  "pattern": "calf",
+  "load_type": "machine",
+  "base_lift": "squat",
+  "base_ratio": 0.35,
+  "difficulty": 1,
+  "technique_uk": "Валик на стегнах біля колін. Повна амплітуда з паузою внизу й угорі.",
+  "mistakes_uk": [
+   "Неповна амплітуда",
+   "Занадто швидкий темп"
+  ]
+ },
+ {
+  "id": "calf_raise_bw",
+  "name_uk": "Підйоми на носки з власною вагою",
+  "name_en": "Bodyweight calf raise",
+  "primary_muscle_id": "calves",
+  "secondary_muscle_ids": [],
+  "equipment_type_id": "bodyweight",
+  "required_equipment": [],
+  "mechanics": "isolation",
+  "region": "lower",
+  "pattern": "calf",
+  "load_type": "bodyweight",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Стань носками на сходинку, тримайся за опору. Повільно опускайся й підіймайся з паузою вгорі.",
+  "mistakes_uk": [
+   "Швидкі пружинні рухи"
+  ]
+ },
+ {
+  "id": "leg_press_calf",
+  "name_uk": "Підйоми на носки в жимі ногами",
+  "name_en": "Leg press calf raise",
+  "primary_muscle_id": "calves",
+  "secondary_muscle_ids": [],
+  "equipment_type_id": "machine",
+  "required_equipment": [
+   "leg_press_45"
+  ],
+  "mechanics": "isolation",
+  "region": "lower",
+  "pattern": "calf",
+  "load_type": "machine",
+  "base_lift": "squat",
+  "base_ratio": 0.9,
+  "difficulty": 1,
+  "technique_uk": "Носки на нижньому краї платформи, ноги майже прямі. Тисни платформу носками з повною амплітудою.",
+  "mistakes_uk": [
+   "Згинання колін",
+   "Зісковзування стоп"
+  ]
+ },
+ {
+  "id": "hip_abduction",
+  "name_uk": "Розведення ніг у тренажері",
+  "name_en": "Hip abduction",
+  "primary_muscle_id": "abductors",
+  "secondary_muscle_ids": [
+   "glutes"
+  ],
+  "equipment_type_id": "machine",
+  "required_equipment": [
+   "hip_abduction"
+  ],
+  "mechanics": "isolation",
+  "region": "lower",
+  "pattern": "hip_abd",
+  "load_type": "machine",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Сядь щільно, розводь ноги в сторони плавно й контрольовано повертай.",
+  "mistakes_uk": [
+   "Удар вагою в кінці руху",
+   "Розгойдування корпусу"
+  ]
+ },
+ {
+  "id": "hip_adduction",
+  "name_uk": "Зведення ніг у тренажері",
+  "name_en": "Hip adduction",
+  "primary_muscle_id": "adductors",
+  "secondary_muscle_ids": [],
+  "equipment_type_id": "machine",
+  "required_equipment": [
+   "hip_adduction"
+  ],
+  "mechanics": "isolation",
+  "region": "lower",
+  "pattern": "hip_add",
+  "load_type": "machine",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Зводь ноги, долаючи опір, і повільно розводь до комфортного розтягнення.",
+  "mistakes_uk": [
+   "Надто широке розведення з болем",
+   "Ривки"
+  ]
+ },
+ {
+  "id": "barbell_bench_press",
+  "name_uk": "Жим штанги лежачи",
+  "name_en": "Barbell bench press",
+  "primary_muscle_id": "chest",
+  "secondary_muscle_ids": [
+   "front_delts",
+   "triceps"
+  ],
+  "equipment_type_id": "barbell",
+  "required_equipment": [
+   "barbell",
+   "flat_bench"
+  ],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "h_push",
+  "load_type": "barbell",
+  "base_lift": "bench",
+  "base_ratio": 1.0,
+  "difficulty": 2,
+  "technique_uk": "Лопатки зведені й опущені, стопи на підлозі. Опускай гриф на низ грудей, лікті під кутом близько 45° до тулуба, і вижимай угору.",
+  "mistakes_uk": [
+   "Відбив грифа від грудей",
+   "Лікті розведені під 90°",
+   "Відрив таза від лави"
+  ]
+ },
+ {
+  "id": "incline_barbell_press",
+  "name_uk": "Жим штанги на похилій лаві",
+  "name_en": "Incline barbell press",
+  "primary_muscle_id": "chest",
+  "secondary_muscle_ids": [
+   "front_delts",
+   "triceps"
+  ],
+  "equipment_type_id": "barbell",
+  "required_equipment": [
+   "barbell",
+   "adjustable_bench"
+  ],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "h_push",
+  "load_type": "barbell",
+  "base_lift": "bench",
+  "base_ratio": 0.8,
+  "difficulty": 2,
+  "technique_uk": "Нахил лави 30°. Опускай гриф на верх грудей і вижимай вертикально.",
+  "mistakes_uk": [
+   "Надто великий нахил — працюють плечі",
+   "Відрив лопаток"
+  ]
+ },
+ {
+  "id": "dumbbell_bench_press",
+  "name_uk": "Жим гантелей лежачи",
+  "name_en": "Dumbbell bench press",
+  "primary_muscle_id": "chest",
+  "secondary_muscle_ids": [
+   "front_delts",
+   "triceps"
+  ],
+  "equipment_type_id": "dumbbell",
+  "required_equipment": [
+   "dumbbells",
+   "flat_bench"
+  ],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "h_push",
+  "load_type": "dumbbell",
+  "base_lift": "bench",
+  "base_ratio": 0.38,
+  "difficulty": 1,
+  "technique_uk": "Лопатки зведені, гантелі над грудьми. Опускай до легкого розтягнення грудей і вижимай, трохи зводячи гантелі вгорі.",
+  "mistakes_uk": [
+   "Гантелі стукаються вгорі",
+   "Лікті надто широко"
+  ]
+ },
+ {
+  "id": "incline_dumbbell_press",
+  "name_uk": "Жим гантелей на похилій лаві",
+  "name_en": "Incline dumbbell press",
+  "primary_muscle_id": "chest",
+  "secondary_muscle_ids": [
+   "front_delts",
+   "triceps"
+  ],
+  "equipment_type_id": "dumbbell",
+  "required_equipment": [
+   "dumbbells",
+   "adjustable_bench"
+  ],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "h_push",
+  "load_type": "dumbbell",
+  "base_lift": "bench",
+  "base_ratio": 0.32,
+  "difficulty": 1,
+  "technique_uk": "Лава під 30°, лопатки зведені. Опускай гантелі до рівня грудей і вижимай угору.",
+  "mistakes_uk": [
+   "Кут лави понад 45°",
+   "Неповна амплітуда"
+  ]
+ },
+ {
+  "id": "smith_incline_press",
+  "name_uk": "Жим на похилій лаві в Сміті",
+  "name_en": "Smith incline press",
+  "primary_muscle_id": "chest",
+  "secondary_muscle_ids": [
+   "front_delts",
+   "triceps"
+  ],
+  "equipment_type_id": "smith",
+  "required_equipment": [
+   "smith",
+   "adjustable_bench"
+  ],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "h_push",
+  "load_type": "barbell",
+  "base_lift": "bench",
+  "base_ratio": 0.75,
+  "difficulty": 1,
+  "technique_uk": "Постав лаву так, щоб гриф опускався на верх грудей. Контрольовано опускай і вижимай.",
+  "mistakes_uk": [
+   "Гриф опускається на шию або живіт",
+   "Відрив лопаток"
+  ]
+ },
+ {
+  "id": "chest_press_machine",
+  "name_uk": "Жим від грудей у тренажері",
+  "name_en": "Chest press machine",
+  "primary_muscle_id": "chest",
+  "secondary_muscle_ids": [
+   "front_delts",
+   "triceps"
+  ],
+  "equipment_type_id": "machine",
+  "required_equipment": [
+   "chest_press_machine"
+  ],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "h_push",
+  "load_type": "machine",
+  "base_lift": "bench",
+  "base_ratio": 0.8,
+  "difficulty": 1,
+  "technique_uk": "Ручки на рівні середини грудей, лопатки притиснуті до спинки. Вижимай, не блокуючи лікті.",
+  "mistakes_uk": [
+   "Сидіння надто високо або низько",
+   "Плечі піднімаються до вух"
+  ]
+ },
+ {
+  "id": "incline_lever_press",
+  "name_uk": "Жим під кутом у важільному тренажері",
+  "name_en": "Incline lever press",
+  "primary_muscle_id": "chest",
+  "secondary_muscle_ids": [
+   "front_delts",
+   "triceps"
+  ],
+  "equipment_type_id": "machine",
+  "required_equipment": [
+   "incline_press_lever"
+  ],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "h_push",
+  "load_type": "machine",
+  "base_lift": "bench",
+  "base_ratio": 0.7,
+  "difficulty": 1,
+  "technique_uk": "Притисни лопатки до спинки, вижимай ручки вгору-вперед і плавно повертай.",
+  "mistakes_uk": [
+   "Неповна амплітуда",
+   "Відрив спини"
+  ]
+ },
+ {
+  "id": "push_up",
+  "name_uk": "Віджимання від підлоги",
+  "name_en": "Push-ups",
+  "primary_muscle_id": "chest",
+  "secondary_muscle_ids": [
+   "triceps",
+   "front_delts",
+   "abs"
+  ],
+  "equipment_type_id": "bodyweight",
+  "required_equipment": [],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "h_push",
+  "load_type": "bodyweight",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Руки трохи ширше плечей, тіло пряме від голови до п'ят. Опускайся грудьми майже до підлоги, лікті під 45°.",
+  "mistakes_uk": [
+   "Провисання таза",
+   "Неповна амплітуда"
+  ]
+ },
+ {
+  "id": "dips",
+  "name_uk": "Віджимання на брусах",
+  "name_en": "Dips",
+  "primary_muscle_id": "chest",
+  "secondary_muscle_ids": [
+   "triceps",
+   "front_delts"
+  ],
+  "equipment_type_id": "bodyweight",
+  "required_equipment": [
+   "dip_bars"
+  ],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "h_push",
+  "load_type": "bodyweight",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 2,
+  "technique_uk": "Легкий нахил вперед, опускайся до кута в ліктях близько 90° і вижимай угору.",
+  "mistakes_uk": [
+   "Надто глибоке опускання з болем у плечах",
+   "Розгойдування"
+  ]
+ },
+ {
+  "id": "cable_fly",
+  "name_uk": "Зведення рук у кросовері",
+  "name_en": "Cable fly",
+  "primary_muscle_id": "chest",
+  "secondary_muscle_ids": [
+   "front_delts"
+  ],
+  "equipment_type_id": "cable",
+  "required_equipment": [
+   "cable_crossover"
+  ],
+  "mechanics": "isolation",
+  "region": "upper",
+  "pattern": "chest_iso",
+  "load_type": "cable",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Крок уперед, руки злегка зігнуті. Зводь ручки дугою перед грудьми, стискаючи груди, і плавно розводь.",
+  "mistakes_uk": [
+   "Згинання ліктів — рух стає жимом",
+   "Розгойдування корпусу"
+  ]
+ },
+ {
+  "id": "pec_deck",
+  "name_uk": "Зведення рук у пек-деку",
+  "name_en": "Pec deck",
+  "primary_muscle_id": "chest",
+  "secondary_muscle_ids": [
+   "front_delts"
+  ],
+  "equipment_type_id": "machine",
+  "required_equipment": [
+   "pec_deck"
+  ],
+  "mechanics": "isolation",
+  "region": "upper",
+  "pattern": "chest_iso",
+  "load_type": "machine",
+  "base_lift": "bench",
+  "base_ratio": 0.45,
+  "difficulty": 1,
+  "technique_uk": "Ручки на рівні грудей, лопатки притиснуті. Зводь руки до торкання, плавно повертай до розтягнення.",
+  "mistakes_uk": [
+   "Сидіння надто низько",
+   "Ривки на старті"
+  ]
+ },
+ {
+  "id": "dumbbell_fly",
+  "name_uk": "Розведення гантелей лежачи",
+  "name_en": "Dumbbell fly",
+  "primary_muscle_id": "chest",
+  "secondary_muscle_ids": [],
+  "equipment_type_id": "dumbbell",
+  "required_equipment": [
+   "dumbbells",
+   "flat_bench"
+  ],
+  "mechanics": "isolation",
+  "region": "upper",
+  "pattern": "chest_iso",
+  "load_type": "dumbbell",
+  "base_lift": "bench",
+  "base_ratio": 0.15,
+  "difficulty": 2,
+  "technique_uk": "Руки злегка зігнуті й фіксовані. Розводь гантелі дугою до розтягнення грудей і зводь угорі.",
+  "mistakes_uk": [
+   "Занадто велика вага й глибоке опускання",
+   "Згинання ліктів"
+  ]
+ },
+ {
+  "id": "pull_up",
+  "name_uk": "Підтягування",
+  "name_en": "Pull-ups",
+  "primary_muscle_id": "lats",
+  "secondary_muscle_ids": [
+   "biceps",
+   "upper_back"
+  ],
+  "equipment_type_id": "bodyweight",
+  "required_equipment": [
+   "pullup_bar"
+  ],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "v_pull",
+  "load_type": "bodyweight",
+  "base_lift": "pullup",
+  "base_ratio": 1.0,
+  "difficulty": 2,
+  "technique_uk": "Хват трохи ширше плечей. Тягнися грудьми до перекладини, зводячи лопатки, і повністю опускайся.",
+  "mistakes_uk": [
+   "Розгойдування й ривки",
+   "Неповне опускання"
+  ]
+ },
+ {
+  "id": "chin_up",
+  "name_uk": "Підтягування зворотним хватом",
+  "name_en": "Chin-ups",
+  "primary_muscle_id": "lats",
+  "secondary_muscle_ids": [
+   "biceps"
+  ],
+  "equipment_type_id": "bodyweight",
+  "required_equipment": [
+   "pullup_bar"
+  ],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "v_pull",
+  "load_type": "bodyweight",
+  "base_lift": "pullup",
+  "base_ratio": 1.0,
+  "difficulty": 2,
+  "technique_uk": "Хват долонями до себе на ширині плечей. Підтягуйся до підборіддя над перекладиною.",
+  "mistakes_uk": [
+   "Тягнешся підборіддям, а не грудьми",
+   "Ривки"
+  ]
+ },
+ {
+  "id": "assisted_pullup",
+  "name_uk": "Підтягування в гравітроні",
+  "name_en": "Assisted pull-ups",
+  "primary_muscle_id": "lats",
+  "secondary_muscle_ids": [
+   "biceps",
+   "upper_back"
+  ],
+  "equipment_type_id": "machine",
+  "required_equipment": [
+   "assisted_pullup"
+  ],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "v_pull",
+  "load_type": "assisted",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Встань колінами на платформу. Що більша вага противаги, то легше. Тягнися грудьми до ручок і повністю опускайся.",
+  "mistakes_uk": [
+   "Надто велика допомога — немає прогресу",
+   "Неповна амплітуда"
+  ]
+ },
+ {
+  "id": "lat_pulldown",
+  "name_uk": "Тяга верхнього блока",
+  "name_en": "Lat pulldown",
+  "primary_muscle_id": "lats",
+  "secondary_muscle_ids": [
+   "biceps",
+   "upper_back"
+  ],
+  "equipment_type_id": "cable",
+  "required_equipment": [
+   "lat_pulldown"
+  ],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "v_pull",
+  "load_type": "cable",
+  "base_lift": "row",
+  "base_ratio": 0.85,
+  "difficulty": 1,
+  "technique_uk": "Хват ширше плечей, легкий нахил назад. Тягни руків'я до верху грудей ліктями вниз, плавно повертай.",
+  "mistakes_uk": [
+   "Тяга за голову",
+   "Сильне відхилення корпусу назад"
+  ]
+ },
+ {
+  "id": "lat_pulldown_close",
+  "name_uk": "Тяга верхнього блока вузьким хватом",
+  "name_en": "Close-grip pulldown",
+  "primary_muscle_id": "lats",
+  "secondary_muscle_ids": [
+   "biceps"
+  ],
+  "equipment_type_id": "cable",
+  "required_equipment": [
+   "lat_pulldown"
+  ],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "v_pull",
+  "load_type": "cable",
+  "base_lift": "row",
+  "base_ratio": 0.8,
+  "difficulty": 1,
+  "technique_uk": "V-подібна ручка, тягни до верху грудей, лікті вздовж тулуба.",
+  "mistakes_uk": [
+   "Рух лише руками",
+   "Ривки корпусом"
+  ]
+ },
+ {
+  "id": "lever_pulldown",
+  "name_uk": "Тяга зверху у важільному тренажері",
+  "name_en": "Lever pulldown",
+  "primary_muscle_id": "lats",
+  "secondary_muscle_ids": [
+   "biceps"
+  ],
+  "equipment_type_id": "machine",
+  "required_equipment": [
+   "pulldown_lever"
+  ],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "v_pull",
+  "load_type": "machine",
+  "base_lift": "row",
+  "base_ratio": 0.8,
+  "difficulty": 1,
+  "technique_uk": "Зафіксуй стегна, тягни ручки вниз, зводячи лопатки.",
+  "mistakes_uk": [
+   "Неповна амплітуда",
+   "Підйом плечей"
+  ]
+ },
+ {
+  "id": "barbell_bent_over_row",
+  "name_uk": "Тяга штанги в нахилі",
+  "name_en": "Barbell row",
+  "primary_muscle_id": "upper_back",
+  "secondary_muscle_ids": [
+   "lats",
+   "biceps",
+   "lower_back"
+  ],
+  "equipment_type_id": "barbell",
+  "required_equipment": [
+   "barbell"
+  ],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "h_pull",
+  "load_type": "barbell",
+  "base_lift": "row",
+  "base_ratio": 1.0,
+  "difficulty": 2,
+  "technique_uk": "Нахил корпусу 30–45°, спина рівна. Тягни гриф до низу живота, зводячи лопатки.",
+  "mistakes_uk": [
+   "Округлена спина",
+   "Корпус піднімається з кожним повтором"
+  ]
+ },
+ {
+  "id": "dumbbell_row",
+  "name_uk": "Тяга гантелі однією рукою",
+  "name_en": "One-arm dumbbell row",
+  "primary_muscle_id": "lats",
+  "secondary_muscle_ids": [
+   "upper_back",
+   "biceps"
+  ],
+  "equipment_type_id": "dumbbell",
+  "required_equipment": [
+   "dumbbells",
+   "flat_bench"
+  ],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "h_pull",
+  "load_type": "dumbbell",
+  "base_lift": "row",
+  "base_ratio": 0.45,
+  "difficulty": 1,
+  "technique_uk": "Коліно й рука на лаві, спина паралельна підлозі. Тягни гантель до пояса ліктем назад.",
+  "mistakes_uk": [
+   "Скручування корпусу",
+   "Тяга до грудей замість пояса"
+  ]
+ },
+ {
+  "id": "seated_cable_row",
+  "name_uk": "Тяга нижнього блока",
+  "name_en": "Seated cable row",
+  "primary_muscle_id": "upper_back",
+  "secondary_muscle_ids": [
+   "lats",
+   "biceps"
+  ],
+  "equipment_type_id": "cable",
+  "required_equipment": [
+   "seated_cable_row"
+  ],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "h_pull",
+  "load_type": "cable",
+  "base_lift": "row",
+  "base_ratio": 0.9,
+  "difficulty": 1,
+  "technique_uk": "Спина рівна, легкий згин колін. Тягни руків'я до живота, зводячи лопатки, без розгойдування.",
+  "mistakes_uk": [
+   "Розгойдування корпусом",
+   "Округлення спини на поверненні"
+  ]
+ },
+ {
+  "id": "t_bar_row",
+  "name_uk": "Тяга Т-грифа",
+  "name_en": "T-bar row",
+  "primary_muscle_id": "upper_back",
+  "secondary_muscle_ids": [
+   "lats",
+   "biceps"
+  ],
+  "equipment_type_id": "barbell",
+  "required_equipment": [
+   "t_bar_row"
+  ],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "h_pull",
+  "load_type": "machine",
+  "base_lift": "row",
+  "base_ratio": 0.8,
+  "difficulty": 2,
+  "technique_uk": "Нахил корпусу, спина рівна. Тягни гриф до низу грудей, контролюй опускання.",
+  "mistakes_uk": [
+   "Округлена спина",
+   "Ривки корпусом"
+  ]
+ },
+ {
+  "id": "lever_row",
+  "name_uk": "Тяга у важільному тренажері",
+  "name_en": "Lever row",
+  "primary_muscle_id": "upper_back",
+  "secondary_muscle_ids": [
+   "lats",
+   "biceps"
+  ],
+  "equipment_type_id": "machine",
+  "required_equipment": [
+   "row_machine"
+  ],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "h_pull",
+  "load_type": "machine",
+  "base_lift": "row",
+  "base_ratio": 0.85,
+  "difficulty": 1,
+  "technique_uk": "Груди на упорі. Тягни ручки до себе, зводячи лопатки, і плавно повертай.",
+  "mistakes_uk": [
+   "Відрив грудей від упору",
+   "Неповна амплітуда"
+  ]
+ },
+ {
+  "id": "inverted_row",
+  "name_uk": "Австралійські підтягування",
+  "name_en": "Inverted row",
+  "primary_muscle_id": "upper_back",
+  "secondary_muscle_ids": [
+   "lats",
+   "biceps"
+  ],
+  "equipment_type_id": "bodyweight",
+  "required_equipment": [
+   "barbell_rack"
+  ],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "h_pull",
+  "load_type": "bodyweight",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Гриф на рівні пояса, тіло пряме під ним. Тягнися грудьми до грифа, зводячи лопатки.",
+  "mistakes_uk": [
+   "Провисання таза",
+   "Неповна амплітуда"
+  ]
+ },
+ {
+  "id": "straight_arm_pulldown",
+  "name_uk": "Пуловер у кросовері прямими руками",
+  "name_en": "Straight-arm pulldown",
+  "primary_muscle_id": "lats",
+  "secondary_muscle_ids": [],
+  "equipment_type_id": "cable",
+  "required_equipment": [
+   "cable_crossover"
+  ],
+  "mechanics": "isolation",
+  "region": "upper",
+  "pattern": "lat_iso",
+  "load_type": "cable",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Руки майже прямі, легкий нахил вперед. Опускай руків'я дугою до стегон силою найширших.",
+  "mistakes_uk": [
+   "Згинання ліктів",
+   "Розгойдування"
+  ]
+ },
+ {
+  "id": "barbell_shrug",
+  "name_uk": "Шраги зі штангою",
+  "name_en": "Barbell shrug",
+  "primary_muscle_id": "traps",
+  "secondary_muscle_ids": [],
+  "equipment_type_id": "barbell",
+  "required_equipment": [
+   "barbell"
+  ],
+  "mechanics": "isolation",
+  "region": "upper",
+  "pattern": "traps",
+  "load_type": "barbell",
+  "base_lift": "deadlift",
+  "base_ratio": 0.5,
+  "difficulty": 1,
+  "technique_uk": "Піднімай плечі прямо вгору до вух, затримайся й опускай. Без обертання плечима.",
+  "mistakes_uk": [
+   "Обертання плечима",
+   "Згинання рук"
+  ]
+ },
+ {
+  "id": "dumbbell_shrug",
+  "name_uk": "Шраги з гантелями",
+  "name_en": "Dumbbell shrug",
+  "primary_muscle_id": "traps",
+  "secondary_muscle_ids": [],
+  "equipment_type_id": "dumbbell",
+  "required_equipment": [
+   "dumbbells"
+  ],
+  "mechanics": "isolation",
+  "region": "upper",
+  "pattern": "traps",
+  "load_type": "dumbbell",
+  "base_lift": "deadlift",
+  "base_ratio": 0.25,
+  "difficulty": 1,
+  "technique_uk": "Гантелі вздовж тулуба. Піднімай плечі вгору, пауза, повільно опускай.",
+  "mistakes_uk": [
+   "Коротка амплітуда"
+  ]
+ },
+ {
+  "id": "face_pull",
+  "name_uk": "Тяга канату до обличчя",
+  "name_en": "Face pull",
+  "primary_muscle_id": "rear_delts",
+  "secondary_muscle_ids": [
+   "upper_back"
+  ],
+  "equipment_type_id": "cable",
+  "required_equipment": [
+   "cable_crossover"
+  ],
+  "mechanics": "isolation",
+  "region": "upper",
+  "pattern": "rear_delt",
+  "load_type": "cable",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Блок на рівні обличчя. Тягни канат до лоба, розводячи кінці й лікті в сторони.",
+  "mistakes_uk": [
+   "Занадто велика вага — рух корпусом",
+   "Лікті опущені"
+  ]
+ },
+ {
+  "id": "reverse_pec_deck",
+  "name_uk": "Зворотні розведення в пек-деку",
+  "name_en": "Reverse pec deck",
+  "primary_muscle_id": "rear_delts",
+  "secondary_muscle_ids": [
+   "upper_back"
+  ],
+  "equipment_type_id": "machine",
+  "required_equipment": [
+   "pec_deck"
+  ],
+  "mechanics": "isolation",
+  "region": "upper",
+  "pattern": "rear_delt",
+  "load_type": "machine",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Груди до спинки, руки злегка зігнуті. Розводь руки назад силою задніх дельт.",
+  "mistakes_uk": [
+   "Зведення лопаток замість роботи дельт",
+   "Ривки"
+  ]
+ },
+ {
+  "id": "rear_delt_dumbbell_fly",
+  "name_uk": "Розведення гантелей у нахилі",
+  "name_en": "Bent-over reverse fly",
+  "primary_muscle_id": "rear_delts",
+  "secondary_muscle_ids": [
+   "upper_back"
+  ],
+  "equipment_type_id": "dumbbell",
+  "required_equipment": [
+   "dumbbells"
+  ],
+  "mechanics": "isolation",
+  "region": "upper",
+  "pattern": "rear_delt",
+  "load_type": "dumbbell",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Нахил майже паралельно підлозі. Розводь гантелі в сторони, лікті злегка зігнуті.",
+  "mistakes_uk": [
+   "Підйом корпусу",
+   "Важкі гантелі й інерція"
+  ]
+ },
+ {
+  "id": "barbell_overhead_press",
+  "name_uk": "Жим штанги стоячи",
+  "name_en": "Overhead press",
+  "primary_muscle_id": "front_delts",
+  "secondary_muscle_ids": [
+   "side_delts",
+   "triceps"
+  ],
+  "equipment_type_id": "barbell",
+  "required_equipment": [
+   "barbell",
+   "barbell_rack"
+  ],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "v_push",
+  "load_type": "barbell",
+  "base_lift": "ohp",
+  "base_ratio": 1.0,
+  "difficulty": 2,
+  "technique_uk": "Гриф на передніх дельтах, сідниці й прес напружені. Вижимай гриф вертикально, проводячи голову вперед під нього.",
+  "mistakes_uk": [
+   "Прогин у попереку",
+   "Гриф іде дугою вперед"
+  ]
+ },
+ {
+  "id": "seated_dumbbell_press",
+  "name_uk": "Жим гантелей сидячи",
+  "name_en": "Seated dumbbell press",
+  "primary_muscle_id": "front_delts",
+  "secondary_muscle_ids": [
+   "side_delts",
+   "triceps"
+  ],
+  "equipment_type_id": "dumbbell",
+  "required_equipment": [
+   "dumbbells",
+   "adjustable_bench"
+  ],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "v_push",
+  "load_type": "dumbbell",
+  "base_lift": "ohp",
+  "base_ratio": 0.4,
+  "difficulty": 1,
+  "technique_uk": "Спинка майже вертикальна. Вижимай гантелі вгору від рівня вух, не стукаючи ними.",
+  "mistakes_uk": [
+   "Прогин у попереку",
+   "Неповна амплітуда"
+  ]
+ },
+ {
+  "id": "shoulder_press_machine",
+  "name_uk": "Жим угору в тренажері",
+  "name_en": "Shoulder press machine",
+  "primary_muscle_id": "front_delts",
+  "secondary_muscle_ids": [
+   "side_delts",
+   "triceps"
+  ],
+  "equipment_type_id": "machine",
+  "required_equipment": [
+   "shoulder_press_machine"
+  ],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "v_push",
+  "load_type": "machine",
+  "base_lift": "ohp",
+  "base_ratio": 0.9,
+  "difficulty": 1,
+  "technique_uk": "Ручки на рівні плечей. Вижимай угору без блокування ліктів і контролюй опускання.",
+  "mistakes_uk": [
+   "Сидіння надто високо",
+   "Відрив спини"
+  ]
+ },
+ {
+  "id": "smith_overhead_press",
+  "name_uk": "Жим сидячи в Сміті",
+  "name_en": "Smith overhead press",
+  "primary_muscle_id": "front_delts",
+  "secondary_muscle_ids": [
+   "side_delts",
+   "triceps"
+  ],
+  "equipment_type_id": "smith",
+  "required_equipment": [
+   "smith",
+   "adjustable_bench"
+  ],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "v_push",
+  "load_type": "barbell",
+  "base_lift": "ohp",
+  "base_ratio": 0.9,
+  "difficulty": 1,
+  "technique_uk": "Лава під гриф так, щоб він опускався перед обличчям до підборіддя. Вижимай угору.",
+  "mistakes_uk": [
+   "Гриф опускається на голову",
+   "Прогин у попереку"
+  ]
+ },
+ {
+  "id": "arnold_press",
+  "name_uk": "Жим Арнольда",
+  "name_en": "Arnold press",
+  "primary_muscle_id": "front_delts",
+  "secondary_muscle_ids": [
+   "side_delts",
+   "triceps"
+  ],
+  "equipment_type_id": "dumbbell",
+  "required_equipment": [
+   "dumbbells",
+   "adjustable_bench"
+  ],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "v_push",
+  "load_type": "dumbbell",
+  "base_lift": "ohp",
+  "base_ratio": 0.35,
+  "difficulty": 2,
+  "technique_uk": "Старт: гантелі перед обличчям, долоні до себе. Вижимаючи, розвертай долоні вперед.",
+  "mistakes_uk": [
+   "Поспіх і втрата контролю"
+  ]
+ },
+ {
+  "id": "pike_push_up",
+  "name_uk": "Віджимання «щука»",
+  "name_en": "Pike push-ups",
+  "primary_muscle_id": "front_delts",
+  "secondary_muscle_ids": [
+   "triceps"
+  ],
+  "equipment_type_id": "bodyweight",
+  "required_equipment": [],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "v_push",
+  "load_type": "bodyweight",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 2,
+  "technique_uk": "Таз високо, тіло у формі перевернутої V. Опускай голову до підлоги між руками й вижимай.",
+  "mistakes_uk": [
+   "Таз опускається — виходять звичайні віджимання"
+  ]
+ },
+ {
+  "id": "lateral_raise",
+  "name_uk": "Махи гантелями в сторони",
+  "name_en": "Lateral raise",
+  "primary_muscle_id": "side_delts",
+  "secondary_muscle_ids": [],
+  "equipment_type_id": "dumbbell",
+  "required_equipment": [
+   "dumbbells"
+  ],
+  "mechanics": "isolation",
+  "region": "upper",
+  "pattern": "side_delt",
+  "load_type": "dumbbell",
+  "base_lift": "ohp",
+  "base_ratio": 0.15,
+  "difficulty": 1,
+  "technique_uk": "Легкий нахил вперед, лікті злегка зігнуті. Піднімай гантелі в сторони до рівня плечей, ведучи ліктями.",
+  "mistakes_uk": [
+   "Розгойдування корпусом",
+   "Підйом плечей до вух"
+  ]
+ },
+ {
+  "id": "cable_lateral_raise",
+  "name_uk": "Махи в сторони в кросовері",
+  "name_en": "Cable lateral raise",
+  "primary_muscle_id": "side_delts",
+  "secondary_muscle_ids": [],
+  "equipment_type_id": "cable",
+  "required_equipment": [
+   "cable_crossover"
+  ],
+  "mechanics": "isolation",
+  "region": "upper",
+  "pattern": "side_delt",
+  "load_type": "cable",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Нижній блок, рука з протилежного боку. Піднімай руку в сторону до рівня плеча.",
+  "mistakes_uk": [
+   "Ривки",
+   "Згинання ліктя"
+  ]
+ },
+ {
+  "id": "lateral_raise_machine",
+  "name_uk": "Махи в сторони в тренажері",
+  "name_en": "Lateral raise machine",
+  "primary_muscle_id": "side_delts",
+  "secondary_muscle_ids": [],
+  "equipment_type_id": "machine",
+  "required_equipment": [
+   "lateral_raise_machine"
+  ],
+  "mechanics": "isolation",
+  "region": "upper",
+  "pattern": "side_delt",
+  "load_type": "machine",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Вісь тренажера на рівні плечей. Піднімай руки в сторони і плавно опускай.",
+  "mistakes_uk": [
+   "Підйом плечей",
+   "Ривки"
+  ]
+ },
+ {
+  "id": "barbell_curl",
+  "name_uk": "Згинання рук зі штангою",
+  "name_en": "Barbell curl",
+  "primary_muscle_id": "biceps",
+  "secondary_muscle_ids": [
+   "forearms"
+  ],
+  "equipment_type_id": "barbell",
+  "required_equipment": [
+   "barbell"
+  ],
+  "mechanics": "isolation",
+  "region": "upper",
+  "pattern": "biceps",
+  "load_type": "barbell",
+  "base_lift": "row",
+  "base_ratio": 0.4,
+  "difficulty": 1,
+  "technique_uk": "Лікті притиснуті до тулуба. Згинай руки без розгойдування й повільно опускай.",
+  "mistakes_uk": [
+   "Розгойдування корпусом",
+   "Лікті йдуть вперед"
+  ]
+ },
+ {
+  "id": "ez_curl",
+  "name_uk": "Згинання рук з EZ-грифом",
+  "name_en": "EZ-bar curl",
+  "primary_muscle_id": "biceps",
+  "secondary_muscle_ids": [
+   "forearms"
+  ],
+  "equipment_type_id": "ez_bar",
+  "required_equipment": [
+   "ez_bar"
+  ],
+  "mechanics": "isolation",
+  "region": "upper",
+  "pattern": "biceps",
+  "load_type": "barbell",
+  "base_lift": "row",
+  "base_ratio": 0.38,
+  "difficulty": 1,
+  "technique_uk": "Хват за вигини грифа, лікті нерухомі. Повна амплітуда без інерції.",
+  "mistakes_uk": [
+   "Неповне розгинання внизу",
+   "Інерція"
+  ]
+ },
+ {
+  "id": "dumbbell_curl",
+  "name_uk": "Згинання рук з гантелями",
+  "name_en": "Dumbbell curl",
+  "primary_muscle_id": "biceps",
+  "secondary_muscle_ids": [
+   "forearms"
+  ],
+  "equipment_type_id": "dumbbell",
+  "required_equipment": [
+   "dumbbells"
+  ],
+  "mechanics": "isolation",
+  "region": "upper",
+  "pattern": "biceps",
+  "load_type": "dumbbell",
+  "base_lift": "row",
+  "base_ratio": 0.17,
+  "difficulty": 1,
+  "technique_uk": "Згинай руки по черзі або разом, розвертаючи долоні вгору. Лікті на місці.",
+  "mistakes_uk": [
+   "Розгойдування",
+   "Швидке опускання"
+  ]
+ },
+ {
+  "id": "hammer_curl",
+  "name_uk": "Молотки",
+  "name_en": "Hammer curl",
+  "primary_muscle_id": "biceps",
+  "secondary_muscle_ids": [
+   "forearms"
+  ],
+  "equipment_type_id": "dumbbell",
+  "required_equipment": [
+   "dumbbells"
+  ],
+  "mechanics": "isolation",
+  "region": "upper",
+  "pattern": "biceps",
+  "load_type": "dumbbell",
+  "base_lift": "row",
+  "base_ratio": 0.18,
+  "difficulty": 1,
+  "technique_uk": "Нейтральний хват (долоні одна до одної). Згинай руки, не розгойдуючи корпус.",
+  "mistakes_uk": [
+   "Лікті відходять від тулуба"
+  ]
+ },
+ {
+  "id": "preacher_curl",
+  "name_uk": "Згинання на лаві Скотта",
+  "name_en": "Preacher curl",
+  "primary_muscle_id": "biceps",
+  "secondary_muscle_ids": [],
+  "equipment_type_id": "ez_bar",
+  "required_equipment": [
+   "ez_bar",
+   "preacher_bench"
+  ],
+  "mechanics": "isolation",
+  "region": "upper",
+  "pattern": "biceps",
+  "load_type": "barbell",
+  "base_lift": "row",
+  "base_ratio": 0.3,
+  "difficulty": 1,
+  "technique_uk": "Плечі щільно на подушці. Опускай гриф майже до повного випрямлення і згинай.",
+  "mistakes_uk": [
+   "Різке повне розгинання з вагою",
+   "Відрив ліктів"
+  ]
+ },
+ {
+  "id": "cable_curl",
+  "name_uk": "Згинання рук на нижньому блоці",
+  "name_en": "Cable curl",
+  "primary_muscle_id": "biceps",
+  "secondary_muscle_ids": [],
+  "equipment_type_id": "cable",
+  "required_equipment": [
+   "cable_crossover"
+  ],
+  "mechanics": "isolation",
+  "region": "upper",
+  "pattern": "biceps",
+  "load_type": "cable",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Прямий або EZ-руків'я на нижньому блоці. Лікті притиснуті, рух лише в ліктьовому суглобі.",
+  "mistakes_uk": [
+   "Нахил корпусу назад"
+  ]
+ },
+ {
+  "id": "biceps_machine",
+  "name_uk": "Згинання рук у тренажері",
+  "name_en": "Biceps curl machine",
+  "primary_muscle_id": "biceps",
+  "secondary_muscle_ids": [],
+  "equipment_type_id": "machine",
+  "required_equipment": [
+   "biceps_curl_machine"
+  ],
+  "mechanics": "isolation",
+  "region": "upper",
+  "pattern": "biceps",
+  "load_type": "machine",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Лікті на осі тренажера. Згинай руки повністю, контролюй опускання.",
+  "mistakes_uk": [
+   "Лікті не на осі",
+   "Ривки"
+  ]
+ },
+ {
+  "id": "triceps_pushdown",
+  "name_uk": "Розгинання рук на блоці",
+  "name_en": "Triceps pushdown",
+  "primary_muscle_id": "triceps",
+  "secondary_muscle_ids": [],
+  "equipment_type_id": "cable",
+  "required_equipment": [
+   "cable_crossover"
+  ],
+  "mechanics": "isolation",
+  "region": "upper",
+  "pattern": "triceps",
+  "load_type": "cable",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Лікті притиснуті до тулуба. Розгинай руки донизу до кінця, повертай до кута 90°.",
+  "mistakes_uk": [
+   "Лікті рухаються",
+   "Нахил і тиск вагою тіла"
+  ]
+ },
+ {
+  "id": "skull_crusher",
+  "name_uk": "Французький жим лежачи",
+  "name_en": "Skull crusher",
+  "primary_muscle_id": "triceps",
+  "secondary_muscle_ids": [],
+  "equipment_type_id": "ez_bar",
+  "required_equipment": [
+   "ez_bar",
+   "flat_bench"
+  ],
+  "mechanics": "isolation",
+  "region": "upper",
+  "pattern": "triceps",
+  "load_type": "barbell",
+  "base_lift": "bench",
+  "base_ratio": 0.3,
+  "difficulty": 2,
+  "technique_uk": "Плечі нерухомі під невеликим кутом за голову. Згинай лише лікті, опускаючи гриф до лоба або за голову.",
+  "mistakes_uk": [
+   "Лікті розходяться",
+   "Рух плечима"
+  ]
+ },
+ {
+  "id": "overhead_dumbbell_extension",
+  "name_uk": "Розгинання гантелі з-за голови",
+  "name_en": "Overhead dumbbell extension",
+  "primary_muscle_id": "triceps",
+  "secondary_muscle_ids": [],
+  "equipment_type_id": "dumbbell",
+  "required_equipment": [
+   "dumbbells"
+  ],
+  "mechanics": "isolation",
+  "region": "upper",
+  "pattern": "triceps",
+  "load_type": "dumbbell",
+  "base_lift": "bench",
+  "base_ratio": 0.2,
+  "difficulty": 1,
+  "technique_uk": "Гантель двома руками за головою, лікті дивляться вгору. Розгинай руки вертикально.",
+  "mistakes_uk": [
+   "Лікті розводяться",
+   "Прогин у попереку"
+  ]
+ },
+ {
+  "id": "close_grip_bench",
+  "name_uk": "Жим лежачи вузьким хватом",
+  "name_en": "Close-grip bench press",
+  "primary_muscle_id": "triceps",
+  "secondary_muscle_ids": [
+   "chest",
+   "front_delts"
+  ],
+  "equipment_type_id": "barbell",
+  "required_equipment": [
+   "barbell",
+   "flat_bench"
+  ],
+  "mechanics": "compound",
+  "region": "upper",
+  "pattern": "triceps",
+  "load_type": "barbell",
+  "base_lift": "bench",
+  "base_ratio": 0.85,
+  "difficulty": 2,
+  "technique_uk": "Хват на ширині плечей. Опускай гриф на низ грудей, лікті вздовж тулуба.",
+  "mistakes_uk": [
+   "Надто вузький хват — біль у зап'ястях",
+   "Лікті розведені"
+  ]
+ },
+ {
+  "id": "triceps_machine",
+  "name_uk": "Розгинання рук у тренажері",
+  "name_en": "Triceps machine",
+  "primary_muscle_id": "triceps",
+  "secondary_muscle_ids": [],
+  "equipment_type_id": "machine",
+  "required_equipment": [
+   "triceps_machine"
+  ],
+  "mechanics": "isolation",
+  "region": "upper",
+  "pattern": "triceps",
+  "load_type": "machine",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Лікті на осі тренажера. Розгинай руки повністю, плавно повертай.",
+  "mistakes_uk": [
+   "Відрив ліктів від подушки"
+  ]
+ },
+ {
+  "id": "bench_dip",
+  "name_uk": "Зворотні віджимання від лави",
+  "name_en": "Bench dips",
+  "primary_muscle_id": "triceps",
+  "secondary_muscle_ids": [
+   "front_delts"
+  ],
+  "equipment_type_id": "bodyweight",
+  "required_equipment": [
+   "flat_bench"
+  ],
+  "mechanics": "isolation",
+  "region": "upper",
+  "pattern": "triceps",
+  "load_type": "bodyweight",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Руки на краю лави за спиною. Опускайся до кута в ліктях 90° і вижимай.",
+  "mistakes_uk": [
+   "Надто глибоке опускання — навантаження на плечі"
+  ]
+ },
+ {
+  "id": "plank",
+  "name_uk": "Планка",
+  "name_en": "Plank",
+  "primary_muscle_id": "abs",
+  "secondary_muscle_ids": [
+   "obliques"
+  ],
+  "equipment_type_id": "bodyweight",
+  "required_equipment": [],
+  "mechanics": "isolation",
+  "region": "core",
+  "pattern": "core",
+  "load_type": "timed",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Упор на передпліччя, тіло пряме від голови до п'ят. Напруж прес і сідниці, дихай рівно.",
+  "mistakes_uk": [
+   "Провисання або підйом таза",
+   "Затримка дихання"
+  ]
+ },
+ {
+  "id": "side_plank",
+  "name_uk": "Бічна планка",
+  "name_en": "Side plank",
+  "primary_muscle_id": "obliques",
+  "secondary_muscle_ids": [
+   "abs"
+  ],
+  "equipment_type_id": "bodyweight",
+  "required_equipment": [],
+  "mechanics": "isolation",
+  "region": "core",
+  "pattern": "core",
+  "load_type": "timed",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Упор на передпліччя збоку, тіло пряме. Тримай таз високо.",
+  "mistakes_uk": [
+   "Таз провисає"
+  ]
+ },
+ {
+  "id": "hanging_leg_raise",
+  "name_uk": "Підйом ніг у висі",
+  "name_en": "Hanging leg raise",
+  "primary_muscle_id": "abs",
+  "secondary_muscle_ids": [
+   "obliques"
+  ],
+  "equipment_type_id": "bodyweight",
+  "required_equipment": [
+   "pullup_bar"
+  ],
+  "mechanics": "isolation",
+  "region": "core",
+  "pattern": "core",
+  "load_type": "bodyweight",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 2,
+  "technique_uk": "Вис на турніку. Піднімай ноги, підкручуючи таз, без розгойдування.",
+  "mistakes_uk": [
+   "Розгойдування",
+   "Рух лише стегнами без підкручування таза"
+  ]
+ },
+ {
+  "id": "roman_chair_leg_raise",
+  "name_uk": "Підйом ніг на брусах",
+  "name_en": "Captain's chair leg raise",
+  "primary_muscle_id": "abs",
+  "secondary_muscle_ids": [],
+  "equipment_type_id": "bodyweight",
+  "required_equipment": [
+   "dip_bars"
+  ],
+  "mechanics": "isolation",
+  "region": "core",
+  "pattern": "core",
+  "load_type": "bodyweight",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Упор на передпліччя, спина притиснута. Піднімай коліна до грудей.",
+  "mistakes_uk": [
+   "Ривки",
+   "Прогин спини"
+  ]
+ },
+ {
+  "id": "cable_crunch",
+  "name_uk": "Скручування на блоці",
+  "name_en": "Cable crunch",
+  "primary_muscle_id": "abs",
+  "secondary_muscle_ids": [],
+  "equipment_type_id": "cable",
+  "required_equipment": [
+   "cable_crossover"
+  ],
+  "mechanics": "isolation",
+  "region": "core",
+  "pattern": "core",
+  "load_type": "cable",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "На колінах, канат біля голови. Скручуйся, наближаючи лікті до колін силою преса.",
+  "mistakes_uk": [
+   "Рух тазом замість скручування"
+  ]
+ },
+ {
+  "id": "ab_crunch_machine",
+  "name_uk": "Скручування в тренажері",
+  "name_en": "Ab crunch machine",
+  "primary_muscle_id": "abs",
+  "secondary_muscle_ids": [],
+  "equipment_type_id": "machine",
+  "required_equipment": [
+   "ab_crunch_machine"
+  ],
+  "mechanics": "isolation",
+  "region": "core",
+  "pattern": "core",
+  "load_type": "machine",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Скручуйся вперед, видихаючи. Повертайся повільно.",
+  "mistakes_uk": [
+   "Ривки",
+   "Тягнеш руками"
+  ]
+ },
+ {
+  "id": "crunch",
+  "name_uk": "Скручування на підлозі",
+  "name_en": "Crunch",
+  "primary_muscle_id": "abs",
+  "secondary_muscle_ids": [],
+  "equipment_type_id": "bodyweight",
+  "required_equipment": [],
+  "mechanics": "isolation",
+  "region": "core",
+  "pattern": "core",
+  "load_type": "bodyweight",
+  "base_lift": null,
+  "base_ratio": null,
+  "difficulty": 1,
+  "technique_uk": "Лежачи, ноги зігнуті. Піднімай лопатки від підлоги, скручуючи корпус, поперек притиснутий.",
+  "mistakes_uk": [
+   "Тягнеш голову руками"
+  ]
+ }
+]

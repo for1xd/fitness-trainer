@@ -167,9 +167,32 @@
     "addFood": "Add food"
   },
   "workouts": {
-    "emptyTitle": "Workouts are coming",
-    "emptyBody": "A program for your gym, a calendar and a live workout mode with a rest timer will live here.",
-    "emptyAction": "See my target"
+    "title": "Workouts",
+    "emptyTitle": "No program yet",
+    "emptyBody": "Answer a few questions and get a program for your goal, experience and gym equipment.",
+    "create": "Create program",
+    "todayPlan": "Today's plan",
+    "restDay": "Rest day today",
+    "next": "Next: {{name}}, {{date}}",
+    "start": "Start workout",
+    "continue": "Continue workout",
+    "doneToday": "Today's workout is done",
+    "deload": "Deload week: fewer sets, same weight",
+    "week": "Week {{n}}",
+    "program": "Program",
+    "calendar": "Calendar",
+    "catalog": "Exercise catalog",
+    "gym": "My gym",
+    "strength": "Strength levels",
+    "newProgram": "New program",
+    "exercisesCount": "Exercises: {{count}}",
+    "setsReps": "{{sets}} × {{min}}–{{max}}",
+    "setsSecs": "{{sets}} × {{min}}–{{max}} s",
+    "history": "Recent workouts",
+    "tonnage": "Volume {{value}} kg",
+    "duration": "{{min}} min",
+    "startAny": "Start: {{name}}",
+    "manualTitle": "Another program day"
   },
   "progress": {
     "title": "Weight",
@@ -195,7 +218,7 @@
     "signOut": "Sign out",
     "deleteLocal": "Delete data from this device",
     "deleteTitle": "Delete all data from this device?",
-    "deleteBody": "Your profile, targets, food diary, water and weight history will be erased from this device. This can't be undone.",
+    "deleteBody": "Your profile, targets, diary, water, workouts and weight history will be erased from this device. This can't be undone.",
     "deleteConfirm": "Delete data",
     "summary": "{{sex}}, {{age}} y.o., {{height}} cm, {{weight}} kg"
   },
@@ -292,5 +315,229 @@
     "trainingHint": "Adds 500 ml to your target",
     "done": "Today's water target reached",
     "customLabelFull": "Custom amount of water"
+  },
+  "templates": {
+    "full_a": "Full body A",
+    "full_b": "Full body B",
+    "upper": "Upper body",
+    "lower": "Lower body",
+    "push": "Push",
+    "pull": "Pull",
+    "legs": "Legs"
+  },
+  "splits": {
+    "full_body": "Full body",
+    "upper_lower": "Upper / lower",
+    "ppl": "Push / pull / legs",
+    "ppl_ul": "Push / pull / legs + upper / lower"
+  },
+  "groups": {
+    "chest": "Chest",
+    "back": "Back",
+    "shoulders": "Shoulders",
+    "arms": "Arms",
+    "legs": "Legs",
+    "core": "Core"
+  },
+  "weekdays": {
+    "1": "Mon",
+    "2": "Tue",
+    "3": "Wed",
+    "4": "Thu",
+    "5": "Fri",
+    "6": "Sat",
+    "7": "Sun"
+  },
+  "focus": {
+    "strength": {
+      "title": "Strength",
+      "desc": "3–6 reps with heavy weight"
+    },
+    "hypertrophy": {
+      "title": "Muscle size",
+      "desc": "6–12 reps, the classic for growth"
+    },
+    "endurance": {
+      "title": "Definition and endurance",
+      "desc": "12–20 reps with lighter weight"
+    }
+  },
+  "experience": {
+    "beginner": {
+      "title": "Beginner",
+      "desc": "Less than 6 months of regular training"
+    },
+    "intermediate": {
+      "title": "Intermediate",
+      "desc": "6 months to 2 years"
+    },
+    "advanced": {
+      "title": "Advanced",
+      "desc": "Over 2 years, solid technique on the main lifts"
+    }
+  },
+  "programNew": {
+    "title": "New program",
+    "focus": "Training focus",
+    "experience": "Experience",
+    "days": "Days per week",
+    "duration": "Workout length",
+    "minutes": "{{n}} min",
+    "equipment": "Equipment",
+    "gymMine": "My gym: {{name}}",
+    "gymDefault": "Typical commercial gym",
+    "gymSetup": "Set up my gym",
+    "weekdays": "Training days",
+    "weekdaysHint": "Pick {{count}} days of the week",
+    "preview": "What you'll get",
+    "save": "Save program",
+    "replaceWarn": "Your current program will be replaced. Workout history stays.",
+    "noStrength": "No strength levels yet — in the first workouts you'll pick weights by feel. You can calibrate now.",
+    "calibrate": "Calibrate",
+    "skipped": "No equipment for: {{patterns}}"
+  },
+  "strength": {
+    "title": "Strength levels",
+    "intro": "Enter the weight and reps of any recent set taken close to failure. We'll estimate your one-rep max (1RM).",
+    "level": "Your experience",
+    "levelHint": "For lifts without data we'll use starting weights for your level — they get refined after your first workouts.",
+    "weight": "Weight",
+    "reps": "Reps",
+    "unknown": "Not sure",
+    "know": "I know a set",
+    "oneRm": "1RM ≈ {{value}} kg",
+    "fromLevel": "Starting estimate ≈ {{value}} kg",
+    "tooManyReps": "Over 15 reps isn't reliable. Enter a heavier set.",
+    "save": "Save levels",
+    "formula": "Up to 10 reps uses the Epley formula, 11–15 uses Brzycki. Your 1RM updates after every workout.",
+    "confidence": {
+      "high": "accurate",
+      "medium": "approximate",
+      "low": "rough"
+    },
+    "lifts": {
+      "squat": "Barbell squat",
+      "bench": "Bench press",
+      "deadlift": "Deadlift",
+      "ohp": "Overhead press",
+      "row": "Barbell row",
+      "pullup": "Pull-ups"
+    },
+    "pullupHint": "Enter added weight (0 if none). We'll add your body weight.",
+    "saved": "Levels saved"
+  },
+  "gym": {
+    "title": "My gym",
+    "intro": "Mark what your gym has — the program will use only this equipment.",
+    "name": "Gym name",
+    "namePlaceholder": "For example, the gym near home",
+    "presets": "Quick start",
+    "categories": {
+      "free": "Free weights and benches",
+      "legs": "Legs",
+      "back": "Back",
+      "chest_shoulders": "Chest and shoulders",
+      "arms_core": "Arms and core"
+    },
+    "brand": "Brand",
+    "brandAny": "Any",
+    "addPhoto": "Add photo",
+    "changePhoto": "Change photo",
+    "save": "Save gym",
+    "selected": "Selected: {{count}}",
+    "photoOf": "Photo: {{name}}"
+  },
+  "exercises": {
+    "title": "Exercise catalog",
+    "search": "Search exercises",
+    "all": "All",
+    "onlyMyGym": "Only my gym",
+    "primary": "Primary muscles",
+    "secondary": "Secondary muscles",
+    "equipment": "Equipment",
+    "technique": "Technique",
+    "mistakes": "Common mistakes",
+    "media": "Technique video will go here",
+    "alternatives": "Alternatives",
+    "myOneRm": "My 1RM ≈ {{value}} kg",
+    "noEquipment": "No equipment",
+    "notInGym": "Not in my gym",
+    "empty": "Nothing found. Try another name or clear the filter.",
+    "count": "Exercises: {{count}}",
+    "oneRmLabel": "1RM"
+  },
+  "live": {
+    "exerciseOf": "Exercise {{n}} of {{total}}",
+    "target": "Target: {{sets}} × {{min}}–{{max}}, RPE {{rpe}}",
+    "targetSecs": "Target: {{sets}} × {{min}}–{{max}} s",
+    "set": "Set {{n}}",
+    "kg": "kg",
+    "reps": "Reps",
+    "secs": "Sec",
+    "doneSet": "Set {{n}} done",
+    "undoSet": "Undo set {{n}}",
+    "weightOf": "Weight, set {{n}}",
+    "repsOf": "Reps, set {{n}}",
+    "rest": "Rest",
+    "skipRest": "Skip",
+    "addRest": "+30 s",
+    "restDone": "Time for the next set",
+    "rpe": "How hard (RPE)",
+    "rpeHint": "10 — no reps left, 8 — two in reserve",
+    "hint": {
+      "increase": "You hit every rep last time — weight increased",
+      "repeat": "Same weight, try to add reps",
+      "decrease": "Weight lowered after two hard sessions in a row",
+      "estimate": "Weight calculated from your 1RM",
+      "none": "Pick a weight: the last reps should be hard, with 1–2 in reserve"
+    },
+    "swap": "Swap exercise",
+    "swapTitle": "Swap with",
+    "swapForever": "Replace in the program for good",
+    "addSet": "Add set",
+    "prev": "Previous",
+    "next": "Next",
+    "finish": "Finish",
+    "finishTitle": "How do you feel?",
+    "wellbeing": {
+      "1": "Bad",
+      "2": "Meh",
+      "3": "OK",
+      "4": "Good",
+      "5": "Great"
+    },
+    "notes": "Note",
+    "notesPlaceholder": "Anything to remember next time",
+    "save": "Save workout",
+    "discard": "Discard workout",
+    "discardTitle": "Discard this workout?",
+    "discardBody": "Completed sets won't be saved.",
+    "saved": "Workout saved: volume {{tonnage}} kg, {{min}} min.",
+    "improved": "New 1RM: {{names}}",
+    "noSets": "Mark at least one set as done",
+    "rpeShort": "RPE"
+  },
+  "calendar": {
+    "title": "Calendar",
+    "month": "Month",
+    "week": "Week",
+    "prev": "Previous month",
+    "next": "Next month",
+    "prevWeek": "Previous week",
+    "nextWeek": "Next week",
+    "planned": "Planned",
+    "done": "Done",
+    "missed": "Missed",
+    "rest": "Rest",
+    "logPast": "Log this workout",
+    "open": "Open"
+  },
+  "workoutDetail": {
+    "delete": "Delete workout",
+    "deleteTitle": "Delete “{{name}}” on {{date}}?",
+    "deleteBody": "The sets will be removed from history. 1RM estimates won't change.",
+    "wellbeing": "Felt: {{value}}",
+    "notFound": "Workout not found",
+    "tonnageLabel": "kg volume"
   }
 }

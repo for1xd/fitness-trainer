@@ -6,6 +6,9 @@ import { formatNumber } from '@/lib/format';
 import { useTheme } from '@/theme/ThemeProvider';
 import { Button, NumberField, Text } from '@/ui';
 
+import { scheduledDayIndex } from '@/features/workouts/logic/schedule';
+import { useWorkouts } from '@/features/workouts/store';
+
 import { dailyWaterMl } from '../logic/water';
 import { MAX_SINGLE_ML, QUICK_ADD_ML, waterTotalMl } from '../logic/waterDay';
 import { useWater } from '../store';
@@ -19,7 +22,14 @@ export function WaterCard({ date, weightKg }: Props) {
   const { t } = useTranslation();
   const { colors } = useTheme();
   const entries = useWater((s) => s.entries);
-  const isTraining = useWater((s) => s.trainingDays.includes(date));
+  const manualTraining = useWater((s) => s.trainingDays.includes(date));
+  // Тренувальний день — якщо позначено вручну, є тренування в програмі або воно вже виконане
+  const planned = useWorkouts(
+    (s) =>
+      (s.program ? scheduledDayIndex(s.program, date) !== null : false) ||
+      s.workouts.some((w) => w.date === date),
+  );
+  const isTraining = manualTraining || planned;
   const { add, undoLast, setTrainingDay } = useWater.getState();
   const [customOpen, setCustomOpen] = useState(false);
   const [customMl, setCustomMl] = useState<number | undefined>(330);
@@ -104,6 +114,7 @@ export function WaterCard({ date, weightKg }: Props) {
         <Switch
           accessibilityLabel={t('water.trainingDay')}
           value={isTraining}
+          disabled={planned}
           onValueChange={(v) => setTrainingDay(date, v)}
           trackColor={{ true: colors['plate-blue'], false: colors.line }}
           thumbColor={colors.raised}

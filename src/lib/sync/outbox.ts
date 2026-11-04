@@ -11,7 +11,11 @@ export type SyncTable =
   | 'foods'
   | 'recipes'
   | 'meal_entries'
-  | 'water_entries';
+  | 'water_entries'
+  | 'strength_estimates'
+  | 'gyms'
+  | 'programs'
+  | 'workouts';
 
 export type Row = Record<string, unknown>;
 

@@ -96,3 +96,49 @@ export function isDeloadWeek(weekNumber: number, everyWeeks = DEFAULT_DELOAD_EVE
 export function deloadSets(sets: number): number {
   return Math.max(1, Math.round(sets * DELOAD_VOLUME_SHARE));
 }
+
+export interface RangeProgressionInput {
+  currentWeightKg: number;
+  region: BodyRegion;
+  sets: { reps: number; rpe?: number }[];
+  repsMin: number;
+  repsMax: number;
+  previousFailures?: number;
+  incrementKg?: number;
+}
+
+/**
+ * Прогресія для діапазону повторень (напр. 8–12):
+ * у всіх підходах ≥ верхньої межі з RPE ≤ 8 → +2,5 кг (верх) / +5 кг (низ);
+ * хоч один підхід < нижньої межі → повтор, другий раз поспіль → −7,5 %;
+ * інакше — та сама вага, додаємо повтори.
+ */
+export function nextWeightForRange({
+  currentWeightKg,
+  region,
+  sets,
+  repsMin,
+  repsMax,
+  previousFailures = 0,
+  incrementKg = 2.5,
+}: RangeProgressionInput): ProgressionResult {
+  if (!sets.length) return { weightKg: currentWeightKg, decision: 'repeat' };
+  if (sets.some((s) => s.reps < repsMin)) {
+    if (previousFailures >= 1) {
+      return {
+        weightKg: Math.max(
+          0,
+          roundToIncrement(currentWeightKg * (1 - FAILURE_DECREASE), incrementKg),
+        ),
+        decision: 'decrease',
+      };
+    }
+    return { weightKg: currentWeightKg, decision: 'repeat' };
+  }
+  const topped = sets.every(
+    (s) => s.reps >= repsMax && (s.rpe ?? MAX_RPE_FOR_INCREASE) <= MAX_RPE_FOR_INCREASE,
+  );
+  if (!topped) return { weightKg: currentWeightKg, decision: 'repeat' };
+  const step = Math.max(incrementKg, roundToIncrement(PROGRESSION_STEP_KG[region], incrementKg));
+  return { weightKg: currentWeightKg + step, decision: 'increase' };
+}

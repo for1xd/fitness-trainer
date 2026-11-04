@@ -4,7 +4,7 @@ import { useTheme } from '@/theme/ThemeProvider';
 
 import { Text } from './Text';
 
-type Variant = 'primary' | 'secondary' | 'ghost' | 'danger';
+type Variant = 'primary' | 'secondary' | 'ghost' | 'danger' | 'inverse';
 
 interface Props extends Omit<PressableProps, 'children'> {
   label: string;
@@ -20,6 +20,8 @@ const box: Record<Variant, string> = {
   secondary: 'border-2 border-ink bg-transparent',
   ghost: 'bg-transparent',
   danger: 'border-2 border-danger bg-transparent',
+  /** Для темних плашок (таймер відпочинку) */
+  inverse: 'border-2 border-inverse bg-transparent',
 };
 
 const textColor: Record<Variant, string> = {
@@ -27,6 +29,7 @@ const textColor: Record<Variant, string> = {
   secondary: 'text-ink',
   ghost: 'text-ink underline',
   danger: 'text-danger',
+  inverse: 'text-inverse',
 };
 
 /** Кнопка висотою 56 dp: зручно натискати однією рукою в залі. */

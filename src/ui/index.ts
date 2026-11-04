@@ -12,3 +12,4 @@ export { Header } from './Header';
 export { IconButton } from './IconButton';
 export { Ring } from './Ring';
 export { TextField } from './TextField';
+export { CompactNumberInput } from './CompactNumberInput';
