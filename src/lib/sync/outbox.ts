@@ -15,7 +15,10 @@ export type SyncTable =
   | 'strength_estimates'
   | 'gyms'
   | 'programs'
-  | 'workouts';
+  | 'workouts'
+  | 'body_measurements'
+  | 'progress_photos'
+  | 'reminders';
 
 export type Row = Record<string, unknown>;
 

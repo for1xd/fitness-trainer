@@ -195,12 +195,61 @@
     "manualTitle": "Another program day"
   },
   "progress": {
-    "title": "Weight",
-    "trend": "7-day trend",
+    "title": "Progress",
+    "trend": "Trend",
     "history": "Weigh-in history",
     "emptyTitle": "No weigh-ins yet",
-    "emptyBody": "Log your weight on the Today tab and your history with a trend will show up here.",
-    "emptyAction": "Log weight"
+    "emptyBody": "Log your weight on the Today tab and charts and a weekly report will show up here.",
+    "emptyAction": "Log weight",
+    "week": "Week of {{date}}",
+    "prevWeek": "Previous week",
+    "nextWeek": "Next week",
+    "report": "Weekly report",
+    "tiles": {
+      "kcal": "Average calories",
+      "kcalOf": "target {{target}}",
+      "protein": "Protein on target",
+      "water": "Water on target",
+      "daysOf": "{{n}} of {{total}} days",
+      "workouts": "Workouts",
+      "workoutsOf": "{{done}} of {{planned}}",
+      "tonnage": "Volume",
+      "weight": "Weight this week",
+      "noData": "no data",
+      "noPlan": "no program"
+    },
+    "weightChart": "Weight",
+    "weightSub": "Dots are weigh-ins, the line is the 7-day trend",
+    "weighIns": "Weigh-ins",
+    "period": {
+      "30": "30 days",
+      "90": "90 days",
+      "365": "Year"
+    },
+    "measurements": "Measurements",
+    "addMeasurements": "Log measurements",
+    "noMeasurements": "Measure waist, chest, biceps and hips every 1–2 weeks to see changes the scale won't show.",
+    "m": {
+      "waistCm": "Waist",
+      "chestCm": "Chest",
+      "bicepsCm": "Biceps",
+      "hipsCm": "Hips",
+      "thighCm": "Thigh"
+    },
+    "photos": "Before and after photos",
+    "openPhotos": "Open photos",
+    "noPhotos": "A monthly photo in the same pose and light is the most honest way to see change.",
+    "strength": "Strength: 1RM",
+    "noStrength": "Charts appear after strength calibration or a few workouts.",
+    "volume": "Weekly volume",
+    "volumeSub": "Total weight × reps per week",
+    "weekOf": "week of {{date}}",
+    "heatmap": "Muscles trained",
+    "heatmapSub": "Sets this week: primary muscle 1, secondary 0.5. For growth aim for 10–20.",
+    "front": "Front",
+    "back": "Back",
+    "bins": ["0", "1–4", "5–9", "10–19", "20+"],
+    "setsShort": "{{n}} sets"
   },
   "profile": {
     "title": "Profile",
@@ -600,5 +649,84 @@
   "foodQuick": {
     "photo": "Meal photo",
     "barcode": "Barcode"
+  },
+  "charts": {
+    "showTable": "Show as table",
+    "showChart": "Show chart"
+  },
+  "measure": {
+    "title": "Measurements",
+    "intro": "Measure in the morning with a tape, without pulling it tight, in the same spots each time.",
+    "hints": {
+      "waistCm": "At navel level",
+      "chestCm": "At the widest point",
+      "bicepsCm": "Flexed, at the widest point",
+      "hipsCm": "Widest point of the glutes",
+      "thighCm": "Mid-thigh"
+    },
+    "save": "Save measurements"
+  },
+  "photosScreen": {
+    "title": "Before and after photos",
+    "private": "Photos are private. Without an account they stay on this device; with an account they're in your private storage.",
+    "angle": "Angle",
+    "angles": {
+      "front": "Front",
+      "side": "Side",
+      "back": "Back"
+    },
+    "take": "Take photo",
+    "pick": "Choose from gallery",
+    "compare": "Comparison",
+    "first": "First, {{date}}",
+    "last": "Latest, {{date}}",
+    "all": "All photos",
+    "empty": "No photos from this angle yet.",
+    "delete": "Delete photo",
+    "deleteTitle": "Delete the photo from {{date}}?",
+    "deleteBody": "The photo will be removed from this device and from cloud storage.",
+    "saving": "Saving photo…",
+    "error": "Couldn't save the photo. Try again.",
+    "photoOf": "{{angle}} photo, {{date}}"
+  },
+  "reminders": {
+    "title": "Reminders",
+    "intro": "Local notifications on your phone. Turn each on separately.",
+    "webOnly": "Reminders work in the phone app. They can't be set up in the browser.",
+    "denied": "Notifications are turned off in phone settings. Allow them for the app to get reminders.",
+    "time": "Time",
+    "timeHint": "Format 07:30",
+    "invalidTime": "Enter a time like 07:30",
+    "types": {
+      "water": {
+        "title": "Water",
+        "desc": "Every 2 hours until 20:00, starting at the chosen time",
+        "notif": "Time for some water",
+        "notifBody": "A glass now gets you closer to your target."
+      },
+      "meal": {
+        "title": "Food diary",
+        "desc": "Once a day, to log what you ate",
+        "notif": "Log today's food",
+        "notifBody": "A couple of minutes and today's diary is complete."
+      },
+      "workout": {
+        "title": "Workout",
+        "desc": "On your program's training days",
+        "notif": "Workout today",
+        "notifBody": "Your program is waiting. Warm up and go."
+      },
+      "weigh_in": {
+        "title": "Weigh-in",
+        "desc": "Every morning, for an accurate trend",
+        "notif": "Time to weigh in",
+        "notifBody": "Mornings before eating are the most accurate."
+      }
+    }
+  },
+  "profileLinks": {
+    "reminders": "Reminders",
+    "measurements": "Measurements",
+    "photos": "Before and after photos"
   }
 }

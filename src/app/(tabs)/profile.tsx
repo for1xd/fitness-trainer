@@ -1,6 +1,7 @@
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import { useTranslation } from 'react-i18next';
-import { View } from 'react-native';
+import { Pressable, View } from 'react-native';
 
 import { useAuth } from '@/features/auth/store';
 import { calcAgeYears } from '@/features/onboarding/logic/nutrition';
@@ -12,15 +13,18 @@ import { useGym } from '@/features/gym/store';
 import { useStrength } from '@/features/strength/store';
 import { useWater } from '@/features/water/store';
 import { useWorkouts } from '@/features/workouts/store';
+import { useProgress } from '@/features/progress/store';
 import { confirmAction } from '@/lib/confirm';
 import { parseIsoDate } from '@/lib/dates';
 import { formatNumber } from '@/lib/format';
 import { isSupabaseConfigured } from '@/lib/supabase';
 import { useOutbox } from '@/lib/sync/store';
+import { useTheme } from '@/theme/ThemeProvider';
 import { Button, Screen, Segmented, Text } from '@/ui';
 
 export default function ProfileScreen() {
   const { t } = useTranslation();
+  const { colors } = useTheme();
   const profile = useProfile((s) => s.profile);
   const weights = useProfile((s) => s.weights);
   const resetProfile = useProfile((s) => s.reset);
@@ -45,6 +49,7 @@ export default function ProfileScreen() {
     useStrength.getState().reset();
     useGym.getState().reset();
     useWorkouts.getState().reset();
+    useProgress.getState().reset();
     useOutbox.getState().reset();
     clearDraft();
     await signOut();
@@ -78,6 +83,29 @@ export default function ProfileScreen() {
           />
         </View>
       ) : null}
+
+      <View className="overflow-hidden rounded-2xl bg-surface">
+        {(
+          [
+            ['reminders', '/reminders', 'bell-outline'],
+            ['measurements', '/body/measurements', 'tape-measure'],
+            ['photos', '/body/photos', 'image-multiple-outline'],
+          ] as const
+        ).map(([key, href, icon], i) => (
+          <Pressable
+            key={key}
+            accessibilityRole="link"
+            onPress={() => router.push(href)}
+            className={`min-h-14 flex-row items-center gap-3 px-4 active:bg-line ${i ? 'border-t border-line' : ''}`}
+          >
+            <MaterialCommunityIcons name={icon} size={22} color={colors.ink} />
+            <Text variant="body" className="flex-1">
+              {t(`profileLinks.${key}`)}
+            </Text>
+            <MaterialCommunityIcons name="chevron-right" size={20} color={colors.muted} />
+          </Pressable>
+        ))}
+      </View>
 
       <Segmented<ThemePreference>
         label={t('profile.theme')}

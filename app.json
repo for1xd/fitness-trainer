@@ -42,6 +42,12 @@
           "photosPermission": "Доступ до фото потрібен, щоб додати фото страви або тренажера.",
           "cameraPermission": "Камера потрібна, щоб фотографувати їжу."
         }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#16191B"
+        }
       ]
     ],
     "scheme": "fitnesstrainer",

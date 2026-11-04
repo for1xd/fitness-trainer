@@ -22,6 +22,9 @@ import { useOnboarding } from '@/features/onboarding/store';
 import { useNutrition } from '@/features/nutrition/store';
 import { useGym } from '@/features/gym/store';
 import { useProfile } from '@/features/profile/store';
+import { useProgress } from '@/features/progress/store';
+import { useReminders } from '@/features/reminders/store';
+import { useReminderScheduler } from '@/features/reminders/useReminderScheduler';
 import { useSettings } from '@/features/settings/store';
 import { useStrength } from '@/features/strength/store';
 import { useWater } from '@/features/water/store';
@@ -45,6 +48,8 @@ const PERSISTED_STORES = [
   useStrength,
   useGym,
   useWorkouts,
+  useProgress,
+  useReminders,
 ] as const;
 
 export default function RootLayout() {
@@ -85,6 +90,7 @@ export default function RootLayout() {
 function RootStack() {
   const signedIn = useAuth(selectSignedIn);
   const hasProfile = useProfile((s) => s.profile !== null && s.targets !== null);
+  useReminderScheduler();
 
   return (
     <Stack screenOptions={{ headerShown: false }}>
@@ -98,6 +104,8 @@ function RootStack() {
         <Stack.Screen name="calendar" />
         <Stack.Screen name="workout" />
         <Stack.Screen name="exercises" />
+        <Stack.Screen name="body" />
+        <Stack.Screen name="reminders" />
       </Stack.Protected>
       <Stack.Protected guard={signedIn}>
         <Stack.Screen name="onboarding" />

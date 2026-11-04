@@ -5,3 +5,5 @@ import './water/api/sync';
 import './strength/store';
 import './gym/store';
 import './workouts/store';
+import './progress/store';
+import './reminders/store';

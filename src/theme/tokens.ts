@@ -3,6 +3,9 @@
  * Основа — крейда (світла) і гумове покриття залу (темна). Кольори даних — кольори
  * олімпійських дисків IWF: червоний 25 кг, синій 20, жовтий 15, зелений 10.
  * Кнопки — кольором тексту (ink), щоб акцентні кольори лишались тільки за даними.
+ *
+ * Палітру даних перевірено валідатором dataviz (світла й темна теми, усі пари, дальтонізм):
+ * різниця червоний↔зелений у межі 6–8 ΔE, тому кольорова позначка ЗАВЖДИ має підпис поруч.
  */
 export const palettes = {
   light: {
@@ -16,7 +19,7 @@ export const palettes = {
     'plate-red': '#C42A30',
     'plate-blue': '#2158B5',
     'plate-yellow': '#D9A80B',
-    'plate-green': '#2D8549',
+    'plate-green': '#2A8F6A',
     warn: '#9A5B00',
     danger: '#B3261E',
   },
@@ -28,10 +31,10 @@ export const palettes = {
     muted: '#9AA29C',
     line: '#383E41',
     inverse: '#16191B',
-    'plate-red': '#E0484D',
-    'plate-blue': '#5B8DE3',
-    'plate-yellow': '#EFC53A',
-    'plate-green': '#4CAF6C',
+    'plate-red': '#E04862',
+    'plate-blue': '#7B8BEA',
+    'plate-yellow': '#B8890F',
+    'plate-green': '#1E9A80',
     warn: '#E7A33A',
     danger: '#F2817A',
   },
