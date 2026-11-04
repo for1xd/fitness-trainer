@@ -17,6 +17,7 @@ type State =
   | { kind: 'searching' }
   | { kind: 'invalid' }
   | { kind: 'notFound'; code: string }
+  | { kind: 'offline'; code: string }
   | { kind: 'error' };
 
 export default function BarcodeScreen() {
@@ -36,8 +37,8 @@ export default function BarcodeScreen() {
     setState({ kind: 'searching' });
     try {
       const result = await lookupBarcode(code);
-      if (result.kind === 'notFound') {
-        setState({ kind: 'notFound', code });
+      if (result.kind === 'notFound' || result.kind === 'offline') {
+        setState({ kind: result.kind, code });
         return;
       }
       const food =
@@ -88,10 +89,14 @@ export default function BarcodeScreen() {
       ) : null}
       {state.kind === 'invalid' ? <Notice tone="warn" text={t('barcode.invalid')} /> : null}
       {state.kind === 'error' ? <Notice tone="warn" text={t('barcode.error')} /> : null}
-      {state.kind === 'notFound' ? (
+      {state.kind === 'notFound' || state.kind === 'offline' ? (
         <View className="gap-3">
           <Notice
-            text={`${t('barcode.notFound', { code: state.code })} ${t('barcode.notFoundHint')}`}
+            text={
+              state.kind === 'offline'
+                ? t('barcode.offline')
+                : `${t('barcode.notFound', { code: state.code })} ${t('barcode.notFoundHint')}`
+            }
           />
           <Button
             label={t('barcode.addOwn')}

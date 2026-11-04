@@ -1,6 +1,6 @@
 import * as ImagePicker from 'expo-image-picker';
 import { router, useLocalSearchParams, useNavigation } from 'expo-router';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ActivityIndicator, Image, View } from 'react-native';
 
@@ -25,6 +25,7 @@ import { useNutrition } from '@/features/nutrition/store';
 import { MEAL_TYPES, type MealType } from '@/features/nutrition/types';
 import { todayIso } from '@/lib/dates';
 import { formatNumber } from '@/lib/format';
+import { artifactCanSendImages } from '@/lib/artifactHost';
 import { isSupabaseConfigured } from '@/lib/supabase';
 import { useTheme } from '@/theme/ThemeProvider';
 import {
@@ -65,10 +66,25 @@ export default function MealPhotoScreen() {
   const [items, setItems] = useState<ReviewItem[]>([]);
   const [meal, setMeal] = useState<MealType>(params.meal ?? defaultMealType(new Date().getHours()));
 
-  const blocked: PhotoErrorKey | null = !isSupabaseConfigured
-    ? 'notConfigured'
-    : !session
+  // В артефакті Claude розпізнавання працює без сервера — через можливість платформи
+  const [artifactPhoto, setArtifactPhoto] = useState<boolean | null>(
+    isSupabaseConfigured ? false : null,
+  );
+  useEffect(() => {
+    if (isSupabaseConfigured) return;
+    let alive = true;
+    void artifactCanSendImages().then((ok) => alive && setArtifactPhoto(ok));
+    return () => {
+      alive = false;
+    };
+  }, []);
+
+  const blocked: PhotoErrorKey | null = isSupabaseConfigured
+    ? !session
       ? 'signedOut'
+      : null
+    : artifactPhoto === false
+      ? 'notConfigured'
       : null;
 
   const run = async (source: 'camera' | 'library') => {
@@ -267,6 +283,7 @@ export default function MealPhotoScreen() {
       <Text variant="body" className="-mt-2 text-muted">
         {t('photo.intro')}
       </Text>
+      {artifactPhoto ? <Notice text={t('photo.artifactNote')} /> : null}
       {phase.kind === 'error' ? <Notice tone="warn" text={t(`photo.errors.${phase.key}`)} /> : null}
       <TextField
         label={t('photo.hint')}

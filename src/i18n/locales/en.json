@@ -625,9 +625,11 @@
       "tooLarge": "The photo is too large. Try taking it again.",
       "notFood": "No food visible in the photo. Take a closer photo of the plate.",
       "network": "Can't reach the server. Check your connection and try again.",
-      "generic": "Couldn't recognise the meal. Try again or add food manually."
+      "generic": "Couldn't recognise the meal. Try again or add food manually.",
+      "artifactDenied": "Photo recognition is off here: Claude access isn't allowed for this artifact. You can turn it on in the artifact's Permissions menu."
     },
-    "permission": "To photograph food, allow camera access in your phone settings."
+    "permission": "To photograph food, allow camera access in your phone settings.",
+    "artifactNote": "In this version Claude recognises the photo through your claude.ai account: it asks for permission the first time, and requests use your Claude limit."
   },
   "barcode": {
     "title": "Barcode",
@@ -644,7 +646,8 @@
     "webHint": "Camera scanning works in the phone app. Here, type the digits under the barcode.",
     "permission": "The camera is needed to scan barcodes.",
     "allowCamera": "Allow camera",
-    "scanAgain": "Scan again"
+    "scanAgain": "Scan again",
+    "offline": "Open Food Facts isn't available in this demo. Add the product yourself from its label — next time it will be found by this code."
   },
   "foodQuick": {
     "photo": "Meal photo",

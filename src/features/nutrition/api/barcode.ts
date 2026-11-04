@@ -1,5 +1,6 @@
 import { z } from 'zod';
 
+import { isArtifactHost } from '@/lib/artifactHost';
 import { isSupabaseConfigured, supabase } from '@/lib/supabase';
 
 import { mapOffProduct } from '../../../../supabase/functions/_shared/foodMappers';
@@ -28,7 +29,11 @@ const remoteSchema = z.object({
 });
 
 export type BarcodeResult =
-  { kind: 'local'; food: Food } | { kind: 'remote'; food: RemoteFood } | { kind: 'notFound' };
+  | { kind: 'local'; food: Food }
+  | { kind: 'remote'; food: RemoteFood }
+  | { kind: 'notFound' }
+  /** Зовнішня база недоступна (артефакт: мережа сторінки закрита) */
+  | { kind: 'offline' };
 
 /**
  * Пошук товару за штрихкодом: спершу власні продукти, далі Open Food Facts
@@ -47,6 +52,8 @@ export async function lookupBarcode(raw: string): Promise<BarcodeResult> {
     const food = remoteSchema.parse(data).foods[0];
     return food ? { kind: 'remote', food } : { kind: 'notFound' };
   }
+
+  if (isArtifactHost()) return { kind: 'offline' };
 
   const fields = 'code,product_name,product_name_uk,brands,serving_quantity,nutriments';
   const res = await fetch(

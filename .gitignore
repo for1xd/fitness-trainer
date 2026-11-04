@@ -48,3 +48,4 @@ artifact/
 dist-sb/
 e2e/shots*/
 e2e/*.png
+e2e/shots-artifact/

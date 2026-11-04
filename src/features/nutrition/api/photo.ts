@@ -2,7 +2,17 @@ import { randomUUID } from 'expo-crypto';
 import { ImageManipulator, SaveFormat } from 'expo-image-manipulator';
 import { z } from 'zod';
 
+import { getArtifactSample, isSampleError } from '@/lib/artifactHost';
 import { supabase } from '@/lib/supabase';
+
+import {
+  applyKnownDishes,
+  buildSystemPrompt,
+  userPrompt,
+  validateMealAnalysis,
+  type KnownDish,
+} from '../../../../supabase/functions/_shared/mealAnalysis';
+import { SEED_FOODS } from '../data/foods';
 
 /** Довша сторона фото перед завантаженням: досить для розпізнавання, легше й дешевше. */
 const MAX_SIDE = 1280;
@@ -16,6 +26,7 @@ export type PhotoErrorKey =
   | 'tooLarge'
   | 'notFood'
   | 'network'
+  | 'artifactDenied'
   | 'generic';
 
 export class PhotoError extends Error {
@@ -76,7 +87,7 @@ export async function analyzeMealPhoto(
   base64: string,
   hint?: string,
 ): Promise<PhotoAnalysisResponse> {
-  if (!supabase) throw new PhotoError('notConfigured');
+  if (!supabase) return analyzeInArtifact(base64, hint);
   const { data: session } = await supabase.auth.getSession();
   const userId = session.session?.user.id;
   if (!userId) throw new PhotoError('signedOut');
@@ -113,4 +124,54 @@ export async function markAnalysisAccepted(analysisId: string | null): Promise<v
     .update({ accepted: true })
     .eq('id', analysisId);
   if (error) console.warn('[photo] accept analysis:', error.message);
+}
+
+// ─────────── Артефакт Claude: розпізнавання через можливість `sample` (без сервера) ───────────
+
+const KNOWN_DISHES: KnownDish[] = SEED_FOODS.filter((f) => f.source === 'ua_dish' && f.slug).map(
+  (f) => ({
+    slug: f.slug!,
+    name: f.name,
+    per100: f.per100,
+  }),
+);
+const DISHES = new Map(KNOWN_DISHES.map((d) => [d.slug, d]));
+
+const JSON_SHAPE = `Reply with ONLY one JSON object, no other text, exactly in this shape:
+{"is_food": boolean, "dish_name_uk": string, "items": [{"name_uk": string, "match_slug": string | null, "grams": number, "kcal": number, "protein_g": number, "fat_g": number, "carbs_g": number, "confidence": number}], "overall_confidence": number, "notes_uk": string}`;
+
+async function analyzeInArtifact(base64: string, hint?: string): Promise<PhotoAnalysisResponse> {
+  const sample = await getArtifactSample();
+  if (!sample) throw new PhotoError('notConfigured');
+  const image = new Blob([base64ToBytes(base64)], { type: 'image/jpeg' });
+  const prompt = `${buildSystemPrompt(KNOWN_DISHES)}\n\nThe attached image is the meal photo.\n${userPrompt(hint)}\n\n${JSON_SHAPE}`;
+  let raw: unknown;
+  try {
+    raw = await sample.json(prompt, { images: [image], modelTier: 'default' });
+  } catch (e) {
+    const code = isSampleError(e) ? e.code : '';
+    if (
+      [
+        'not_granted',
+        'sampling_disabled',
+        'images_unavailable',
+        'not_declared',
+        'capability_disabled',
+      ].includes(code)
+    ) {
+      throw new PhotoError('artifactDenied');
+    }
+    if (code === 'rate_limited') throw new PhotoError('busy');
+    if (code === 'refused') throw new PhotoError('refused');
+    if (code === 'image_rejected') throw new PhotoError('tooLarge');
+    throw new PhotoError('generic');
+  }
+  const validated = validateMealAnalysis(raw, new Set(DISHES.keys()));
+  if (!validated) throw new PhotoError('generic');
+  if (!validated.isFood) throw new PhotoError('notFood');
+  return {
+    analysisId: null,
+    model: 'claude-artifact',
+    analysis: applyKnownDishes(validated, DISHES),
+  };
 }
