@@ -59,7 +59,8 @@
     "typecheck": "tsc --noEmit",
     "test": "jest",
     "format": "prettier --write .",
-    "seed:build": "node scripts/build-seed.mjs"
+    "seed:build": "node scripts/build-seed.mjs",
+    "build:artifact": "expo export -p web && node scripts/build-artifact.mjs"
   },
   "private": true,
   "jest": {
