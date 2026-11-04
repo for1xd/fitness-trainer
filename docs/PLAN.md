@@ -1,0 +1,128 @@
+# План проєкту «Фітнес-тренер»
+
+> Статус: **чекає підтвердження**. Код не пишеться, доки план не погоджено.
+
+## 1. Архітектура
+
+```
+┌──────────── Expo app (iOS / Android / Web) ─────────────┐
+│ Expo Router screens → features/* (hooks, logic, api)    │
+│ TanStack Query ⇄ Repository layer ⇄ SQLite (Drizzle)    │
+│                         │ outbox-синхронізація          │
+└─────────────────────────┼───────────────────────────────┘
+                          ▼
+┌──────────────────── Supabase ───────────────────────────┐
+│ Auth (email + magic link, Apple/Google — пізніше)       │
+│ Postgres + RLS · Storage (meal-photos, progress-photos, │
+│ gym-photos — приватні бакети)                           │
+│ Edge Functions:                                         │
+│   analyze-meal   → Claude API (vision) → строгий JSON   │
+│   food-search    → своя БД + Open Food Facts + USDA     │
+│   barcode-lookup → Open Food Facts, кеш у foods         │
+└─────────────────────────────────────────────────────────┘
+```
+
+**Чому саме так (обґрунтування відхилень від пропозиції):**
+- **TanStack Query + Zustand разом**: Query — для даних із сервера/БД (кеш, інвалідація), Zustand — для короткоживучого стану (живе тренування, кроки онбордингу). Вони не конкурують.
+- **NativeWind**, а не Tamagui: простіше, менше магії компілятора, добре працює на вебі; токени тем у CSS-змінних.
+- **Офлайн: expo-sqlite + Drizzle**, а не MMKV для даних: потрібні запити (сума КБЖВ за день, історія підходів). MMKV не працює на вебі, тож для налаштувань — тонка обгортка над AsyncStorage/localStorage.
+- **Синхронізація**: власна outbox-черга (кожен запис має `id uuid` з клієнта, `updated_at`, `deleted_at`), last-write-wins. Якщо стане тісно — міграція на PowerSync без зміни схеми.
+- **Графіки**: `react-native-gifted-charts` (SVG, працює на вебі). Теплова карта м'язів — власний SVG-силует.
+- **Штрихкоди**: `expo-camera` на телефоні; на вебі — ZXing у браузері + ручний ввід коду як запасний варіант.
+- **Пуші**: `expo-notifications` (локальні нагадування на пристрої); на вебі — лише в межах відкритої вкладки.
+- **Десктоп**: веб-версія з адаптивом (бокова навігація від 1024 px); Tauri-обгортка — після MVP.
+
+## 2. Схема БД (Postgres, скорочено)
+
+**Профіль і норми**
+- `profiles` — id (= auth.uid), sex, birth_date, height_cm, activity_level, goal (`gain|lose|maintain`), pace, locale, units
+- `weight_entries` — user_id, date, weight_kg
+- `nutrition_targets` — user_id, valid_from, kcal, protein_g, fat_g, carbs_g, water_ml, reason (`onboarding|weight_change|manual`)
+- `body_measurements` — user_id, date, waist, chest, biceps, hips, thigh (см)
+- `progress_photos` — user_id, date, angle, storage_path (приватний бакет)
+
+**Харчування**
+- `foods` — id, source (`ua_dish|off|usda|user|ai`), external_id, barcode, name_uk, name_en, brand, kcal/protein/fat/carbs на 100 г, owner_id (null = загальна), `search` (pg_trgm + tsvector)
+- `food_portions` — food_id, label_uk («тарілка», «шт.», «ст. л.»), grams
+- `recipes` + `recipe_ingredients` (food_id, grams) — КБЖВ рахується автоматично
+- `meal_entries` — user_id, eaten_at, meal_type, food_id | recipe_id, grams, snapshot КБЖВ, source (`manual|barcode|photo`)
+- `meal_photo_analyses` — user_id, storage_path, model, raw_json, confidence, accepted
+- `water_entries` — user_id, at, ml
+
+**Тренування**
+- `muscles`, `equipment_types`
+- `exercises` — slug, name_uk, primary_muscle, secondary_muscles[], equipment_type, machine_type_id, mechanics (`compound|isolation`), region (`upper|lower|core`), technique_uk, mistakes_uk[], media_url, substitutes (через спільні м'язи)
+- `machine_types` (Смітт, кросовер, гакк, жим ногами 45°, пек-дек, гравітрон…), `brands` (InterAtletika, Technogym, Matrix, Life Fitness, Hammer Strength, Panatta, Precor, Impulse), `machines` (brand + type + модель)
+- `gyms` — owner_id (null = готовий «профіль залу»/мережі), name, chain, city; `gym_equipment` — gym_id, machine_type_id | machine_id, photo_path; `profiles.active_gym_id`
+- `strength_estimates` — user_id, exercise_id, one_rm_kg, method (`epley|brzycki|level|from_set`), confidence, measured_at
+- `programs` — user_id, goal, split, days_per_week, session_min, gym_id, start_date, deload_every_weeks, is_active
+- `program_days` → `program_exercises` — exercise_id, order, sets, reps_min, reps_max, pct_1rm, rest_sec, target_rpe
+- `workouts` — user_id, date, program_day_id, status (`planned|done|skipped`), notes, wellbeing 1–5, duration_min
+- `workout_sets` — workout_id, exercise_id, set_index, weight_kg, reps, rpe, is_warmup
+
+**Інше**: `reminders` (type, time, days, enabled).
+
+**RLS**: таблиці користувача — `user_id = auth.uid()` для select/insert/update/delete. Довідники (`exercises`, `machines`, `foods` з `owner_id is null`, готові `gyms`) — лише читання для автентифікованих. Storage — шлях `{user_id}/…`, політика за префіксом.
+
+## 3. Формули (всі з юніт-тестами)
+- **BMR (Міффлін — Сан Жеор)**: `10·кг + 6,25·см − 5·вік + 5` (чол) / `− 161` (жін). **TDEE** = BMR × 1,2 / 1,375 / 1,55 / 1,725 / 1,9.
+- **Мета**: схуднення −10/−15/−20 % (темп повільно/норм/швидко), набір +5/+10/+15 %, підтримка 0.
+- **Макро**: білок 1,6–2,2 г/кг (вище при дефіциті), жири ≥0,8 г/кг, решта — вуглеводи (не < 0, інакше зменшуємо жир до мінімуму).
+- **Запобіжники**: калорії ≥1500 (ч) / ≥1200 (ж); попередження при плановому темпі > 1 % ваги/тиждень на схудненні або > 0,5 %/тиждень на наборі.
+- **Перерахунок**: 7-денне ковзне середнє ваги; якщо тренд змінився на ≥1 кг від ваги останнього розрахунку — нові норми.
+- **Вода**: 30–35 мл/кг + ~500 мл у тренувальний день.
+- **1ПМ**: Еплі `w·(1+r/30)` для 1–10 повт., Бжицкі `w·36/(37−r)` для 11–15; >15 — не приймаємо. Впевненість: ≤5 повт — висока, 6–10 — середня, 11–15 — низька. «Не знаю» → коефіцієнти від маси тіла за рівнем (низька впевненість), уточнюється з перших підходів.
+- **Робоча вага**: сила 3–6 повт @80–90 %, гіпертрофія 6–12 @65–80 %, витривалість 12–20 @50–65 %; округлення до 2,5 кг (або кроку тренажера).
+- **Прогресія**: всі повтори з RPE ≤8 → +2,5 кг (верх) / +5 кг (низ); провал → повтор ваги, двічі поспіль → −5–10 %; deload (−40 % обсягу) кожні 4–6 тижнів.
+
+## 4. Розпізнавання їжі по фото
+Edge Function `analyze-meal`: клієнт вантажить фото в приватний бакет → функція бере його, надсилає в Claude API (vision, structured output / tool use зі схемою) → валідація Zod → клієнт показує редаговану форму. Модель задається через секрет `CLAUDE_MODEL`.
+
+Схема відповіді (строга, без додаткових полів):
+```json
+{
+  "is_food": true,
+  "dish_name_uk": "Борщ зі сметаною",
+  "items": [
+    { "name_uk": "Борщ український", "match_hint": "ua_dish:borshch",
+      "grams": 350, "kcal": 175, "protein_g": 7.0, "fat_g": 7.4, "carbs_g": 19.6,
+      "confidence": 0.8 }
+  ],
+  "total": { "kcal": 0, "protein_g": 0, "fat_g": 0, "carbs_g": 0 },
+  "overall_confidence": 0.7,
+  "notes_uk": "Вагу оцінено за розміром тарілки ~24 см"
+}
+```
+Промт (суть): «Ти — нутриціолог. Визнач кожен окремий продукт на фото, оціни вагу в грамах за розміром посуду/столових приборів, розрахуй КБЖВ на цю вагу. Віддавай перевагу українським стравам зі списку (передається), якщо схожі. Не вигадуй продуктів, яких не видно; якщо на фото не їжа — `is_food: false`. Впевненість 0–1 чесна». Після відповіді сервер звіряє `match_hint` з таблицею `foods` і перераховує КБЖВ з бази, якщо знайдено збіг.
+
+## 5. Екрани
+Нижня навігація (телефон) / бокова (ПК ≥1024 px): **Сьогодні · Харчування · Тренування · Прогрес · Профіль**.
+- **Auth**: вхід / реєстрація.
+- **Онбординг** (кроки): стать/вік → зріст/вага → активність → мета і темп → результат норм + дисклеймер → (опційно) силова калібровка.
+- **Сьогодні**: кільця калорій і БЖВ, вода (+250/+500), тренування на сьогодні, кнопка «Сфотографувати їжу».
+- **Харчування**: день по прийомах їжі; додавання: пошук / штрихкод / фото / мої рецепти; редактор порції; конструктор рецепта.
+- **Тренування**: поточна програма, календар (місяць/тиждень, кольори груп м'язів), генератор (анкета), «Мій зал», каталог вправ і тренажерів, картка вправи, **живе тренування** (великі кнопки, таймер відпочинку, підказка ваги з минулого разу, заміна вправи).
+- **Прогрес**: вага + тренд, заміри, фото до/після, 1ПМ, тоннаж, теплова карта м'язів, тижневий звіт.
+- **Профіль**: дані, цілі, тема, мова, нагадування, вихід/експорт даних.
+
+## 6. Дизайн (напрям, на погодження)
+Тема «зал і крейда»: графітова темна основа (не чиста чорна), «крейдяний» світлий режим, **один** сигнальний акцент (пропоную помаранчевий, як на маркуванні дисків) + приглушені кольори груп м'язів. Великі цифри — це головне на екрані (ккал, кг, повтори), шрифт із кирилицею: Unbounded для цифр/заголовків, Inter для тексту. Без скла, градієнтів і «веселкових» кнопок. Основні дії в зоні великого пальця, кнопки 56+ dp.
+
+## 7. Seed-дані
+- `supabase/seed/exercises.json` — ~120 вправ (вільні ваги, власна вага, блоки, тренажери) з технікою і помилками.
+- `supabase/seed/machines.json` — типи тренажерів (~35) × бренди.
+- `supabase/seed/ua-dishes.json` — **150+ українських страв** на 100 г (стандартні рецептури, позначені як орієнтовні) + порції.
+- Скрипт `scripts/build-seed.ts` → `supabase/seed.sql`.
+
+## 8. Етапи
+1. **Каркас**: Expo + Router + TS strict + ESLint/Prettier + NativeWind + i18n + тема; Supabase-міграції (вся схема + RLS); авторизація; онбординг і розрахунок КБЖВ; тести формул; README, `.env.example`.
+2. **Харчування і вода**: seed українських страв, пошук з автодоповненням (своя БД + OFF + USDA через Edge Function), порції, рецепти, денний підсумок з кільцями, трекер води; офлайн-кеш і синхронізація.
+3. **Тренування**: силова калібровка, каталог вправ/тренажерів, «Мій зал», генератор програм, прогресія, календар, живе тренування.
+4. **AI і сканер**: `analyze-meal` (Claude vision), екран редагування результату, сканер штрихкодів.
+5. **Прогрес і полірування**: графіки, заміри, фото до/після, теплова карта, тижневий звіт, пуш-нагадування, адаптив для ПК, перевірка веб-версії через Playwright.
+
+Після кожного етапу — короткий звіт: що зроблено, що перевірити вручну.
+
+## 9. Що потрібно від тебе (не блокує етап 1)
+- Проєкт Supabase (URL + anon key) — або працюю з локальним `supabase start`.
+- Ключ Claude API і (опційно) USDA API key — кладуться в `supabase secrets`, не в репозиторій.
