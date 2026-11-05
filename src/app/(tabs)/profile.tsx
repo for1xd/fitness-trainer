@@ -1,4 +1,4 @@
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Icon } from '@/ui/icons/Icon';
 import { router } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { Pressable, View } from 'react-native';
@@ -62,11 +62,11 @@ export default function ProfileScreen() {
             onPress={() => router.push(href)}
             className={`min-h-14 flex-row items-center gap-3 px-4 active:bg-line ${i ? 'border-t border-line' : ''}`}
           >
-            <MaterialCommunityIcons name={icon} size={22} color={colors.ink} />
+            <Icon name={icon} size={22} color={colors.ink} />
             <Text variant="body" className="flex-1">
               {t(`profileLinks.${key}`)}
             </Text>
-            <MaterialCommunityIcons name="chevron-right" size={20} color={colors.muted} />
+            <Icon name="chevron-right" size={20} color={colors.muted} />
           </Pressable>
         ))}
       </View>

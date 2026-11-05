@@ -13,6 +13,8 @@ const server = http.createServer((req, res) => {
   fs.createReadStream(p).pipe(res);
 }).listen(8105);
 const BASE = 'http://localhost:8105';
+const AXE_PATH = process.env.AXE || '/tmp/claude-0/lh/node_modules/axe-core/axe.min.js';
+const AXE = fs.existsSync(AXE_PATH) ? fs.readFileSync(AXE_PATH, 'utf8') : null;
 
 const setEaten = (kcal) => {
   const today = new Date(); today.setHours(12);
@@ -27,7 +29,7 @@ const setEaten = (kcal) => {
   const browser = await chromium.launch();
   const issues = [];
   for (const scheme of ['dark', 'light']) {
-    for (const width of [375, 390, 1280]) {
+    for (const width of [375, 390, 768, 1280]) {
       const ctx = await browser.newContext({ viewport: { width, height: width > 800 ? 860 : 812 }, colorScheme: scheme, locale: 'uk-UA' });
       const page = await ctx.newPage();
       page.on('pageerror', (e) => issues.push(`${scheme}/${width} pageerror ${e.message}`));
@@ -56,6 +58,30 @@ const setEaten = (kcal) => {
           return [...new Set(out)].slice(0, 6);
         });
         if (overflow.length) issues.push(`${scheme}/${width}/${tab} overflow: ${overflow.join(' | ')}`);
+        // Горизонтальна прокрутка сторінки
+        if (await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1))
+          issues.push(`${scheme}/${width}/${tab} horizontal page scroll`);
+        // Зони натискання: щонайменше 44×44 (на телефоні — для всіх кнопок, вкладок, перемикачів)
+        const small = await page.evaluate(() => {
+          const out = [];
+          for (const el of document.querySelectorAll('[role=button],[role=tab],[role=link],[role=radio],[role=checkbox],[role=switch],a,button,input')) {
+            if (el.closest('[aria-hidden="true"]')) continue;
+            const r = el.getBoundingClientRect();
+            if (!r.width || !r.height) continue;
+            if (r.width < 44 || r.height < 44) out.push(`${(el.getAttribute('aria-label') || el.textContent || el.tagName).trim().slice(0, 24)} ${Math.round(r.width)}×${Math.round(r.height)}`);
+          }
+          return [...new Set(out)].slice(0, 6);
+        });
+        if (small.length && width <= 390) issues.push(`${scheme}/${width}/${tab} small targets: ${small.join(' | ')}`);
+        // axe: контраст, підписи, ролі
+        if (AXE && width === 390) {
+          await page.addScriptTag({ content: AXE });
+          const res = await page.evaluate(async () => {
+            const r = await window.axe.run(document, { runOnly: ['wcag2a', 'wcag2aa'] });
+            return r.violations.map((v) => `${v.id}(${v.nodes.length}): ${v.nodes.slice(0, 2).map((n) => n.target.join(' ').slice(-40)).join(', ')}`);
+          });
+          if (res.length) issues.push(`${scheme}/${width}/${tab} axe: ${res.join(' ; ')}`);
+        }
       }
       if (width === 390) {
         // Кільце калорій на крайніх значеннях (норма підтримки ≈ 2 760)

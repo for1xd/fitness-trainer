@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Text as RNText, type TextStyle } from 'react-native';
 
 import { useTheme } from '@/theme/ThemeProvider';
@@ -39,6 +40,21 @@ export function FitText({
   accessibilityLabel,
 }: FitTextProps) {
   const { colors } = useTheme();
+  // Шрифт може ще вантажитись — тоді вимір запасним шрифтом занижений; перемірюємо після завантаження
+  const [, setFontReady] = useState(0);
+  useEffect(() => {
+    if (typeof document === 'undefined' || !document.fonts) return;
+    const spec = `${maxFontSize}px "${fontFamily}"`;
+    if (document.fonts.check(spec)) return;
+    let alive = true;
+    document.fonts
+      .load(spec)
+      .then(() => alive && setFontReady((n) => n + 1))
+      .catch(() => undefined);
+    return () => {
+      alive = false;
+    };
+  }, [fontFamily, maxFontSize]);
   const width = measure(text, maxFontSize, fontFamily);
   // Запас 8 %: відмінності рендерингу шрифту між canvas і DOM
   const fitted = Math.floor((maxFontSize * maxWidth * 0.92) / Math.max(1, width));

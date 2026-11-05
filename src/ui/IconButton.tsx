@@ -1,4 +1,4 @@
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Icon } from '@/ui/icons/Icon';
 import type { ComponentProps } from 'react';
 import { Pressable } from 'react-native';
 
@@ -8,7 +8,7 @@ import { useTheme } from '@/theme/ThemeProvider';
 import { pressStyle } from './pressFeedback';
 
 interface Props {
-  icon: ComponentProps<typeof MaterialCommunityIcons>['name'];
+  icon: ComponentProps<typeof Icon>['name'];
   /** Обов'язковий підпис для екранних читачів і підказки. */
   label: string;
   onPress: () => void;
@@ -36,7 +36,7 @@ export function IconButton({ icon, label, onPress, disabled, tone = 'default' }:
         tone === 'filled' ? 'bg-ink active:opacity-80' : 'active:bg-line'
       } ${disabled ? 'opacity-30' : ''}`}
     >
-      <MaterialCommunityIcons name={icon} size={24} color={color} />
+      <Icon name={icon} size={24} color={color} />
     </Pressable>
   );
 }

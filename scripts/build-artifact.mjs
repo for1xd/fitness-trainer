@@ -13,6 +13,8 @@ import {
 import { dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { fontPreloads } from './web-postexport.mjs';
+
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const dist = join(root, 'dist');
 const out = join(root, 'artifact');
@@ -53,16 +55,18 @@ const css = readdirSync(join(dist, '_expo/static/css'))
   .join('\n');
 
 const page = `<title>Фітнес-тренер</title>
+${fontPreloads(dist, '')}
 <style>
-:root { --bg: #E7EAE6; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #101315; color-scheme: dark; } }
-:root[data-theme="dark"] { --bg: #101315; color-scheme: dark; }
+:root { --bg: #E7EAE6; --ink: #14171A; --accent: #6F4FE0; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #101315; --ink: #EEF1EC; --accent: #9A7BF2; color-scheme: dark; } }
+:root[data-theme="dark"] { --bg: #101315; --ink: #EEF1EC; --accent: #9A7BF2; color-scheme: dark; }
 html, body { height: 100%; }
 body { overflow: hidden; background: var(--bg); }
 #root { display: flex; height: 100%; flex: 1; }
+.boot { flex: 1; display: flex; align-items: center; justify-content: center; }
 </style>
 <style>${css}</style>
-<div id="root"></div>
+<div id="root"><div class="boot" role="img" aria-label="Фітнес-тренер"><svg width="64" height="64" viewBox="0 0 512 512" fill="none" stroke-linecap="round" aria-hidden="true"><path d="M256 120 A136 136 0 1 1 120 256" stroke="var(--accent)" stroke-width="60"/><path d="M256 78 V434" stroke="var(--ink)" stroke-width="60"/></svg></div></div>
 <script>
 (function () {
   window.__APP_BASE__ = location.href.split('#')[0].split('?')[0].replace(/[^/]*$/, '');

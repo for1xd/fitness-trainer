@@ -102,7 +102,7 @@ export function NumberField({
             placeholderTextColor={colors.muted}
             selectTextOnFocus
             maxLength={6}
-            className="min-w-16 text-center font-display text-2xl text-ink"
+            className="h-full min-w-16 text-center font-display text-2xl text-ink"
           />
           <Text variant="caption" className="ml-1">
             {unit}

@@ -1,4 +1,4 @@
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Icon } from '@/ui/icons/Icon';
 import { router } from 'expo-router';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -252,7 +252,7 @@ export default function LiveWorkoutScreen() {
           <Text variant="title" className="flex-1">
             {exercise?.name_uk ?? ex.exerciseId}
           </Text>
-          <MaterialCommunityIcons name="information-outline" size={22} color={colors.muted} />
+          <Icon name="information-outline" size={22} color={colors.muted} />
         </Pressable>
         <Text variant="label" className="text-muted">
           {timed
@@ -315,11 +315,7 @@ export default function LiveWorkoutScreen() {
                 onPress={() => completeSet(k)}
                 className={`h-14 w-14 items-center justify-center rounded-2xl ${s.done ? 'bg-ink' : 'border-2 border-ink active:bg-line'}`}
               >
-                <MaterialCommunityIcons
-                  name="check"
-                  size={28}
-                  color={s.done ? colors.inverse : colors.ink}
-                />
+                <Icon name="check" size={28} color={s.done ? colors.inverse : colors.ink} />
               </Pressable>
             </View>
             {s.done && !timed ? (
@@ -335,6 +331,7 @@ export default function LiveWorkoutScreen() {
                       accessibilityRole="radio"
                       accessibilityLabel={`${t('live.rpe')}: ${r}`}
                       accessibilityState={{ checked: on }}
+                      aria-checked={on}
                       onPress={() =>
                         updateActive((w) => patchSet(w, i, k, { rpe: on ? undefined : Number(r) }))
                       }

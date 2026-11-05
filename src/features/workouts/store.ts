@@ -140,8 +140,7 @@ export const useWorkouts = create<WorkoutsState>()(
 
       reset: () => set({ program: null, workouts: [], active: null }),
     }),
-    { name: 'workouts', storage: persistStorage,
-      ...versioned('workouts') },
+    { name: 'workouts', storage: persistStorage, ...versioned('workouts') },
   ),
 );
 

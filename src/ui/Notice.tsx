@@ -1,4 +1,4 @@
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Icon } from '@/ui/icons/Icon';
 import { View } from 'react-native';
 
 import { useTheme } from '@/theme/ThemeProvider';
@@ -14,7 +14,7 @@ export function Notice({ text, tone = 'info' }: Props) {
   const { colors } = useTheme();
   return (
     <View className="flex-row gap-3 rounded-card border border-hairline bg-surface p-4">
-      <MaterialCommunityIcons
+      <Icon
         name={tone === 'warn' ? 'alert-outline' : 'information-outline'}
         size={22}
         color={tone === 'warn' ? colors.warn : colors.muted}

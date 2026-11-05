@@ -1,4 +1,4 @@
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Icon } from '@/ui/icons/Icon';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -47,7 +47,7 @@ export default function ExerciseScreen() {
 
       {/* Місце під GIF / відео техніки */}
       <View className="aspect-video items-center justify-center gap-2 rounded-card border border-hairline bg-surface">
-        <MaterialCommunityIcons name="play-circle-outline" size={40} color={colors.muted} />
+        <Icon name="play-circle-outline" size={40} color={colors.muted} />
         <Text variant="caption">{t('exercises.media')}</Text>
       </View>
 
@@ -85,7 +85,7 @@ export default function ExerciseScreen() {
         <Text variant="heading">{t('exercises.mistakes')}</Text>
         {exercise.mistakes_uk.map((m) => (
           <View key={m} className="flex-row gap-2">
-            <MaterialCommunityIcons name="close-circle-outline" size={20} color={colors.danger} />
+            <Icon name="close-circle-outline" size={20} color={colors.danger} />
             <Text variant="body" className="flex-1">
               {m}
             </Text>
@@ -107,7 +107,7 @@ export default function ExerciseScreen() {
                 <Text variant="body" className="flex-1">
                   {a.name_uk}
                 </Text>
-                <MaterialCommunityIcons name="chevron-right" size={20} color={colors.muted} />
+                <Icon name="chevron-right" size={20} color={colors.muted} />
               </Pressable>
             ))}
           </View>

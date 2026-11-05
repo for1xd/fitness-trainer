@@ -11,13 +11,16 @@ interface Props {
   progress?: number;
   /** Однотонний варіант */
   mono?: string;
+  /** Явні кольори — коли тема ще недоступна (заставка до завантаження) */
+  arcColor?: string;
+  stemColor?: string;
 }
 
 /**
  * Знак застосунку: «Ф» як кільце прогресу. Геометрія — як у assets/brand (полотно 512):
  * коло R=136, товщина 60; риска виходить за коло на 42.
  */
-export function LogoMark({ size, progress = 1, mono }: Props) {
+export function LogoMark({ size, progress = 1, mono, arcColor, stemColor }: Props) {
   const { colors } = useTheme();
   const k = size / 512;
   const r = 136 * k;
@@ -34,7 +37,7 @@ export function LogoMark({ size, progress = 1, mono }: Props) {
           cy={mid}
           r={r}
           fill="none"
-          stroke={mono ?? colors.accent}
+          stroke={mono ?? arcColor ?? colors.accent}
           strokeWidth={w}
           strokeLinecap="round"
           strokeDasharray={`${arc} ${c}`}
@@ -47,7 +50,7 @@ export function LogoMark({ size, progress = 1, mono }: Props) {
         y1={mid - ext}
         x2={mid}
         y2={mid + ext}
-        stroke={mono ?? colors.ink}
+        stroke={mono ?? stemColor ?? colors.ink}
         strokeWidth={w}
         strokeLinecap="round"
       />

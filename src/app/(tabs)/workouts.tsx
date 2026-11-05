@@ -1,4 +1,4 @@
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Icon } from '@/ui/icons/Icon';
 import { router, type Href } from 'expo-router';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -224,11 +224,11 @@ function Links({
           onPress={() => router.push(l.href)}
           className={`min-h-14 flex-row items-center gap-3 px-4 active:bg-line ${i ? 'border-t border-line' : ''}`}
         >
-          <MaterialCommunityIcons name={l.icon} size={22} color={colors.ink} />
+          <Icon name={l.icon} size={22} color={colors.ink} />
           <Text variant="body" className="flex-1">
             {l.label}
           </Text>
-          <MaterialCommunityIcons name="chevron-right" size={20} color={colors.muted} />
+          <Icon name="chevron-right" size={20} color={colors.muted} />
         </Pressable>
       ))}
     </View>

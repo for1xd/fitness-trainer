@@ -1,4 +1,4 @@
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Icon } from '@/ui/icons/Icon';
 import { router } from 'expo-router';
 import { useDeferredValue, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -60,6 +60,7 @@ export default function ExercisesScreen() {
               key={g ?? 'all'}
               accessibilityRole="radio"
               accessibilityState={{ checked: on }}
+              aria-checked={on}
               onPress={() => setGroup(g)}
               className={`h-11 flex-row items-center gap-2 rounded-full px-4 ${on ? 'bg-ink' : 'bg-surface active:bg-line'}`}
             >
@@ -109,7 +110,7 @@ export default function ExercisesScreen() {
                     {available ? '' : `, ${t('exercises.notInGym').toLowerCase()}`}
                   </Text>
                 </View>
-                <MaterialCommunityIcons name="chevron-right" size={20} color={colors.muted} />
+                <Icon name="chevron-right" size={20} color={colors.muted} />
               </Pressable>
             );
           })}

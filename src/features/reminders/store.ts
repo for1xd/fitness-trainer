@@ -76,8 +76,7 @@ export const useReminders = create<RemindersState>()(
           return { reminders };
         }),
     }),
-    { name: 'reminders', storage: persistStorage,
-      ...versioned('reminders') },
+    { name: 'reminders', storage: persistStorage, ...versioned('reminders') },
   ),
 );
 

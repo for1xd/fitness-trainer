@@ -165,8 +165,7 @@ export const useProgress = create<ProgressState>()(
 
       reset: () => set({ measurements: [], photos: [] }),
     }),
-    { name: 'progress', storage: persistStorage,
-      ...versioned('progress') },
+    { name: 'progress', storage: persistStorage, ...versioned('progress') },
   ),
 );
 

@@ -1,4 +1,4 @@
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Icon } from '@/ui/icons/Icon';
 import { Tabs } from 'expo-router';
 import type { ComponentProps } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -9,7 +9,7 @@ import { SaveIndicator } from '@/features/data/components/SaveIndicator';
 import { useReducedMotion } from '@/lib/useReducedMotion';
 import { useTheme } from '@/theme/ThemeProvider';
 
-type IconName = ComponentProps<typeof MaterialCommunityIcons>['name'];
+type IconName = ComponentProps<typeof Icon>['name'];
 
 const TABS: {
   name: string;
@@ -101,7 +101,7 @@ export default function TabsLayout() {
             options={{
               title: t(`tabs.${tab.key}`),
               tabBarIcon: ({ color, size }) => (
-                <MaterialCommunityIcons name={tab.icon} size={size} color={String(color)} />
+                <Icon name={tab.icon} size={size} color={String(color)} />
               ),
             }}
           />

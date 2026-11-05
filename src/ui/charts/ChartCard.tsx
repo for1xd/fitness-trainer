@@ -50,7 +50,7 @@ export function ChartCard({ title, subtitle, right, table, children }: Props) {
         <Pressable
           accessibilityRole="button"
           onPress={() => setAsTable((v) => !v)}
-          className="min-h-10 justify-center self-start active:opacity-60"
+          className="min-h-12 justify-center self-start active:opacity-60"
         >
           <Text variant="caption" className="underline">
             {asTable ? t('charts.showChart') : t('charts.showTable')}

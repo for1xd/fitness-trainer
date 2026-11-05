@@ -17,6 +17,7 @@ export function ChoiceCard({ title, description, aside, selected, onPress }: Pro
     <Pressable
       accessibilityRole="radio"
       accessibilityState={{ checked: selected }}
+      aria-checked={selected}
       onPress={onPress}
       className={`min-h-14 flex-row items-center gap-3 rounded-2xl border-2 px-4 py-3 active:opacity-80 ${
         selected ? 'border-ink bg-raised' : 'border-line bg-surface'

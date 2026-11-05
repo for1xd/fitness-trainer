@@ -1,4 +1,4 @@
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Icon } from '@/ui/icons/Icon';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { View } from 'react-native';
@@ -43,11 +43,7 @@ export function SaveIndicator({ bottom }: { bottom: number }) {
       style={{ bottom }}
       className="absolute flex-row items-center gap-2 self-center rounded-full border border-hairline bg-raised px-4 py-2"
     >
-      <MaterialCommunityIcons
-        name={icon}
-        size={16}
-        color={state === 'error' ? colors.danger : colors.muted}
-      />
+      <Icon name={icon} size={16} color={state === 'error' ? colors.danger : colors.muted} />
       <Text variant="caption">{label}</Text>
     </View>
   );

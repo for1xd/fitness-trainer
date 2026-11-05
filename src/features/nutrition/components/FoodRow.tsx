@@ -1,4 +1,4 @@
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Icon } from '@/ui/icons/Icon';
 import { useTranslation } from 'react-i18next';
 import { Pressable, View } from 'react-native';
 
@@ -41,7 +41,7 @@ export function FoodRow({ name, brand, source, per100, isRecipe, onPress, first 
       <Text variant="caption" className="text-right">
         {t('food.per100', { kcal: formatNumber(per100.kcal) })}
       </Text>
-      <MaterialCommunityIcons name="chevron-right" size={20} color={colors.muted} />
+      <Icon name="chevron-right" size={20} color={colors.muted} />
     </Pressable>
   );
 }

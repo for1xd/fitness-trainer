@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "main": "expo-router/entry",
   "dependencies": {
-    "@expo-google-fonts/manrope": "0.4.3",
-    "@expo-google-fonts/unbounded": "0.4.1",
     "@expo/vector-icons": "15.1.1",
     "@react-native-async-storage/async-storage": "2.2.0",
     "@supabase/supabase-js": "2.119.0",
@@ -52,7 +50,9 @@
     "prettier": "3.9.10",
     "prettier-plugin-tailwindcss": "0.8.1",
     "tailwindcss": "3.4.19",
-    "typescript": "6.0.3"
+    "typescript": "6.0.3",
+    "@expo-google-fonts/manrope": "0.4.3",
+    "@expo-google-fonts/unbounded": "0.4.1"
   },
   "scripts": {
     "start": "expo start",
@@ -64,7 +64,10 @@
     "test": "jest",
     "format": "prettier --write .",
     "seed:build": "node scripts/build-seed.mjs",
-    "build:artifact": "expo export -p web && node scripts/build-artifact.mjs"
+    "build:artifact": "npm run build:web && node scripts/build-artifact.mjs",
+    "icons:build": "node scripts/build-icons.mjs",
+    "build:web": "expo export -p web && node scripts/web-postexport.mjs",
+    "fonts:subset": "bash scripts/subset-fonts.sh"
   },
   "private": true,
   "jest": {

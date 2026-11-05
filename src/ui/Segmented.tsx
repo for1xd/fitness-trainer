@@ -27,6 +27,7 @@ export function Segmented<T extends string>({ label, options, value, onChange }:
               key={o.value}
               accessibilityRole="radio"
               accessibilityState={{ checked: selected }}
+              aria-checked={selected}
               onPress={() => onChange(o.value)}
               className={`min-h-12 flex-1 items-center justify-center rounded-xl px-2 ${
                 selected ? 'bg-ink' : 'active:bg-line'

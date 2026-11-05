@@ -1,4 +1,4 @@
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Icon } from '@/ui/icons/Icon';
 import type { ComponentProps } from 'react';
 import { useState } from 'react';
 import { Platform, TextInput, View, type TextInputProps } from 'react-native';
@@ -13,7 +13,7 @@ interface Props extends TextInputProps {
   hideLabel?: boolean;
   hint?: string;
   error?: string;
-  icon?: ComponentProps<typeof MaterialCommunityIcons>['name'];
+  icon?: ComponentProps<typeof Icon>['name'];
 }
 
 /** Найдовший текст в одному полі (назви). Поле може задати свою межу через maxLength. */
@@ -42,7 +42,7 @@ export function TextField({
           error ? 'border-danger' : focused ? 'border-accent' : 'border-line'
         }`}
       >
-        {icon ? <MaterialCommunityIcons name={icon} size={22} color={colors.muted} /> : null}
+        {icon ? <Icon name={icon} size={22} color={colors.muted} /> : null}
         <TextInput
           accessibilityLabel={label}
           // Межа довжини за замовчуванням: назви страв, продуктів, залів

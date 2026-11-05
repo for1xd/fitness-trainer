@@ -10,12 +10,23 @@
       /* Фон теми з першого кадру — до завантаження JS (src/theme/tokens.ts) */
       :root {
         --bg: #e7eae6;
+        --ink: #14171a;
+        --accent: #6f4fe0;
       }
       @media (prefers-color-scheme: dark) {
         :root {
           --bg: #101315;
+          --ink: #eef1ec;
+          --accent: #9a7bf2;
           color-scheme: dark;
         }
+      }
+      /* Заставка до запуску JS — React замінить вміст #root */
+      .boot {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       html,
       body {
@@ -34,6 +45,14 @@
   </head>
   <body>
     <noscript>Увімкніть JavaScript, щоб запустити застосунок.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      <div class="boot" role="img" aria-label="Фітнес-тренер">
+        <!-- Знак застосунку (assets/brand/mark.svg) -->
+        <svg width="64" height="64" viewBox="0 0 512 512" fill="none" stroke-linecap="round" aria-hidden="true">
+          <path d="M256 120 A136 136 0 1 1 120 256" stroke="var(--accent)" stroke-width="60" />
+          <path d="M256 78 V434" stroke="var(--ink)" stroke-width="60" />
+        </svg>
+      </div>
+    </div>
   </body>
 </html>

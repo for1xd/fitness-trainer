@@ -1,6 +1,6 @@
 import { checkPickedImage } from '@/lib/imageCheck';
 import { storeImageLocally } from '@/lib/localImage';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Icon } from '@/ui/icons/Icon';
 import * as ImagePicker from 'expo-image-picker';
 import { router } from 'expo-router';
 import { useState } from 'react';
@@ -136,10 +136,11 @@ function MachineRow({
       <Pressable
         accessibilityRole="checkbox"
         accessibilityState={{ checked: selected }}
+        aria-checked={selected}
         onPress={onToggle}
         className="min-h-14 flex-row items-center gap-3 px-4 py-2 active:bg-line"
       >
-        <MaterialCommunityIcons
+        <Icon
           name={selected ? 'checkbox-marked' : 'checkbox-blank-outline'}
           size={24}
           color={selected ? colors.ink : colors.muted}
@@ -169,6 +170,7 @@ function MachineRow({
                   key={b.id ?? 'any'}
                   accessibilityRole="radio"
                   accessibilityState={{ checked: on }}
+                  aria-checked={on}
                   accessibilityLabel={`${t('gym.brand')}: ${b.name}`}
                   onPress={() => onPatch({ brandId: b.id })}
                   className={`h-10 justify-center rounded-full px-3 ${on ? 'bg-ink' : 'bg-bg active:bg-line'}`}

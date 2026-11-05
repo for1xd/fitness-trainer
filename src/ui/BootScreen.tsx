@@ -3,6 +3,8 @@ import { useColorScheme, View } from 'react-native';
 
 import { palettes } from '@/theme/tokens';
 
+import { LogoMark } from './Logo';
+
 const SKELETON_AFTER_MS = 300;
 
 /**
@@ -36,7 +38,12 @@ export function BootScreen() {
           </View>
           {block(180)}
         </View>
-      ) : null}
+      ) : (
+        // Той самий знак і місце, що й у статичній заставці public/index.html
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+          <LogoMark size={64} arcColor={colors.accent} stemColor={colors.ink} />
+        </View>
+      )}
     </View>
   );
 }

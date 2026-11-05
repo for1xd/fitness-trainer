@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Switch, View } from 'react-native';
+import { Pressable, View } from 'react-native';
 
 import { formatNumber } from '@/lib/format';
 import { useTweenedNumber } from '@/lib/useTweenedNumber';
@@ -59,6 +59,7 @@ export function WaterCard({ date, weightKg }: Props) {
       <View
         className="h-3 overflow-hidden rounded-full bg-line"
         accessibilityRole="progressbar"
+        aria-label={t('water.title')}
         accessibilityValue={{ min: 0, max: target, now: total }}
       >
         <View
@@ -113,20 +114,44 @@ export function WaterCard({ date, weightKg }: Props) {
         </View>
       ) : null}
 
-      <View className="flex-row items-center gap-3">
+      {/* Увесь рядок — перемикач: велика зона натискання */}
+      <Pressable
+        accessibilityRole="switch"
+        accessibilityLabel={t('water.trainingDay')}
+        accessibilityState={{ checked: isTraining, disabled: planned }}
+        aria-checked={isTraining}
+        disabled={planned}
+        onPress={() => setTrainingDay(date, !isTraining)}
+        className="min-h-12 flex-row items-center gap-3"
+      >
         <View className="flex-1">
           <Text variant="label">{t('water.trainingDay')}</Text>
           <Text variant="caption">{t('water.trainingHint')}</Text>
         </View>
-        <Switch
-          accessibilityLabel={t('water.trainingDay')}
-          value={isTraining}
-          disabled={planned}
-          onValueChange={(v) => setTrainingDay(date, v)}
-          trackColor={{ true: colors['plate-blue'], false: colors.line }}
-          thumbColor={colors.raised}
-        />
-      </View>
+        {/* Лише вигляд перемикача: натискання обробляє весь рядок */}
+        <View
+          pointerEvents="none"
+          aria-hidden
+          style={{
+            width: 44,
+            height: 26,
+            borderRadius: 13,
+            padding: 3,
+            backgroundColor: isTraining ? colors['plate-blue'] : colors.line,
+            opacity: planned ? 0.5 : 1,
+          }}
+        >
+          <View
+            style={{
+              width: 20,
+              height: 20,
+              borderRadius: 10,
+              backgroundColor: colors.raised,
+              transform: [{ translateX: isTraining ? 18 : 0 }],
+            }}
+          />
+        </View>
+      </Pressable>
 
       {total > 0 ? (
         <Button

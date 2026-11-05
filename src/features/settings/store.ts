@@ -21,7 +21,6 @@ export const useSettings = create<SettingsState>()(
       setTheme: (theme) => set({ theme }),
       setLanguage: (language) => set({ language }),
     }),
-    { name: 'settings', storage: persistStorage,
-      ...versioned('settings') },
+    { name: 'settings', storage: persistStorage, ...versioned('settings') },
   ),
 );

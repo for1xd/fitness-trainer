@@ -9,6 +9,7 @@ export function StepProgress({ current, total }: { current: number; total: numbe
     <View
       className="gap-2"
       accessibilityRole="progressbar"
+      aria-label={t('onboarding.stepOf', { current, total })}
       accessibilityValue={{ min: 1, max: total, now: current }}
     >
       <Text variant="caption">{t('onboarding.stepOf', { current, total })}</Text>

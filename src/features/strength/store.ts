@@ -105,8 +105,7 @@ export const useStrength = create<StrengthState>()(
         reset: () => set({ experience: null, estimates: {}, history: [] }),
       };
     },
-    { name: 'strength', storage: persistStorage,
-      ...versioned('strength') },
+    { name: 'strength', storage: persistStorage, ...versioned('strength') },
   ),
 );
 

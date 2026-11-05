@@ -82,8 +82,7 @@ export const useGym = create<GymState>()(
         ),
       reset: () => set({ gym: null }),
     }),
-    { name: 'gym', storage: persistStorage,
-      ...versioned('gym') },
+    { name: 'gym', storage: persistStorage, ...versioned('gym') },
   ),
 );
 

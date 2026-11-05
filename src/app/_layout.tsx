@@ -2,12 +2,6 @@ import '@/global.css';
 import '@/i18n';
 import '@/lib/zodConfig';
 
-import {
-  Manrope_500Medium,
-  Manrope_600SemiBold,
-  Manrope_700Bold,
-} from '@expo-google-fonts/manrope';
-import { Unbounded_600SemiBold, Unbounded_700Bold } from '@expo-google-fonts/unbounded';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
@@ -32,6 +26,7 @@ import { useWorkouts } from '@/features/workouts/store';
 import { startSyncEngine } from '@/lib/sync/engine';
 import { useOutbox } from '@/lib/sync/store';
 import { usePersistHydrated } from '@/lib/usePersistHydrated';
+import { useWebFontsReady } from '@/lib/useWebFontsReady';
 import { ThemeProvider } from '@/theme/ThemeProvider';
 import { NavigationTheme } from '@/theme/NavigationTheme';
 import { BootScreen, ConfirmHost } from '@/ui';
@@ -40,6 +35,13 @@ import { Stack, useStackScreenOptions } from '@/ui/navigation/Stack';
 void SplashScreen.preventAutoHideAsync();
 
 const queryClient = new QueryClient();
+const FONT_FAMILIES = [
+  'Unbounded_600SemiBold',
+  'Unbounded_700Bold',
+  'Manrope_500Medium',
+  'Manrope_600SemiBold',
+  'Manrope_700Bold',
+] as const;
 const PERSISTED_STORES = [
   useAuth,
   useProfile,
@@ -56,12 +58,13 @@ const PERSISTED_STORES = [
 ] as const;
 
 export default function RootLayout() {
+  // Шрифти обрізані до латиниці й кирилиці (scripts/subset-fonts.sh): ~270 КБ замість ~1 МБ
   const [fontsLoaded] = useFonts({
-    Unbounded_600SemiBold,
-    Unbounded_700Bold,
-    Manrope_500Medium,
-    Manrope_600SemiBold,
-    Manrope_700Bold,
+    Unbounded_600SemiBold: require('../../assets/fonts/Unbounded_600SemiBold.ttf'),
+    Unbounded_700Bold: require('../../assets/fonts/Unbounded_700Bold.ttf'),
+    Manrope_500Medium: require('../../assets/fonts/Manrope_500Medium.ttf'),
+    Manrope_600SemiBold: require('../../assets/fonts/Manrope_600SemiBold.ttf'),
+    Manrope_700Bold: require('../../assets/fonts/Manrope_700Bold.ttf'),
   });
   const hydrated = usePersistHydrated(PERSISTED_STORES);
   const language = useSettings((s) => s.language);
@@ -72,7 +75,8 @@ export default function RootLayout() {
     void i18n.changeLanguage(language);
   }, [language]);
 
-  const ready = fontsLoaded && hydrated;
+  const fontsReady = useWebFontsReady(FONT_FAMILIES, fontsLoaded);
+  const ready = fontsReady && hydrated;
   useEffect(() => {
     if (ready) void SplashScreen.hideAsync();
   }, [ready]);
