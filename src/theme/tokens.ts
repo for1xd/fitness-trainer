@@ -4,18 +4,24 @@
  * олімпійських дисків IWF: червоний 25 кг, синій 20, жовтий 15, зелений 10.
  * Кнопки — кольором тексту (ink), щоб акцентні кольори лишались тільки за даними.
  *
+ * Рівні поверхонь: bg (фон) → surface (картки) → raised (поля, підказки); hairline — рамка карток.
+ * accent — один акцентний колір: заповнення кільця калорій, активна вкладка, фокус.
+ * Вторинний текст (muted) ≥ 6,7:1 на всіх поверхнях обох тем (WCAG AA — 4,5).
+ *
  * Палітру даних перевірено валідатором dataviz (світла й темна теми, усі пари, дальтонізм):
  * різниця червоний↔зелений у межі 6–8 ΔE, тому кольорова позначка ЗАВЖДИ має підпис поруч.
  */
 export const palettes = {
   light: {
-    bg: '#E9ECE8',
-    surface: '#F6F7F4',
+    bg: '#E7EAE6',
+    surface: '#F7F8F5',
     raised: '#FFFFFF',
-    ink: '#16191B',
-    muted: '#58605B',
-    line: '#CDD3CD',
-    inverse: '#F6F7F4',
+    ink: '#14171A',
+    muted: '#4D5550',
+    line: '#C9CFC9',
+    hairline: '#DCE0DB',
+    accent: '#6F4FE0',
+    inverse: '#F7F8F5',
     'plate-red': '#C42A30',
     'plate-blue': '#2158B5',
     'plate-yellow': '#D9A80B',
@@ -24,13 +30,15 @@ export const palettes = {
     danger: '#B3261E',
   },
   dark: {
-    bg: '#191C1E',
-    surface: '#222628',
-    raised: '#2B3033',
-    ink: '#ECEFEA',
-    muted: '#9AA29C',
-    line: '#383E41',
-    inverse: '#16191B',
+    bg: '#101315',
+    surface: '#1C2023',
+    raised: '#282D31',
+    ink: '#EEF1EC',
+    muted: '#AEB6B0',
+    line: '#3C4348',
+    hairline: '#2A3034',
+    accent: '#9A7BF2',
+    inverse: '#14171A',
     'plate-red': '#E04862',
     'plate-blue': '#7B8BEA',
     'plate-yellow': '#B8890F',

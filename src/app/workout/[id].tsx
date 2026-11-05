@@ -104,7 +104,7 @@ export default function WorkoutDetailScreen() {
         return (
           <View
             key={`${sets[0]!.position}-${sets[0]!.exerciseId}`}
-            className="gap-2 rounded-2xl bg-surface p-4"
+            className="gap-2 rounded-card border border-hairline bg-surface p-4"
           >
             <Text variant="heading">{ex?.name_uk ?? sets[0]!.exerciseId}</Text>
             {sets.map((s) => (

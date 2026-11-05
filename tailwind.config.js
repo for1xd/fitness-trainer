@@ -14,6 +14,8 @@ module.exports = {
         ink: c('ink'),
         muted: c('muted'),
         line: c('line'),
+        hairline: c('hairline'),
+        accent: c('accent'),
         inverse: c('inverse'),
         // Кольори дисків (IWF): кодують дані, а не прикрашають
         protein: c('plate-red'),
@@ -32,6 +34,8 @@ module.exports = {
       },
       borderRadius: {
         plate: '999px',
+        /** Єдиний радіус карток */
+        card: '20px',
       },
     },
   },

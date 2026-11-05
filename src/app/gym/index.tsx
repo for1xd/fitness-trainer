@@ -78,7 +78,7 @@ export default function GymScreen() {
       {CATEGORIES.map((cat) => (
         <View key={cat} className="gap-2">
           <Text variant="heading">{t(`gym.categories.${cat}`)}</Text>
-          <View className="overflow-hidden rounded-2xl bg-surface">
+          <View className="overflow-hidden rounded-card border border-hairline bg-surface">
             {MACHINE_TYPES.filter((m) => m.category === cat).map((m, i) => (
               <MachineRow
                 key={m.id}
@@ -149,7 +149,7 @@ function MachineRow({
           <ScrollView
             horizontal
             showsHorizontalScrollIndicator={false}
-            contentContainerClassName="gap-1.5"
+            contentContainerClassName="gap-2"
           >
             {[{ id: undefined, name: t('gym.brandAny') }, ...BRANDS].map((b) => {
               const on = item.brandId === b.id;

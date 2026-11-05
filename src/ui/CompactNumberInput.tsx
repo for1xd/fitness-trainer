@@ -44,7 +44,7 @@ export function CompactNumberInput({
     <View
       style={{ width }}
       className={`h-12 flex-row items-center justify-center rounded-xl border-2 bg-raised px-2 ${
-        focused ? 'border-ink' : 'border-line'
+        focused ? 'border-accent' : 'border-line'
       } ${editable ? '' : 'opacity-60'}`}
     >
       <TextInput

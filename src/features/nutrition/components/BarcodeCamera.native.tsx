@@ -16,7 +16,7 @@ export function BarcodeCamera({ onScanned, paused }: BarcodeCameraProps) {
   if (!permission) return null;
   if (!permission.granted) {
     return (
-      <View className="gap-3 rounded-3xl bg-surface p-4">
+      <View className="gap-3 rounded-card border border-hairline bg-surface p-4">
         <Text variant="body">{t('barcode.permission')}</Text>
         <Button label={t('barcode.allowCamera')} onPress={() => void requestPermission()} />
       </View>

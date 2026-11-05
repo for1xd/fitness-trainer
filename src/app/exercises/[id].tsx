@@ -46,7 +46,7 @@ export default function ExerciseScreen() {
       <Header title={exercise.name_uk} />
 
       {/* Місце під GIF / відео техніки */}
-      <View className="aspect-video items-center justify-center gap-2 rounded-3xl bg-surface">
+      <View className="aspect-video items-center justify-center gap-2 rounded-card border border-hairline bg-surface">
         <MaterialCommunityIcons name="play-circle-outline" size={40} color={colors.muted} />
         <Text variant="caption">{t('exercises.media')}</Text>
       </View>
@@ -55,7 +55,7 @@ export default function ExerciseScreen() {
         <Notice tone="warn" text={t('exercises.notInGym')} />
       ) : null}
 
-      <View className="gap-3 rounded-2xl bg-surface p-4">
+      <View className="gap-3 rounded-card border border-hairline bg-surface p-4">
         <Row label={t('exercises.primary')} value={muscles([exercise.primary_muscle_id])} />
         {exercise.secondary_muscle_ids.length ? (
           <Row label={t('exercises.secondary')} value={muscles(exercise.secondary_muscle_ids)} />
@@ -96,7 +96,7 @@ export default function ExerciseScreen() {
       {alts.length ? (
         <View className="gap-2">
           <Text variant="heading">{t('exercises.alternatives')}</Text>
-          <View className="overflow-hidden rounded-2xl bg-surface">
+          <View className="overflow-hidden rounded-card border border-hairline bg-surface">
             {alts.map((a, i) => (
               <Pressable
                 key={a.id}
@@ -119,7 +119,7 @@ export default function ExerciseScreen() {
 
 function Row({ label, value }: { label: string; value: string }) {
   return (
-    <View className="gap-0.5">
+    <View className="gap-1">
       <Text variant="caption">{label}</Text>
       <Text variant="body">{value}</Text>
     </View>

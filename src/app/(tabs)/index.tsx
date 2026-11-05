@@ -46,7 +46,8 @@ export default function TodayScreen() {
       <View className="flex-row gap-3">
         <Button
           label={t('nutrition.addFood')}
-          className="flex-[2]"
+          compact
+          className="flex-1"
           onPress={() =>
             router.push({
               pathname: '/food/add',
@@ -70,7 +71,7 @@ export default function TodayScreen() {
 
       <WaterCard date={today} weightKg={latestWeightKg(weights) ?? targets.weightKg} />
 
-      <View className="gap-4 rounded-3xl bg-surface p-4">
+      <View className="gap-4 rounded-card border border-hairline bg-surface p-4">
         <View className="gap-1">
           <Text variant="heading">{t('today.weighIn')}</Text>
           <Text variant="caption">{t('today.weighInHint')}</Text>

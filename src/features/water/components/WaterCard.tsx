@@ -40,7 +40,7 @@ export function WaterCard({ date, weightKg }: Props) {
   const liters = (ml: number) => formatNumber(ml / 1000, 2);
 
   return (
-    <View className="gap-4 rounded-3xl bg-surface p-4">
+    <View className="gap-4 rounded-card border border-hairline bg-surface p-4">
       <View className="flex-row items-end justify-between">
         <View>
           <Text variant="heading">{t('water.title')}</Text>

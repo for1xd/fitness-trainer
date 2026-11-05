@@ -69,7 +69,7 @@ export function LineChart({ series, xLabels, height = 200, formatY, xEvery }: Pr
       {series.length > 1 ? (
         <View className="flex-row flex-wrap gap-4" importantForAccessibility="no-hide-descendants">
           {series.map((s) => (
-            <View key={s.key} className="flex-row items-center gap-1.5">
+            <View key={s.key} className="flex-row items-center gap-2">
               {s.dotsOnly ? (
                 <View style={{ width: 8, height: 8, borderRadius: 4, backgroundColor: s.color }} />
               ) : (
@@ -210,13 +210,13 @@ export function LineChart({ series, xLabels, height = 200, formatY, xEvery }: Pr
               left: Math.min(Math.max(0, x(index) - 70), width - 140),
               width: 140,
             }}
-            className="gap-0.5 rounded-xl bg-raised px-3 py-2 shadow-sm"
+            className="gap-1 rounded-xl bg-raised px-3 py-2 shadow-sm"
           >
             <Text variant="caption">{xLabels[index]}</Text>
             {series.map((s) => {
               const v = s.values[index];
               return v === null || v === undefined ? null : (
-                <View key={s.key} className="flex-row items-center gap-1.5">
+                <View key={s.key} className="flex-row items-center gap-2">
                   <View style={{ width: 10, height: 2, backgroundColor: s.color }} />
                   <Text variant="label">{formatY(v)}</Text>
                   <Text variant="caption">{s.label}</Text>

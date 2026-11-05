@@ -12,7 +12,7 @@ export function StepProgress({ current, total }: { current: number; total: numbe
       accessibilityValue={{ min: 1, max: total, now: current }}
     >
       <Text variant="caption">{t('onboarding.stepOf', { current, total })}</Text>
-      <View className="flex-row gap-1.5">
+      <View className="flex-row gap-2">
         {Array.from({ length: total }, (_, i) => (
           <View
             key={i}

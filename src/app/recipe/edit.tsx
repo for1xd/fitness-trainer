@@ -114,7 +114,7 @@ export default function RecipeEditScreen() {
         {ingredients.length === 0 ? (
           <Text variant="caption">{t('recipe.noIngredients')}</Text>
         ) : (
-          <View className="overflow-hidden rounded-2xl bg-surface">
+          <View className="overflow-hidden rounded-card border border-hairline bg-surface">
             {ingredients.map((i, idx) => (
               <View
                 key={i.id}
@@ -163,7 +163,7 @@ export default function RecipeEditScreen() {
           autoCorrect={false}
         />
         {deferred.trim() ? (
-          <View className="overflow-hidden rounded-2xl bg-surface">
+          <View className="overflow-hidden rounded-card border border-hairline bg-surface">
             {results.map((f, idx) => (
               <FoodRow key={f.id} {...f} first={idx === 0} onPress={() => addIngredient(f)} />
             ))}
@@ -196,7 +196,7 @@ export default function RecipeEditScreen() {
       </View>
 
       {ingredients.length > 0 ? (
-        <View className="gap-3 rounded-2xl bg-surface p-4">
+        <View className="gap-3 rounded-card border border-hairline bg-surface p-4">
           <Totals
             title={t('recipe.perServing', { grams: formatNumber(totals.servingG) })}
             n={{

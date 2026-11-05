@@ -91,7 +91,7 @@ export default function ExercisesScreen() {
           {t('exercises.empty')}
         </Text>
       ) : (
-        <View className="overflow-hidden rounded-2xl bg-surface">
+        <View className="overflow-hidden rounded-card border border-hairline bg-surface">
           {list.map((e, i) => {
             const available = isAvailable(e, equipment);
             return (
@@ -99,7 +99,7 @@ export default function ExercisesScreen() {
                 key={e.id}
                 accessibilityRole="link"
                 onPress={() => router.push({ pathname: '/exercises/[id]', params: { id: e.id } })}
-                className={`min-h-16 flex-row items-center gap-3 px-4 py-2.5 active:bg-line ${i ? 'border-t border-line' : ''}`}
+                className={`min-h-16 flex-row items-center gap-3 px-4 py-3 active:bg-line ${i ? 'border-t border-line' : ''}`}
               >
                 <GroupDots groups={[muscleGroupOf(e.id) ?? 'core']} size={10} />
                 <View className="flex-1">

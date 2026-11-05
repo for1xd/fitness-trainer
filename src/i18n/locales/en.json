@@ -157,14 +157,15 @@
   },
   "nutrition": {
     "title": "Food",
-    "eaten": "Eaten {{eaten}} of {{target}} kcal",
     "left": "left",
-    "over": "over target",
+    "over": "over",
     "addTo": "Add to {{meal}}",
     "emptyMeal": "Nothing yet",
     "recipes": "My recipes",
     "macroOf": "{{eaten}} of {{target}} g",
-    "addFood": "Add food"
+    "addFood": "Add food",
+    "eatenLabel": "Eaten",
+    "ofTarget": "of {{target}} kcal"
   },
   "workouts": {
     "title": "Workouts",
@@ -206,7 +207,7 @@
     "nextWeek": "Next week",
     "report": "Weekly report",
     "tiles": {
-      "kcal": "Average calories",
+      "kcal": "Avg calories",
       "kcalOf": "target {{target}}",
       "protein": "Protein on target",
       "water": "Water on target",
@@ -248,7 +249,13 @@
     "heatmapSub": "Sets this week: primary muscle 1, secondary 0.5. For growth aim for 10–20.",
     "front": "Front",
     "back": "Back",
-    "bins": ["0", "1–4", "5–9", "10–19", "20+"],
+    "bins": [
+      "0",
+      "1–4",
+      "5–9",
+      "10–19",
+      "20+"
+    ],
     "setsShort": "{{n}} sets"
   },
   "profile": {

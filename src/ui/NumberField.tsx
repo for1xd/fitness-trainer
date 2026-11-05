@@ -82,7 +82,7 @@ export function NumberField({
         <StepButton symbol="−" label={t('common.decrease')} onPress={() => bump(-1)} />
         <View
           className={`h-14 flex-1 flex-row items-center justify-center rounded-2xl border-2 bg-raised px-3 ${
-            error ? 'border-danger' : focused ? 'border-ink' : 'border-line'
+            error ? 'border-danger' : focused ? 'border-accent' : 'border-line'
           }`}
         >
           <TextInput
@@ -135,7 +135,7 @@ function StepButton({
       accessibilityRole="button"
       accessibilityLabel={label}
       onPress={onPress}
-      className="h-14 w-14 items-center justify-center rounded-2xl bg-surface active:bg-line"
+      className="h-14 w-14 items-center justify-center rounded-card border border-hairline bg-surface active:bg-line"
     >
       <Text variant="number">{symbol}</Text>
     </Pressable>

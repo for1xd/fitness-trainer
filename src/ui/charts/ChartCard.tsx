@@ -19,7 +19,7 @@ export function ChartCard({ title, subtitle, right, table, children }: Props) {
   const { t } = useTranslation();
   const [asTable, setAsTable] = useState(false);
   return (
-    <View className="gap-3 rounded-3xl bg-surface p-4">
+    <View className="gap-3 rounded-card border border-hairline bg-surface p-4">
       <View className="flex-row items-start gap-2">
         <View className="flex-1">
           <Text variant="heading">{title}</Text>

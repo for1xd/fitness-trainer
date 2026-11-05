@@ -187,6 +187,6 @@ function PhotoImage({ photo, label }: { photo: ProgressPhoto; label: string }) {
       resizeMode="cover"
     />
   ) : (
-    <View className="aspect-[3/4] w-full rounded-2xl bg-surface" accessibilityLabel={label} />
+    <View className="aspect-[3/4] w-full rounded-card border border-hairline bg-surface" accessibilityLabel={label} />
   );
 }

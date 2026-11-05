@@ -212,7 +212,7 @@ export default function MealPhotoScreen() {
         {phase.notes ? <Text variant="caption">{phase.notes}</Text> : null}
 
         {items.length ? (
-          <View className="overflow-hidden rounded-2xl bg-surface">
+          <View className="overflow-hidden rounded-card border border-hairline bg-surface">
             {items.map((item, i) => {
               const n = reviewItemNutrients(item);
               const level = confidenceLevel(item.confidence);

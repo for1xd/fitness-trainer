@@ -13,7 +13,7 @@ interface Props {
 export function Notice({ text, tone = 'info' }: Props) {
   const { colors } = useTheme();
   return (
-    <View className="flex-row gap-3 rounded-2xl bg-surface p-4">
+    <View className="flex-row gap-3 rounded-card border border-hairline bg-surface p-4">
       <MaterialCommunityIcons
         name={tone === 'warn' ? 'alert-outline' : 'information-outline'}
         size={22}

@@ -36,7 +36,7 @@ export function TextField({
       {hideLabel ? null : <Text variant="label">{label}</Text>}
       <View
         className={`h-14 flex-row items-center gap-2 rounded-2xl border-2 bg-raised px-4 ${
-          error ? 'border-danger' : focused ? 'border-ink' : 'border-line'
+          error ? 'border-danger' : focused ? 'border-accent' : 'border-line'
         }`}
       >
         {icon ? <MaterialCommunityIcons name={icon} size={22} color={colors.muted} /> : null}

@@ -31,16 +31,20 @@ export default function NutritionScreen() {
 
   return (
     <Screen>
-      <View className="flex-row items-center gap-1">
-        <Text variant="title" className="flex-1">
-          {t('nutrition.title')}
-        </Text>
+      <Text variant="title">{t('nutrition.title')}</Text>
+      {/* Навігація по днях: ‹ дата › — «вперед» неактивна на сьогодні */}
+      <View className="flex-row items-center justify-between gap-2 rounded-card border border-hairline bg-surface p-1">
         <IconButton
           icon="chevron-left"
           label={t('common.prevDay')}
           onPress={() => setDate(addDaysIso(date, -1))}
         />
-        <Text variant="label" className="min-w-24 text-center" accessibilityLiveRegion="polite">
+        <Text
+          variant="label"
+          numberOfLines={1}
+          className="flex-1 text-center"
+          accessibilityLiveRegion="polite"
+        >
           {dateLabel}
         </Text>
         <IconButton

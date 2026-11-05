@@ -23,7 +23,7 @@ export function TargetsSummary({ targets, waterMl, label }: Props) {
         <Text variant="caption">{label}</Text>
       </View>
       <PlateLoad proteinG={targets.proteinG} fatG={targets.fatG} carbsG={targets.carbsG} />
-      <View className="flex-row items-center gap-3 rounded-2xl bg-surface px-4 py-3">
+      <View className="flex-row items-center gap-3 rounded-card border border-hairline bg-surface px-4 py-3">
         <View className="h-8 w-1.5 rounded-full bg-water" />
         <Text variant="label" className="flex-1">
           {t('result.water')}

@@ -81,7 +81,7 @@ export default function WorkoutsScreen() {
       </View>
 
       {active ? (
-        <View className="gap-3 rounded-3xl bg-surface p-4">
+        <View className="gap-3 rounded-card border border-hairline bg-surface p-4">
           <Text variant="heading">{active.name}</Text>
           <Button label={t('workouts.continue')} onPress={() => router.push('/workout/live')} />
         </View>
@@ -98,7 +98,7 @@ export default function WorkoutsScreen() {
           }
         />
       ) : (
-        <View className="gap-1 rounded-3xl bg-surface p-4">
+        <View className="gap-1 rounded-card border border-hairline bg-surface p-4">
           <Text variant="heading">{t('workouts.restDay')}</Text>
           {next ? (
             <Text variant="caption">
@@ -147,7 +147,7 @@ export default function WorkoutsScreen() {
       {recent.length ? (
         <View className="gap-2">
           <Text variant="heading">{t('workouts.history')}</Text>
-          <View className="overflow-hidden rounded-2xl bg-surface">
+          <View className="overflow-hidden rounded-card border border-hairline bg-surface">
             {recent.map((w, i) => (
               <Pressable
                 key={w.id}
@@ -180,13 +180,13 @@ function WeekStrip({ week, today }: { week: ReturnType<typeof dayStatus>[]; toda
       accessibilityRole="link"
       accessibilityLabel={t('workouts.calendar')}
       onPress={() => router.push('/calendar')}
-      className="flex-row justify-between rounded-2xl bg-surface px-2 py-3 active:opacity-80"
+      className="flex-row justify-between rounded-card border border-hairline bg-surface px-2 py-3 active:opacity-80"
     >
       {week.map((d, i) => {
         const isToday = d.date === today;
         const done = d.doneWorkoutIds.length > 0;
         return (
-          <View key={d.date} className="flex-1 items-center gap-1.5">
+          <View key={d.date} className="flex-1 items-center gap-2">
             <Text variant="caption">{t(`weekdays.${i + 1}` as 'weekdays.1')}</Text>
             <View
               className={`h-9 w-9 items-center justify-center rounded-full ${isToday ? 'border-2 border-ink' : ''} ${done ? 'bg-ink' : ''}`}
@@ -216,7 +216,7 @@ function Links({
 }) {
   const { colors } = useTheme();
   return (
-    <View className="overflow-hidden rounded-2xl bg-surface">
+    <View className="overflow-hidden rounded-card border border-hairline bg-surface">
       {links.map((l, i) => (
         <Pressable
           key={l.label}

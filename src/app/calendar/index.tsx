@@ -149,7 +149,7 @@ export default function CalendarScreen() {
               onPress={() => setSelected(addDaysIso(selected, 7))}
             />
           </View>
-          <View className="overflow-hidden rounded-2xl bg-surface">
+          <View className="overflow-hidden rounded-card border border-hairline bg-surface">
             {week.map((d, i) => {
               const st = status(d);
               const name = st.doneWorkoutIds.length
@@ -194,7 +194,7 @@ export default function CalendarScreen() {
             key={w.id}
             accessibilityRole="link"
             onPress={() => router.push({ pathname: '/workout/[id]', params: { id: w.id } })}
-            className="flex-row items-center gap-3 rounded-2xl bg-surface p-4 active:opacity-80"
+            className="flex-row items-center gap-3 rounded-card border border-hairline bg-surface p-4 active:opacity-80"
           >
             <GroupDots groups={groupsOfWorkout(w)} size={10} />
             <View className="flex-1">

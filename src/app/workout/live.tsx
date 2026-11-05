@@ -365,7 +365,7 @@ export default function LiveWorkoutScreen() {
       {swapOpen && exercise ? (
         <View className="gap-2">
           <Text variant="heading">{t('live.swapTitle')}</Text>
-          <View className="overflow-hidden rounded-2xl bg-surface">
+          <View className="overflow-hidden rounded-card border border-hairline bg-surface">
             {alternatives(exercise, EXERCISES, equipment).map((a, k) => (
               <Pressable
                 key={a.id}

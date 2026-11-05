@@ -3,6 +3,7 @@ import { Tabs } from 'expo-router';
 import type { ComponentProps } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useWindowDimensions } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { useTheme } from '@/theme/ThemeProvider';
 
@@ -28,6 +29,9 @@ export default function TabsLayout() {
   const { colors } = useTheme();
   const { width } = useWindowDimensions();
   const wide = width >= WIDE_BREAKPOINT;
+  const insets = useSafeAreaInsets();
+  // Таб-бар піднято над системною смугою (home indicator): відступ = safe area + 8
+  const bottomPad = insets.bottom + 8;
 
   return (
     <Tabs
@@ -35,18 +39,20 @@ export default function TabsLayout() {
         headerShown: false,
         tabBarPosition: wide ? 'left' : 'bottom',
         tabBarLabelPosition: wide ? 'beside-icon' : 'below-icon',
-        tabBarActiveTintColor: colors.ink,
+        tabBarActiveTintColor: wide ? colors.ink : colors.accent,
         tabBarInactiveTintColor: colors.muted,
         tabBarActiveBackgroundColor: wide ? colors.surface : undefined,
         tabBarStyle: {
-          backgroundColor: colors.bg,
-          borderTopColor: colors.line,
+          backgroundColor: colors.surface,
+          borderTopColor: colors.hairline,
           borderRightColor: colors.line,
-          ...(wide ? { width: 232, paddingTop: 24 } : { minHeight: 64 }),
+          ...(wide
+            ? { width: 232, paddingTop: 24 }
+            : { height: 64 + bottomPad, paddingTop: 6, paddingBottom: bottomPad }),
         },
         tabBarItemStyle: wide
           ? { borderRadius: 12, marginHorizontal: 12, minHeight: 48 }
-          : undefined,
+          : { minHeight: 52, paddingVertical: 2 },
         tabBarLabelStyle: { fontFamily: 'Manrope_600SemiBold', fontSize: wide ? 15 : 11 },
         sceneStyle: { backgroundColor: colors.bg },
       }}

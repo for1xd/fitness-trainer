@@ -97,7 +97,7 @@ export default function StrengthScreen() {
         const r = estimateFor(lift);
         const current = saved[BASE_LIFT_EXERCISE[lift]];
         return (
-          <View key={lift} className="gap-3 rounded-3xl bg-surface p-4">
+          <View key={lift} className="gap-3 rounded-card border border-hairline bg-surface p-4">
             <View>
               <Text variant="heading">{t(`strength.lifts.${lift}`)}</Text>
               {current ? (

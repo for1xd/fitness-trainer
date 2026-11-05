@@ -20,7 +20,7 @@ interface Props {
 export function ProgramDayCard({ name, muscleFocus, exercises, eyebrow, footer }: Props) {
   const { t } = useTranslation();
   return (
-    <View className="gap-3 rounded-3xl bg-surface p-4">
+    <View className="gap-3 rounded-card border border-hairline bg-surface p-4">
       <View className="gap-1">
         {eyebrow ? <Text variant="caption">{eyebrow}</Text> : null}
         <View className="flex-row items-center gap-3">

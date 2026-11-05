@@ -37,7 +37,7 @@ export function PlateLoad({ proteinG, fatG, carbsG }: Props) {
       <View className="h-28 flex-row items-center">
         {/* замок грифа */}
         <View className="h-10 w-3 rounded-sm bg-muted" />
-        <View className="h-full flex-1 flex-row items-center gap-[3px] pl-[3px]">
+        <View className="h-full flex-1 flex-row items-center gap-[3px] pl-1">
           {plates.map((p, i) => (
             <View
               key={p.key}
@@ -51,8 +51,8 @@ export function PlateLoad({ proteinG, fatG, carbsG }: Props) {
       </View>
       <View className="flex-row">
         {plates.map((p) => (
-          <View key={p.key} className="flex-1 gap-0.5">
-            <View className="flex-row items-center gap-1.5">
+          <View key={p.key} className="flex-1 gap-1">
+            <View className="flex-row items-center gap-2">
               <View className={`h-2.5 w-2.5 rounded-full ${p.color}`} />
               <Text variant="caption">{t(`result.${p.key}`)}</Text>
             </View>

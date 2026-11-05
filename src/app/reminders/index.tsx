@@ -48,7 +48,7 @@ export default function RemindersScreen() {
         const r = reminders[type];
         const parsed = parseTime(times[type]);
         return (
-          <View key={type} className="gap-3 rounded-3xl bg-surface p-4">
+          <View key={type} className="gap-3 rounded-card border border-hairline bg-surface p-4">
             <View className="flex-row items-center gap-3">
               <View className="flex-1">
                 <Text variant="heading">{t(`reminders.types.${type}.title`)}</Text>

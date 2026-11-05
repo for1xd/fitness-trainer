@@ -62,7 +62,7 @@ export default function ProfileScreen() {
       <Text variant="title">{t('profile.title')}</Text>
 
       {profile ? (
-        <View className="gap-3 rounded-3xl bg-surface p-4">
+        <View className="gap-3 rounded-card border border-hairline bg-surface p-4">
           <Text variant="heading">{t('profile.params')}</Text>
           <Text variant="body">
             {t('profile.summary', {
@@ -84,7 +84,7 @@ export default function ProfileScreen() {
         </View>
       ) : null}
 
-      <View className="overflow-hidden rounded-2xl bg-surface">
+      <View className="overflow-hidden rounded-card border border-hairline bg-surface">
         {(
           [
             ['reminders', '/reminders', 'bell-outline'],

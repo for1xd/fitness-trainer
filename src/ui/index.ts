@@ -13,3 +13,4 @@ export { IconButton } from './IconButton';
 export { Ring } from './Ring';
 export { TextField } from './TextField';
 export { CompactNumberInput } from './CompactNumberInput';
+export { FitText } from './FitText';

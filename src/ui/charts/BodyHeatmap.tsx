@@ -175,7 +175,7 @@ export function BodyHeatmap({ binOf, labels, accessibilityLabel }: Props) {
         importantForAccessibility="no-hide-descendants"
       >
         {labels.bins.map((l, bin) => (
-          <View key={l} className="flex-row items-center gap-1.5">
+          <View key={l} className="flex-row items-center gap-2">
             <View
               style={{
                 width: 12,

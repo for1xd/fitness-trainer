@@ -126,7 +126,7 @@ export function ColumnChart({
             left: Math.min(Math.max(0, cx(index) - 70), width - 140),
             width: 140,
           }}
-          className="gap-0.5 rounded-xl bg-raised px-3 py-2 shadow-sm"
+          className="gap-1 rounded-xl bg-raised px-3 py-2 shadow-sm"
         >
           <Text variant="label">{formatY(values[index] ?? 0)}</Text>
           <Text variant="caption">{tooltipLabels[index]}</Text>

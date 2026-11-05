@@ -146,7 +146,7 @@ export default function NewProgramScreen() {
 
       <View className="gap-2">
         <Text variant="label">{t('programNew.weekdays')}</Text>
-        <View className="flex-row gap-1.5">
+        <View className="flex-row gap-2">
           {[1, 2, 3, 4, 5, 6, 7].map((d) => {
             const on = weekdays.includes(d);
             return (

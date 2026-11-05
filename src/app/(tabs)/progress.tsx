@@ -177,7 +177,7 @@ export default function ProgressScreen() {
           {tiles.map((tile) => (
             <View
               key={tile.label}
-              className="min-w-[150px] flex-1 basis-[30%] gap-0.5 rounded-2xl bg-surface p-3"
+              className="min-w-[150px] flex-1 basis-[30%] gap-1 rounded-card border border-hairline bg-surface p-3"
             >
               <Text variant="caption" numberOfLines={1}>
                 {tile.label}

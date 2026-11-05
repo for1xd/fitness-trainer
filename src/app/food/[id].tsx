@@ -156,12 +156,12 @@ export default function FoodPortionScreen() {
         </Text>
       </View>
 
-      <View className="flex-row rounded-2xl bg-surface p-4">
+      <View className="flex-row rounded-card border border-hairline bg-surface p-4">
         {(['protein', 'fat', 'carbs'] as const).map((k) => {
           const value = preview ? preview[`${k}G`] : 0;
           return (
-            <View key={k} className="flex-1 gap-0.5">
-              <View className="flex-row items-center gap-1.5">
+            <View key={k} className="flex-1 gap-1">
+              <View className="flex-row items-center gap-2">
                 <View className={`h-2.5 w-2.5 rounded-full ${DOT[k]}`} />
                 <Text variant="caption">{t(`result.${k}`)}</Text>
               </View>

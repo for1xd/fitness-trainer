@@ -30,7 +30,7 @@ export function MealSection({ group, date }: Props) {
         ) : null}
         <IconButton icon="plus" label={t('nutrition.addTo', { meal: mealName })} onPress={add} />
       </View>
-      <View className="overflow-hidden rounded-2xl bg-surface">
+      <View className="overflow-hidden rounded-card border border-hairline bg-surface">
         {group.entries.length === 0 ? (
           <Pressable
             accessibilityRole="button"
