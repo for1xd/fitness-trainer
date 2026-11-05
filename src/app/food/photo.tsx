@@ -26,6 +26,7 @@ import { MEAL_TYPES, type MealType } from '@/features/nutrition/types';
 import { todayIso } from '@/lib/dates';
 import { formatNumber } from '@/lib/format';
 import { artifactCanSendImages } from '@/lib/artifactHost';
+import { checkPickedImage } from '@/lib/imageCheck';
 import { isSupabaseConfigured } from '@/lib/supabase';
 import { useTheme } from '@/theme/ThemeProvider';
 import {
@@ -95,6 +96,12 @@ export default function MealPhotoScreen() {
           : await ImagePicker.launchImageLibraryAsync(options);
       const asset = picked.canceled ? undefined : picked.assets[0];
       if (!asset) return;
+      // Лише зображення розумного розміру; далі фото перекодовується (зменшення, без EXIF)
+      const invalid = checkPickedImage(asset);
+      if (invalid) {
+        setPhase({ kind: 'error', key: invalid });
+        return;
+      }
       setPhase({ kind: 'analyzing', uri: asset.uri });
       const photo = await preparePhoto(asset.uri, asset.width, asset.height);
       const result = await analyzeMealPhoto(photo.base64, hint);

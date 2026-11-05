@@ -1,3 +1,5 @@
+import { checkPickedImage } from '@/lib/imageCheck';
+import { storeImageLocally } from '@/lib/localImage';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import * as ImagePicker from 'expo-image-picker';
 import { router } from 'expo-router';
@@ -116,8 +118,17 @@ function MachineRow({
   const branded = machine.category !== 'free';
 
   const pickPhoto = async () => {
-    const res = await ImagePicker.launchImageLibraryAsync({ mediaTypes: ['images'], quality: 0.6 });
-    if (!res.canceled && res.assets[0]) onPatch({ photoUri: res.assets[0].uri });
+    const res = await ImagePicker.launchImageLibraryAsync({ mediaTypes: ['images'], quality: 1 });
+    const asset = res.canceled ? undefined : res.assets[0];
+    if (!asset || checkPickedImage(asset)) return;
+    // Зменшене перекодоване фото: без EXIF (геолокації) і переживає перезавантаження у браузері
+    const stored = await storeImageLocally(
+      asset.uri,
+      `gym-${machine.id}`,
+      asset.width,
+      asset.height,
+    ).catch(() => null);
+    if (stored) onPatch({ photoUri: stored.uri });
   };
 
   return (

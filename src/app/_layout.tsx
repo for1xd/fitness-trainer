@@ -1,5 +1,6 @@
 import '@/global.css';
 import '@/i18n';
+import '@/lib/zodConfig';
 
 import {
   Manrope_500Medium,

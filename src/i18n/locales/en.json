@@ -626,7 +626,8 @@
       "notFood": "No food visible in the photo. Take a closer photo of the plate.",
       "network": "Can't reach the server. Check your connection and try again.",
       "generic": "Couldn't recognise the meal. Try again or add food manually.",
-      "artifactDenied": "Photo recognition is off here: Claude access isn't allowed for this artifact. You can turn it on in the artifact's Permissions menu."
+      "artifactDenied": "Photo recognition is off here: Claude access isn't allowed for this artifact. You can turn it on in the artifact's Permissions menu.",
+      "badType": "This isn’t a photo. Use JPEG, PNG, WebP or HEIC."
     },
     "permission": "To photograph food, allow camera access in your phone settings.",
     "artifactNote": "In this version Claude recognises the photo through your claude.ai account: it asks for permission the first time, and requests use your Claude limit."
@@ -671,7 +672,7 @@
   },
   "photosScreen": {
     "title": "Before and after photos",
-    "private": "Photos are private. Without an account they stay on this device; with an account they're in your private storage.",
+    "private": "Photos are private: they are stored in your personal space and nobody else can see them. Before saving, photos are downsized and location data (EXIF) is removed.",
     "angle": "Angle",
     "angles": {
       "front": "Front",
@@ -689,7 +690,7 @@
     "deleteTitle": "Delete the photo from {{date}}?",
     "deleteBody": "The photo will be removed from this device and from cloud storage.",
     "saving": "Saving photo…",
-    "error": "Couldn't save the photo. Try again.",
+    "error": "Couldn’t save the photo. Use JPEG, PNG, WebP or HEIC up to 20 MB.",
     "photoOf": "{{angle}} photo, {{date}}"
   },
   "reminders": {

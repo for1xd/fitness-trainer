@@ -148,6 +148,20 @@ async function onboard(page) {
   if (!(await a.page.locator('text="0,25" >> visible=true').count())) fail('water not restored by import');
   console.log('  export → reset → import: ok');
 
+  // Файл із невідомим полем відхиляється цілком
+  const evil = JSON.parse(exported);
+  evil.stores.water.hacked = '<img src=x onerror=alert(1)>';
+  fs.writeFileSync(path.join(OUT, 'evil.json'), JSON.stringify(evil));
+  await a.page.goto(BASE + '/profile');
+  const chooser2 = a.page.waitForEvent('filechooser');
+  await vis(a.page, 'Імпортувати з файлу').click();
+  await (await chooser2).setFiles(path.join(OUT, 'evil.json'));
+  await vis(a.page, 'Замінити').click();
+  await vis(a.page, 'Файл не схожий на експорт цього застосунку.').waitFor();
+  const water = JSON.parse(await a.page.evaluate(() => localStorage.getItem('water')));
+  if ('hacked' in water.state) fail('unknown field imported');
+  console.log('  import with unknown field rejected: ok');
+
   await browser.close(); server.close();
   console.log(process.exitCode ? 'FAILED' : 'all data checks passed');
 })().catch((e) => { console.error(e); server.close(); process.exit(1); });

@@ -178,6 +178,7 @@ export default function LiveWorkoutScreen() {
             accessibilityLabel={t('live.notes')}
             value={notes}
             onChangeText={setNotes}
+            maxLength={1000}
             placeholder={t('live.notesPlaceholder')}
             placeholderTextColor={colors.muted}
             multiline

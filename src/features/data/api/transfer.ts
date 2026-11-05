@@ -13,6 +13,8 @@ import { useWorkouts } from '@/features/workouts/store';
 import { flushAll } from '@/lib/cloud/storage';
 import { useOutbox } from '@/lib/sync/store';
 
+import { isValidStoreState } from '../logic/validateState';
+
 import {
   buildEnvelope,
   EXPORTED_STORES,
@@ -66,14 +68,18 @@ export async function importJson(
 ): Promise<{ ok: true } | { ok: false; error: ImportError }> {
   const parsed = parseEnvelope(text);
   if (!parsed.ok) return parsed;
+  // Спершу перевіряємо всі розділи — файл або приймається повністю, або не змінює нічого
+  for (const name of EXPORTED_STORES) {
+    const state = parsed.stores[name];
+    const initial = STORES[name].getInitialState() as Record<string, unknown>;
+    if (state && !isValidStoreState(state, initial)) return { ok: false, error: 'wrongFormat' };
+  }
   for (const name of EXPORTED_STORES) {
     const state = parsed.stores[name];
     if (!state) continue;
-    // Повна заміна: спершу початковий стан, потім лише відомі поля з файлу
+    // Повна заміна: початковий стан + поля з файлу (уже перевірені)
     const hook = STORES[name];
-    const initial = hook.getInitialState() as Record<string, unknown>;
-    const known = Object.fromEntries(Object.entries(state).filter(([k]) => k in initial));
-    hook.setState({ ...initial, ...known });
+    hook.setState({ ...(hook.getInitialState() as Record<string, unknown>), ...state });
   }
   await flushAll();
   return { ok: true };

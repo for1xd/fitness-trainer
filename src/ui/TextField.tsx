@@ -16,6 +16,9 @@ interface Props extends TextInputProps {
   icon?: ComponentProps<typeof MaterialCommunityIcons>['name'];
 }
 
+/** Найдовший текст в одному полі (назви). Поле може задати свою межу через maxLength. */
+export const TEXT_MAX_LENGTH = 120;
+
 /** На вебі прибираємо контур браузера: фокус показує рамка контейнера. */
 const NO_OUTLINE = Platform.OS === 'web' ? ({ outlineStyle: 'none' } as object) : undefined;
 
@@ -42,6 +45,8 @@ export function TextField({
         {icon ? <MaterialCommunityIcons name={icon} size={22} color={colors.muted} /> : null}
         <TextInput
           accessibilityLabel={label}
+          // Межа довжини за замовчуванням: назви страв, продуктів, залів
+          maxLength={TEXT_MAX_LENGTH}
           placeholderTextColor={colors.muted}
           className="h-full flex-1 font-body text-base text-ink"
           style={NO_OUTLINE}

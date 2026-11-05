@@ -1,3 +1,4 @@
+import { checkPickedImage } from '@/lib/imageCheck';
 import { randomUUID } from 'expo-crypto';
 import * as ImagePicker from 'expo-image-picker';
 import { useEffect, useMemo, useState } from 'react';
@@ -48,6 +49,10 @@ export default function PhotosScreen() {
           : await ImagePicker.launchImageLibraryAsync(options);
       const asset = picked.canceled ? undefined : picked.assets[0];
       if (!asset) return;
+      if (checkPickedImage(asset)) {
+        setError(true);
+        return;
+      }
       setBusy(true);
       const id = randomUUID();
       const stored = await storeImageLocally(

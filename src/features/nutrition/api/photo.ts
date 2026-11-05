@@ -23,6 +23,7 @@ export type PhotoErrorKey =
   | 'refused'
   | 'busy'
   | 'tooLarge'
+  | 'badType'
   | 'notFood'
   | 'network'
   | 'artifactDenied'
