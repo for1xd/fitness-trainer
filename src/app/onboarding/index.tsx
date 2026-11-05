@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { View } from 'react-native';
 
+import { BrandIntro } from '@/features/onboarding/components/BrandIntro';
 import { draftFromProfile } from '@/features/onboarding/draftFromProfile';
 import {
   ACTIVITY_FACTORS,
@@ -78,6 +79,7 @@ export default function OnboardingScreen() {
         </View>
       }
     >
+      {!isEdit && step === 0 ? <BrandIntro /> : null}
       <StepProgress current={step + 1} total={STEPS.length} />
       {current === 'about' && <AboutStep draft={draft} update={update} />}
       {current === 'body' && <BodyStep draft={draft} update={update} />}

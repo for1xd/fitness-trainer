@@ -37,8 +37,7 @@ export const useOnboarding = create<OnboardingState>()(
       load: (draft) => set({ draft, step: 0 }),
       clear: () => set({ draft: empty, step: 0 }),
     }),
-    { name: 'onboarding-draft', storage: persistStorage,
-      ...versioned('onboarding-draft') },
+    { name: 'onboarding-draft', storage: persistStorage, ...versioned('onboarding-draft') },
   ),
 );
 
