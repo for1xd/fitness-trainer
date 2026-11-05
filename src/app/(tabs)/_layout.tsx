@@ -2,10 +2,11 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
 import type { ComponentProps } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useWindowDimensions, View } from 'react-native';
+import { Animated, Easing, useWindowDimensions, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { SaveIndicator } from '@/features/data/components/SaveIndicator';
+import { useReducedMotion } from '@/lib/useReducedMotion';
 import { useTheme } from '@/theme/ThemeProvider';
 
 type IconName = ComponentProps<typeof MaterialCommunityIcons>['name'];
@@ -22,6 +23,35 @@ const TABS: {
   { name: 'profile', key: 'profile', icon: 'account-outline' },
 ];
 
+/**
+ * Перехід між вкладками: crossfade + зсув на 10 px у бік руху, 180 мс.
+ * progress: -1 — вкладка лівіше активної, 0 — активна, 1 — правіше.
+ */
+function forTabShift({
+  current,
+}: {
+  current: { progress: Animated.AnimatedInterpolation<number> };
+}) {
+  return {
+    sceneStyle: {
+      opacity: current.progress.interpolate({ inputRange: [-1, 0, 1], outputRange: [0, 1, 0] }),
+      transform: [
+        {
+          translateX: current.progress.interpolate({
+            inputRange: [-1, 0, 1],
+            outputRange: [-10, 0, 10],
+          }),
+        },
+      ],
+    },
+  };
+}
+
+const TAB_TRANSITION = {
+  animation: 'timing' as const,
+  config: { duration: 180, easing: Easing.out(Easing.cubic) },
+};
+
 /** Широкий екран (ПК, планшет горизонтально) — бокова навігація. */
 const WIDE_BREAKPOINT = 1024;
 
@@ -31,6 +61,7 @@ export default function TabsLayout() {
   const { width } = useWindowDimensions();
   const wide = width >= WIDE_BREAKPOINT;
   const insets = useSafeAreaInsets();
+  const reduced = useReducedMotion();
   // Таб-бар піднято над системною смугою (home indicator): відступ = safe area + 8
   const bottomPad = insets.bottom + 8;
 
@@ -39,6 +70,10 @@ export default function TabsLayout() {
       <Tabs
         screenOptions={{
           headerShown: false,
+          // «Зменшити рух» — миттєва зміна вкладки
+          ...(reduced
+            ? { animation: 'none' as const }
+            : { sceneStyleInterpolator: forTabShift, transitionSpec: TAB_TRANSITION }),
           tabBarPosition: wide ? 'left' : 'bottom',
           tabBarLabelPosition: wide ? 'beside-icon' : 'below-icon',
           tabBarActiveTintColor: wide ? colors.ink : colors.accent,

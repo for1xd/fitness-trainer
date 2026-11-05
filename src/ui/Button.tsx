@@ -1,6 +1,9 @@
 import { ActivityIndicator, Pressable, type PressableProps } from 'react-native';
 
+import { useReducedMotion } from '@/lib/useReducedMotion';
 import { useTheme } from '@/theme/ThemeProvider';
+
+import { pressStyle } from './pressFeedback';
 
 import { Text } from './Text';
 
@@ -43,12 +46,14 @@ export function Button({
   ...rest
 }: Props) {
   const { colors } = useTheme();
+  const reduced = useReducedMotion();
   const inactive = disabled || loading;
   return (
     <Pressable
       accessibilityRole="button"
       accessibilityState={{ disabled: !!inactive, busy: loading }}
       disabled={inactive}
+      style={({ pressed }) => pressStyle(pressed, reduced)}
       className={`min-h-14 flex-row items-center justify-center rounded-2xl ${variant === 'ghost' ? 'px-1' : compact ? 'px-3' : 'px-6'} active:opacity-80 ${box[variant]} ${inactive ? 'opacity-50' : ''} ${className}`}
       {...rest}
     >

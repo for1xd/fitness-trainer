@@ -9,7 +9,6 @@ import {
 import { Unbounded_600SemiBold, Unbounded_700Bold } from '@expo-google-fonts/unbounded';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import i18n from 'i18next';
 import { useEffect } from 'react';
@@ -33,7 +32,9 @@ import { startSyncEngine } from '@/lib/sync/engine';
 import { useOutbox } from '@/lib/sync/store';
 import { usePersistHydrated } from '@/lib/usePersistHydrated';
 import { ThemeProvider } from '@/theme/ThemeProvider';
-import { ConfirmHost } from '@/ui';
+import { NavigationTheme } from '@/theme/NavigationTheme';
+import { BootScreen, ConfirmHost } from '@/ui';
+import { Stack, useStackScreenOptions } from '@/ui/navigation/Stack';
 
 void SplashScreen.preventAutoHideAsync();
 
@@ -75,13 +76,15 @@ export default function RootLayout() {
     if (ready) void SplashScreen.hideAsync();
   }, [ready]);
 
-  if (!ready) return null;
+  if (!ready) return <BootScreen />;
 
   return (
     <QueryClientProvider client={queryClient}>
       <SafeAreaProvider>
         <ThemeProvider>
-          <RootStack />
+          <NavigationTheme>
+            <RootStack />
+          </NavigationTheme>
           <ConfirmHost />
         </ThemeProvider>
       </SafeAreaProvider>
@@ -93,9 +96,10 @@ function RootStack() {
   // Без входу: перший запуск — онбординг, далі одразу головний екран
   const hasProfile = useProfile((s) => s.profile !== null && s.targets !== null);
   useReminderScheduler();
+  const screenOptions = useStackScreenOptions();
 
   return (
-    <Stack screenOptions={{ headerShown: false }}>
+    <Stack screenOptions={screenOptions}>
       <Stack.Protected guard={hasProfile}>
         <Stack.Screen name="(tabs)" />
         <Stack.Screen name="food" />

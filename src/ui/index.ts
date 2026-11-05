@@ -16,3 +16,4 @@ export { CompactNumberInput } from './CompactNumberInput';
 export { FitText } from './FitText';
 export { ConfirmHost } from './ConfirmHost';
 export { LogoMark } from './Logo';
+export { BootScreen } from './BootScreen';

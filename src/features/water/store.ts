@@ -65,7 +65,6 @@ export const useWater = create<WaterState>()(
         set((s) => ({ entries: mergeLww(s.entries, entries, deletedIds) })),
       reset: () => set({ entries: [], trainingDays: [] }),
     }),
-    { name: 'water', storage: persistStorage,
-      ...versioned('water') },
+    { name: 'water', storage: persistStorage, ...versioned('water') },
   ),
 );

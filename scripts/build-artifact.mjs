@@ -54,9 +54,9 @@ const css = readdirSync(join(dist, '_expo/static/css'))
 
 const page = `<title>Фітнес-тренер</title>
 <style>
-:root { --bg: #E9ECE8; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #191C1E; color-scheme: dark; } }
-:root[data-theme="dark"] { --bg: #191C1E; color-scheme: dark; }
+:root { --bg: #E7EAE6; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #101315; color-scheme: dark; } }
+:root[data-theme="dark"] { --bg: #101315; color-scheme: dark; }
 html, body { height: 100%; }
 body { overflow: hidden; background: var(--bg); }
 #root { display: flex; height: 100%; flex: 1; }

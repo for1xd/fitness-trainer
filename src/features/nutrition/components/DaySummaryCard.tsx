@@ -3,6 +3,7 @@ import { View } from 'react-native';
 
 import type { NutritionTargets } from '@/features/onboarding/logic/nutrition';
 import { formatNumber } from '@/lib/format';
+import { useTweenedNumber } from '@/lib/useTweenedNumber';
 import { useTheme } from '@/theme/ThemeProvider';
 import { FitText, Ring, Text } from '@/ui';
 
@@ -44,6 +45,9 @@ export function DaySummaryCard({ eaten, targets }: Props) {
   ] as const;
 
   const leftLabel = t(over ? 'nutrition.over' : 'nutrition.left');
+  // Цифри «рахують» до нового значення
+  const shownLeft = Math.round(useTweenedNumber(Math.abs(left.kcal)));
+  const shownEaten = Math.round(useTweenedNumber(eaten.kcal));
 
   return (
     <View className="gap-6 rounded-card border border-hairline bg-surface p-4 md:flex-row md:items-center md:gap-8">
@@ -56,7 +60,7 @@ export function DaySummaryCard({ eaten, targets }: Props) {
           trackColor={tint(ringColor, 0.18)}
         >
           <FitText
-            text={formatNumber(Math.abs(left.kcal))}
+            text={formatNumber(shownLeft)}
             maxWidth={RING_TEXT_W}
             maxFontSize={32}
             minFontSize={14}
@@ -77,7 +81,7 @@ export function DaySummaryCard({ eaten, targets }: Props) {
         <View className="min-w-0 flex-1 gap-1">
           <Text variant="caption">{t('nutrition.eatenLabel')}</Text>
           <Text variant="number" numberOfLines={1} style={{ fontVariant: ['tabular-nums'] }}>
-            {formatNumber(eaten.kcal)}
+            {formatNumber(shownEaten)}
           </Text>
           <Text variant="caption" numberOfLines={1}>
             {t('nutrition.ofTarget', { target: formatNumber(targets.kcal) })}

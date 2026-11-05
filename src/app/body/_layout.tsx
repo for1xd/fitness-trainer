@@ -1,5 +1,5 @@
-import { Stack } from 'expo-router';
+import { Stack, useStackScreenOptions } from '@/ui/navigation/Stack';
 
 export default function Layout() {
-  return <Stack screenOptions={{ headerShown: false }} />;
+  return <Stack screenOptions={useStackScreenOptions()} />;
 }

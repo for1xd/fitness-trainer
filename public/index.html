@@ -7,9 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>%WEB_TITLE%</title>
     <style id="expo-reset">
+      /* Фон теми з першого кадру — до завантаження JS (src/theme/tokens.ts) */
+      :root {
+        --bg: #e7eae6;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #101315;
+          color-scheme: dark;
+        }
+      }
       html,
       body {
         height: 100%;
+        background: var(--bg);
       }
       body {
         overflow: hidden;

@@ -2,6 +2,8 @@ import type { ReactNode } from 'react';
 import { View } from 'react-native';
 import Svg, { Circle } from 'react-native-svg';
 
+import { useTweenedNumber } from '@/lib/useTweenedNumber';
+
 interface Props {
   size: number;
   stroke: number;
@@ -16,7 +18,8 @@ interface Props {
 export function Ring({ size, stroke, progress, color, trackColor, children }: Props) {
   const r = (size - stroke) / 2;
   const c = 2 * Math.PI * r;
-  const p = Math.min(1, Math.max(0, progress));
+  // Зміна значення — плавне заповнення дуги
+  const p = useTweenedNumber(Math.min(1, Math.max(0, progress)));
   return (
     <View style={{ width: size, height: size }} className="items-center justify-center">
       <Svg
