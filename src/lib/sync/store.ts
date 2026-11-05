@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-import { persistStorage } from '@/lib/persistStorage';
+import { persistStorage, versioned } from '@/lib/persistStorage';
 
 import { enqueueOp, removeSent, type OutboxOp, type Row, type SyncTable } from './outbox';
 
@@ -37,7 +37,7 @@ export const useOutbox = create<OutboxState>()(
         set((s) => ({ pulledUntil: { ...s.pulledUntil, [table]: iso } })),
       reset: () => set({ queue: [], pulledUntil: {} }),
     }),
-    { name: 'outbox', storage: persistStorage },
+    { name: 'outbox', storage: persistStorage, ...versioned('outbox') },
   ),
 );
 

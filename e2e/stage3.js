@@ -27,7 +27,6 @@ const server = http.createServer((req, res) => {
     const tab = async (label) => { await page.getByRole('tab', { name: new RegExp(label) }).first().click().catch(() => click(label)); };
 
     await page.goto('http://localhost:8099/');
-    await click('Продовжити без акаунта');
     await click('Чоловік'); await page.getByLabel('Вік').fill('30'); await click('Далі');
     await page.getByLabel('Зріст').fill('180'); await page.getByLabel('Вага').fill('82'); await click('Далі');
     await click('Помірна активність'); await click('Далі'); await click('Набрати масу');

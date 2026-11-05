@@ -3,7 +3,7 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
 import { useStrength } from '@/features/strength/store';
-import { persistStorage } from '@/lib/persistStorage';
+import { persistStorage, versioned } from '@/lib/persistStorage';
 import { mergeLww, type Row } from '@/lib/sync/outbox';
 import { registerSyncTable } from '@/lib/sync/registry';
 import { queueRow } from '@/lib/sync/store';
@@ -140,7 +140,8 @@ export const useWorkouts = create<WorkoutsState>()(
 
       reset: () => set({ program: null, workouts: [], active: null }),
     }),
-    { name: 'workouts', storage: persistStorage },
+    { name: 'workouts', storage: persistStorage,
+      ...versioned('workouts') },
   ),
 );
 

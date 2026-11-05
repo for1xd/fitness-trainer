@@ -3,7 +3,7 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
 import { todayIso } from '@/lib/dates';
-import { persistStorage } from '@/lib/persistStorage';
+import { persistStorage, versioned } from '@/lib/persistStorage';
 import { mergeLww } from '@/lib/sync/outbox';
 import { queueRow } from '@/lib/sync/store';
 
@@ -94,6 +94,7 @@ export const useProfile = create<ProfileState>()(
     {
       name: 'profile',
       storage: persistStorage,
+      ...versioned('profile'),
       partialize: (s) => ({
         profile: s.profile,
         profileUpdatedAt: s.profileUpdatedAt,

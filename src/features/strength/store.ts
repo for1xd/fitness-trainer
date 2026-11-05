@@ -2,7 +2,7 @@ import { randomUUID } from 'expo-crypto';
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-import { persistStorage } from '@/lib/persistStorage';
+import { persistStorage, versioned } from '@/lib/persistStorage';
 import type { Row } from '@/lib/sync/outbox';
 import { registerSyncTable } from '@/lib/sync/registry';
 import { queueRow } from '@/lib/sync/store';
@@ -105,7 +105,8 @@ export const useStrength = create<StrengthState>()(
         reset: () => set({ experience: null, estimates: {}, history: [] }),
       };
     },
-    { name: 'strength', storage: persistStorage },
+    { name: 'strength', storage: persistStorage,
+      ...versioned('strength') },
   ),
 );
 

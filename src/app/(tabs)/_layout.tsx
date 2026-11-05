@@ -2,9 +2,10 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
 import type { ComponentProps } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useWindowDimensions } from 'react-native';
+import { useWindowDimensions, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
+import { SaveIndicator } from '@/features/data/components/SaveIndicator';
 import { useTheme } from '@/theme/ThemeProvider';
 
 type IconName = ComponentProps<typeof MaterialCommunityIcons>['name'];
@@ -34,41 +35,44 @@ export default function TabsLayout() {
   const bottomPad = insets.bottom + 8;
 
   return (
-    <Tabs
-      screenOptions={{
-        headerShown: false,
-        tabBarPosition: wide ? 'left' : 'bottom',
-        tabBarLabelPosition: wide ? 'beside-icon' : 'below-icon',
-        tabBarActiveTintColor: wide ? colors.ink : colors.accent,
-        tabBarInactiveTintColor: colors.muted,
-        tabBarActiveBackgroundColor: wide ? colors.surface : undefined,
-        tabBarStyle: {
-          backgroundColor: colors.surface,
-          borderTopColor: colors.hairline,
-          borderRightColor: colors.line,
-          ...(wide
-            ? { width: 232, paddingTop: 24 }
-            : { height: 64 + bottomPad, paddingTop: 6, paddingBottom: bottomPad }),
-        },
-        tabBarItemStyle: wide
-          ? { borderRadius: 12, marginHorizontal: 12, minHeight: 48 }
-          : { minHeight: 52, paddingVertical: 2 },
-        tabBarLabelStyle: { fontFamily: 'Manrope_600SemiBold', fontSize: wide ? 15 : 11 },
-        sceneStyle: { backgroundColor: colors.bg },
-      }}
-    >
-      {TABS.map((tab) => (
-        <Tabs.Screen
-          key={tab.name}
-          name={tab.name}
-          options={{
-            title: t(`tabs.${tab.key}`),
-            tabBarIcon: ({ color, size }) => (
-              <MaterialCommunityIcons name={tab.icon} size={size} color={String(color)} />
-            ),
-          }}
-        />
-      ))}
-    </Tabs>
+    <View style={{ flex: 1, backgroundColor: colors.bg }}>
+      <Tabs
+        screenOptions={{
+          headerShown: false,
+          tabBarPosition: wide ? 'left' : 'bottom',
+          tabBarLabelPosition: wide ? 'beside-icon' : 'below-icon',
+          tabBarActiveTintColor: wide ? colors.ink : colors.accent,
+          tabBarInactiveTintColor: colors.muted,
+          tabBarActiveBackgroundColor: wide ? colors.surface : undefined,
+          tabBarStyle: {
+            backgroundColor: colors.surface,
+            borderTopColor: colors.hairline,
+            borderRightColor: colors.line,
+            ...(wide
+              ? { width: 232, paddingTop: 24 }
+              : { height: 64 + bottomPad, paddingTop: 6, paddingBottom: bottomPad }),
+          },
+          tabBarItemStyle: wide
+            ? { borderRadius: 12, marginHorizontal: 12, minHeight: 48 }
+            : { minHeight: 52, paddingVertical: 2 },
+          tabBarLabelStyle: { fontFamily: 'Manrope_600SemiBold', fontSize: wide ? 15 : 11 },
+          sceneStyle: { backgroundColor: colors.bg },
+        }}
+      >
+        {TABS.map((tab) => (
+          <Tabs.Screen
+            key={tab.name}
+            name={tab.name}
+            options={{
+              title: t(`tabs.${tab.key}`),
+              tabBarIcon: ({ color, size }) => (
+                <MaterialCommunityIcons name={tab.icon} size={size} color={String(color)} />
+              ),
+            }}
+          />
+        ))}
+      </Tabs>
+      <SaveIndicator bottom={wide ? 24 : 64 + bottomPad + 8} />
+    </View>
   );
 }

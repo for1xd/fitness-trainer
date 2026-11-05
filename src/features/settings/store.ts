@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-import { persistStorage } from '@/lib/persistStorage';
+import { persistStorage, versioned } from '@/lib/persistStorage';
 
 export type ThemePreference = 'system' | 'light' | 'dark';
 export type Language = 'uk' | 'en';
@@ -21,6 +21,7 @@ export const useSettings = create<SettingsState>()(
       setTheme: (theme) => set({ theme }),
       setLanguage: (language) => set({ language }),
     }),
-    { name: 'settings', storage: persistStorage },
+    { name: 'settings', storage: persistStorage,
+      ...versioned('settings') },
   ),
 );

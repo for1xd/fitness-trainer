@@ -25,7 +25,6 @@ const server = http.createServer((req, res) => {
     const step = (s) => console.log(`  ${name}: ${s}`);
 
     await page.goto('http://localhost:8099/');
-    await click('Продовжити без акаунта');
     await click('Чоловік');
     await page.getByLabel('Вік').fill('30');
     await click('Далі');
@@ -99,6 +98,7 @@ const server = http.createServer((req, res) => {
     await click('Вареники з картоплею');
     await see('Видалити запис');
     await click('Видалити запис');
+    await page.getByRole('button', { name: 'Видалити запис' }).last().click(); // підтвердження в діалозі
     await page.getByText('Вареники з картоплею', { exact: true }).waitFor({ state: 'detached', timeout: 10000 });
     step('delete ok');
 

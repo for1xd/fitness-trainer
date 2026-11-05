@@ -51,7 +51,6 @@ const seed = () => {
     const click = (t) => vis(t).click(); const see = (t, timeout = 10000) => vis(t).waitFor({ timeout });
     const shot = (s) => page.screenshot({ path: `${OUT}/${name}-${s}.png`, fullPage: true });
     await page.goto('http://localhost:8103/');
-    await click('Продовжити без акаунта');
     await click('Чоловік'); await page.getByLabel('Вік').fill('30'); await click('Далі');
     await page.getByLabel('Зріст').fill('180'); await page.getByLabel('Вага').fill('84'); await click('Далі');
     await click('Помірна активність'); await click('Далі'); await click('Схуднути');

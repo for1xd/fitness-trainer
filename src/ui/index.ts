@@ -14,3 +14,4 @@ export { Ring } from './Ring';
 export { TextField } from './TextField';
 export { CompactNumberInput } from './CompactNumberInput';
 export { FitText } from './FitText';
+export { ConfirmHost } from './ConfirmHost';

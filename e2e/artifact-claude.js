@@ -39,7 +39,6 @@ const server = http.createServer((req, res) => {
   const click = (t) => vis(t).click();
   try {
     await page.goto('http://localhost:8104/');
-    await click('Продовжити без акаунта');
     await click('Чоловік'); await page.getByLabel('Вік').fill('30'); await click('Далі');
     await page.getByLabel('Зріст').fill('180'); await page.getByLabel('Вага').fill('82'); await click('Далі');
     await click('Помірна активність'); await click('Далі'); await click('Схуднути');
@@ -58,7 +57,7 @@ const server = http.createServer((req, res) => {
     const calls = await page.evaluate(() => window.__sampleCalls);
     if (!calls.length || !calls[0].hasDishList || !calls[0].images[0]?.startsWith('image/jpeg:')) throw new Error('bad sample call ' + JSON.stringify(calls));
     await click('Додати в щоденник');
-    await page.getByText(/З'їдено 452 з/).first().waitFor(); // 250 г × 148 + 82
+    await page.locator('text="452" >> visible=true').first().waitFor(); // 250 г × 148 + 82
     console.log('  artifact photo ok:', JSON.stringify(calls[0]));
 
     await click('Додати їжу'); await click('Штрихкод');

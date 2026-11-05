@@ -165,7 +165,10 @@
     "macroOf": "{{eaten}} of {{target}} g",
     "addFood": "Add food",
     "eatenLabel": "Eaten",
-    "ofTarget": "of {{target}} kcal"
+    "ofTarget": "of {{target}} kcal",
+    "emptyDayTitle": "Nothing logged yet",
+    "emptyDayBody": "Log what you eat by search, barcode or a meal photo. The rings show what’s left for today.",
+    "emptyDayAction": "Add your first meal"
   },
   "workouts": {
     "title": "Workouts",
@@ -269,16 +272,7 @@
       "dark": "Dark"
     },
     "language": "Language",
-    "account": "Account",
-    "guestMode": "No account: data stays on this device",
-    "signOut": "Sign out",
-    "deleteLocal": "Delete data from this device",
-    "deleteTitle": "Delete all data from this device?",
-    "deleteBody": "Your profile, targets, diary, water, workouts and weight history will be erased from this device. This can't be undone.",
-    "deleteConfirm": "Delete data",
-    "summary": "{{sex}}, {{age}} y.o., {{height}} cm, {{weight}} kg",
-    "signIn": "Sign in or create an account",
-    "signInHint": "Data from this device will be kept and synced to your account."
+    "summary": "{{sex}}, {{age}} y.o., {{height}} cm, {{weight}} kg"
   },
   "validation": {
     "range": "Enter a value from {{min}} to {{max}} {{unit}}",
@@ -622,10 +616,8 @@
     "retake": "Another photo",
     "addMore": "Add food manually",
     "empty": "All items removed. Take another photo or add food manually.",
-    "signIn": "Sign in",
     "errors": {
-      "signedOut": "Photo recognition works when you're signed in: the photo is stored in your private storage.",
-      "notConfigured": "The server isn't connected yet, so photo recognition is unavailable. Add food through search.",
+      "notConfigured": "Photo recognition works in the claude.ai version. Here, add food via search.",
       "upload": "Couldn't upload the photo. Check your connection and try again.",
       "refused": "This photo couldn't be processed. Try another one or add food manually.",
       "busy": "The recognition service is busy right now. Try again in a minute.",
@@ -738,5 +730,35 @@
     "reminders": "Reminders",
     "measurements": "Measurements",
     "photos": "Before and after photos"
+  },
+  "data": {
+    "title": "Saving and transfer",
+    "saving": "Saving…",
+    "savedAccount": "Saved",
+    "savedDevice": "Saved on this device",
+    "saveError": "Couldn’t save. Will retry on the next change.",
+    "modeAccount": "Your data is stored in your claude.ai account and opens on any device. Other people with the link can’t see it.",
+    "modeReadonly": "You have view-only access, so data stays in this browser only. Ask the owner for Contributor access to keep it in your account.",
+    "modeDevice": "Your data is stored on this device.",
+    "modePending": "Connecting to storage…",
+    "export": "Export data (JSON)",
+    "import": "Import from file",
+    "reset": "Reset everything",
+    "resetTitle": "Delete all data?",
+    "resetBody": "This deletes: profile and targets, food diary, water, strength numbers, My gym, program and workouts, measurements and photos, reminders and settings. It can’t be undone, so export first.",
+    "resetConfirm": "Delete everything",
+    "importTitle": "Replace data from file?",
+    "importBody": "Sections present in the file will be fully replaced with its contents. Current data in those sections will be lost.",
+    "importConfirm": "Replace",
+    "importDone": "Data imported.",
+    "exportDone": "Export file saved.",
+    "exportFailed": "Couldn’t save the file.",
+    "nativeHint": "File export and import currently work in the web version.",
+    "importErrors": {
+      "tooLarge": "File is too large (over 25 MB).",
+      "notJson": "This isn’t a JSON file.",
+      "wrongFormat": "This file doesn’t look like an export from this app.",
+      "newerVersion": "This file comes from a newer app version. Reload the page and try again."
+    }
   }
 }

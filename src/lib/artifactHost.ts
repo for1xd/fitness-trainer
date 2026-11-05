@@ -58,3 +58,61 @@ export async function artifactCanSendImages(): Promise<boolean> {
 
 export const isSampleError = (e: unknown): e is ArtifactSampleError =>
   typeof e === 'object' && e !== null && typeof (e as { code?: unknown }).code === 'string';
+
+/* ---------- Сховище артефакта (db) і поточний користувач (user) ---------- */
+
+export interface ArtifactDocSnapshot {
+  exists: boolean;
+  data(): Record<string, unknown> | undefined;
+}
+
+export interface ArtifactDocRef {
+  get(): Promise<ArtifactDocSnapshot>;
+  set(data: Record<string, unknown>): Promise<void>;
+  delete(): Promise<void>;
+}
+
+export interface ArtifactDb {
+  doc(path: string): ArtifactDocRef;
+}
+
+export interface ArtifactUser {
+  id(): Promise<string | null>;
+  can(capability: string): Promise<boolean | null>;
+}
+
+let dbPromise: Promise<ArtifactDb | null> | null = null;
+let userPromise: Promise<ArtifactUser | null> | null = null;
+
+export function getArtifactDb(): Promise<ArtifactDb | null> {
+  const h = host();
+  if (!h) return Promise.resolve(null);
+  dbPromise ??= h
+    .use('db')
+    .then((d) => (d ? (d as ArtifactDb) : null))
+    .catch(() => null);
+  return dbPromise;
+}
+
+export function getArtifactUser(): Promise<ArtifactUser | null> {
+  const h = host();
+  if (!h) return Promise.resolve(null);
+  userPromise ??= h
+    .use('user')
+    .then((u) => (u ? (u as ArtifactUser) : null))
+    .catch(() => null);
+  return userPromise;
+}
+
+export interface ArtifactDownloads {
+  save(file: { filename: string; data: Blob | string }): Promise<unknown>;
+}
+
+export function getArtifactDownloads(): Promise<ArtifactDownloads | null> {
+  const h = host();
+  if (!h) return Promise.resolve(null);
+  return h
+    .use('downloads')
+    .then((d) => (d ? (d as ArtifactDownloads) : null))
+    .catch(() => null);
+}

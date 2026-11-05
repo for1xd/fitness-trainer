@@ -3,7 +3,7 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
 import { GYM_PRESETS } from '@/features/catalog/data';
-import { persistStorage } from '@/lib/persistStorage';
+import { persistStorage, versioned } from '@/lib/persistStorage';
 import type { Row } from '@/lib/sync/outbox';
 import { registerSyncTable } from '@/lib/sync/registry';
 import { queueRow } from '@/lib/sync/store';
@@ -82,7 +82,8 @@ export const useGym = create<GymState>()(
         ),
       reset: () => set({ gym: null }),
     }),
-    { name: 'gym', storage: persistStorage },
+    { name: 'gym', storage: persistStorage,
+      ...versioned('gym') },
   ),
 );
 

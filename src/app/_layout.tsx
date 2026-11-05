@@ -17,7 +17,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import '@/features/syncTables';
 
-import { selectSignedIn, subscribeToAuth, useAuth } from '@/features/auth/store';
+import { subscribeToAuth, useAuth } from '@/features/auth/store';
 import { useOnboarding } from '@/features/onboarding/store';
 import { useNutrition } from '@/features/nutrition/store';
 import { useGym } from '@/features/gym/store';
@@ -33,6 +33,7 @@ import { startSyncEngine } from '@/lib/sync/engine';
 import { useOutbox } from '@/lib/sync/store';
 import { usePersistHydrated } from '@/lib/usePersistHydrated';
 import { ThemeProvider } from '@/theme/ThemeProvider';
+import { ConfirmHost } from '@/ui';
 
 void SplashScreen.preventAutoHideAsync();
 
@@ -81,6 +82,7 @@ export default function RootLayout() {
       <SafeAreaProvider>
         <ThemeProvider>
           <RootStack />
+          <ConfirmHost />
         </ThemeProvider>
       </SafeAreaProvider>
     </QueryClientProvider>
@@ -88,13 +90,13 @@ export default function RootLayout() {
 }
 
 function RootStack() {
-  const signedIn = useAuth(selectSignedIn);
+  // Без входу: перший запуск — онбординг, далі одразу головний екран
   const hasProfile = useProfile((s) => s.profile !== null && s.targets !== null);
   useReminderScheduler();
 
   return (
     <Stack screenOptions={{ headerShown: false }}>
-      <Stack.Protected guard={signedIn && hasProfile}>
+      <Stack.Protected guard={hasProfile}>
         <Stack.Screen name="(tabs)" />
         <Stack.Screen name="food" />
         <Stack.Screen name="recipe" />
@@ -107,12 +109,7 @@ function RootStack() {
         <Stack.Screen name="body" />
         <Stack.Screen name="reminders" />
       </Stack.Protected>
-      <Stack.Protected guard={signedIn}>
-        <Stack.Screen name="onboarding" />
-      </Stack.Protected>
-      <Stack.Protected guard={!signedIn}>
-        <Stack.Screen name="sign-in" />
-      </Stack.Protected>
+      <Stack.Screen name="onboarding" />
     </Stack>
   );
 }

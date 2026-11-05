@@ -204,7 +204,9 @@ function Section({ title, children }: { title: string; children: React.ReactNode
       <Text variant="label" className="text-muted">
         {title}
       </Text>
-      <View className="overflow-hidden rounded-card border border-hairline bg-surface">{children}</View>
+      <View className="overflow-hidden rounded-card border border-hairline bg-surface">
+        {children}
+      </View>
     </View>
   );
 }

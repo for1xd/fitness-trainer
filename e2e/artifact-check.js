@@ -25,8 +25,7 @@ const server = http.createServer((req, res) => {
   const vis = (t) => page.locator(`text=${JSON.stringify(t)} >> visible=true`).first();
   try {
     await page.goto('http://localhost:8098/x/y/index.html');
-    await vis('Продовжити без акаунта').click({ timeout: 20000 });
-    await vis('Чоловік').click(); await page.getByLabel('Вік').fill('30'); await vis('Далі').click();
+    await vis('Чоловік').click({ timeout: 20000 }); await page.getByLabel('Вік').fill('30'); await vis('Далі').click();
     await page.getByLabel('Зріст').fill('180'); await page.getByLabel('Вага').fill('82'); await vis('Далі').click();
     await vis('Помірна активність').click(); await vis('Далі').click(); await vis('Схуднути').click();
     await vis('Розрахувати норму').click(); await vis('Зберегти й почати').click();

@@ -9,7 +9,6 @@ const serve = (dir, port) => http.createServer((req, res) => {
   fs.createReadStream(p).pipe(res);
 }).listen(port);
 const s1 = serve(require('path').join(__dirname, '..', 'dist'), 8101);
-const s2 = serve(require('path').join(__dirname, '..', 'dist-sb'), 8102);
 const USER = '11111111-2222-3333-4444-555555555555';
 const b64 = (o) => Buffer.from(JSON.stringify(o)).toString('base64url');
 const JWT = `${b64({ alg: 'HS256', typ: 'JWT' })}.${b64({ sub: USER, role: 'authenticated', exp: Math.floor(Date.now() / 1000) + 3600, aud: 'authenticated' })}.sig`;
@@ -48,9 +47,9 @@ const ANALYSIS = { analysisId: 'aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee', model: 'c
       return route.fulfill({ json: { status: 0 } });
     });
     await A.page.goto('http://localhost:8101/');
-    await A.click('Продовжити без акаунта'); await onboard(A);
+    await onboard(A);
     await A.click('Фото страви');
-    await A.page.getByText(/Сервер ще не підключено/).first().waitFor();
+    await A.page.getByText(/працює у версії на claude.ai/).first().waitFor();
     await A.shot('1-photo-guest');
     await A.page.goBack();
     await A.click('Додати їжу'); await A.click('Штрихкод');
@@ -76,49 +75,8 @@ const ANALYSIS = { analysisId: 'aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee', model: 'c
     console.log('  guest: barcode not found → own product → found locally ok');
     await A.ctx.close();
 
-    // ── B: з (підміненим) Supabase — розпізнавання фото
-    const B = await ctxFor('account');
-    const calls = [];
-    await B.page.route('http://sb.test/**', async (route) => {
-      const req = route.request(); const url = new URL(req.url()); calls.push(`${req.method()} ${url.pathname}`);
-      if (url.pathname === '/auth/v1/token') return route.fulfill({ json: { access_token: JWT, token_type: 'bearer', expires_in: 3600, expires_at: Math.floor(Date.now() / 1000) + 3600, refresh_token: 'r', user } });
-      if (url.pathname === '/auth/v1/user') return route.fulfill({ json: user });
-      if (url.pathname.startsWith('/storage/v1/object/meal-photos/')) return route.fulfill({ json: { Key: url.pathname.slice(18), Id: 'x' } });
-      if (url.pathname === '/functions/v1/analyze-meal') {
-        const body = JSON.parse(req.postData() || '{}');
-        if (!String(body.storagePath).startsWith(USER + '/')) return route.fulfill({ status: 400, json: { error: 'invalid_path' } });
-        return route.fulfill({ json: ANALYSIS });
-      }
-      if (url.pathname.startsWith('/rest/v1/')) return route.fulfill({ status: req.method() === 'GET' ? 200 : 201, json: [] });
-      return route.fulfill({ json: {} });
-    });
-    await B.page.goto('http://localhost:8102/');
-    await B.page.getByLabel('Ел. пошта').fill('test@example.com');
-    await B.page.getByLabel('Пароль').fill('password123');
-    await B.click('Увійти');
-    await B.see('Про тебе', 20000);
-    await onboard(B);
-    await B.click('Фото страви');
-    await B.page.getByLabel('Підказка (необов\'язково)').fill('борщ зі сметаною');
-    // фото-фікстура
-    const shotPage = await B.ctx.newPage(); await shotPage.setContent('<body style="margin:0;background:#a33"><div style="width:600px;height:450px;background:radial-gradient(#d44,#822)"></div></body>');
-    const img = path.join(__dirname, 'meal.png'); await shotPage.screenshot({ path: img, clip: { x: 0, y: 0, width: 600, height: 450 } }); await shotPage.close();
-    const chooser = B.page.waitForEvent('filechooser');
-    await B.click('Вибрати з галереї');
-    await (await chooser).setFiles(img);
-    await B.see('Перевір результат', 20000);
-    await B.see("Борщ український з м'ясом");
-    await B.shot('3-photo-review');
-    await B.page.getByLabel('Сметана 20%, вага').fill('40');
-    await B.page.getByText(/Разом: 282 ккал/).first().waitFor(); // 199,5 + 82,7
-    await B.click('Додати в щоденник');
-    await B.see('Зважування');
-    await B.page.getByText(/З'їдено 282 з/).first().waitFor();
-    await B.shot('4-today-after-photo');
-    const fnCalls = calls.filter((c) => c.includes('/functions/') || c.includes('/storage/'));
-    console.log('  account: photo flow ok; calls:', fnCalls.join(', '));
-    await B.ctx.close();
+    // Розпізнавання фото в артефакті перевіряє e2e/artifact-claude.js; екран входу прибрано.
   } catch (e) { console.error('FAIL', e.message.split('\n').slice(0, 5).join('\n')); }
   console.log('errors:', errors.length ? errors.slice(0, 8) : 'none');
-  await browser.close(); s1.close(); s2.close();
+  await browser.close(); s1.close();
 })();

@@ -4,7 +4,7 @@ import { persist } from 'zustand/middleware';
 
 import { mergeLww } from '@/lib/sync/outbox';
 import { queueRow } from '@/lib/sync/store';
-import { persistStorage } from '@/lib/persistStorage';
+import { persistStorage, versioned } from '@/lib/persistStorage';
 
 import { foodToRow, mealEntryToRow, recipeToRow } from './api/rows';
 import { scaleNutrients } from './logic/nutrients';
@@ -147,6 +147,7 @@ export const useNutrition = create<NutritionState>()(
     {
       name: 'nutrition',
       storage: persistStorage,
+      ...versioned('nutrition'),
       partialize: (s) => ({ entries: s.entries, userFoods: s.userFoods, recipes: s.recipes }),
     },
   ),

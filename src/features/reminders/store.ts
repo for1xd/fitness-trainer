@@ -2,7 +2,7 @@ import { randomUUID } from 'expo-crypto';
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-import { persistStorage } from '@/lib/persistStorage';
+import { persistStorage, versioned } from '@/lib/persistStorage';
 import type { Row } from '@/lib/sync/outbox';
 import { registerSyncTable } from '@/lib/sync/registry';
 import { queueRow } from '@/lib/sync/store';
@@ -76,7 +76,8 @@ export const useReminders = create<RemindersState>()(
           return { reminders };
         }),
     }),
-    { name: 'reminders', storage: persistStorage },
+    { name: 'reminders', storage: persistStorage,
+      ...versioned('reminders') },
   ),
 );
 

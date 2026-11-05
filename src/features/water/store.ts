@@ -4,7 +4,7 @@ import { persist } from 'zustand/middleware';
 
 import { mergeLww, type Row } from '@/lib/sync/outbox';
 import { queueRow } from '@/lib/sync/store';
-import { persistStorage } from '@/lib/persistStorage';
+import { persistStorage, versioned } from '@/lib/persistStorage';
 
 import { lastEntryOfDay, MAX_SINGLE_ML, type WaterEntry } from './logic/waterDay';
 
@@ -65,6 +65,7 @@ export const useWater = create<WaterState>()(
         set((s) => ({ entries: mergeLww(s.entries, entries, deletedIds) })),
       reset: () => set({ entries: [], trainingDays: [] }),
     }),
-    { name: 'water', storage: persistStorage },
+    { name: 'water', storage: persistStorage,
+      ...versioned('water') },
   ),
 );

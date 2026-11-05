@@ -3,7 +3,7 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
 import { todayIso } from '@/lib/dates';
-import { persistStorage } from '@/lib/persistStorage';
+import { persistStorage, versioned } from '@/lib/persistStorage';
 import { supabase } from '@/lib/supabase';
 import { mergeLww, type Row } from '@/lib/sync/outbox';
 import { registerSyncTable } from '@/lib/sync/registry';
@@ -165,7 +165,8 @@ export const useProgress = create<ProgressState>()(
 
       reset: () => set({ measurements: [], photos: [] }),
     }),
-    { name: 'progress', storage: persistStorage },
+    { name: 'progress', storage: persistStorage,
+      ...versioned('progress') },
   ),
 );
 

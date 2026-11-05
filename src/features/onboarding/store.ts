@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-import { persistStorage } from '@/lib/persistStorage';
+import { persistStorage, versioned } from '@/lib/persistStorage';
 
 import type { ActivityLevel, Goal, Pace, Sex } from './logic/nutrition';
 
@@ -37,7 +37,8 @@ export const useOnboarding = create<OnboardingState>()(
       load: (draft) => set({ draft, step: 0 }),
       clear: () => set({ draft: empty, step: 0 }),
     }),
-    { name: 'onboarding-draft', storage: persistStorage },
+    { name: 'onboarding-draft', storage: persistStorage,
+      ...versioned('onboarding-draft') },
   ),
 );
 

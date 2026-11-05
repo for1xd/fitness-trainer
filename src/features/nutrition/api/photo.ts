@@ -18,7 +18,6 @@ import { SEED_FOODS } from '../data/foods';
 const MAX_SIDE = 1280;
 
 export type PhotoErrorKey =
-  | 'signedOut'
   | 'notConfigured'
   | 'upload'
   | 'refused'
@@ -87,10 +86,11 @@ export async function analyzeMealPhoto(
   base64: string,
   hint?: string,
 ): Promise<PhotoAnalysisResponse> {
+  // Без сервера або без входу — розпізнавання через Claude в артефакті
   if (!supabase) return analyzeInArtifact(base64, hint);
   const { data: session } = await supabase.auth.getSession();
   const userId = session.session?.user.id;
-  if (!userId) throw new PhotoError('signedOut');
+  if (!userId) return analyzeInArtifact(base64, hint);
 
   const path = `${userId}/${randomUUID()}.jpg`;
   const upload = await supabase.storage

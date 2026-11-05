@@ -59,7 +59,6 @@ export default function MealPhotoScreen() {
   const params = useLocalSearchParams<{ date?: string; meal?: MealType }>();
   const date = params.date ?? todayIso();
   const session = useAuth((s) => s.session);
-  const setGuest = useAuth((s) => s.setGuest);
   const navigation = useNavigation();
   const [phase, setPhase] = useState<Phase>({ kind: 'pick' });
   const [hint, setHint] = useState('');
@@ -67,11 +66,9 @@ export default function MealPhotoScreen() {
   const [meal, setMeal] = useState<MealType>(params.meal ?? defaultMealType(new Date().getHours()));
 
   // В артефакті Claude розпізнавання працює без сервера — через можливість платформи
-  const [artifactPhoto, setArtifactPhoto] = useState<boolean | null>(
-    isSupabaseConfigured ? false : null,
-  );
+  const serverReady = isSupabaseConfigured && session !== null;
+  const [artifactPhoto, setArtifactPhoto] = useState<boolean | null>(null);
   useEffect(() => {
-    if (isSupabaseConfigured) return;
     let alive = true;
     void artifactCanSendImages().then((ok) => alive && setArtifactPhoto(ok));
     return () => {
@@ -79,13 +76,8 @@ export default function MealPhotoScreen() {
     };
   }, []);
 
-  const blocked: PhotoErrorKey | null = isSupabaseConfigured
-    ? !session
-      ? 'signedOut'
-      : null
-    : artifactPhoto === false
-      ? 'notConfigured'
-      : null;
+  const blocked: PhotoErrorKey | null =
+    !serverReady && artifactPhoto === false ? 'notConfigured' : null;
 
   const run = async (source: 'camera' | 'library') => {
     try {
@@ -152,9 +144,6 @@ export default function MealPhotoScreen() {
       <Screen edges={['top', 'bottom']}>
         <Header title={t('photo.title')} />
         <Notice text={t(`photo.errors.${blocked}`)} />
-        {blocked === 'signedOut' ? (
-          <Button label={t('photo.signIn')} onPress={() => setGuest(false)} />
-        ) : null}
         <Button
           label={t('photo.addMore')}
           variant="secondary"

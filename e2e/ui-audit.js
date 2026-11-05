@@ -34,7 +34,6 @@ const setEaten = (kcal) => {
       const vis = (t) => page.locator(`text=${JSON.stringify(t)} >> visible=true`).first();
       const click = (t) => vis(t).click();
       await page.goto(BASE + '/');
-      await click('Продовжити без акаунта');
       await click('Чоловік'); await page.getByLabel('Вік').fill('30'); await click('Далі');
       await page.getByLabel('Зріст').fill('180'); await page.getByLabel('Вага').fill('80'); await click('Далі');
       await click('Помірна активність'); await click('Далі'); await click('Тримати форму');

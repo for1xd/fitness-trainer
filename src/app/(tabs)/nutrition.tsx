@@ -57,6 +57,19 @@ export default function NutritionScreen() {
 
       <DaySummaryCard eaten={summary.total} targets={targets} />
 
+      {summary.meals.every((g) => g.entries.length === 0) ? (
+        <View className="gap-3 rounded-card border border-hairline bg-surface p-4">
+          <Text variant="heading">{t('nutrition.emptyDayTitle')}</Text>
+          <Text variant="body" className="text-muted">
+            {t('nutrition.emptyDayBody')}
+          </Text>
+          <Button
+            label={t('nutrition.emptyDayAction')}
+            onPress={() => router.push({ pathname: '/food/add', params: { date } })}
+          />
+        </View>
+      ) : null}
+
       {summary.meals.map((group) => (
         <MealSection key={group.mealType} group={group} date={date} />
       ))}

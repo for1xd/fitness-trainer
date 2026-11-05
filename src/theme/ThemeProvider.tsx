@@ -35,3 +35,13 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
 /** Сирі кольори для місць, де className недоступний (іконки, навігація, SVG). */
 export const useTheme = () => useContext(ThemeContext);
+
+/**
+ * Змінні теми для вмісту, що рендериться поза деревом ThemeProvider (Modal на вебі — у порталі),
+ * інакше класи NativeWind (`bg-raised`, `text-ink`) там не мають кольорів.
+ */
+export function ThemeScope({ children }: { children: ReactNode }) {
+  const { colors } = useTheme();
+  const style = useMemo(() => vars(cssVariables(colors)), [colors]);
+  return <View style={[{ flex: 1 }, style]}>{children}</View>;
+}
