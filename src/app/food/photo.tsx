@@ -206,6 +206,7 @@ export default function MealPhotoScreen() {
         </View>
         {phase.overall < 0.5 ? <Notice tone="warn" text={t('photo.lowConfidence')} /> : null}
         {phase.notes ? <Text variant="caption">{phase.notes}</Text> : null}
+        <Notice text={t('photo.weightHint')} />
 
         {items.length ? (
           <View className="overflow-hidden rounded-card border border-hairline bg-surface">

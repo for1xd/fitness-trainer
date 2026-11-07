@@ -1,5 +1,6 @@
 import {
   applyKnownDishes,
+  isConsistentMatch,
   buildSystemPrompt,
   MEAL_ANALYSIS_SCHEMA,
   sniffImageType,
@@ -106,6 +107,39 @@ describe('applyKnownDishes', () => {
     const a = applyKnownDishes(validateMealAnalysis(raw)!, new Map([[borshch.slug, borshch]]));
     expect(a.items[0]).toMatchObject({ name: borshch.name, kcal: 199.5, proteinG: 10.9 });
     expect(a.items[1]?.kcal).toBe(62); // невпізнана — як оцінила модель
+  });
+
+  it('відкидає збіг, якщо оцінка моделі далека від бази (інший варіант страви)', () => {
+    // Вершковий суп з лососем: модель — 85 ккал/100 г, «Юшка рибна» в базі — 45
+    const yushka: KnownDish = {
+      slug: 'yushka-rybna',
+      name: 'Юшка рибна',
+      per100: { kcal: 45, proteinG: 4.5, fatG: 1.8, carbsG: 2.9 },
+    };
+    const soup = {
+      ...raw,
+      items: [
+        {
+          ...raw.items[0],
+          name_uk: 'Вершковий суп з лососем',
+          match_slug: yushka.slug,
+          grams: 350,
+          kcal: 298,
+        },
+      ],
+    };
+    const a = applyKnownDishes(validateMealAnalysis(soup)!, new Map([[yushka.slug, yushka]]));
+    expect(a.items[0]).toMatchObject({
+      name: 'Вершковий суп з лососем',
+      matchSlug: null,
+      kcal: 298,
+    });
+  });
+
+  it('isConsistentMatch: ±25 % від бази', () => {
+    expect(isConsistentMatch({ kcal: 57 * 3.5 * 1.3, grams: 350 }, borshch)).toBe(true);
+    expect(isConsistentMatch({ kcal: 57 * 3.5 * 1.4, grams: 350 }, borshch)).toBe(false);
+    expect(isConsistentMatch({ kcal: 57 * 3.5 * 0.7, grams: 350 }, borshch)).toBe(false);
   });
 });
 

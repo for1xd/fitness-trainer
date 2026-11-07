@@ -85,10 +85,10 @@ export function buildSystemPrompt(dishes: KnownDish[]): string {
 
 For each separate food you can see:
 - name it in Ukrainian (name_uk), the way a Ukrainian would write it in a diary;
-- estimate its weight in grams from visual cues: a dinner plate is about 24–26 cm, a soup bowl holds 300–400 ml, a fork is about 19 cm, a slice of bread is about 30 g, a glass holds about 250 ml;
+- estimate its weight in grams from visual cues: a dinner plate is about 24–26 cm, a deep soup plate filled to the usual level holds about 350–450 g (a small bowl 250–300 g), a fork is about 19 cm, a slice of bread is about 30 g, a glass holds about 250 ml;
 - give kcal, protein, fat and carbs for that weight. Keep them consistent: kcal ≈ 4 × protein + 9 × fat + 4 × carbs (alcohol is the exception).
 
-If a food is one of the known dishes below, set match_slug to its slug and use its name; the app takes per-100 g values from its own database, so for matched dishes the weight matters most. Otherwise set match_slug to null. Only use slugs from the list.
+If a food is one of the known dishes below — the same dish with a similar recipe, not just a similar-looking one — set match_slug to its slug and use its name; the app takes per-100 g values from its own database, so for matched dishes the weight matters most. If it is a richer or different variant (a creamy soup versus a clear broth, fried versus boiled, with cheese or mayonnaise added), set match_slug to null and estimate the nutrition yourself. Only use slugs from the list.
 
 Include only what is visible. Count visible sauces, sour cream and oil, but do not add side dishes or drinks you cannot see. List a composite dish (borscht with sour cream, a sandwich) as its parts only when the parts are clearly separate on the plate.
 
@@ -151,7 +151,27 @@ export function validateMealAnalysis(
   };
 }
 
-/** Для впізнаних страв КБЖВ рахується з бази (на 100 г) — точніше, ніж оцінка моделі. */
+/**
+ * Наскільки калорійність на 100 г за оцінкою моделі може відрізнятись від страви з бази,
+ * щоб вважати це тією самою стравою. Далі — це інший варіант (напр. вершковий суп з лососем
+ * замість юшки), і база дала б хибне число.
+ */
+export const MATCH_KCAL_TOLERANCE = 0.25;
+
+export function isConsistentMatch(
+  item: Pick<AnalyzedItem, 'kcal' | 'grams'>,
+  dish: KnownDish,
+): boolean {
+  if (item.grams <= 0 || dish.per100.kcal <= 0) return true;
+  const modelPer100 = (item.kcal / item.grams) * 100;
+  const ratio = modelPer100 / dish.per100.kcal;
+  return ratio >= 1 - MATCH_KCAL_TOLERANCE && ratio <= 1 / (1 - MATCH_KCAL_TOLERANCE);
+}
+
+/**
+ * Для впізнаних страв КБЖВ рахується з бази (на 100 г) — точніше, ніж оцінка моделі.
+ * Якщо оцінка моделі сильно відрізняється від бази — збіг відкидається, лишається оцінка моделі.
+ */
 export function applyKnownDishes(
   analysis: MealAnalysis,
   dishes: ReadonlyMap<string, KnownDish>,
@@ -161,6 +181,7 @@ export function applyKnownDishes(
     items: analysis.items.map((item) => {
       const dish = item.matchSlug ? dishes.get(item.matchSlug) : undefined;
       if (!dish) return item;
+      if (!isConsistentMatch(item, dish)) return { ...item, matchSlug: null };
       const k = item.grams / 100;
       return {
         ...item,

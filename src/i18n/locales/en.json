@@ -253,7 +253,13 @@
     "heatmapSub": "Sets this week: primary muscle 1, secondary 0.5. For growth aim for 10–20.",
     "front": "Front",
     "back": "Back",
-    "bins": ["0", "1–4", "5–9", "10–19", "20+"],
+    "bins": [
+      "0",
+      "1–4",
+      "5–9",
+      "10–19",
+      "20+"
+    ],
     "setsShort": "{{n}} sets"
   },
   "profile": {
@@ -624,7 +630,8 @@
       "badType": "This isn’t a photo. Use JPEG, PNG, WebP or HEIC."
     },
     "permission": "To photograph food, allow camera access in your phone settings.",
-    "artifactNote": "In this version Claude recognises the photo through your claude.ai account: it asks for permission the first time, and requests use your Claude limit."
+    "artifactNote": "In this version Claude recognises the photo through your claude.ai account: it asks for permission the first time, and requests use your Claude limit.",
+    "weightHint": "Weight is estimated from the photo and can be off by 20–25%. If you weigh the dish, enter the exact weight and the calories will update."
   },
   "barcode": {
     "title": "Barcode",
